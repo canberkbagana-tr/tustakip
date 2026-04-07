@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TUS Sınav Çalışma Takip Uygulaması - Günlük ilerleme takibi, istatistikler ve hedef planlama">
+  <title>TUS Takip 📚</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Motivation Bar -->
+  <div class="motivation-bar" id="motivationBar">
+    <span class="quote-emoji">💪</span>
+    <span id="motivationText">Her sayfa seni hedefe bir adım daha yaklaştırıyor!</span>
+    <span class="quote-emoji">🎯</span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-brand">
+        <span class="logo-icon">🩺</span>
+        <span>TUS Takip</span>
+      </a>
+      <ul class="nav-tabs">
+        <li>
+          <button class="nav-tab active" data-page="dashboard" id="nav-dashboard">
+            <span class="tab-icon">📊</span>
+            <span class="tab-text">Dashboard</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab" data-page="books" id="nav-books">
+            <span class="tab-icon">📚</span>
+            <span class="tab-text">Kitaplar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab" data-page="logs" id="nav-logs">
+            <span class="tab-icon">📝</span>
+            <span class="tab-text">Kayıtlar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab" data-page="stats" id="nav-stats">
+            <span class="tab-icon">📈</span>
+            <span class="tab-text">İstatistikler</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab" data-page="settings" id="nav-settings">
+            <span class="tab-icon">⚙️</span>
+            <span class="tab-text">Ayarlar</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- ==================== DASHBOARD ==================== -->
+    <section class="page active" id="page-dashboard">
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="card stat-card">
+          <span class="stat-icon">📖</span>
+          <div class="card-title">Toplam Okunan</div>
+          <div class="card-value gradient-text" id="totalRead">0</div>
+          <div class="card-subtitle"><span id="totalTarget">5.526</span> sayfadan</div>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-icon">📅</span>
+          <div class="card-title">Günlük Ortalama</div>
+          <div class="card-value" id="dailyAverage">0</div>
+          <div class="card-subtitle">sayfa/gün</div>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-icon">🎯</span>
+          <div class="card-title">Tahmini Bitiş</div>
+          <div class="card-value" id="estimatedEnd" style="font-size:1.2rem">-</div>
+          <div class="card-subtitle" id="remainingDays">-</div>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-icon">🔥</span>
+          <div class="card-title">Streak</div>
+          <div class="card-value" id="currentStreak">0</div>
+          <div class="card-subtitle">art arda gün</div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="card progress-section">
+        <div class="progress-header">
+          <span class="progress-title">Genel İlerleme</span>
+          <span class="progress-percentage" id="progressPercent">0%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
+        </div>
+        <div class="progress-details">
+          <span><span id="pagesRead">0</span> sayfa okundu</span>
+          <span><span id="pagesRemaining">5.526</span> sayfa kaldı</span>
+        </div>
+      </div>
+
+      <!-- Per-Book Progress -->
+      <div class="card" id="bookProgressSection" style="margin-bottom:24px">
+        <div class="card-title">📚 Kitap Bazlı İlerleme</div>
+        <div id="bookProgressBars">
+          <div class="empty-state">
+            <div class="empty-icon">📚</div>
+            <p>Henüz kitap eklenmemiş. Kitaplar sekmesinden ekle!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Add + Recent Entries -->
+      <div class="dashboard-grid">
+        <div class="card">
+          <div class="card-title">⚡ Hızlı Kayıt Ekle</div>
+          <form class="quick-add-form" id="quickAddForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entryDate">Tarih</label>
+                <input type="date" id="entryDate" required>
+              </div>
+              <div class="form-group">
+                <label for="entryBook">Kitap</label>
+                <select id="entryBook" required>
+                  <option value="">Kitap seç...</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entryPages">Sayfa Sayısı</label>
+                <input type="number" id="entryPages" min="0" max="500" placeholder="0" required>
+              </div>
+              <div class="form-group">
+                <label for="entryType">Gün Tipi</label>
+                <select id="entryType">
+                  <option value="calisma">📚 Çalışma Günü</option>
+                  <option value="nobet">🏥 Nöbet Günü</option>
+                  <option value="tatil">🌴 Tatil / Dinlenme</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="entryNote">Not (opsiyonel)</label>
+              <textarea id="entryNote" placeholder="Bugün hangi konuları çalıştın?" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitEntry">
+              ✨ Kaydet
+            </button>
+          </form>
+        </div>
+        <div class="card">
+          <div class="card-title">🕐 Son Kayıtlar</div>
+          <div class="entries-list" id="recentEntries">
+            <div class="empty-state">
+              <div class="empty-icon">📭</div>
+              <p>Henüz kayıt yok. İlk kaydını ekle!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== BOOKS ==================== -->
+    <section class="page" id="page-books">
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-title">➕ Yeni Kitap Ekle</div>
+        <form id="addBookForm" class="quick-add-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookName">Kitap Adı</label>
+              <input type="text" id="bookName" placeholder="ör: Anatomi" required>
+            </div>
+            <div class="form-group">
+              <label for="bookPages">Toplam Sayfa</label>
+              <input type="number" id="bookPages" min="1" max="5000" placeholder="500" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bookColor">Renk</label>
+            <div class="color-picker-row">
+              <button type="button" class="color-btn active" data-color="#7c5cfc" style="background:#7c5cfc"></button>
+              <button type="button" class="color-btn" data-color="#4f8cff" style="background:#4f8cff"></button>
+              <button type="button" class="color-btn" data-color="#38d9d9" style="background:#38d9d9"></button>
+              <button type="button" class="color-btn" data-color="#4ade80" style="background:#4ade80"></button>
+              <button type="button" class="color-btn" data-color="#fb923c" style="background:#fb923c"></button>
+              <button type="button" class="color-btn" data-color="#f472b6" style="background:#f472b6"></button>
+              <button type="button" class="color-btn" data-color="#f87171" style="background:#f87171"></button>
+              <button type="button" class="color-btn" data-color="#a78bfa" style="background:#a78bfa"></button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">📖 Kitap Ekle</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📚 Kitap Listesi</div>
+        <div class="book-summary" id="bookSummary">
+          <span>Toplam: <strong id="booksTotalPages">0</strong> sayfa</span>
+          <span>Tekrar ile: <strong id="booksWithReview">0</strong> sayfa</span>
+        </div>
+        <div id="booksList" class="books-list">
+          <div class="empty-state">
+            <div class="empty-icon">📚</div>
+            <p>Henüz kitap eklenmemiş.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOGS ==================== -->
+    <section class="page" id="page-logs">
+      <div class="card">
+        <div class="logs-header">
+          <h2>📝 Tüm Kayıtlar</h2>
+          <div class="filter-group">
+            <select id="filterBook">
+              <option value="all">Tüm Kitaplar</option>
+            </select>
+            <select id="filterType">
+              <option value="all">Tümü</option>
+              <option value="calisma">📚 Çalışma</option>
+              <option value="nobet">🏥 Nöbet</option>
+              <option value="tatil">🌴 Tatil</option>
+            </select>
+            <select id="filterMonth">
+              <option value="all">Tüm Aylar</option>
+            </select>
+          </div>
+        </div>
+        <div class="full-entries-list" id="allEntries">
+          <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <p>Henüz hiç kayıt eklenmemiş.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATISTICS ==================== -->
+    <section class="page" id="page-stats">
+
+      <div class="stats-page-grid">
+        <div class="card">
+          <div class="card-title">📊 Son 30 Gün</div>
+          <div class="chart-container">
+            <canvas id="dailyChart"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">📅 Aylık Özet</div>
+          <div class="chart-container">
+            <canvas id="monthlyChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-title">📚 Kitap Bazlı Dağılım</div>
+        <div class="chart-container">
+          <canvas id="bookChart"></canvas>
+        </div>
+      </div>
+
+      <div class="stats-page-grid">
+        <div class="card">
+          <div class="card-title">🔥 Çalışma Streak'i</div>
+          <div class="streak-display">
+            <span class="streak-fire">🔥</span>
+            <div>
+              <div class="streak-number" id="streakNumber">0</div>
+              <div class="streak-label">art arda çalışma günü</div>
+            </div>
+          </div>
+          <div style="margin-top:16px; font-size:0.85rem; color:var(--text-secondary);">
+            En uzun streak: <strong id="longestStreak">0</strong> gün
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">🏆 En İyi 5 Gün</div>
+          <div class="best-days" id="bestDays">
+            <div class="empty-state">
+              <p>Henüz veri yok</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios Table -->
+      <div class="card scenarios-section">
+        <h3>📋 Farklı Hızlara Göre Bitiş Senaryoları</h3>
+        <table class="scenarios-table">
+          <thead>
+            <tr>
+              <th>Günlük Sayfa</th>
+              <th>Toplam Çalışma Günü</th>
+              <th>Toplam Ay</th>
+              <th>Tahmini Bitiş</th>
+            </tr>
+          </thead>
+          <tbody id="scenariosBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== SETTINGS ==================== -->
+    <section class="page" id="page-settings">
+      <div class="card">
+        <div class="card-title">⚙️ Çalışma Parametreleri</div>
+        <div class="settings-grid">
+          <div class="settings-group">
+            <div class="setting-item">
+              <label for="settingReviewPercent">Tekrar Payı (%)</label>
+              <input type="number" id="settingReviewPercent" value="20" min="0" max="100">
+              <span class="setting-hint">Anlamama/tekrar için ekstra oran</span>
+            </div>
+            <div class="setting-item">
+              <label for="settingDailyGoal">Günlük Hedef (sayfa)</label>
+              <input type="number" id="settingDailyGoal" value="100" min="1">
+              <span class="setting-hint">Aktif çalışma günlerinde hedef</span>
+            </div>
+          </div>
+          <div class="settings-group">
+            <div class="setting-item">
+              <label for="settingShiftDays">Aylık Nöbet Günü</label>
+              <input type="number" id="settingShiftDays" value="8" min="0" max="30">
+              <span class="setting-hint">Ayda kaç gün nöbet tutuluyor</span>
+            </div>
+            <div class="setting-item">
+              <label for="settingRestDays">Aylık Dinlenme Günü</label>
+              <input type="number" id="settingRestDays" value="3" min="0" max="30">
+              <span class="setting-hint">Ekstra tatil/dinlenme günü</span>
+            </div>
+            <div class="setting-item">
+              <label for="settingStudentName">İsim</label>
+              <input type="text" id="settingStudentName" value="" placeholder="İlay">
+              <span class="setting-hint">Motivasyon mesajlarında kullanılır</span>
+            </div>
+          </div>
+        </div>
+        <div class="settings-actions">
+          <button class="btn btn-primary" id="saveSettings">💾 Ayarları Kaydet</button>
+        </div>
+      </div>
+
+      <div class="card data-section" style="margin-top:16px;">
+        <h3>🗂️ Veri Yönetimi</h3>
+        <div class="data-actions">
+          <button class="btn btn-ghost" id="exportData">📤 Verileri Dışa Aktar (JSON)</button>
+          <button class="btn btn-ghost" id="importDataBtn">📥 Verileri İçe Aktar</button>
+          <input type="file" id="importDataFile" accept=".json" style="display:none;">
+          <button class="btn btn-danger btn-sm" id="clearData">🗑️ Tüm Verileri Sil</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Edit Modal -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <h3>✏️ Kaydı Düzenle</h3>
+      <form id="editForm">
+        <input type="hidden" id="editIndex">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="editDate">Tarih</label>
+            <input type="date" id="editDate" required>
+          </div>
+          <div class="form-group">
+            <label for="editBook">Kitap</label>
+            <select id="editBook"></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="editPages">Sayfa</label>
+            <input type="number" id="editPages" min="0" max="500" required>
+          </div>
+          <div class="form-group">
+            <label for="editType">Gün Tipi</label>
+            <select id="editType">
+              <option value="calisma">📚 Çalışma Günü</option>
+              <option value="nobet">🏥 Nöbet Günü</option>
+              <option value="tatil">🌴 Tatil / Dinlenme</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top:12px">
+          <label for="editNote">Not</label>
+          <textarea id="editNote" rows="2"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="cancelEdit">İptal</button>
+          <button type="submit" class="btn btn-primary">💾 Güncelle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
