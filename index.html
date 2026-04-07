@@ -15,6 +15,7 @@
     <span class="quote-emoji">💪</span>
     <span id="motivationText">Her sayfa seni hedefe bir adım daha yaklaştırıyor!</span>
     <span class="quote-emoji">🎯</span>
+    <span id="syncStatus"></span>
   </div>
 
   <!-- Navbar -->
@@ -41,6 +42,12 @@
           <button class="nav-tab" data-page="logs" id="nav-logs">
             <span class="tab-icon">📝</span>
             <span class="tab-text">Kayıtlar</span>
+          </button>
+        </li>
+        <li>
+          <button class="nav-tab" data-page="weekly" id="nav-weekly">
+            <span class="tab-icon">📅</span>
+            <span class="tab-text">Haftalık</span>
           </button>
         </li>
         <li>
@@ -248,6 +255,66 @@
       </div>
     </section>
 
+    <!-- ==================== WEEKLY REPORT ==================== -->
+    <section class="page" id="page-weekly">
+      <div class="card" style="margin-bottom:24px">
+        <div class="weekly-header">
+          <button class="btn btn-ghost btn-sm" id="prevWeek">← Önceki</button>
+          <h2 id="weekTitle">📅 Bu Hafta</h2>
+          <button class="btn btn-ghost btn-sm" id="nextWeek">Sonraki →</button>
+        </div>
+        <div class="weekly-date-range" id="weekRange"></div>
+      </div>
+
+      <!-- Weekly Stats -->
+      <div class="stats-grid" style="margin-bottom:24px">
+        <div class="card stat-card">
+          <span class="stat-icon">📖</span>
+          <div class="card-title">Haftalık Toplam</div>
+          <div class="card-value gradient-text" id="weeklyTotal">0</div>
+          <div class="card-subtitle">sayfa okundu</div>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-icon">📅</span>
+          <div class="card-title">Günlük Ortalama</div>
+          <div class="card-value" id="weeklyAvg">0</div>
+          <div class="card-subtitle">sayfa/gün</div>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-icon">📚</span>
+          <div class="card-title">Çalışılan Gün</div>
+          <div class="card-value" id="weeklyDays">0</div>
+          <div class="card-subtitle">/ 7 gün</div>
+        </div>
+        <div class="card stat-card">
+          <span class="stat-icon">🎯</span>
+          <div class="card-title">Hedefe Ulaşma</div>
+          <div class="card-value" id="weeklyGoalPercent">0%</div>
+          <div class="card-subtitle" id="weeklyGoalSub">hedef: 0 sayfa</div>
+        </div>
+      </div>
+
+      <!-- Weekly Chart -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-title">📊 Günlük Dağılım</div>
+        <div class="chart-container">
+          <canvas id="weeklyChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Weekly Book Breakdown -->
+      <div class="card" style="margin-bottom:24px">
+        <div class="card-title">📚 Kitap Dağılımı (Bu Hafta)</div>
+        <div id="weeklyBookBreakdown"></div>
+      </div>
+
+      <!-- Weekly Day Details -->
+      <div class="card">
+        <div class="card-title">📋 Gün Gün Detay</div>
+        <div id="weeklyDayDetails"></div>
+      </div>
+    </section>
+
     <!-- ==================== STATISTICS ==================== -->
     <section class="page" id="page-stats">
 
@@ -351,6 +418,7 @@
         </div>
         <div class="settings-actions">
           <button class="btn btn-primary" id="saveSettings">💾 Ayarları Kaydet</button>
+          <button class="btn btn-ghost" id="syncNow">🔄 Firebase Senkronize Et</button>
         </div>
       </div>
 
@@ -412,6 +480,7 @@
     </div>
   </div>
 
+  <script src="firebase-sync.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

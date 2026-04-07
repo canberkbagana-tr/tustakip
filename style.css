@@ -1184,8 +1184,146 @@ body::before {
   color: var(--text-secondary);
   font-style: italic;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
 .motivation-bar .quote-emoji {
   margin: 0 4px;
+}
+
+/* ===== Sync Badge ===== */
+.sync-badge {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.sync-online {
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--accent-green);
+}
+
+.sync-offline {
+  background: rgba(248, 113, 113, 0.15);
+  color: var(--accent-red);
+}
+
+/* ===== Weekly Report ===== */
+.weekly-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.weekly-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.weekly-date-range {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.weekly-day-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(20, 20, 50, 0.4);
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+  border-left: 3px solid transparent;
+  transition: var(--transition);
+}
+
+.weekly-day-card:hover {
+  background: rgba(30, 30, 60, 0.5);
+}
+
+.weekly-day-card.has-data {
+  border-left-color: var(--accent-green);
+}
+
+.weekly-day-card.no-data {
+  border-left-color: var(--border-color);
+  opacity: 0.6;
+}
+
+.weekly-day-name {
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.weekly-day-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  min-width: 80px;
+}
+
+.weekly-day-pages {
+  font-weight: 700;
+  min-width: 80px;
+  text-align: right;
+}
+
+.weekly-day-books {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.weekly-book-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(120, 100, 255, 0.06);
+}
+
+.weekly-book-bar:last-child {
+  border-bottom: none;
+}
+
+.weekly-book-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.weekly-book-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.weekly-book-fill-wrap {
+  flex: 1;
+  height: 8px;
+  background: rgba(20, 20, 50, 0.8);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.weekly-book-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.weekly-book-pages {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  min-width: 70px;
+  text-align: right;
 }
