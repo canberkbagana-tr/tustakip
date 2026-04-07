@@ -145,10 +145,10 @@
         tab.classList.add('active');
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         document.getElementById(`page-${page}`).classList.add('active');
-        if (page === 'stats') renderStats();
+        if (page === 'stats') setTimeout(renderStats, 50);
         if (page === 'logs') renderAllEntries();
         if (page === 'books') renderBooksList();
-        if (page === 'weekly') renderWeeklyReport();
+        if (page === 'weekly') setTimeout(renderWeeklyReport, 50);
       });
     });
   }
@@ -355,36 +355,40 @@
   }
 
   function renderWeeklyReport() {
-    const weekDates = getWeekDates(currentWeekOffset);
-    const startDate = weekDates[0], endDate = weekDates[6];
+    try {
+      const weekDates = getWeekDates(currentWeekOffset);
+      const startDate = weekDates[0], endDate = weekDates[6];
 
-    // Title
-    const isThisWeek = currentWeekOffset === 0;
-    document.getElementById('weekTitle').textContent = isThisWeek ? '📅 Bu Hafta' : `📅 ${formatDate(startDate)} Haftası`;
-    document.getElementById('weekRange').textContent = `${formatFullDate(startDate)} — ${formatFullDate(endDate)}`;
+      // Title
+      const isThisWeek = currentWeekOffset === 0;
+      document.getElementById('weekTitle').textContent = isThisWeek ? '📅 Bu Hafta' : `📅 ${formatDate(startDate)} Haftası`;
+      document.getElementById('weekRange').textContent = `${formatFullDate(startDate)} — ${formatFullDate(endDate)}`;
 
-    // Get entries for this week
-    const weekEntries = entries.filter(e => e.date >= startDate && e.date <= endDate);
-    const totalPages = weekEntries.reduce((s, e) => s + (e.pages || 0), 0);
-    const workDays = new Set(weekEntries.filter(e => e.pages > 0).map(e => e.date)).size;
-    const weeklyGoal = settings.dailyGoal * 7;
-    const goalPct = weeklyGoal > 0 ? Math.min(100, (totalPages / weeklyGoal) * 100) : 0;
+      // Get entries for this week
+      const weekEntries = entries.filter(e => e.date >= startDate && e.date <= endDate);
+      const totalPages = weekEntries.reduce((s, e) => s + (e.pages || 0), 0);
+      const workDays = new Set(weekEntries.filter(e => e.pages > 0).map(e => e.date)).size;
+      const weeklyGoal = settings.dailyGoal * 7;
+      const goalPct = weeklyGoal > 0 ? Math.min(100, (totalPages / weeklyGoal) * 100) : 0;
 
-    // Stats
-    document.getElementById('weeklyTotal').textContent = totalPages;
-    document.getElementById('weeklyAvg').textContent = workDays > 0 ? Math.round(totalPages / workDays) : 0;
-    document.getElementById('weeklyDays').textContent = workDays;
-    document.getElementById('weeklyGoalPercent').textContent = goalPct.toFixed(0) + '%';
-    document.getElementById('weeklyGoalSub').textContent = `hedef: ${weeklyGoal} sayfa`;
+      // Stats
+      document.getElementById('weeklyTotal').textContent = totalPages;
+      document.getElementById('weeklyAvg').textContent = workDays > 0 ? Math.round(totalPages / workDays) : 0;
+      document.getElementById('weeklyDays').textContent = workDays;
+      document.getElementById('weeklyGoalPercent').textContent = goalPct.toFixed(0) + '%';
+      document.getElementById('weeklyGoalSub').textContent = `hedef: ${weeklyGoal} sayfa`;
 
-    // Chart
-    renderWeeklyChart(weekDates, weekEntries);
+      // Chart
+      renderWeeklyChart(weekDates, weekEntries);
 
-    // Book breakdown
-    renderWeeklyBookBreakdown(weekEntries);
+      // Book breakdown
+      renderWeeklyBookBreakdown(weekEntries);
 
-    // Day details
-    renderWeeklyDayDetails(weekDates, weekEntries);
+      // Day details
+      renderWeeklyDayDetails(weekDates, weekEntries);
+    } catch (err) {
+      console.error('Haftalik rapor hatasi:', err);
+    }
   }
 
   function renderWeeklyChart(weekDates, weekEntries) {
@@ -653,7 +657,10 @@
     loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updateMotivation();
 
     // Firebase: load from cloud on startup
-    syncFromFirebase();
+    syncFromFirebase().then(() => updateSyncStatus());
+
+    // Initial sync badge
+    setTimeout(updateSyncStatus, 2000);
 
     // Auto-sync every 30 seconds
     setInterval(async () => {
