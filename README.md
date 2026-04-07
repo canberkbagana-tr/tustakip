@@ -1,0 +1,2 @@
+# tustakip
+manitsal tussal takipsel
