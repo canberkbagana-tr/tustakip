@@ -152,7 +152,7 @@
                 <label for="entryType">Gün Tipi</label>
                 <select id="entryType">
                   <option value="calisma">📚 Çalışma Günü</option>
-                  <option value="nobet">🏥 Nöbet Günü</option>
+                  <option value="nobet">🏢 Mesai / Yoğun Gün</option>
                   <option value="tatil">🌴 Tatil / Dinlenme</option>
                 </select>
               </div>
@@ -250,7 +250,7 @@
             <select id="filterType">
               <option value="all">Tümü</option>
               <option value="calisma">📚 Çalışma</option>
-              <option value="nobet">🏥 Nöbet</option>
+              <option value="nobet">🏢 Mesai / Yoğun</option>
               <option value="tatil">🌴 Tatil</option>
             </select>
             <select id="filterMonth">
@@ -412,14 +412,9 @@
           </div>
           <div class="settings-group">
             <div class="setting-item">
-              <label for="settingShiftDays">Aylık Nöbet Günü</label>
-              <input type="number" id="settingShiftDays" value="8" min="0" max="30">
-              <span class="setting-hint">Ayda kaç gün nöbet tutuluyor</span>
-            </div>
-            <div class="setting-item">
-              <label for="settingRestDays">Aylık Dinlenme Günü</label>
-              <input type="number" id="settingRestDays" value="3" min="0" max="30">
-              <span class="setting-hint">Ekstra tatil/dinlenme günü</span>
+              <label for="settingOffDays">Aylık İzin / Boş Gün</label>
+              <input type="number" id="settingOffDays" value="8" min="0" max="30">
+              <span class="setting-hint">Hafta sonları veya çalışılmayan günler</span>
             </div>
             <div class="setting-item">
               <label for="settingStudentName">İsim</label>
@@ -475,7 +470,7 @@
             <label for="editType">Gün Tipi</label>
             <select id="editType">
               <option value="calisma">📚 Çalışma Günü</option>
-              <option value="nobet">🏥 Nöbet Günü</option>
+              <option value="nobet">🏢 Mesai / Yoğun Gün</option>
               <option value="tatil">🌴 Tatil / Dinlenme</option>
             </select>
           </div>

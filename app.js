@@ -13,8 +13,7 @@
   const DEFAULT_SETTINGS = {
     reviewPercent: 20,
     dailyGoal: 100,
-    shiftDays: 8,
-    restDays: 3,
+    offDays: 8,
     studentName: ''
   };
 
@@ -38,7 +37,7 @@
 
   const TYPE_LABELS = {
     calisma: { text: 'Çalışma', emoji: '📚' },
-    nobet: { text: 'Nöbet', emoji: '🏥' },
+    nobet: { text: 'Mesai / Yoğun', emoji: '🏢' },
     tatil: { text: 'Tatil', emoji: '🌴' }
   };
 
@@ -63,7 +62,15 @@
       const sb = localStorage.getItem(STORAGE_KEYS.books);
       if (sb) books = JSON.parse(sb);
       const ss = localStorage.getItem(STORAGE_KEYS.settings);
-      if (ss) settings = { ...DEFAULT_SETTINGS, ...JSON.parse(ss) };
+      if (ss) {
+        let parsed = JSON.parse(ss);
+        if (parsed.shiftDays !== undefined || parsed.restDays !== undefined) {
+          parsed.offDays = (parsed.shiftDays || 0) + (parsed.restDays || 0);
+          delete parsed.shiftDays;
+          delete parsed.restDays;
+        }
+        settings = { ...DEFAULT_SETTINGS, ...parsed };
+      }
     } catch (e) { console.error('Veri yükleme hatası:', e); }
   }
 
@@ -77,7 +84,7 @@
   function getTotalRead() { return entries.reduce((s, e) => s + (e.pages || 0), 0); }
   function getBookRead(bookId) { return entries.filter(e => e.bookId === bookId).reduce((s, e) => s + (e.pages || 0), 0); }
   function getBookById(bookId) { return books.find(b => b.id === bookId); }
-  function getWorkingDaysPerMonth() { return 30 - settings.shiftDays - settings.restDays; }
+  function getWorkingDaysPerMonth() { return 30 - settings.offDays; }
   function getWorkingEntries() { return entries.filter(e => e.type === 'calisma' && e.pages > 0); }
 
   function formatDate(dateStr) {
@@ -113,7 +120,16 @@
     if (data) {
       if (data.entries && Array.isArray(data.entries)) { entries = data.entries; saveEntries(); }
       if (data.books && Array.isArray(data.books)) { books = data.books; saveBooks(); }
-      if (data.settings) { settings = { ...DEFAULT_SETTINGS, ...data.settings }; saveSettings(); }
+      if (data.settings) {
+        let parsed = data.settings;
+        if (parsed.shiftDays !== undefined || parsed.restDays !== undefined) {
+          parsed.offDays = (parsed.shiftDays || 0) + (parsed.restDays || 0);
+          delete parsed.shiftDays;
+          delete parsed.restDays;
+        }
+        settings = { ...DEFAULT_SETTINGS, ...parsed };
+        saveSettings();
+      }
       loadSettingsToUI();
       populateBookSelectors();
       updateDashboard();
@@ -534,16 +550,14 @@
   function loadSettingsToUI() {
     document.getElementById('settingReviewPercent').value = settings.reviewPercent;
     document.getElementById('settingDailyGoal').value = settings.dailyGoal;
-    document.getElementById('settingShiftDays').value = settings.shiftDays;
-    document.getElementById('settingRestDays').value = settings.restDays;
+    document.getElementById('settingOffDays').value = settings.offDays;
     document.getElementById('settingStudentName').value = settings.studentName || '';
   }
 
   function saveSettingsFromUI() {
     settings.reviewPercent = parseInt(document.getElementById('settingReviewPercent').value) || 0;
     settings.dailyGoal = parseInt(document.getElementById('settingDailyGoal').value) || DEFAULT_SETTINGS.dailyGoal;
-    settings.shiftDays = parseInt(document.getElementById('settingShiftDays').value) || 0;
-    settings.restDays = parseInt(document.getElementById('settingRestDays').value) || 0;
+    settings.offDays = parseInt(document.getElementById('settingOffDays').value) || 0;
     settings.studentName = document.getElementById('settingStudentName').value.trim();
     saveSettings(); syncToFirebase(); updateDashboard(); renderBooksList(); updateMotivation();
     showToast('Ayarlar kaydedildi! ⚙️');
@@ -563,7 +577,17 @@
         const d = JSON.parse(e.target.result);
         if (d.entries) { entries = d.entries; saveEntries(); }
         if (d.books) { books = d.books; saveBooks(); }
-        if (d.settings) { settings = { ...DEFAULT_SETTINGS, ...d.settings }; saveSettings(); loadSettingsToUI(); }
+        if (d.settings) {
+          let parsed = d.settings;
+          if (parsed.shiftDays !== undefined || parsed.restDays !== undefined) {
+            parsed.offDays = (parsed.shiftDays || 0) + (parsed.restDays || 0);
+            delete parsed.shiftDays;
+            delete parsed.restDays;
+          }
+          settings = { ...DEFAULT_SETTINGS, ...parsed };
+          saveSettings();
+          loadSettingsToUI();
+        }
         syncToFirebase(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter();
         showToast('Veriler içe aktarıldı! 📥');
       } catch { showToast('Dosya okunamadı! ❌', 'error'); }
