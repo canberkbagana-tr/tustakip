@@ -1327,3 +1327,67 @@ body::before {
   min-width: 70px;
   text-align: right;
 }
+
+/* Floating Partner Note */
+.floating-note {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  color: #a01045;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 10px 25px rgba(255, 154, 158, 0.4), 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  max-width: 80vw;
+  z-index: 1000;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.floating-note:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.floating-note.hide {
+  opacity: 0;
+  pointer-events: none;
+  bottom: -50px;
+}
+
+.floating-note .note-header {
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed rgba(160, 16, 69, 0.3);
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floating-note .note-content {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.floating-note .note-close {
+  background: none;
+  border: none;
+  color: #a01045;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.floating-note .note-close:hover {
+  opacity: 1;
+}

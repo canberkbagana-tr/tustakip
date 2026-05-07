@@ -421,6 +421,11 @@
               <input type="text" id="settingStudentName" value="" placeholder="İlay">
               <span class="setting-hint">Motivasyon mesajlarında kullanılır</span>
             </div>
+            <div class="setting-item" style="margin-top:12px;">
+              <label for="settingPartnerNote">💌 İlay'a Özel Not</label>
+              <textarea id="settingPartnerNote" rows="3" placeholder="Bugün harikasın sevgilim, pes etme!"></textarea>
+              <span class="setting-hint">Ekranın kenarında ona pop-up olarak görünür. Gizlemek için silin.</span>
+            </div>
           </div>
         </div>
         <div class="settings-actions">
@@ -485,6 +490,13 @@
         </div>
       </form>
     </div>
+  </div>
+
+  <!-- Floating Partner Note -->
+  <div class="floating-note" id="floatingNote" style="display:none;">
+    <div class="note-header">💌 Sana Özel</div>
+    <div class="note-content" id="floatingNoteContent"></div>
+    <button class="note-close" id="floatingNoteClose" title="Gizle">×</button>
   </div>
 
   <script src="firebase-sync.js"></script>

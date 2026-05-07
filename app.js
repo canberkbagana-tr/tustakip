@@ -14,7 +14,8 @@
     reviewPercent: 20,
     dailyGoal: 100,
     offDays: 8,
-    studentName: ''
+    studentName: '',
+    partnerNote: ''
   };
 
   const MOTIVATIONAL_QUOTES = [
@@ -135,6 +136,7 @@
       updateDashboard();
       renderBooksList();
       populateMonthFilter();
+      updatePartnerNote();
     }
     updateSyncStatus();
   }
@@ -552,6 +554,7 @@
     const elDG = document.getElementById('settingDailyGoal'); if (elDG) elDG.value = settings.dailyGoal;
     const elOD = document.getElementById('settingOffDays'); if (elOD) elOD.value = settings.offDays;
     const elSN = document.getElementById('settingStudentName'); if (elSN) elSN.value = settings.studentName || '';
+    const elPN = document.getElementById('settingPartnerNote'); if (elPN) elPN.value = settings.partnerNote || '';
   }
 
   function saveSettingsFromUI() {
@@ -559,8 +562,22 @@
     const elDG = document.getElementById('settingDailyGoal'); if (elDG) settings.dailyGoal = parseInt(elDG.value) || DEFAULT_SETTINGS.dailyGoal;
     const elOD = document.getElementById('settingOffDays'); if (elOD) settings.offDays = parseInt(elOD.value) || 0;
     const elSN = document.getElementById('settingStudentName'); if (elSN) settings.studentName = elSN.value.trim();
-    saveSettings(); syncToFirebase(); updateDashboard(); renderBooksList(); updateMotivation();
+    const elPN = document.getElementById('settingPartnerNote'); if (elPN) settings.partnerNote = elPN.value.trim();
+    saveSettings(); syncToFirebase(); updateDashboard(); renderBooksList(); updateMotivation(); updatePartnerNote();
     showToast('Ayarlar kaydedildi! ⚙️');
+  }
+
+  function updatePartnerNote() {
+    const fn = document.getElementById('floatingNote');
+    const fnc = document.getElementById('floatingNoteContent');
+    if (!fn || !fnc) return;
+    if (settings.partnerNote && settings.partnerNote.trim() !== '') {
+      fnc.textContent = settings.partnerNote;
+      fn.style.display = 'block';
+      fn.classList.remove('hide');
+    } else {
+      fn.style.display = 'none';
+    }
   }
 
   // ===== Data Import/Export =====
@@ -588,7 +605,7 @@
           saveSettings();
           loadSettingsToUI();
         }
-        syncToFirebase(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter();
+        syncToFirebase(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updatePartnerNote();
         showToast('Veriler içe aktarıldı! 📥');
       } catch { showToast('Dosya okunamadı! ❌', 'error'); }
     };
@@ -600,7 +617,7 @@
     if (!confirm('Son onay: Gerçekten silinsin mi?')) return;
     entries = []; books = []; settings = { ...DEFAULT_SETTINGS };
     saveEntries(); saveBooks(); saveSettings(); syncToFirebase();
-    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter();
+    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updatePartnerNote();
     showToast('Tüm veriler silindi 🗑️', 'info');
   }
 
@@ -678,7 +695,7 @@
     document.getElementById('clearData').addEventListener('click', clearAllData);
 
     // Load UI
-    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updateMotivation();
+    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updateMotivation(); updatePartnerNote();
 
     // Firebase: load from cloud on startup
     syncFromFirebase().then(() => updateSyncStatus());
@@ -695,6 +712,14 @@
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) syncFromFirebase();
     });
+
+    // Close partner note
+    const closeNoteBtn = document.getElementById('floatingNoteClose');
+    if (closeNoteBtn) {
+      closeNoteBtn.addEventListener('click', () => {
+        document.getElementById('floatingNote').classList.add('hide');
+      });
+    }
   }
 
   // Public API
