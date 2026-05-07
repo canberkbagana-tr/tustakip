@@ -548,17 +548,17 @@
 
   // ===== Settings =====
   function loadSettingsToUI() {
-    document.getElementById('settingReviewPercent').value = settings.reviewPercent;
-    document.getElementById('settingDailyGoal').value = settings.dailyGoal;
-    document.getElementById('settingOffDays').value = settings.offDays;
-    document.getElementById('settingStudentName').value = settings.studentName || '';
+    const elRP = document.getElementById('settingReviewPercent'); if (elRP) elRP.value = settings.reviewPercent;
+    const elDG = document.getElementById('settingDailyGoal'); if (elDG) elDG.value = settings.dailyGoal;
+    const elOD = document.getElementById('settingOffDays'); if (elOD) elOD.value = settings.offDays;
+    const elSN = document.getElementById('settingStudentName'); if (elSN) elSN.value = settings.studentName || '';
   }
 
   function saveSettingsFromUI() {
-    settings.reviewPercent = parseInt(document.getElementById('settingReviewPercent').value) || 0;
-    settings.dailyGoal = parseInt(document.getElementById('settingDailyGoal').value) || DEFAULT_SETTINGS.dailyGoal;
-    settings.offDays = parseInt(document.getElementById('settingOffDays').value) || 0;
-    settings.studentName = document.getElementById('settingStudentName').value.trim();
+    const elRP = document.getElementById('settingReviewPercent'); if (elRP) settings.reviewPercent = parseInt(elRP.value) || 0;
+    const elDG = document.getElementById('settingDailyGoal'); if (elDG) settings.dailyGoal = parseInt(elDG.value) || DEFAULT_SETTINGS.dailyGoal;
+    const elOD = document.getElementById('settingOffDays'); if (elOD) settings.offDays = parseInt(elOD.value) || 0;
+    const elSN = document.getElementById('settingStudentName'); if (elSN) settings.studentName = elSN.value.trim();
     saveSettings(); syncToFirebase(); updateDashboard(); renderBooksList(); updateMotivation();
     showToast('Ayarlar kaydedildi! ⚙️');
   }
