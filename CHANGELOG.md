@@ -4,6 +4,26 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## [v3.3.0] - 2026-08-25
+### ✨ Yeni Özellikler
+- **📋 Notlar & Görevler (Checklist & Notes) Sayfası:**
+  - Yeni navbar sekmesi `📋 Notlar` eklendi.
+  - Görev ekleme, tamamlama, silme ve filtreleme (Tümü / Bekleyen / Tamamlanan).
+  - Kitaplardan otomatik tag seçimi ve serbest özel etiket ekleme desteği.
+  - **Sürükle-Bırak (Drag & Drop):** Görevleri istenen sırada manuel düzenleyebilme.
+  - **İlerleme Halkası (Progress Ring):** Tamamlanan/toplam görev oranı ve haftalık tamamlanan görev istatistikleri.
+  - **Aylık Mini Takvim:** Görevli günlerde renkli durum noktaları, tarihe tıklayarak günün görevlerini filtreleme.
+  - **📝 Hızlı Not Alanı:** Serbest not defteri ve tek tıkla kaydetme.
+- **🗂️ Dashboard Açılır-Kapanır (Collapsible) Akordeon Paneller:**
+  - `📚 Kitap Bazlı İlerleme` ve `📋 Görevlerim` bölümleri akordeon şeklinde açılıp kapanabilir hale getirildi.
+  - Panel başlıklarında anlık durum rozetleri (`X kitap • %Y`, `X bekliyor`).
+  - Dashboard üzerinden Notlar sayfasına geçmeden doğrudan görev tamamlama checkbox desteği.
+  - Gecikmiş görevler için kırmızı `⚠️` uyarı gösterimi.
+- **🔄 Firebase Senkronizasyonu Genişletildi:**
+  - Görevler (`tasks`) ve hızlı not (`quickNote`) gerçek zamanlı bulut eşitlemesine dahil edildi.
+
+---
+
 ## [v3.2.0] - 2026-08-25
 ### ✨ Yeni Özellikler
 - **⏳ 2027 Mart TUS Sınav Geri Sayımı:** 

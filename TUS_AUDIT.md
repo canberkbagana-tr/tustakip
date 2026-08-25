@@ -26,151 +26,106 @@ TUS, ~25 branş × yüzlerce konu içeren devasa bir müfredattır. Başarı 3 p
 | Haftalık rapor | ✅ |
 | 2027 TUS gün sayacı | ✅ |
 | Firebase senkronizasyon | ✅ |
-| Notlar & Görev listesi | ✅ (yeni) |
-| Aralıklı tekrar / tekrar takibi | ❌ |
-| Deneme sınavı net takibi | ❌ |
-| Pomodoro / odak zamanlayıcı | ❌ |
+| Notlar & Görev listesi | ✅ |
+| Dashboard açılır-kapanır paneller | ✅ |
+| Streak sayısı | ✅ |
+| Aralıklı tekrar / tekrar takibi (1./2./3. tekrar) | ❌ |
+| Deneme sınavı net takibi & analizi | ❌ |
 | Konu/alt başlık tamamlama | ❌ |
-| Streak (çalışma serisi) | ❌ |
 | Yanlış soru / zayıf konu analizi | ❌ |
-| Motivasyon / puan tahmini | ❌ |
+| TUS puanı / net tahmini | ❌ |
 
 ---
 
 ## 🚨 Kritik Eksikler (Yüksek Öncelik)
 
-### 1. 🔁 Tekrar Takip Sistemi — EN KRİTİK
-> TUS'ta en sık sorulan şey: "Bu konuya kaçıncı tekrarı yaptım?"
+### 1. 🔁 Tekrar Takip Sistemi (1. / 2. / 3. Tekrar) — EN KRİTİK
+> TUS'ta en sık sorulan soru: "Bu kitabı/konuyu kaçıncı kez dönüyorum?"
 
-**Problem:** Şu an sadece "okuduğum sayfalar" takip ediliyor. Ama **1. tekrar**, **2. tekrar**, **3. tekrar** kavramı yok. Bir kitabı 3 kez geçmek ile 1 kez geçmek aynı görünüyor.
+**Problem:** Şu an sadece "okunan sayfa sayısı" toplanıyor. Ancak TUS pedagojisinde bir kitabı ilk kez okumak (1. tur) ile hızlı pekiştirme (2. veya 3. tekrar) çok farklıdır. Kaçıncı tekrarda olunduğu bilinmeden genel hazırlık seviyesi ölçülemez.
 
 **Ne olmalı:**
-- Her kayıta "kaçıncı tekrar?" bilgisi eklenmeli (1/2/3/4)
-- Bir kitabın kaç kez geçildiği görünmeli
-- Konu bazlı "Bu konuya ne zaman baktım, ne zaman bakmam gerekiyor?" takibi
-- Aralıklı tekrar takvimi: Konuyu bitirince → 3 gün sonra tekrar, 7 gün sonra tekrar gibi otomatik hatırlatma
+- Kayıt eklerken veya kitap bazında "Tekrar No" (1. Tur / 2. Tekrar / 3. Tekrar vb.) seçilebilmeli.
+- Kitap bazında kaçıncı tekrarın hangi tarihte bittiği gösterilmeli.
+- Konu bazlı aralıklı tekrar (Spaced Repetition) takvimi: Bir konu bitince 3. gün, 7. gün ve 21. gün için otomatik tekrar hatırlatıcısı.
 
 ```
 Örnek görünüm:
-Patoloji Bölüm 1 - İnflamasyon
-✅ 1. Tekrar: 12 Ağu | ✅ 2. Tekrar: 16 Ağu | ⏰ 3. Tekrar: 23 Ağu (BUGÜN!)
+Patoloji: 1. Tur (Tamamlandı - 12 Ağu) ➔ 2. Tekrar (%45 - Devam ediyor)
 ```
 
 ---
 
-### 2. 📝 Deneme Sınavı Net Takibi
-> TUS'çuların haftalık denemeleri var, bunun gittiği yer yok.
+### 2. 📝 Deneme Sınavı Net Takibi & Trend Analizi
+> TUS başarısının gerçek pusulası deneme netleridir.
 
-**Problem:** Şu an "kaç sayfa okuduk" var ama "denemede kaç net yaptık" yok.
-
-**Ne olmalı:**
-- "Deneme Ekle" butonu → Tarih, hangi deneme, branş bazlı D/Y/B (doğru/yanlış/boş)
-- Net = D - (Y/4) formülü otomatik hesaplansın
-- Branş bazlı trend grafiği: "Fizyolojim her denemede artıyor, Patolojim düşüyor"
-- TUS puan tahmini (T puanı / K puanı yaklaşık hesabı)
-
----
-
-### 3. ⏱️ Pomodoro / Odak Zamanlayıcı
-> TUS'çular genellikle 25-50 dakika odak, 10 dakika mola döngüsüyle çalışır.
-
-**Problem:** Şu an "kaç sayfa" var ama "kaç dakika çalıştım" takip edilmiyor. Sayfa hızlı okunabilir ama verimli mi? Belli değil.
+**Problem:** Sadece sayfa takibi yapmak, çalışmanın soruya yansıyıp yansımadığını göstermez. Denemelerin takibi için şu an yer yok.
 
 **Ne olmalı:**
-- Dashboard'da veya ayrı sekmede Pomodoro timer
-- 25/50 dakika ayarlanabilir odak süresi
-- "Bugün X pomodoro tamamladın" istatistiği
-- Günlük toplam çalışma süresi
+- "Deneme Sınavı Ekle" modülü: Temel Tıp ve Klinik Tıp branşları için Doğru/Yanlış/Boş girişi.
+- Otomatik Net Hesabı: `Net = Doğru - (Yanlış / 4)`.
+- Branş bazlı başarı analizi (Örn: "Dahiliye netlerin yükselişte, Mikrobiyoloji düşüşte").
+- Deneme net gelişim grafiği (zaman içindeki net artış eğrisi).
+- Yaklaşık TUS Puanı / Sıralama projeksiyonu.
 
 ---
 
 ## ⚠️ Orta Öncelikli İyileştirmeler
 
-### 4. 📚 Konu/Alt Başlık Takibi
-**Problem:** Şu an sadece "Patoloji - 50 sayfa" gibi genel giriş var. Ama "Patoloji → Hücre Hasarı → Apoptozis" gibi alt konu bazında "bitti/yarısı/okunmadı" takibi yok.
+### 3. 📚 Konu ve Alt Başlık Takibi (Checklist Mantığı)
+**Problem:** Sadece "Patoloji - 50 sayfa" yazmak yerine hangi klinik/temel alt başlıkların tamamlandığı bilinmelidir.
 
 **Ne olmalı:**
-- Her kitaba alt konular eklenebilsin (Bölüm 1, Bölüm 2...)
-- Her bölüm için tamamlanma durumu: `⬜ Okunmadı → 🟡 Okunuyor → ✅ Tamam → 🔁 Tekrarda`
-- Bölüm bazlı ilerleme çubuğu
+- Kitapların altına standart TUS konu başlıkları (örn: Biyokimya ➔ Enzimler, Lipid Metabolizması vb.) eklenebilmeli.
+- Her konu için durum: `⬜ Çalışılmadı ➔ 🟡 Çalışılıyor ➔ ✅ 1. Tekrar Bitti ➔ 🔁 Tekrarda`.
 
 ---
 
-### 5. 🔥 Streak (Çalışma Serisi) Sistemi
-**Problem:** "Bu ay 18 gün çalıştım ama 5 gün boş geçirdim" bilgisi yok.
+### 4. ❌ Yanlış Soru / Spot Bilgi Defteri
+**Problem:** TUS'ta en çok puan kazandıran yöntem, denemelerde ve soru bankalarında yapılan yanlışların analiz edilmesidir.
 
 **Ne olmalı:**
-- Streak takvimi: Her gün çalışıldı mı? (GitHub contribution graph gibi)
-- Mevcut streak sayısı: "🔥 12 günlük seri!"
-- En uzun streak rekoru
-- Streak kırılma uyarısı
+- Yanlış yapılan soruların veya unutulan hap/spot bilgilerin branş bazlı hızlıca not alınabilmesi.
+- Bu spot bilgilerin haftalık veya sınav öncesi hızlı gözden geçirme listesi olarak filtrelenebilmesi.
 
 ---
 
-### 6. ❌ Yanlış Soru Defteri
-**Problem:** TUS'ta kritik olan "yanlış yaptığın soruyu anlamak". Bunu kaydetmek için yer yok.
+### 5. 📊 Hedef vs. Gerçek Analizi & Akıllı Planlama
+**Problem:** Sınava kalan gün sayısı ile kalan sayfa/tur sayısı arasındaki günlük tempo dengesi yeterince vurgulanmıyor.
 
 **Ne olmalı:**
-- Notlar sayfasına "Yanlış Soru" tag'i veya ayrı mini-bölüm
-- Branş, konu, neden yanlış (bilmiyorum / yorumladım / dikkat hatası) bilgisi
-- Tekrar edilmesi gereken soruların hatırlatması
+- "Günde ortalama X sayfa okursan Mart 2027 sınavına kadar tüm dersleri Y tekrar ile bitirirsin" şeklinde akıllı tempo önerisi.
+- Mevcut temponun hedef takvimin önünde mi yoksa gerisinde mi olduğunu gösteren net gösterge.
 
 ---
 
-### 7. 📊 Hedef vs. Gerçek Analizi
-**Problem:** Dashboard'da hedef hesaplanıyor ama "ne kadar geride/ilerideyim?" çok net değil.
+## 💡 Düşük Öncelik / Gelecek Fikirler
 
-**Ne olmalı:**
-- Dashboard'a belirgin "Programa göre +X sayfa iledesin ✅" veya "-X sayfa gerideysin 🔴"
-- Bugün çalışılması gereken sayfa sayısı büyük ve net gösterilsin
-- Kalan sürede hedefi yakalamak için günlük sayfa önerisi
+### 6. 📱 Gelişmiş Mobil Arayüz İyileştirmeleri
+- Tıp fakültesi / hastane nöbet aralarında telefondan tek elle hızlı giriş yapabilmek için mobil odaklı optimizasyonlar.
 
----
-
-## 💡 Düşük Öncelik / Nice-to-Have
-
-### 8. 🗂️ Çalışma Programı / Plan Oluşturucu
-- "TUS'a 580 gün kaldı, 24 kitap var → günde X sayfa okumalısın" otomatik plan
-- Branş sıralaması önerisi (Temel önce, Klinik sonra)
-
-### 9. 🎯 Önceki TUS Sınav Yüzdelikleri Referansı
-- "380 net ile kaçıncı yüzdelik?" gibi bir referans tablo
-- Hedef branş için gerekli net tahmini
-
-### 10. 🌙 Dark Mode Renk Temaları
-- Şu an tek tema var. "Daha fazla mavi ışık azaltma" veya OLED siyah tema seçeneği
-
-### 11. 📱 Mobil Uyumluluk İyileştirme
-- Şu an masaüstü odaklı. Telefondan kullanım (ders arası, tuvalet molası 😄) için responsive iyileştirme
-
-### 12. 🔔 Hatırlatıcılar
-- "Bugün Patoloji tekrarı yapman gerek!" bildirim sistemi (tarayıcı notification)
-- Tekrar günleri yaklaşınca otomatik hatırlatma
+### 7. 🔔 Tarayıcı Bildirimleri ve Hatırlatıcılar
+- Planlanan görevler ve planlanan tekrar tarihleri için günlük tarayıcı hatırlatıcısı.
 
 ---
 
-## 📊 Öncelik Özeti
+## 📊 Güncellenmiş Öncelik Tablosu
 
 ```
-🚨 Kritik (Oyunu değiştirir):
-  1. Tekrar Takibi (1./2./3. tekrar sistemi)
-  2. Deneme Sınavı Net Takibi
-  3. Pomodoro Timer
+🚨 Kritik (İlk Yapılması Gerekenler):
+  1. 🔁 Tekrar Takip Sistemi (1./2./3. Tekrar Turları)
+  2. 📝 Deneme Sınavı Net Takibi & Branş Analizleri
 
-⚠️ Önemli (Çok faydalı):
-  4. Konu/Alt Başlık Takibi
-  5. Streak Sistemi
-  6. Yanlış Soru Defteri
-  7. Hedef vs. Gerçek analizi belirginleştirme
+⚠️ Önemli (Çalışma Kalitesini Katlayanlar):
+  3. 📚 Konu / Alt Başlık Checklist Takibi
+  4. ❌ Yanlış Soru & Spot Bilgi Defteri
+  5. 📊 Hedef vs. Gerçek / Akıllı Günlük Tempo
 
-💡 Bonus:
-  8. Plan oluşturucu
-  9. Yüzdelik referans
-  10. Tema seçimi
-  11. Mobil iyileştirme
-  12. Bildirimler
+💡 Tamamlayıcı:
+  6. 📱 Mobil Deneyim İyileştirmeleri
+  7. 🔔 Akıllı Tekrar Hatırlatıcıları
 ```
 
 ---
 
-> *"TUS'çu için en önemli şey: neyi bildiğini değil, neyi bilmediğini bilmek."*
+> *"TUS'çu için en önemli şey: neyi bildiğini değil, neyi unuttuğunu tespit edip tekrar etmektir."*
