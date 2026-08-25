@@ -2,6 +2,10 @@
 
 > **Araştırma bazlı:** TUS pedagojisi, aralıklı tekrar sistemi, ve mevcut TUS uygulamaları (TusMapp, TusAI, TUSCoach) incelenerek hazırlanmıştır.
 
+> 🔔 **BİR SONRAKİ OTURUMDA İLK ELE ALINACAK MADDE:**
+> **GitHub Repoyu Private Yapma & Vercel/Cloudflare Pages'e Geçiş:**
+> - Repoyu Private'a çekip, ücretsiz Vercel veya Cloudflare Pages üzerinden canlıya alarak kodları ve Firebase URL'sini tamamen gizli tutma adımları yapılacak.
+
 ---
 
 ## 🧠 TUS'a Nasıl Çalışılır? (Kısa Özet)
