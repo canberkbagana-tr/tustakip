@@ -128,15 +128,54 @@
         </div>
       </div>
 
-      <!-- Per-Book Progress -->
-      <div class="card" id="bookProgressSection" style="margin-bottom:24px">
-        <div class="card-title">📚 Kitap Bazlı İlerleme</div>
-        <div id="bookProgressBars">
-          <div class="empty-state">
-            <div class="empty-icon">📚</div>
-            <p>Henüz kitap eklenmemiş. Kitaplar sekmesinden ekle!</p>
+      <!-- Collapsible Panels Row -->
+      <div class="dash-panels-row">
+
+        <!-- Panel 1: Kitap Bazlı İlerleme -->
+        <div class="dash-panel" id="dashPanelBooks">
+          <button class="dash-panel-header" id="dashPanelBooksToggle" onclick="app.toggleDashPanel('books')" aria-expanded="true">
+            <span class="dash-panel-title">
+              <span class="dash-panel-icon">📚</span>
+              Kitap Bazlı İlerleme
+            </span>
+            <span class="dash-panel-meta" id="dashBooksMeta"></span>
+            <span class="dash-panel-arrow" id="dashPanelBooksArrow">▾</span>
+          </button>
+          <div class="dash-panel-body" id="dashPanelBooksBody">
+            <div id="bookProgressBars">
+              <div class="empty-state">
+                <div class="empty-icon">📚</div>
+                <p>Henüz kitap eklenmemiş. Kitaplar sekmesinden ekle!</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Panel 2: Görevlerim -->
+        <div class="dash-panel" id="dashPanelTasks">
+          <button class="dash-panel-header" id="dashPanelTasksToggle" onclick="app.toggleDashPanel('tasks')" aria-expanded="true">
+            <span class="dash-panel-title">
+              <span class="dash-panel-icon">📋</span>
+              Görevlerim
+            </span>
+            <span class="dash-panel-meta" id="dashTasksMeta"></span>
+            <span class="dash-panel-arrow" id="dashPanelTasksArrow">▾</span>
+          </button>
+          <div class="dash-panel-body" id="dashPanelTasksBody">
+            <div id="dashTasksList">
+              <div class="empty-state">
+                <div class="empty-icon">✅</div>
+                <p>Görev yok. <a href="#" onclick="document.getElementById('nav-notes').click();return false;" style="color:var(--accent-purple-light)">Notlar sayfasından</a> ekle!</p>
+              </div>
+            </div>
+            <div class="dash-tasks-footer" id="dashTasksFooter" style="display:none">
+              <button class="btn btn-ghost" style="width:100%;margin-top:8px;font-size:0.8rem" onclick="document.getElementById('nav-notes').click()">
+                📋 Tüm Görevlere Git →
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Quick Add + Recent Entries -->

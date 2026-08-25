@@ -269,6 +269,8 @@
     renderBookProgressBars();
     renderRecentEntries();
     updateExamCountdown();
+    updateDashBooksMeta();
+    updateDashTasksPanel();
   }
 
   function renderBookProgressBars() {
@@ -688,6 +690,91 @@
   }
 
 
+  // ===== Dashboard Collapsible Panels =====
+
+  const dashPanelState = { books: true, tasks: true }; // true = expanded
+
+  function toggleDashPanel(panel) {
+    dashPanelState[panel] = !dashPanelState[panel];
+    const body = document.getElementById(`dashPanel${panel.charAt(0).toUpperCase() + panel.slice(1)}Body`);
+    const arrow = document.getElementById(`dashPanel${panel.charAt(0).toUpperCase() + panel.slice(1)}Arrow`);
+    const header = document.getElementById(`dashPanel${panel.charAt(0).toUpperCase() + panel.slice(1)}Toggle`);
+    if (!body) return;
+    if (dashPanelState[panel]) {
+      body.classList.remove('collapsed');
+      arrow.classList.remove('collapsed');
+      if (header) header.setAttribute('aria-expanded', 'true');
+    } else {
+      body.classList.add('collapsed');
+      arrow.classList.add('collapsed');
+      if (header) header.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function updateDashBooksMeta() {
+    const el = document.getElementById('dashBooksMeta');
+    if (!el) return;
+    const total = books.length;
+    if (total === 0) { el.textContent = ''; return; }
+    const totalPages = getTotalPages();
+    const readPages = getTotalRead();
+    const pct = totalPages > 0 ? Math.round(readPages / totalPages * 100) : 0;
+    el.textContent = `${total} kitap • %${pct}`;
+  }
+
+  function updateDashTasksPanel() {
+    const listEl = document.getElementById('dashTasksList');
+    const footer = document.getElementById('dashTasksFooter');
+    const meta = document.getElementById('dashTasksMeta');
+    if (!listEl) return;
+
+    const pending = tasks.filter(t => !t.done);
+    const done = tasks.filter(t => t.done);
+    const total = tasks.length;
+
+    // Meta badge
+    if (meta) {
+      if (total === 0) meta.textContent = '';
+      else {
+        const pendingCount = pending.length;
+        meta.textContent = pendingCount > 0 ? `${pendingCount} bekliyor` : '✓ Tümü tamam';
+      }
+    }
+
+    if (total === 0) {
+      listEl.innerHTML = '<div class="empty-state"><div class="empty-icon">✅</div><p>Görev yok. <a href="#" onclick="document.getElementById(\'nav-notes\').click();return false;" style="color:var(--accent-purple-light)">Notlar sayfasından</a> ekle!</p></div>';
+      if (footer) footer.style.display = 'none';
+      return;
+    }
+
+    // Show pending first (max 5), then done (max 3)
+    const toShow = [...pending.slice(0, 5), ...done.slice(0, 3)];
+    const today = getTodayStr();
+
+    listEl.innerHTML = toShow.map(task => {
+      const isOverdue = !task.done && task.date && task.date < today;
+      const dateLabel = task.date
+        ? `<span class="dash-task-date${isOverdue ? ' overdue' : ''}">${isOverdue ? '⚠️ ' : '📅 '}${formatDate(task.date)}</span>`
+        : '';
+      const tagsHTML = (task.tags || []).slice(0, 2).map(tag =>
+        `<span class="dash-task-tag" style="border-color:${getTagColor(tag)}44;color:${getTagColor(tag)}">${tag}</span>`
+      ).join('');
+
+      return `
+        <div class="dash-task-item">
+          <div class="dash-task-check ${task.done ? 'done' : ''}" onclick="app.toggleTask('${task.id}')" title="${task.done ? 'Geri al' : 'Tamamla'}">
+            ${task.done ? '✔' : ''}
+          </div>
+          <span class="dash-task-text ${task.done ? 'done' : ''}">${task.text}</span>
+          <div class="dash-task-tags">${tagsHTML}</div>
+          ${dateLabel}
+        </div>
+      `;
+    }).join('');
+
+    if (footer) footer.style.display = total > 8 ? 'block' : 'block';
+  }
+
   // ===== Notes & Tasks =====
 
   function getWeekRange() {
@@ -772,6 +859,7 @@
     renderTaskList();
     updateNotesStats();
     renderCalendar();
+    updateDashTasksPanel();
     showToast('Görev eklendi! ✅');
   }
 
@@ -783,6 +871,7 @@
     renderTaskList();
     updateNotesStats();
     renderCalendar();
+    updateDashTasksPanel();
   }
 
   function deleteTask(id) {
@@ -791,6 +880,7 @@
     renderTaskList();
     updateNotesStats();
     renderCalendar();
+    updateDashTasksPanel();
     showToast('Görev silindi.', 'info');
   }
 
@@ -1130,7 +1220,7 @@
   }
 
   // Public API
-  window.app = { editEntry, deleteEntry, deleteBook, toggleTask, deleteTask };
+  window.app = { editEntry, deleteEntry, deleteBook, toggleTask, deleteTask, toggleDashPanel };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
