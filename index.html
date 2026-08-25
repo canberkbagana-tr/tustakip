@@ -15,6 +15,7 @@
     <span class="quote-emoji">💪</span>
     <span id="motivationText">Her sayfa seni hedefe bir adım daha yaklaştırıyor!</span>
     <span class="quote-emoji">🎯</span>
+    <span id="navCountdownBadge" class="nav-countdown-badge">⏳ 2027 Mart TUS: Hesaplanıyor...</span>
     <span id="syncStatus"></span>
   </div>
 
@@ -97,6 +98,12 @@
           <div class="card-title">Streak</div>
           <div class="card-value" id="currentStreak">0</div>
           <div class="card-subtitle">art arda gün</div>
+        </div>
+        <div class="card stat-card stat-countdown-card">
+          <span class="stat-icon">⏳</span>
+          <div class="card-title" id="countdownTitle">2027 Mart TUS</div>
+          <div class="card-value countdown-glow-text" id="examCountdownDays">0 Gün</div>
+          <div class="card-subtitle" id="examCountdownDetail">Hesaplanıyor...</div>
         </div>
       </div>
 
@@ -420,6 +427,11 @@
               <label for="settingStudentName">İsim</label>
               <input type="text" id="settingStudentName" value="" placeholder="İlay">
               <span class="setting-hint">Motivasyon mesajlarında kullanılır</span>
+            </div>
+            <div class="setting-item">
+              <label for="settingExamDate">🎯 Hedef TUS Sınav Tarihi</label>
+              <input type="date" id="settingExamDate" value="2027-03-21">
+              <span class="setting-hint">Geri sayım sayacı için sınav tarihi</span>
             </div>
             <div class="setting-item" style="margin-top:12px;">
               <label for="settingPartnerNote">💌 İlay'a Özel Not</label>

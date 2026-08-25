@@ -216,7 +216,7 @@ body::before {
 /* ===== Dashboard Grid ===== */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -239,6 +239,56 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Stat Countdown Card */
+.stat-countdown-card {
+  background: linear-gradient(135deg, rgba(124, 92, 252, 0.12) 0%, rgba(244, 114, 182, 0.12) 100%);
+  border-color: rgba(244, 114, 182, 0.35);
+  box-shadow: 0 4px 20px rgba(244, 114, 182, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-countdown-card:hover {
+  border-color: rgba(244, 114, 182, 0.65);
+  box-shadow: 0 0 25px rgba(244, 114, 182, 0.25);
+  transform: translateY(-2px);
+}
+
+.stat-countdown-card .card-value.countdown-glow-text {
+  background: linear-gradient(135deg, #f472b6 0%, #fb923c 50%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.stat-countdown-card .card-subtitle {
+  font-family: 'Inter', monospace, sans-serif;
+  color: var(--accent-pink);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
+
+/* Nav Countdown Badge in Motivation Bar */
+.nav-countdown-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(244, 114, 182, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(244, 114, 182, 0.3);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: 6px;
+  white-space: nowrap;
 }
 
 /* ===== Progress Section ===== */

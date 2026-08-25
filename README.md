@@ -1,36 +1,39 @@
 # TUS Takip 🩺📚
 
-Kız arkadaşının TUS çalışma ilerlemesini takip etmek için basit ve şık bir web uygulaması.
+TUS (Tıpta Uzmanlık Sınavı) çalışma ilerlemesini adım adım takip etmek, motive olmak ve senkronize kalmak için geliştirilmiş modern, şık ve hızlı bir web uygulaması.
 
-## 🚀 Canlı Demo
+## 🌐 Canlı Site
+🔗 **[https://canberkbagana-tr.github.io/tustakip/](https://canberkbagana-tr.github.io/tustakip/)**
 
-Bu uygulamayı GitHub Pages üzerinden kullanabilirsin:
-
-1. Bu repoyu GitHub'a push'la
-2. **Settings → Pages → Source: main branch** seç
-3. Link hazır: `https://KULLANICIADIN.github.io/tus-takip/`
+---
 
 ## 💡 Özellikler
 
-- 📊 **Dashboard** - Toplam ilerleme, günlük ortalama, tahmini bitiş tarihi
-- 📝 **Kayıt Ekleme** - Günlük okunan sayfa, nöbet/tatil günü işareti
-- 📈 **İstatistikler** - Grafikler, streak takibi, en iyi günler
-- ⚙️ **Ayarlar** - Müfredat sayfa sayısı, nöbet günleri, hedef
-- 📤 **Veri Yedekleme** - JSON formatında dışa/içe aktarma
-- 📱 **Mobil Uyumlu** - Telefon ve bilgisayardan erişim
+- ⏳ **2027 Mart TUS Sınav Geri Sayımı** - Sınav tarihine kalan gün, saat, dakika ve saniye canlı sayacı
+- 📊 **Dashboard** - Toplam okunan sayfa, günlük ortalama, tahmini bitiş tarihi ve streak takibi
+- 📚 **Kitap & Müfredat Yönetimi** - 20 farklı renk seçeneği ile kitap ekleme, silme ve sayfa ilerleme takibi
+- 📝 **Günlük Kayıt Ekleme** - Çalışma, nöbet/yoğun gün ve tatil/dinlenme kayıtları
+- 📅 **Haftalık Rapor** - Haftalık çalışma grafikleri ve kitap dağılımları
+- 📈 **Gelişmiş İstatistikler** - Chart.js grafikleri, aylık özetler ve senaryo tabloları
+- 🔄 **Firebase Bulut Senkronizasyonu** - SDK'sız REST API ile tüm cihazlar arasında anlık çift yönlü senkronizasyon
+- 💌 **Özel Not (Sticky Note)** - Ekranın kenarında tatlı bir floating motivasyon post-it'i
+- ⚙️ **Özelleştirilebilir Ayarlar** - Tekrar payı (%), günlük hedef, izin günleri ve hedef sınav tarihi
+- 📤 **Veri Yedekleme** - Tek tıkla JSON formatında dışa/içe aktarma
+- 📱 **Mobil Uyumlu & Responsive** - Telefon, tablet ve masaüstünde kusursuz koyu tema arayüzü
 
-## 📋 Kullanım
+---
 
-1. `index.html` dosyasını tarayıcıda aç
-2. Ayarlar sayfasından parametreleri düzenle
-3. Her gün okunan sayfa sayısını gir
-4. İlerlemeyi takip et!
+## 📋 Değişiklikler ve Sürümler
 
-## 🛠️ Kurulum
+Tüm sürüm detayları için **[CHANGELOG.md](CHANGELOG.md)** dosyasına göz atabilirsiniz.
 
-Sunucu gerektirmez! Tarayıcıda direkt açılır. Veriler localStorage'da saklanır.
+---
+
+## 🛠️ Yerel Çalıştırma
+
+Sunucu veya derleme gerektirmez! Doğrudan tarayıcıda açılır:
 
 ```bash
-# Yerel çalıştırma (opsiyonel)
+# Tarayıcıda doğrudan index.html dosyasını açabilir veya:
 npx serve .
 ```

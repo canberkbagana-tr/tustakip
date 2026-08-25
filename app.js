@@ -15,7 +15,8 @@
     dailyGoal: 100,
     offDays: 8,
     studentName: '',
-    partnerNote: ''
+    partnerNote: '',
+    examDate: '2027-03-21'
   };
 
   const MOTIVATIONAL_QUOTES = [
@@ -248,6 +249,7 @@
     document.getElementById('pagesRemaining').textContent = remaining.toLocaleString('tr-TR');
     renderBookProgressBars();
     renderRecentEntries();
+    updateExamCountdown();
   }
 
   function renderBookProgressBars() {
@@ -548,6 +550,41 @@
     }).join('');
   }
 
+  // ===== Exam Countdown =====
+  function updateExamCountdown() {
+    const targetDateStr = settings.examDate || '2027-03-21';
+    const target = new Date(targetDateStr + 'T10:15:00');
+    const now = new Date();
+    const diffMs = target - now;
+
+    const daysEl = document.getElementById('examCountdownDays');
+    const detailEl = document.getElementById('examCountdownDetail');
+    const navCountdownEl = document.getElementById('navCountdownBadge');
+
+    if (!daysEl) return;
+
+    if (diffMs <= 0) {
+      daysEl.textContent = '🎉';
+      if (detailEl) detailEl.textContent = 'Sınav Günü / Tamamlandı!';
+      if (navCountdownEl) navCountdownEl.textContent = '🎉 Sınav Günü!';
+      return;
+    }
+
+    const totalSeconds = Math.floor(diffMs / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    daysEl.textContent = `${days} Gün`;
+    if (detailEl) {
+      detailEl.textContent = `${String(hours).padStart(2, '0')}sa ${String(minutes).padStart(2, '0')}dk ${String(seconds).padStart(2, '0')}sn kaldı`;
+    }
+    if (navCountdownEl) {
+      navCountdownEl.textContent = `🎯 Mart 2027 TUS: ${days} gün`;
+    }
+  }
+
   // ===== Settings =====
   function loadSettingsToUI() {
     const elRP = document.getElementById('settingReviewPercent'); if (elRP) elRP.value = settings.reviewPercent;
@@ -555,6 +592,7 @@
     const elOD = document.getElementById('settingOffDays'); if (elOD) elOD.value = settings.offDays;
     const elSN = document.getElementById('settingStudentName'); if (elSN) elSN.value = settings.studentName || '';
     const elPN = document.getElementById('settingPartnerNote'); if (elPN) elPN.value = settings.partnerNote || '';
+    const elED = document.getElementById('settingExamDate'); if (elED) elED.value = settings.examDate || '2027-03-21';
   }
 
   function saveSettingsFromUI() {
@@ -563,7 +601,8 @@
     const elOD = document.getElementById('settingOffDays'); if (elOD) settings.offDays = parseInt(elOD.value) || 0;
     const elSN = document.getElementById('settingStudentName'); if (elSN) settings.studentName = elSN.value.trim();
     const elPN = document.getElementById('settingPartnerNote'); if (elPN) settings.partnerNote = elPN.value.trim();
-    saveSettings(); syncToFirebase(); updateDashboard(); renderBooksList(); updateMotivation(); updatePartnerNote();
+    const elED = document.getElementById('settingExamDate'); if (elED && elED.value) settings.examDate = elED.value;
+    saveSettings(); syncToFirebase(); updateDashboard(); renderBooksList(); updateMotivation(); updatePartnerNote(); updateExamCountdown();
     showToast('Ayarlar kaydedildi! ⚙️');
   }
 
@@ -695,7 +734,10 @@
     document.getElementById('clearData').addEventListener('click', clearAllData);
 
     // Load UI
-    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updateMotivation(); updatePartnerNote();
+    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updateMotivation(); updatePartnerNote(); updateExamCountdown();
+
+    // 1-second ticking interval for exam countdown
+    setInterval(updateExamCountdown, 1000);
 
     // Firebase: load from cloud on startup
     syncFromFirebase().then(() => updateSyncStatus());

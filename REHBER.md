@@ -34,12 +34,12 @@ Firebase'i "test mode"da açtın. **7 Mayıs 2026** civarında süresi dolacak v
 
 | Sekme | Açıklama |
 |-------|----------|
-| 📊 Dashboard | Genel ilerleme, kitap bazlı progress, hızlı kayıt ekleme |
-| 📚 Kitaplar | Kitap ekle/sil, renk seç, sayfa sayısı belirle |
+| 📊 Dashboard | 2027 Mart TUS geri sayımı, genel ilerleme, kitap bazlı progress, hızlı kayıt ekleme |
+| 📚 Kitaplar | Kitap ekle/sil, 20 renk seçeneği, sayfa sayısı belirle |
 | 📝 Kayıtlar | Tüm kayıtlar, filtreleme (kitap/ay/gün tipi) |
 | 📅 Haftalık | Bu haftanın raporu, gün gün detay, kitap dağılımı |
 | 📈 İstatistikler | 30 günlük grafik, aylık özet, doughnut chart, streak, senaryolar |
-| ⚙️ Ayarlar | Tekrar payı, hedef, nöbet/tatil günleri, veri yönetimi |
+| ⚙️ Ayarlar | Hedef sınav tarihi, tekrar payı, hedef, nöbet/tatil günleri, veri yönetimi |
 
 ---
 
