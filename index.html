@@ -58,6 +58,12 @@
           </button>
         </li>
         <li>
+          <button class="nav-tab" data-page="notes" id="nav-notes">
+            <span class="tab-icon">📋</span>
+            <span class="tab-text">Notlar</span>
+          </button>
+        </li>
+        <li>
           <button class="nav-tab" data-page="settings" id="nav-settings">
             <span class="tab-icon">⚙️</span>
             <span class="tab-text">Ayarlar</span>
@@ -455,6 +461,116 @@
           <button class="btn btn-danger btn-sm" id="clearData">🗑️ Tüm Verileri Sil</button>
         </div>
       </div>
+    </section>
+
+    <!-- ==================== NOTES & TASKS ==================== -->
+    <section class="page" id="page-notes">
+
+      <!-- Stats row -->
+      <div class="notes-stats-row">
+        <div class="card notes-stat-card">
+          <div class="notes-stat-ring-wrap">
+            <svg class="notes-ring" viewBox="0 0 80 80">
+              <circle class="notes-ring-bg" cx="40" cy="40" r="34"/>
+              <circle class="notes-ring-fill" id="notesRingFill" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="213.6"/>
+            </svg>
+            <span class="notes-ring-label" id="notesRingLabel">0/0</span>
+          </div>
+          <div>
+            <div class="card-title">Tamamlanan Görev</div>
+            <div class="card-value" id="notesDoneCount" style="font-size:1.5rem">0 / 0</div>
+            <div class="card-subtitle">toplam görev</div>
+          </div>
+        </div>
+        <div class="card notes-stat-card">
+          <span class="stat-icon">🗓️</span>
+          <div>
+            <div class="card-title">Bu Hafta</div>
+            <div class="card-value" id="notesWeekDone" style="font-size:1.5rem">0</div>
+            <div class="card-subtitle">görev tamamlandı</div>
+          </div>
+        </div>
+        <div class="card notes-stat-card">
+          <span class="stat-icon">⏰</span>
+          <div>
+            <div class="card-title">Yaklaşan</div>
+            <div class="card-value" id="notesUpcoming" style="font-size:1.5rem">0</div>
+            <div class="card-subtitle">bu hafta sona eriyor</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main grid: task list + calendar -->
+      <div class="notes-main-grid">
+
+        <!-- LEFT: Task List -->
+        <div class="notes-left">
+          <div class="card">
+            <div class="card-title">📋 Görev Listesi</div>
+
+            <!-- Add task form -->
+            <div class="task-add-form" id="taskAddForm">
+              <div class="task-add-row">
+                <input type="text" id="taskText" placeholder="Yeni görev ekle..." class="task-text-input" autocomplete="off">
+                <button type="button" class="btn-task-add" id="taskAddBtn" title="Ekle">+</button>
+              </div>
+              <div class="task-add-meta">
+                <input type="date" id="taskDate" class="task-date-input">
+                <div class="task-tags-row" id="taskTagsRow">
+                  <!-- Book tags populated by JS -->
+                </div>
+                <div class="task-custom-tag-wrap">
+                  <input type="text" id="taskCustomTag" placeholder="+ özel etiket" class="task-custom-tag-input">
+                </div>
+              </div>
+            </div>
+
+            <!-- Filter row -->
+            <div class="task-filter-row">
+              <button class="task-filter-btn active" data-filter="all" id="filterAll">Tümü</button>
+              <button class="task-filter-btn" data-filter="pending" id="filterPending">⏳ Bekleyen</button>
+              <button class="task-filter-btn" data-filter="done" id="filterDone">✅ Tamamlanan</button>
+            </div>
+
+            <!-- Task list -->
+            <div class="task-list" id="taskList">
+              <div class="empty-state" id="taskEmptyState">
+                <div class="empty-icon">📋</div>
+                <p>Henüz görev yok. İlk görevini ekle!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Calendar + Quick Note -->
+        <div class="notes-right">
+
+          <!-- Mini Calendar Card -->
+          <div class="card notes-calendar-card">
+            <div class="cal-header">
+              <button class="cal-nav" id="calPrev">&#8249;</button>
+              <span class="cal-month-label" id="calMonthLabel"></span>
+              <button class="cal-nav" id="calNext">&#8250;</button>
+            </div>
+            <div class="cal-weekdays">
+              <span>Pt</span><span>Sa</span><span>Ça</span><span>Pe</span><span>Cu</span><span>Ct</span><span>Pz</span>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+            <div class="cal-day-tasks">
+              <div class="card-title" id="calSelectedLabel">Tarih seç</div>
+              <div id="calDayTaskList"><p style="color:var(--text-muted);font-size:0.82rem;text-align:center">Bir güne tıkla</p></div>
+            </div>
+          </div>
+
+          <!-- Quick Notes Card -->
+          <div class="card notes-quicknote-card">
+            <div class="card-title">📝 Hızlı Not</div>
+            <textarea id="quickNoteText" class="quicknote-textarea" placeholder="Buraya serbest not alabilirsin..."></textarea>
+            <button class="btn btn-primary" id="quickNoteSaveBtn" style="margin-top:10px;width:100%">💾 Notu Kaydet</button>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   </main>

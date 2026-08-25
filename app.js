@@ -7,7 +7,9 @@
   const STORAGE_KEYS = {
     entries: 'tus_entries',
     settings: 'tus_settings',
-    books: 'tus_books'
+    books: 'tus_books',
+    tasks: 'tus_tasks',
+    quickNote: 'tus_quicknote'
   };
 
   const DEFAULT_SETTINGS = {
@@ -49,12 +51,19 @@
   let entries = [];
   let books = [];
   let settings = { ...DEFAULT_SETTINGS };
+  let tasks = [];
+  let quickNote = '';
   let dailyChart = null;
   let monthlyChart = null;
   let bookChart = null;
   let weeklyChart = null;
   let selectedBookColor = '#7c5cfc';
-  let currentWeekOffset = 0; // 0 = this week, -1 = last week, etc.
+  let currentWeekOffset = 0;
+  // Notes page state
+  let taskFilter = 'all';
+  let taskDragSrcIdx = null;
+  let calViewDate = new Date();
+  let calSelectedDate = null;
 
   // ===== Helpers =====
   function loadData() {
@@ -73,12 +82,18 @@
         }
         settings = { ...DEFAULT_SETTINGS, ...parsed };
       }
+      const st = localStorage.getItem(STORAGE_KEYS.tasks);
+      if (st) tasks = JSON.parse(st);
+      const sqn = localStorage.getItem(STORAGE_KEYS.quickNote);
+      if (sqn !== null) quickNote = sqn;
     } catch (e) { console.error('Veri yükleme hatası:', e); }
   }
 
   function saveEntries() { localStorage.setItem(STORAGE_KEYS.entries, JSON.stringify(entries)); }
   function saveBooks() { localStorage.setItem(STORAGE_KEYS.books, JSON.stringify(books)); }
   function saveSettings() { localStorage.setItem(STORAGE_KEYS.settings, JSON.stringify(settings)); }
+  function saveTasks() { localStorage.setItem(STORAGE_KEYS.tasks, JSON.stringify(tasks)); }
+  function saveQuickNote() { localStorage.setItem(STORAGE_KEYS.quickNote, quickNote); }
 
   function generateId() { return Date.now().toString(36) + Math.random().toString(36).substr(2, 5); }
   function getTotalPages() { return books.reduce((s, b) => s + (b.totalPages || 0), 0); }
@@ -132,19 +147,22 @@
         settings = { ...DEFAULT_SETTINGS, ...parsed };
         saveSettings();
       }
+      if (data.tasks && Array.isArray(data.tasks)) { tasks = data.tasks; saveTasks(); }
+      if (data.quickNote !== undefined) { quickNote = data.quickNote; saveQuickNote(); }
       loadSettingsToUI();
       populateBookSelectors();
       updateDashboard();
       renderBooksList();
       populateMonthFilter();
       updatePartnerNote();
+      renderNotesPage();
     }
     updateSyncStatus();
   }
 
   async function syncToFirebase() {
     if (!window.FirebaseSync) return;
-    await FirebaseSync.saveAll({ entries, books, settings });
+    await FirebaseSync.saveAll({ entries, books, settings, tasks, quickNote });
     updateSyncStatus();
   }
 
@@ -168,6 +186,7 @@
         if (page === 'logs') renderAllEntries();
         if (page === 'books') renderBooksList();
         if (page === 'weekly') setTimeout(renderWeeklyReport, 50);
+        if (page === 'notes') renderNotesPage();
       });
     });
   }
@@ -668,53 +687,399 @@
     document.getElementById('motivationText').textContent = q;
   }
 
-  // ===== Init =====
-  function init() {
-    loadData();
-    document.getElementById('entryDate').value = getTodayStr();
-    initNavigation();
 
-    // Color picker
-    document.querySelectorAll('.color-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active'); selectedBookColor = this.dataset.color;
+  // ===== Notes & Tasks =====
+
+  function getWeekRange() {
+    const now = new Date();
+    const day = now.getDay();
+    const diffToMon = (day === 0 ? -6 : 1 - day);
+    const mon = new Date(now); mon.setDate(now.getDate() + diffToMon); mon.setHours(0,0,0,0);
+    const sun = new Date(mon); sun.setDate(mon.getDate() + 6); sun.setHours(23,59,59,999);
+    return { mon, sun };
+  }
+
+  function updateNotesStats() {
+    const total = tasks.length;
+    const done = tasks.filter(t => t.done).length;
+    const { mon, sun } = getWeekRange();
+    const weekDone = tasks.filter(t => t.done && t.date && new Date(t.date + 'T00:00:00') >= mon && new Date(t.date + 'T00:00:00') <= sun).length;
+    const today = new Date(); today.setHours(0,0,0,0);
+    const weekEnd = new Date(sun);
+    const upcoming = tasks.filter(t => !t.done && t.date && new Date(t.date + 'T00:00:00') >= today && new Date(t.date + 'T00:00:00') <= weekEnd).length;
+
+    const elDone = document.getElementById('notesDoneCount');
+    const elWeek = document.getElementById('notesWeekDone');
+    const elUp = document.getElementById('notesUpcoming');
+    const elRingFill = document.getElementById('notesRingFill');
+    const elRingLabel = document.getElementById('notesRingLabel');
+    if (elDone) elDone.textContent = `${done} / ${total}`;
+    if (elWeek) elWeek.textContent = weekDone;
+    if (elUp) elUp.textContent = upcoming;
+    if (elRingFill && elRingLabel) {
+      const pct = total > 0 ? done / total : 0;
+      const circ = 2 * Math.PI * 34;
+      elRingFill.style.strokeDashoffset = circ * (1 - pct);
+      elRingLabel.textContent = `${done}/${total}`;
+    }
+  }
+
+  function populateTaskBookTags() {
+    const row = document.getElementById('taskTagsRow');
+    if (!row) return;
+    row.innerHTML = '';
+    books.forEach(b => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'task-tag-chip';
+      chip.dataset.tag = b.name;
+      chip.style.borderColor = b.color;
+      chip.textContent = b.name;
+      chip.addEventListener('click', () => chip.classList.toggle('selected'));
+      row.appendChild(chip);
+    });
+  }
+
+  function getSelectedTags() {
+    const chips = document.querySelectorAll('.task-tag-chip.selected');
+    const tags = Array.from(chips).map(c => c.dataset.tag);
+    const custom = (document.getElementById('taskCustomTag')?.value || '').trim();
+    if (custom) tags.push(custom);
+    return tags;
+  }
+
+  function addTask() {
+    const textEl = document.getElementById('taskText');
+    const dateEl = document.getElementById('taskDate');
+    if (!textEl || !textEl.value.trim()) { showToast('Görev metni yaz!', 'error'); return; }
+    const task = {
+      id: generateId(),
+      text: textEl.value.trim(),
+      done: false,
+      date: dateEl?.value || '',
+      tags: getSelectedTags(),
+      createdAt: getTodayStr(),
+      order: tasks.length
+    };
+    tasks.push(task);
+    saveTasks(); syncToFirebase();
+    // Reset form
+    textEl.value = '';
+    if (dateEl) dateEl.value = '';
+    document.querySelectorAll('.task-tag-chip.selected').forEach(c => c.classList.remove('selected'));
+    const customEl = document.getElementById('taskCustomTag');
+    if (customEl) customEl.value = '';
+    renderTaskList();
+    updateNotesStats();
+    renderCalendar();
+    showToast('Görev eklendi! ✅');
+  }
+
+  function toggleTask(id) {
+    const t = tasks.find(t => t.id === id);
+    if (!t) return;
+    t.done = !t.done;
+    saveTasks(); syncToFirebase();
+    renderTaskList();
+    updateNotesStats();
+    renderCalendar();
+  }
+
+  function deleteTask(id) {
+    tasks = tasks.filter(t => t.id !== id);
+    saveTasks(); syncToFirebase();
+    renderTaskList();
+    updateNotesStats();
+    renderCalendar();
+    showToast('Görev silindi.', 'info');
+  }
+
+  function getTagColor(tagName) {
+    const book = books.find(b => b.name === tagName);
+    return book ? book.color : '#7c5cfc';
+  }
+
+  function renderTaskList() {
+    const list = document.getElementById('taskList');
+    if (!list) return;
+    let filtered = tasks.slice();
+    if (taskFilter === 'pending') filtered = filtered.filter(t => !t.done);
+    if (taskFilter === 'done') filtered = filtered.filter(t => t.done);
+    if (calSelectedDate) filtered = filtered.filter(t => t.date === calSelectedDate);
+    if (filtered.length === 0) {
+      list.innerHTML = '<div class="empty-state"><div class="empty-icon">📋</div><p>Görev bulunamadı.</p></div>';
+      return;
+    }
+    list.innerHTML = '';
+    filtered.forEach((task, idx) => {
+      const realIdx = tasks.findIndex(t => t.id === task.id);
+      const row = document.createElement('div');
+      row.className = 'task-row' + (task.done ? ' task-done' : '');
+      row.draggable = true;
+      row.dataset.id = task.id;
+      row.dataset.realIdx = realIdx;
+
+      const tagsHTML = (task.tags || []).map(tag =>
+        `<span class="task-tag" style="background:${getTagColor(tag)}22;color:${getTagColor(tag)};border-color:${getTagColor(tag)}44">${tag}</span>`
+      ).join('');
+      const dateHTML = task.date ? `<span class="task-date-label">📅 ${formatDate(task.date)}</span>` : '';
+
+      row.innerHTML = `
+        <label class="task-check-wrap" title="${task.done ? 'Geri al' : 'Tamamla'}">
+          <input type="checkbox" class="task-checkbox" ${task.done ? 'checked' : ''} onchange="app.toggleTask('${task.id}')">
+          <span class="task-checkmark">${task.done ? '✔' : ''}</span>
+        </label>
+        <div class="task-body">
+          <div class="task-text">${task.text}</div>
+          <div class="task-meta">${tagsHTML}${dateHTML}</div>
+        </div>
+        <button class="task-delete-btn" onclick="app.deleteTask('${task.id}')" title="Sil">×</button>
+        <div class="task-drag-handle" title="Sürükle">☰</div>
+      `;
+
+      // Drag & drop
+      row.addEventListener('dragstart', (e) => {
+        taskDragSrcIdx = realIdx;
+        row.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
       });
-    });
-
-    // Add Book
-    document.getElementById('addBookForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const n = document.getElementById('bookName').value.trim(), p = document.getElementById('bookPages').value;
-      if (!n || !p) { showToast('Kitap adı ve sayfa gerekli!', 'error'); return; }
-      addBook(n, p, selectedBookColor);
-      document.getElementById('bookName').value = ''; document.getElementById('bookPages').value = '';
-    });
-
-    // Quick Add
-    document.getElementById('quickAddForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const bookId = document.getElementById('entryBook').value;
-      if (!bookId) { showToast('Bir kitap seç! 📖', 'error'); return; }
-      addEntry({
-        date: document.getElementById('entryDate').value, bookId,
-        pages: parseInt(document.getElementById('entryPages').value) || 0,
-        type: document.getElementById('entryType').value,
-        note: document.getElementById('entryNote').value.trim()
+      row.addEventListener('dragend', () => { row.classList.remove('dragging'); document.querySelectorAll('.task-row').forEach(r => r.classList.remove('drag-over')); });
+      row.addEventListener('dragover', (e) => { e.preventDefault(); row.classList.add('drag-over'); });
+      row.addEventListener('dragleave', () => row.classList.remove('drag-over'));
+      row.addEventListener('drop', (e) => {
+        e.preventDefault();
+        row.classList.remove('drag-over');
+        const destIdx = parseInt(row.dataset.realIdx);
+        if (taskDragSrcIdx === null || taskDragSrcIdx === destIdx) return;
+        const moved = tasks.splice(taskDragSrcIdx, 1)[0];
+        tasks.splice(destIdx, 0, moved);
+        taskDragSrcIdx = null;
+        saveTasks(); syncToFirebase();
+        renderTaskList();
       });
-      document.getElementById('entryPages').value = ''; document.getElementById('entryNote').value = '';
-      document.getElementById('entryDate').value = getTodayStr();
-    });
 
-    // Edit
-    document.getElementById('editForm').addEventListener('submit', function(e) { e.preventDefault(); saveEdit(); });
-    document.getElementById('cancelEdit').addEventListener('click', () => document.getElementById('editModal').classList.remove('active'));
-    document.getElementById('editModal').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('active'); });
+      list.appendChild(row);
+    });
+  }
+
+  // ===== Mini Calendar =====
+
+  function renderCalendar() {
+    const grid = document.getElementById('calGrid');
+    const label = document.getElementById('calMonthLabel');
+    if (!grid || !label) return;
+
+    const year = calViewDate.getFullYear();
+    const month = calViewDate.getMonth();
+    label.textContent = calViewDate.toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' });
+
+    const firstDay = new Date(year, month, 1);
+    let startDow = firstDay.getDay(); // 0=Sun
+    startDow = startDow === 0 ? 6 : startDow - 1; // Monday-first
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const todayStr = getTodayStr();
+
+    // Build a set of dates that have tasks
+    const taskDateSet = {};
+    tasks.forEach(t => { if (t.date) { taskDateSet[t.date] = (taskDateSet[t.date] || []); taskDateSet[t.date].push(t); } });
+
+    grid.innerHTML = '';
+    // Empty cells before month starts
+    for (let i = 0; i < startDow; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'cal-cell cal-empty';
+      grid.appendChild(cell);
+    }
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const cell = document.createElement('div');
+      cell.className = 'cal-cell';
+      if (dateStr === todayStr) cell.classList.add('cal-today');
+      if (dateStr === calSelectedDate) cell.classList.add('cal-selected');
+      const tasksOnDay = taskDateSet[dateStr] || [];
+      const hasDone = tasksOnDay.some(t => t.done);
+      const hasPending = tasksOnDay.some(t => !t.done);
+      cell.innerHTML = `<span class="cal-day-num">${d}</span>`
+        + (hasPending ? '<span class="cal-dot cal-dot-pending"></span>' : '')
+        + (hasDone ? '<span class="cal-dot cal-dot-done"></span>' : '');
+      cell.addEventListener('click', () => {
+        if (calSelectedDate === dateStr) {
+          calSelectedDate = null;
+        } else {
+          calSelectedDate = dateStr;
+        }
+        renderCalendar();
+        renderCalDayTasks();
+        renderTaskList();
+      });
+      grid.appendChild(cell);
+    }
+  }
+
+  function renderCalDayTasks() {
+    const label = document.getElementById('calSelectedLabel');
+    const listEl = document.getElementById('calDayTaskList');
+    if (!listEl) return;
+    if (!calSelectedDate) {
+      if (label) label.textContent = 'Tarih seç';
+      listEl.innerHTML = '<p style="color:var(--text-muted);font-size:0.82rem;text-align:center">Bir güne tıkla</p>';
+      return;
+    }
+    const d = new Date(calSelectedDate + 'T00:00:00');
+    if (label) label.textContent = d.toLocaleDateString('tr-TR', { day:'numeric', month:'long' });
+    const dayTasks = tasks.filter(t => t.date === calSelectedDate);
+    if (dayTasks.length === 0) {
+      listEl.innerHTML = '<p style="color:var(--text-muted);font-size:0.82rem;text-align:center">Bu günde görev yok</p>';
+      return;
+    }
+    listEl.innerHTML = dayTasks.map(t => `
+      <div class="cal-day-task-item ${t.done ? 'cal-day-done' : ''}">
+        <span>${t.done ? '✅' : '○'}</span>
+        <span>${t.text}</span>
+      </div>
+    `).join('');
+  }
+
+  // ===== Quick Note =====
+
+  function renderQuickNote() {
+    const el = document.getElementById('quickNoteText');
+    if (el) el.value = quickNote;
+  }
+
+  // ===== Render full Notes Page =====
+
+  function renderNotesPage() {
+    populateTaskBookTags();
+    renderTaskList();
+    updateNotesStats();
+    renderCalendar();
+    renderCalDayTasks();
+    renderQuickNote();
+  }
+
+  // ===== Init event listeners for Notes =====
+
+  function initNotesEvents() {
+    // Add task
+    const addBtn = document.getElementById('taskAddBtn');
+    if (addBtn) addBtn.addEventListener('click', addTask);
+    const taskTextEl = document.getElementById('taskText');
+    if (taskTextEl) taskTextEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') addTask(); });
 
     // Filters
-    document.getElementById('filterType').addEventListener('change', renderAllEntries);
-    document.getElementById('filterMonth').addEventListener('change', renderAllEntries);
-    document.getElementById('filterBook').addEventListener('change', renderAllEntries);
+    document.querySelectorAll('.task-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.task-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        taskFilter = btn.dataset.filter;
+        calSelectedDate = null;
+        renderCalendar();
+        renderCalDayTasks();
+        renderTaskList();
+      });
+    });
+
+    // Calendar nav
+    const calPrev = document.getElementById('calPrev');
+    const calNext = document.getElementById('calNext');
+    if (calPrev) calPrev.addEventListener('click', () => {
+      calViewDate = new Date(calViewDate.getFullYear(), calViewDate.getMonth() - 1, 1);
+      renderCalendar();
+    });
+    if (calNext) calNext.addEventListener('click', () => {
+      calViewDate = new Date(calViewDate.getFullYear(), calViewDate.getMonth() + 1, 1);
+      renderCalendar();
+    });
+
+    // Quick note save
+    const qnSave = document.getElementById('quickNoteSaveBtn');
+    if (qnSave) qnSave.addEventListener('click', () => {
+      const el = document.getElementById('quickNoteText');
+      quickNote = el ? el.value : '';
+      saveQuickNote(); syncToFirebase();
+      showToast('Not kaydedildi! 📝');
+    });
+  }
+
+  // ===== init =====
+  function init() {
+    loadData();
+    initNavigation();
+    initNotesEvents();
+
+    // Quick add form
+    document.getElementById('quickAddForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const date = document.getElementById('entryDate').value;
+      const bookId = document.getElementById('entryBook').value;
+      const pages = parseInt(document.getElementById('entryPages').value) || 0;
+      const type = document.getElementById('entryType').value;
+      const note = document.getElementById('entryNote').value.trim();
+      if (!date || !bookId) { showToast('Tarih ve kitap seç!', 'error'); return; }
+      const existing = entries.findIndex(e => e.date === date && e.bookId === bookId);
+      if (existing >= 0) {
+        if (!confirm('Bu tarih ve kitap için zaten kayıt var. Güncellensin mi?')) return;
+        entries[existing] = { ...entries[existing], pages, type, note };
+      } else {
+        entries.push({ date, bookId, pages, type, note });
+      }
+      entries.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+      saveEntries(); syncToFirebase();
+      updateDashboard(); populateMonthFilter();
+      document.getElementById('entryNote').value = '';
+      document.getElementById('entryPages').value = '';
+      showToast('✨ Kayıt eklendi!');
+    });
+    document.getElementById('entryDate').value = getTodayStr();
+
+    // Edit modal
+    document.getElementById('cancelEdit').addEventListener('click', () => document.getElementById('editModal').style.display = 'none');
+    document.getElementById('editModal').addEventListener('click', (e) => { if (e.target.id === 'editModal') document.getElementById('editModal').style.display = 'none'; });
+    document.getElementById('editForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const idx = parseInt(document.getElementById('editIndex').value);
+      if (isNaN(idx)) return;
+      entries[idx] = {
+        ...entries[idx],
+        date: document.getElementById('editDate').value,
+        bookId: document.getElementById('editBook').value,
+        pages: parseInt(document.getElementById('editPages').value) || 0,
+        type: document.getElementById('editType').value,
+        note: document.getElementById('editNote').value.trim()
+      };
+      entries.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+      saveEntries(); syncToFirebase();
+      document.getElementById('editModal').style.display = 'none';
+      renderAllEntries(); updateDashboard();
+      showToast('Kayıt güncellendi! ✏️');
+    });
+
+    // Add book
+    document.getElementById('addBookForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('bookName').value;
+      const pages = document.getElementById('bookPages').value;
+      if (!name || !pages) return;
+      addBook(name, pages, selectedBookColor);
+      document.getElementById('bookName').value = '';
+      document.getElementById('bookPages').value = '';
+    });
+
+    // Color pickers
+    document.querySelectorAll('.color-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedBookColor = btn.dataset.color;
+      });
+    });
+
+    // Logs filter
+    ['filterBook','filterMonth','filterType'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('change', renderAllEntries);
+    });
 
     // Weekly navigation
     document.getElementById('prevWeek').addEventListener('click', () => { currentWeekOffset--; renderWeeklyReport(); });
@@ -765,7 +1130,7 @@
   }
 
   // Public API
-  window.app = { editEntry, deleteEntry, deleteBook };
+  window.app = { editEntry, deleteEntry, deleteBook, toggleTask, deleteTask };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
