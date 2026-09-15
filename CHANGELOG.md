@@ -4,6 +4,29 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## [v4.0.0-draft] - 2026-09-15 (Yerel Geliştirme - Canlıya Sürülmedi)
+### 🔐 Çoklu Kullanıcı & Admin Yönetim Sistemi (Multi-User & Role-Based Access)
+- **🛡️ Sıfır Risk & Veri Koruma Protokolü:**
+  - İlay'ın tüm canlı verileri (13 kitap, çalışma kayıtları, notlar, ayarlar) `backup_ilay_data_v3.json` olarak kalıcı yedeklendi.
+  - Canlı Firebase `/tus.json` yolu korunarak yeni yapı `/tus_v4/` altına izole edildi.
+- **🔑 Kimlik Doğrulama Servisi (`auth.js`):**
+  - Web Crypto API (`crypto.subtle`) ile SHA-256 şifre hashleme.
+  - Oturum kontrolü (`localStorage` ve Firebase RTDB auth tablosu).
+  - Hazır hesaplar: `canberk` (Admin), `ilay` (Öğrenci), `x` (Öğrenci), `y` (Öğrenci).
+- **🚪 Modern Giriş Ekranı (Login Overlay):**
+  - Koyu tema cam efektli (glassmorphism) açılış giriş kartı.
+  - Hızlı test butonları (`Canberk Admin`, `İlay`, `Öğrenci X`, `Öğrenci Y`).
+- **👁️ Admin Öğrenci Değiştirici (Student Switcher):**
+  - Sadece Canberk (Admin) giriş yaptığında navbar'da beliren açılır menü.
+  - Tek tıkla İlay, X veya Y öğrencilerinin süreçleri arasında anında geçiş yapabilme.
+- **👥 Öğrenci Yönetim Paneli (Ayarlar Sayfası):**
+  - Admin kullanıcılar için yeni aday ekleme modalı (Standart 13 TUS Kitabı şablon seçeneğiyle).
+  - Şifre sıfırlama ve profil inceleme aksiyonları.
+- **🔒 Katı Veri İzolasyonu:**
+  - Normal öğrenciler (İlay, X, Y) yalnızca kendi çalışma süreçlerini görür; switcher veya admin menülerini asla görmezler.
+
+---
+
 ## [v3.3.0] - 2026-08-25
 ### ✨ Yeni Özellikler
 - **📋 Notlar & Görevler (Checklist & Notes) Sayfası:**

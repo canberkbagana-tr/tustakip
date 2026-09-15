@@ -1,17 +1,9 @@
-// ===== TUS Takip - Main Application (v3 - Firebase Sync + Weekly Report) =====
+// ===== TUS Takip - Main Application (v4 - Multi-User & Admin System) =====
 
 (function() {
   'use strict';
 
-  // ===== Constants =====
-  const STORAGE_KEYS = {
-    entries: 'tus_entries',
-    settings: 'tus_settings',
-    books: 'tus_books',
-    tasks: 'tus_tasks',
-    quickNote: 'tus_quicknote'
-  };
-
+  // ===== Default Settings =====
   const DEFAULT_SETTINGS = {
     reviewPercent: 20,
     dailyGoal: 100,
@@ -20,6 +12,22 @@
     partnerNote: '',
     examDate: '2027-03-21'
   };
+
+  // ===== Multi-User & Authentication State =====
+  let currentUser = null;
+  let activeStudent = 'ilay'; // Profile currently viewed/managed
+
+  function getKeys() {
+    const user = activeStudent || 'ilay';
+    const p = `tus_${user}_`;
+    return {
+      entries: p + 'entries',
+      settings: p + 'settings',
+      books: p + 'books',
+      tasks: p + 'tasks',
+      quickNote: p + 'quicknote'
+    };
+  }
 
   const MOTIVATIONAL_QUOTES = [
     "Her sayfa seni hedefe bir adım daha yaklaştırıyor!",
@@ -68,11 +76,24 @@
   // ===== Helpers =====
   function loadData() {
     try {
-      const se = localStorage.getItem(STORAGE_KEYS.entries);
-      if (se) entries = JSON.parse(se);
-      const sb = localStorage.getItem(STORAGE_KEYS.books);
-      if (sb) books = JSON.parse(sb);
-      const ss = localStorage.getItem(STORAGE_KEYS.settings);
+      const keys = getKeys();
+      let se = localStorage.getItem(keys.entries);
+      let sb = localStorage.getItem(keys.books);
+      let ss = localStorage.getItem(keys.settings);
+      let st = localStorage.getItem(keys.tasks);
+      let sqn = localStorage.getItem(keys.quickNote);
+
+      // 🛡️ ZERO-LOSS MIGRATION: If İlay and no prefixed data, check legacy non-prefixed keys
+      if (activeStudent === 'ilay' && !se && !sb) {
+        se = localStorage.getItem('tus_entries');
+        sb = localStorage.getItem('tus_books');
+        ss = localStorage.getItem('tus_settings');
+        st = localStorage.getItem('tus_tasks');
+        sqn = localStorage.getItem('tus_quicknote');
+      }
+
+      entries = se ? JSON.parse(se) : [];
+      books = sb ? JSON.parse(sb) : [];
       if (ss) {
         let parsed = JSON.parse(ss);
         if (parsed.shiftDays !== undefined || parsed.restDays !== undefined) {
@@ -81,19 +102,22 @@
           delete parsed.restDays;
         }
         settings = { ...DEFAULT_SETTINGS, ...parsed };
+      } else {
+        settings = { ...DEFAULT_SETTINGS };
       }
-      const st = localStorage.getItem(STORAGE_KEYS.tasks);
-      if (st) tasks = JSON.parse(st);
-      const sqn = localStorage.getItem(STORAGE_KEYS.quickNote);
-      if (sqn !== null) quickNote = sqn;
-    } catch (e) { console.error('Veri yükleme hatası:', e); }
+      tasks = st ? JSON.parse(st) : [];
+      quickNote = (sqn !== null) ? sqn : '';
+    } catch (e) {
+      console.error('Veri yükleme hatası:', e);
+      entries = []; books = []; settings = { ...DEFAULT_SETTINGS }; tasks = []; quickNote = '';
+    }
   }
 
-  function saveEntries() { localStorage.setItem(STORAGE_KEYS.entries, JSON.stringify(entries)); }
-  function saveBooks() { localStorage.setItem(STORAGE_KEYS.books, JSON.stringify(books)); }
-  function saveSettings() { localStorage.setItem(STORAGE_KEYS.settings, JSON.stringify(settings)); }
-  function saveTasks() { localStorage.setItem(STORAGE_KEYS.tasks, JSON.stringify(tasks)); }
-  function saveQuickNote() { localStorage.setItem(STORAGE_KEYS.quickNote, quickNote); }
+  function saveEntries() { localStorage.setItem(getKeys().entries, JSON.stringify(entries)); }
+  function saveBooks() { localStorage.setItem(getKeys().books, JSON.stringify(books)); }
+  function saveSettings() { localStorage.setItem(getKeys().settings, JSON.stringify(settings)); }
+  function saveTasks() { localStorage.setItem(getKeys().tasks, JSON.stringify(tasks)); }
+  function saveQuickNote() { localStorage.setItem(getKeys().quickNote, quickNote); }
 
   function generateId() { return Date.now().toString(36) + Math.random().toString(36).substr(2, 5); }
   function getTotalPages() { return books.reduce((s, b) => s + (b.totalPages || 0), 0); }
@@ -125,6 +149,7 @@
 
   function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
+    if (!toast) return;
     toast.textContent = message;
     toast.className = `toast ${type} show`;
     setTimeout(() => toast.classList.remove('show'), 3000);
@@ -133,10 +158,13 @@
   // ===== Firebase Sync =====
   async function syncFromFirebase() {
     if (!window.FirebaseSync) return;
-    const data = await FirebaseSync.fetchAll();
+    window.FirebaseSync.setTargetUser(activeStudent);
+    const data = await window.FirebaseSync.fetchAll();
     if (data) {
       if (data.entries && Array.isArray(data.entries)) { entries = data.entries; saveEntries(); }
+      else if (!data.entries) { entries = []; saveEntries(); }
       if (data.books && Array.isArray(data.books)) { books = data.books; saveBooks(); }
+      else if (!data.books) { books = []; saveBooks(); }
       if (data.settings) {
         let parsed = data.settings;
         if (parsed.shiftDays !== undefined || parsed.restDays !== undefined) {
@@ -146,31 +174,49 @@
         }
         settings = { ...DEFAULT_SETTINGS, ...parsed };
         saveSettings();
+      } else {
+        settings = { ...DEFAULT_SETTINGS };
+        saveSettings();
       }
       if (data.tasks && Array.isArray(data.tasks)) { tasks = data.tasks; saveTasks(); }
+      else { tasks = []; saveTasks(); }
       if (data.quickNote !== undefined) { quickNote = data.quickNote; saveQuickNote(); }
-      loadSettingsToUI();
-      populateBookSelectors();
-      updateDashboard();
-      renderBooksList();
-      populateMonthFilter();
-      updatePartnerNote();
-      renderNotesPage();
+      else { quickNote = ''; saveQuickNote(); }
+      
+      refreshAllUI();
     }
     updateSyncStatus();
   }
 
   async function syncToFirebase() {
     if (!window.FirebaseSync) return;
-    await FirebaseSync.saveAll({ entries, books, settings, tasks, quickNote });
+    window.FirebaseSync.setTargetUser(activeStudent);
+    await window.FirebaseSync.saveAll({ entries, books, settings, tasks, quickNote });
     updateSyncStatus();
   }
 
   function updateSyncStatus() {
     const el = document.getElementById('syncStatus');
     if (el && window.FirebaseSync) {
-      el.innerHTML = FirebaseSync.getStatusHTML();
+      el.innerHTML = window.FirebaseSync.getStatusHTML();
     }
+  }
+
+  function refreshAllUI() {
+    loadSettingsToUI();
+    populateBookSelectors();
+    updateDashboard();
+    renderBooksList();
+    populateMonthFilter();
+    updatePartnerNote();
+    updateExamCountdown();
+    renderNotesPage();
+    const statsPage = document.getElementById('page-stats');
+    if (statsPage && statsPage.classList.contains('active')) renderStats();
+    const weeklyPage = document.getElementById('page-weekly');
+    if (weeklyPage && weeklyPage.classList.contains('active')) renderWeeklyReport();
+    const logsPage = document.getElementById('page-logs');
+    if (logsPage && logsPage.classList.contains('active')) renderAllEntries();
   }
 
   // ===== Navigation =====
@@ -1093,7 +1139,7 @@
   }
 
   // ===== init =====
-  function init() {
+  async function init() {
     loadData();
     initNavigation();
     initNotesEvents();
@@ -1217,10 +1263,351 @@
         document.getElementById('floatingNote').classList.add('hide');
       });
     }
+
+    // ===== Multi-User Authentication Startup =====
+    const hasActiveSession = await initAuthAndSession();
+    if (hasActiveSession) {
+      startPeriodicSync();
+    }
+  }
+
+  // ===== Periodic Sync Helper =====
+  function startPeriodicSync() {
+    // 1-second ticking interval for exam countdown
+    setInterval(updateExamCountdown, 1000);
+
+    // Initial sync badge
+    setTimeout(updateSyncStatus, 2000);
+
+    // Auto-sync every 30 seconds
+    setInterval(async () => {
+      if (currentUser) await syncFromFirebase();
+    }, 30000);
+
+    // Sync on page focus (when user comes back to tab)
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && currentUser) syncFromFirebase();
+    });
+  }
+
+  // ===== Multi-User & Admin Management Functions =====
+  async function initAuthAndSession() {
+    if (!window.AuthService) return false;
+    const user = await window.AuthService.init();
+    if (!user) {
+      // Show login overlay
+      const overlay = document.getElementById('loginOverlay');
+      if (overlay) overlay.style.display = 'flex';
+      setupLoginOverlay();
+      return false;
+    }
+    await onUserLoggedIn(user);
+    return true;
+  }
+
+  function setupLoginOverlay() {
+    const overlay = document.getElementById('loginOverlay');
+    const form = document.getElementById('loginForm');
+    const uInput = document.getElementById('loginUsername');
+    const pInput = document.getElementById('loginPassword');
+    const errEl = document.getElementById('loginErrorMsg');
+    const submitBtn = document.getElementById('loginSubmitBtn');
+    const hintEl = document.getElementById('loginSelectedHint');
+    const quickRow = document.getElementById('loginQuickUsersRow');
+
+    // Dynamically render quick buttons for existing users
+    if (quickRow && window.AuthService && window.AuthService.usersCache) {
+      const users = Object.values(window.AuthService.usersCache);
+      if (users.length > 0) {
+        quickRow.innerHTML = users.map(u => {
+          const icon = u.role === 'admin' ? '👑 ' : (u.username === 'ilay' ? '👩‍⚕️ ' : '👨‍⚕️ ');
+          return `<button type="button" class="quick-user-btn" data-user="${u.username}" data-name="${u.displayName || u.username}">${icon}${u.displayName || u.username}</button>`;
+        }).join('');
+      }
+    }
+
+    // Quick user buttons: selects username, CLEARS password, and forces user to type their password
+    document.querySelectorAll('.quick-user-btn').forEach(btn => {
+      btn.onclick = () => {
+        uInput.value = btn.dataset.user;
+        pInput.value = '';
+        pInput.focus();
+        if (errEl) errEl.style.display = 'none';
+        if (hintEl) {
+          const name = btn.dataset.name || btn.dataset.user;
+          hintEl.textContent = `🔒 "${name}" seçildi. Devam etmek için şifrenizi girin:`;
+          hintEl.style.display = 'block';
+        }
+      };
+    });
+
+    if (form) {
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+        errEl.style.display = 'none';
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Giriş yapılıyor...</span>';
+
+        const res = await window.AuthService.login(uInput.value, pInput.value);
+        if (res.success) {
+          if (overlay) overlay.style.display = 'none';
+          await onUserLoggedIn(res.user);
+          startPeriodicSync();
+          showToast(`Hoş geldin, ${res.user.displayName}! 👋`, 'success');
+        } else {
+          errEl.textContent = res.message;
+          errEl.style.display = 'block';
+        }
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Giriş Yap</span> <span class="btn-arrow">→</span>';
+      };
+    }
+  }
+
+  async function onUserLoggedIn(user) {
+    currentUser = user;
+
+    // User profile pill in navbar
+    const pillWrap = document.getElementById('userPillWrap');
+    const badge = document.getElementById('userRoleBadge');
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (pillWrap) pillWrap.style.display = 'flex';
+    if (badge) {
+      badge.textContent = user.role === 'admin' ? `👑 ${user.displayName || user.username}` : `👤 ${user.displayName || user.username}`;
+    }
+    if (logoutBtn) {
+      logoutBtn.onclick = () => window.AuthService.logout();
+    }
+
+    if (window.AuthService.isAdmin()) {
+      // Admin: Determine active student to inspect
+      const savedStudent = localStorage.getItem('tus_active_target_student');
+      activeStudent = savedStudent || 'ilay';
+
+      // Admin Switcher in navbar
+      const switcherWrap = document.getElementById('adminSwitcherWrap');
+      if (switcherWrap) switcherWrap.style.display = 'flex';
+      await populateAdminStudentSelector();
+
+      // Admin Management in Settings
+      const adminMgmtCard = document.getElementById('adminUserManagementCard');
+      if (adminMgmtCard) {
+        adminMgmtCard.style.display = 'block';
+        await renderAdminUsersList();
+        setupAddUserModal();
+        setupDeleteUserModal();
+      }
+    } else {
+      // Regular User: strict isolation, can only view own data
+      activeStudent = user.username;
+      const switcherWrap = document.getElementById('adminSwitcherWrap');
+      if (switcherWrap) switcherWrap.style.display = 'none';
+      const adminMgmtCard = document.getElementById('adminUserManagementCard');
+      if (adminMgmtCard) adminMgmtCard.style.display = 'none';
+    }
+
+    // Set Firebase sync target
+    if (window.FirebaseSync) {
+      window.FirebaseSync.setTargetUser(activeStudent);
+    }
+
+    // Load local data & update UI
+    loadData();
+    refreshAllUI();
+
+    // Sync from Firebase
+    await syncFromFirebase();
+  }
+
+  async function populateAdminStudentSelector() {
+    const select = document.getElementById('adminStudentSelect');
+    if (!select) return;
+    const users = await window.AuthService.getAllUsers();
+
+    select.innerHTML = users.map(u => {
+      const isSelected = u.username === activeStudent ? 'selected' : '';
+      const prefix = u.role === 'admin' ? '👑 ' : (u.username === 'ilay' ? '👩‍⚕️ ' : '👨‍⚕️ ');
+      return `<option value="${u.username}" ${isSelected}>${prefix}${u.displayName || u.username}</option>`;
+    }).join('');
+
+    select.onchange = async (e) => {
+      await switchActiveStudent(e.target.value);
+    };
+  }
+
+  async function switchActiveStudent(newStudent) {
+    if (!window.AuthService.isAdmin()) return;
+    activeStudent = newStudent;
+    localStorage.setItem('tus_active_target_student', activeStudent);
+    if (window.FirebaseSync) window.FirebaseSync.setTargetUser(activeStudent);
+
+    showToast(`İncelenen öğrenci değiştirildi: ${activeStudent}`, 'info');
+    loadData();
+    refreshAllUI();
+    await syncFromFirebase();
+  }
+
+  async function renderAdminUsersList() {
+    const tbody = document.getElementById('adminUsersTableBody');
+    if (!tbody) return;
+    const users = await window.AuthService.getAllUsers();
+    tbody.innerHTML = users.map(u => {
+      const roleBadge = u.role === 'admin'
+        ? '<span class="user-role-pill admin">Admin</span>'
+        : '<span class="user-role-pill user">Öğrenci</span>';
+      const dateStr = u.createdAt ? new Date(u.createdAt).toLocaleDateString('tr-TR') : '-';
+      const isCurrentActive = u.username === activeStudent;
+      const inspectBtn = `<button type="button" class="admin-action-btn" onclick="window.app.adminSelectStudent('${u.username}')">${isCurrentActive ? '👁️ Seçili' : '👁️ İncele'}</button>`;
+      const resetBtn = `<button type="button" class="admin-action-btn" onclick="window.app.adminResetPass('${u.username}')">🔑 Şifre</button>`;
+      const deleteBtn = (u.username !== 'canberk' && u.username !== 'ilay') ? `<button type="button" class="admin-action-btn" style="color:var(--accent-red); border-color:rgba(248,113,113,0.4);" onclick="window.app.adminDeleteUser('${u.username}')">🗑️ Sil</button>` : '';
+
+      return `
+        <tr>
+          <td><strong>${u.username}</strong></td>
+          <td>${u.displayName || u.username}</td>
+          <td>${roleBadge}</td>
+          <td>${dateStr}</td>
+          <td>${inspectBtn} ${resetBtn} ${deleteBtn}</td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  function setupAddUserModal() {
+    const openBtn = document.getElementById('openAddUserModalBtn');
+    const modal = document.getElementById('addUserModal');
+    const closeBtn = document.getElementById('closeAddUserModal');
+    const cancelBtn = document.getElementById('cancelAddUserBtn');
+    const form = document.getElementById('addUserForm');
+    const errEl = document.getElementById('addUserError');
+
+    if (openBtn && modal) {
+      openBtn.onclick = () => {
+        errEl.style.display = 'none';
+        form.reset();
+        modal.style.display = 'flex';
+      };
+    }
+    const closeModal = () => { if (modal) modal.style.display = 'none'; };
+    if (closeBtn) closeBtn.onclick = closeModal;
+    if (cancelBtn) cancelBtn.onclick = closeModal;
+
+    if (form) {
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+        errEl.style.display = 'none';
+        const u = document.getElementById('newUsername').value;
+        const d = document.getElementById('newDisplayName').value;
+        const p = document.getElementById('newPassword').value;
+        const useTemplate = document.getElementById('newUseTemplate').checked;
+
+        const res = await window.AuthService.createUser(u, p, d, 'user');
+        if (!res.success) {
+          errEl.textContent = res.message;
+          errEl.style.display = 'block';
+          return;
+        }
+
+        // If template checked, seed default 13 books
+        if (useTemplate && window.FirebaseSync) {
+          const templateData = {
+            books: window.FirebaseSync.getDefaultBooksTemplate(),
+            entries: [],
+            settings: { ...DEFAULT_SETTINGS, studentName: d },
+            tasks: [],
+            quickNote: ''
+          };
+          window.FirebaseSync.setTargetUser(res.user.username);
+          await window.FirebaseSync.saveAll(templateData);
+          window.FirebaseSync.setTargetUser(activeStudent);
+        }
+
+        showToast(`Yeni öğrenci eklendi: ${d}`, 'success');
+        closeModal();
+        await renderAdminUsersList();
+        await populateAdminStudentSelector();
+      };
+    }
+  }
+
+  async function adminResetPass(username) {
+    const newPass = prompt(`${username} için yeni şifre girin:`);
+    if (!newPass || newPass.trim().length < 3) {
+      showToast('Şifre en az 3 karakter olmalıdır.', 'danger');
+      return;
+    }
+    const res = await window.AuthService.resetPassword(username, newPass.trim());
+    if (res.success) {
+      showToast(res.message, 'success');
+    } else {
+      showToast(res.message, 'danger');
+    }
+  }
+
+  let pendingDeleteUsername = null;
+
+  function adminDeleteUser(username) {
+    pendingDeleteUsername = username;
+    const modal = document.getElementById('confirmDeleteModal');
+    const nameEl = document.getElementById('deleteTargetUsernameDisplay');
+    if (nameEl) nameEl.textContent = username;
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function setupDeleteUserModal() {
+    const modal = document.getElementById('confirmDeleteModal');
+    const cancelBtn = document.getElementById('cancelDeleteUserBtn');
+    const executeBtn = document.getElementById('executeDeleteUserBtn');
+
+    if (cancelBtn && modal) {
+      cancelBtn.onclick = () => {
+        modal.style.display = 'none';
+        pendingDeleteUsername = null;
+      };
+    }
+
+    if (executeBtn && modal) {
+      executeBtn.onclick = async () => {
+        if (!pendingDeleteUsername) return;
+        const target = pendingDeleteUsername;
+        executeBtn.disabled = true;
+        executeBtn.textContent = 'Siliniyor...';
+
+        const res = await window.AuthService.deleteUser(target);
+        if (res.success) {
+          showToast(res.message, 'success');
+          modal.style.display = 'none';
+          if (activeStudent === target) {
+            await switchActiveStudent('ilay');
+          }
+          await renderAdminUsersList();
+          await populateAdminStudentSelector();
+        } else {
+          showToast(res.message, 'danger');
+        }
+        executeBtn.disabled = false;
+        executeBtn.textContent = '🗑️ Evet, Hesabı Sil';
+        pendingDeleteUsername = null;
+      };
+    }
   }
 
   // Public API
-  window.app = { editEntry, deleteEntry, deleteBook, toggleTask, deleteTask, toggleDashPanel };
+  window.app = {
+    editEntry,
+    deleteEntry,
+    deleteBook,
+    toggleTask,
+    deleteTask,
+    toggleDashPanel,
+    adminSelectStudent: (u) => {
+      const select = document.getElementById('adminStudentSelect');
+      if (select) select.value = u;
+      switchActiveStudent(u);
+    },
+    adminResetPass,
+    adminDeleteUser
+  };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();

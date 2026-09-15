@@ -10,6 +10,49 @@
 </head>
 <body>
 
+  <!-- Login Screen Overlay (Shown when user is not logged in) -->
+  <div class="login-overlay" id="loginOverlay" style="display:none;">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="login-logo">🩺📚</div>
+        <h2>TUS Takip</h2>
+        <p class="login-subtitle">Hedefe odaklan, süreci yönet. Lütfen giriş yap.</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <!-- Fast User Select (Fills username, but ALWAYS REQUIRES password) -->
+        <div class="login-quick-links" style="margin-bottom: 18px; margin-top: 0; border-top: none; padding-top: 0;">
+          <div class="quick-links-title" style="margin-bottom: 8px;">👤 Hızlı Hesap Seç (Şifre Girilmesi Zorunludur):</div>
+          <div class="quick-badges-row" id="loginQuickUsersRow">
+            <button type="button" class="quick-user-btn" data-user="canberk" data-name="Canberk (Admin)">👑 Canberk (Admin)</button>
+            <button type="button" class="quick-user-btn" data-user="ilay" data-name="İlay">👩‍⚕️ İlay</button>
+            <button type="button" class="quick-user-btn" data-user="x" data-name="Öğrenci X">👨‍⚕️ Öğrenci X</button>
+            <button type="button" class="quick-user-btn" data-user="y" data-name="Öğrenci Y">👨‍⚕️ Öğrenci Y</button>
+          </div>
+        </div>
+
+        <div id="loginSelectedHint" class="login-selected-hint" style="display:none; background:rgba(124,92,252,0.15); border:1px solid rgba(124,92,252,0.3); color:#c4b5fd; padding:8px 12px; border-radius:8px; font-size:0.84rem; margin-bottom:14px; text-align:center;"></div>
+
+        <div class="form-group">
+          <label for="loginUsername">Kullanıcı Adı</label>
+          <input type="text" id="loginUsername" placeholder="Kullanıcı adınızı girin" required autocomplete="username" autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Şifre</label>
+          <input type="password" id="loginPassword" placeholder="Şifrenizi girin" required autocomplete="current-password">
+        </div>
+
+        <div id="loginErrorMsg" class="login-error-msg" style="display:none;"></div>
+
+        <button type="submit" class="btn btn-primary login-btn" id="loginSubmitBtn">
+          <span>Giriş Yap</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- Motivation Bar -->
   <div class="motivation-bar" id="motivationBar">
     <span class="quote-emoji">💪</span>
@@ -70,6 +113,17 @@
           </button>
         </li>
       </ul>
+      <!-- User & Admin Nav Controls -->
+      <div class="nav-user-controls">
+        <div class="admin-switcher-wrap" id="adminSwitcherWrap" style="display:none;">
+          <span class="switcher-label">👁️ Öğrenci:</span>
+          <select id="adminStudentSelect" class="admin-student-select"></select>
+        </div>
+        <div class="user-pill-wrap" id="userPillWrap" style="display:none;">
+          <span class="user-role-badge" id="userRoleBadge">👤 İlay</span>
+          <button type="button" class="btn-logout" id="logoutBtn" title="Güvenli Çıkış">🚪 Çıkış</button>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -500,6 +554,31 @@
           <button class="btn btn-danger btn-sm" id="clearData">🗑️ Tüm Verileri Sil</button>
         </div>
       </div>
+
+      <!-- Admin Student & User Management Card -->
+      <div class="card admin-mgmt-card" id="adminUserManagementCard" style="display:none; margin-top:16px;">
+        <div class="admin-mgmt-header">
+          <div>
+            <h3>👥 Öğrenci & Kullanıcı Yönetimi (Admin)</h3>
+            <p class="section-desc" style="color:var(--text-muted); font-size:0.85rem; margin-top:4px;">Yeni aday ekleyin, şifre sıfırlayın veya süreçlerini inceleyin.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" id="openAddUserModalBtn">➕ Yeni Öğrenci Ekle</button>
+        </div>
+        <div class="user-table-responsive" style="margin-top:14px; overflow-x:auto;">
+          <table class="admin-users-table">
+            <thead>
+              <tr>
+                <th>Kullanıcı Adı</th>
+                <th>İsim</th>
+                <th>Rol</th>
+                <th>Kayıt Tarihi</th>
+                <th>İşlemler</th>
+              </tr>
+            </thead>
+            <tbody id="adminUsersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- ==================== NOTES & TASKS ==================== -->
@@ -666,7 +745,59 @@
     <button class="note-close" id="floatingNoteClose" title="Gizle">×</button>
   </div>
 
-  <script src="firebase-sync.js"></script>
-  <script src="app.js"></script>
+  <!-- Add User Modal (Admin only) -->
+  <div class="modal-backdrop" id="addUserModal" style="display:none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>➕ Yeni Öğrenci Ekle</h3>
+        <button type="button" class="modal-close" id="closeAddUserModal">×</button>
+      </div>
+      <form id="addUserForm">
+        <div class="form-group">
+          <label for="newUsername">Kullanıcı Adı</label>
+          <input type="text" id="newUsername" placeholder="orn: dr_mert" required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="newDisplayName">Görünen İsim</label>
+          <input type="text" id="newDisplayName" placeholder="orn: Dr. Mert Kaya" required>
+        </div>
+        <div class="form-group">
+          <label for="newPassword">Başlangıç Şifresi</label>
+          <input type="password" id="newPassword" placeholder="En az 3 karakter" required>
+        </div>
+        <div class="form-group" style="margin-top:10px;">
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.9rem;">
+            <input type="checkbox" id="newUseTemplate" checked>
+            <span>📚 Standart 13 TUS Kitap Şablonu ile başlasın</span>
+          </label>
+        </div>
+        <div id="addUserError" style="display:none; color:var(--danger); font-size:0.85rem; margin-top:8px;"></div>
+        <div class="modal-actions" style="margin-top:16px;">
+          <button type="button" class="btn btn-ghost" id="cancelAddUserBtn">İptal</button>
+          <button type="submit" class="btn btn-primary" id="saveNewUserBtn">💾 Öğrenciyi Oluştur</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirm Delete User Modal (Admin only) -->
+  <div class="modal-backdrop" id="confirmDeleteModal" style="display:none;">
+    <div class="modal-card" style="max-width:420px; text-align:center;">
+      <div style="font-size:2.8rem; margin-bottom:8px;">⚠️</div>
+      <h3 style="margin-bottom:8px;">Öğrenci Hesabını Sil</h3>
+      <p style="color:var(--text-secondary); font-size:0.92rem; line-height:1.5;">
+        <strong id="deleteTargetUsernameDisplay" style="color:#fff;"></strong> öğrencisini ve bu hesaba ait tüm çalışma kayıtlarını silmek istediğinize emin misiniz?
+      </p>
+      <p style="color:var(--accent-red); font-size:0.82rem; margin-top:8px; font-weight:600;">⚠️ Bu işlem geri alınamaz!</p>
+      <div class="modal-actions" style="margin-top:20px; justify-content:center; gap:12px;">
+        <button type="button" class="btn btn-ghost" id="cancelDeleteUserBtn">Vazgeç</button>
+        <button type="button" class="btn btn-danger" id="executeDeleteUserBtn">🗑️ Evet, Hesabı Sil</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js?v=4.0.3"></script>
+  <script src="firebase-sync.js?v=4.0.3"></script>
+  <script src="app.js?v=4.0.3"></script>
 </body>
 </html>
