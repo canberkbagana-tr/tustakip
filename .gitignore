@@ -1,0 +1,14 @@
+# Ignore large PDF source files to prevent Git bloat and stay under GitHub 100MB file limit
+cikmis_sorular/*.pdf
+*.pdf
+
+# System & OS files
+.DS_Store
+Thumbs.db
+test_page*.png
+
+# Sensitive data — local backups only, must NOT go to GitHub
+# Ilay's real data lives in Firebase. These are local safety copies.
+backup_*.json
+current_firebase_data.json
+*_SAFE_COPY_*.json
