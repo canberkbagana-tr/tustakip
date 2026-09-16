@@ -15,10 +15,10 @@
 
   // ===== Multi-User & Authentication State =====
   let currentUser = null;
-  let activeStudent = 'ilay'; // Profile currently viewed/managed
+  let activeStudent = null; // Profile currently viewed/managed
 
   function getKeys() {
-    const user = activeStudent || 'ilay';
+    const user = activeStudent || (currentUser ? currentUser.username : 'guest');
     const p = `tus_${user}_`;
     return {
       entries: p + 'entries',
@@ -157,14 +157,14 @@
 
   // ===== Firebase Sync =====
   async function syncFromFirebase() {
-    if (!window.FirebaseSync) return;
+    if (!window.FirebaseSync || !activeStudent) return;
     window.FirebaseSync.setTargetUser(activeStudent);
     const data = await window.FirebaseSync.fetchAll();
     if (data) {
       if (data.entries && Array.isArray(data.entries)) { entries = data.entries; saveEntries(); }
-      else if (!data.entries) { entries = []; saveEntries(); }
+      else { entries = []; saveEntries(); }
       if (data.books && Array.isArray(data.books)) { books = data.books; saveBooks(); }
-      else if (!data.books) { books = []; saveBooks(); }
+      else { books = []; saveBooks(); }
       if (data.settings) {
         let parsed = data.settings;
         if (parsed.shiftDays !== undefined || parsed.restDays !== undefined) {
@@ -184,6 +184,23 @@
       else { quickNote = ''; saveQuickNote(); }
       
       refreshAllUI();
+    } else {
+      // If user has NO cloud data and is NOT ilay (e.g. newly registered user or user z)
+      if (activeStudent !== 'ilay') {
+        const keys = getKeys();
+        const localBooks = localStorage.getItem(keys.books);
+        if (!localBooks) {
+          // Initialize with standard template and 0 entries
+          books = window.FirebaseSync.getDefaultBooksTemplate();
+          entries = [];
+          settings = { ...DEFAULT_SETTINGS, studentName: currentUser ? (currentUser.displayName || currentUser.username) : '' };
+          tasks = [];
+          quickNote = '';
+          saveBooks(); saveEntries(); saveSettings(); saveTasks(); saveQuickNote();
+          refreshAllUI();
+          await syncToFirebase();
+        }
+      }
     }
     updateSyncStatus();
   }
@@ -677,7 +694,8 @@
     const fn = document.getElementById('floatingNote');
     const fnc = document.getElementById('floatingNoteContent');
     if (!fn || !fnc) return;
-    if (settings.partnerNote && settings.partnerNote.trim() !== '') {
+    // Partner note is strictly for İlay's profile
+    if (activeStudent === 'ilay' && settings.partnerNote && settings.partnerNote.trim() !== '') {
       fnc.textContent = settings.partnerNote;
       fn.style.display = 'block';
       fn.classList.remove('hide');
@@ -1140,7 +1158,6 @@
 
   // ===== init =====
   async function init() {
-    loadData();
     initNavigation();
     initNotesEvents();
 
@@ -1234,27 +1251,8 @@
     document.getElementById('importDataFile').addEventListener('change', function(e) { if (e.target.files[0]) { importData(e.target.files[0]); e.target.value = ''; } });
     document.getElementById('clearData').addEventListener('click', clearAllData);
 
-    // Load UI
-    loadSettingsToUI(); populateBookSelectors(); updateDashboard(); renderBooksList(); populateMonthFilter(); updateMotivation(); updatePartnerNote(); updateExamCountdown();
-
     // 1-second ticking interval for exam countdown
     setInterval(updateExamCountdown, 1000);
-
-    // Firebase: load from cloud on startup
-    syncFromFirebase().then(() => updateSyncStatus());
-
-    // Initial sync badge
-    setTimeout(updateSyncStatus, 2000);
-
-    // Auto-sync every 30 seconds
-    setInterval(async () => {
-      await syncFromFirebase();
-    }, 30000);
-
-    // Sync on page focus (when user comes back to tab)
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) syncFromFirebase();
-    });
 
     // Close partner note
     const closeNoteBtn = document.getElementById('floatingNoteClose');
@@ -1293,14 +1291,14 @@
   // ===== Multi-User & Admin Management Functions =====
   async function initAuthAndSession() {
     if (!window.AuthService) return false;
-    const user = await window.AuthService.init();
+    const overlay = document.getElementById('loginOverlay');
     if (!user) {
       // Show login overlay
-      const overlay = document.getElementById('loginOverlay');
       if (overlay) overlay.style.display = 'flex';
       setupLoginOverlay();
       return false;
     }
+    if (overlay) overlay.style.display = 'none';
     await onUserLoggedIn(user);
     return true;
   }
@@ -1445,6 +1443,7 @@
     loadData();
     refreshAllUI();
     await syncFromFirebase();
+    window.dispatchEvent(new CustomEvent('tus-user-changed', { detail: { student: activeStudent } }));
   }
 
   async function renderAdminUsersList() {

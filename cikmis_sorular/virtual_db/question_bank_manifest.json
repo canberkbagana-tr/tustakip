@@ -1,0 +1,136 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-09-15T23:50:00.000Z",
+  "totalQuestions": 7,
+  "summary": {
+    "totalSubjects": 13,
+    "activeSubjects": 1
+  },
+  "subjects": {
+    "fizyoloji": {
+      "name": "Fizyoloji",
+      "code": "fizyoloji",
+      "file": "cikmis_sorular/virtual_db/questions_fizyoloji.json",
+      "color": "#ef4444",
+      "icon": "🫀",
+      "questionCount": 7,
+      "categories": {
+        "Hücre Bölünmesi (Mitoz)": 1,
+        "Hücre Zarı & Membran Proteinleri": 1,
+        "Organeller & Genetik Materyal": 1,
+        "Hücre İçi İyon Dengesi": 1,
+        "Sitoskeleton & Hücre Mimarisi": 1,
+        "Hücre İçi Sindirim & Organeller": 1,
+        "Hücre Ölümü & Otoliz": 1
+      }
+    },
+    "patoloji": {
+      "name": "Patoloji",
+      "code": "patoloji",
+      "file": "cikmis_sorular/virtual_db/questions_patoloji.json",
+      "color": "#f472b6",
+      "icon": "🔬",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "dahiliye": {
+      "name": "Dahiliye",
+      "code": "dahiliye",
+      "file": "cikmis_sorular/virtual_db/questions_dahiliye.json",
+      "color": "#7c5cfc",
+      "icon": "🩺",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "pediatri": {
+      "name": "Pediatri",
+      "code": "pediatri",
+      "file": "cikmis_sorular/virtual_db/questions_pediatri.json",
+      "color": "#38d9d9",
+      "icon": "👶",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "genelcerrahi": {
+      "name": "Genel Cerrahi",
+      "code": "genelcerrahi",
+      "file": "cikmis_sorular/virtual_db/questions_genelcerrahi.json",
+      "color": "#eab308",
+      "icon": "🩹",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "kadindogum": {
+      "name": "Kadın Doğum",
+      "code": "kadindogum",
+      "file": "cikmis_sorular/virtual_db/questions_kadindogum.json",
+      "color": "#84cc16",
+      "icon": "🤰",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "kucukstajlar": {
+      "name": "Küçük Stajlar",
+      "code": "kucukstajlar",
+      "file": "cikmis_sorular/virtual_db/questions_kucukstajlar.json",
+      "color": "#10b981",
+      "icon": "🏥",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "biyokimya": {
+      "name": "Biyokimya",
+      "code": "biyokimya",
+      "file": "cikmis_sorular/virtual_db/questions_biyokimya.json",
+      "color": "#4ade80",
+      "icon": "🧪",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "mikrobiyoloji": {
+      "name": "Mikrobiyoloji",
+      "code": "mikrobiyoloji",
+      "file": "cikmis_sorular/virtual_db/questions_mikrobiyoloji.json",
+      "color": "#f97316",
+      "icon": "🧫",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "farmakoloji": {
+      "name": "Farmakoloji",
+      "code": "farmakoloji",
+      "file": "cikmis_sorular/virtual_db/questions_farmakoloji.json",
+      "color": "#f87171",
+      "icon": "💊",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "anatomi": {
+      "name": "Anatomi",
+      "code": "anatomi",
+      "file": "cikmis_sorular/virtual_db/questions_anatomi.json",
+      "color": "#d946ef",
+      "icon": "🦴",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "entegrehucre": {
+      "name": "Entegre Hücre",
+      "code": "entegrehucre",
+      "file": "cikmis_sorular/virtual_db/questions_entegrehucre.json",
+      "color": "#4f8cff",
+      "icon": "🧬",
+      "questionCount": 0,
+      "categories": {}
+    },
+    "orjinalsorular": {
+      "name": "Orijinal TUS Soruları",
+      "code": "orjinalsorular",
+      "file": "cikmis_sorular/virtual_db/questions_orjinalsorular.json",
+      "color": "#ef4444",
+      "icon": "📝",
+      "questionCount": 0,
+      "categories": {}
+    }
+  }
+}

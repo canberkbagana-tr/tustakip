@@ -27,12 +27,14 @@
     connected: false,
     lastSync: null,
     syncing: false,
-    activeUser: 'ilay', // target user profile to sync
+    activeUser: null, // target user profile to sync (must be set explicitly via setTargetUser)
 
     // Set target user profile (used when switching students or on user login)
     setTargetUser(username) {
       if (username) {
         this.activeUser = username.trim().toLowerCase();
+      } else {
+        this.activeUser = null;
       }
     },
 
@@ -46,7 +48,11 @@
 
     // ===== Read user data from Firebase =====
     async fetchAll() {
-      const user = this.activeUser || 'ilay';
+      const user = this.activeUser;
+      if (!user) {
+        console.warn('FirebaseSync: No active user set. Aborting fetchAll.');
+        return null;
+      }
       try {
         const res = await fetch(`${DB_URL}/tus_v4/users/${user}/data.json`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -79,8 +85,12 @@
     // ===== Write user data to Firebase =====
     async saveAll(data) {
       if (this.syncing) return;
+      const user = this.activeUser;
+      if (!user) {
+        console.warn('FirebaseSync: No active user set. Aborting saveAll.');
+        return false;
+      }
       this.syncing = true;
-      const user = this.activeUser || 'ilay';
       try {
         const res = await fetch(`${DB_URL}/tus_v4/users/${user}/data.json`, {
           method: 'PUT',
@@ -102,7 +112,11 @@
 
     // ===== Save specific path for active user =====
     async savePath(path, data) {
-      const user = this.activeUser || 'ilay';
+      const user = this.activeUser;
+      if (!user) {
+        console.warn('FirebaseSync: No active user set. Aborting savePath.');
+        return false;
+      }
       try {
         const res = await fetch(`${DB_URL}/tus_v4/users/${user}/data/${path}.json`, {
           method: 'PUT',
@@ -138,7 +152,7 @@
         const timeStr = this.lastSync
           ? this.lastSync.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })
           : '-';
-        return `<span class="sync-badge sync-online" title="Son senkronizasyon: ${timeStr}">🟢 Senkron (${this.activeUser})</span>`;
+        return `<span class="sync-badge sync-online" title="Son senkronizasyon: ${timeStr}">🟢 Senkron (${this.activeUser || 'Giriş Yok'})</span>`;
       }
       return `<span class="sync-badge sync-offline" title="Firebase bağlantısı yok">🔴 Çevrimdışı</span>`;
     }

@@ -12,3 +12,7 @@ test_page*.png
 backup_*.json
 current_firebase_data.json
 *_SAFE_COPY_*.json
+
+# Tesseract local models
+cikmis_sorular/tessdata/
+*.traineddata

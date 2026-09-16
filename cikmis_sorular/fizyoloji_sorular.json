@@ -1,0 +1,114 @@
+[
+  {
+    "id": "fizyoloji_q1",
+    "exam": "Nisan 2001 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Hücre Bölünmesi (Mitoz)",
+    "question": "Kromozomlar hücre bölünmesinde hangi evrede ekvatoryal düzeyde dizilim gösterirler?",
+    "options": {
+      "A": "İnterfaz",
+      "B": "Profaz",
+      "C": "Metafaz",
+      "D": "Anafaz",
+      "E": "Telofaz"
+    },
+    "answer": "C",
+    "explanation": "Ekvatoryal dizilim = Metafazın en önemli özelliğidir. Mitoz bölünmede kromozomların mikrotübüllere tutunarak hücrenin ekvatoral düzleminde (metafaz plağı) tek sıra halinde dizildiği evre metafazdır. Karyotip analizi de en belirgin bu evrede yapılır."
+  },
+  {
+    "id": "fizyoloji_q2",
+    "exam": "Eylül 1999 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Hücre Zarı & Membran Proteinleri",
+    "question": "Aşağıdakilerden hangisi hücre membranının özelliği değildir?",
+    "options": {
+      "A": "Yapısında temel olarak proteinler ve fosfolipidler bulunur.",
+      "B": "Periferal proteinler iyon kanalı görevi görür.",
+      "C": "Hücre membranı asimetrik yapıdadır.",
+      "D": "Protein yapılı hormonlar için yüzeyde özelleşmiş reseptörler bulunur.",
+      "E": "Kolesterol oranı artan bölümlerinde akışkanlık azalır."
+    },
+    "answer": "B",
+    "explanation": "Periferal proteinler membran boyunca uzanmazlar (transmembran değillerdir), lipid çift katmanının sadece bir yüzüne gevşek bağlıdırlar. Bu nedenle iyon kanalı veya taşıyıcı protein görevi İNTEGRAL (transmembran) proteinlere aittir. Kolesterol ise membran akışkanlığını düzenler, yüksek konsantrasyonda akışkanlığı azaltır."
+  },
+  {
+    "id": "fizyoloji_q3",
+    "exam": "Nisan 1997 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Organeller & Genetik Materyal",
+    "question": "Nükleus DNA'sına gereksinim olmadan kendi kendine bölünebilen / çoğalabilen organel aşağıdakilerden hangisidir?",
+    "options": {
+      "A": "Mitokondri",
+      "B": "Lizozom",
+      "C": "Peroksizom",
+      "D": "Golgi cisimciği",
+      "E": "Granüllü endoplazmik retikulum"
+    },
+    "answer": "A",
+    "explanation": "Mitokondri kendi dairesel çift sarmallı DNA'sına (mtDNA), kendi ribozomlarına ve tRNA'larına sahiptir. Nükleer DNA'dan bağımsız olarak replike olabilir ve ikiye bölünerek çoğalabilir. Anneden aktarılır (maternal kalıtım)."
+  },
+  {
+    "id": "fizyoloji_q4",
+    "exam": "Nisan 1994 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Hücre İçi İyon Dengesi",
+    "question": "Hücre içinde en fazla kalsiyum (Ca²⁺) içeren / depolayan organeller aşağıdaki seçeneklerin hangisinde birlikte verilmiştir?",
+    "options": {
+      "A": "Çekirdek ve Golgi cisimciği",
+      "B": "Lizozom ve Peroksizom",
+      "C": "Ribozom ve Çekirdekçik",
+      "D": "Plazma zarı ve Sentrozom",
+      "E": "Mitokondri ve Endoplazmik retikulum"
+    },
+    "answer": "E",
+    "explanation": "Hücrede serbest sitozolik kalsiyum çok düşüktür. Kalsiyumun başlıca depolandığı yer Agranüler / Düz Endoplazmik Retikulumdur (özellikle kas hücrelerinde Sarkoplazmik Retikulum). İkinci önemli kalsiyum deposu ve tamponlayıcısı ise Mitokondridir."
+  },
+  {
+    "id": "fizyoloji_q5",
+    "exam": "Eylül 2003 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Sitoskeleton & Hücre Mimarisi",
+    "question": "Hücre iskeleti elemanlarından hangisi mikrovillüslerin yapısında demetler halinde bulunur ve fırçamsı kenarı oluşturur?",
+    "options": {
+      "A": "Mikrotübüller",
+      "B": "Ara filamanlar",
+      "C": "Aktin filamanları (Mikrofilamanlar)",
+      "D": "Nörofilamanlar",
+      "E": "Laminler"
+    },
+    "answer": "C",
+    "explanation": "Mikrovillüslerin merkezinde paralel demetler halinde organize olmuş AKTİN filamanları yer alır (fimbrin ve villin ile bir arada tutulur). Mikrotübüller ise silya (titrek tüy) ve flagella yapısında 9+2 mikrotübül çifti düzeninde bulunur."
+  },
+  {
+    "id": "fizyoloji_q6",
+    "exam": "Nisan 2005 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Hücre İçi Sindirim & Organeller",
+    "question": "Hücre içi aktif sindirimin gerçekleştiği, primer lizozomun sindirilecek materyali içeren vezikülle birleşmesiyle oluşan yapı aşağıdakilerden hangisidir?",
+    "options": {
+      "A": "Mitokondri",
+      "B": "Primer lizozom",
+      "C": "Peroksizom",
+      "D": "Sekonder lizozom (Fagolizozom)",
+      "E": "Proteazom"
+    },
+    "answer": "D",
+    "explanation": "Golgi'den yeni tomurcuklanan inaktif hidrolitik enzim içeren organele primer lizozom denir. Primer lizozom fagositer veya pinositer bir vakuolle kaynaştığında sekonder lizozom (fagolizozom) oluşur ve aktif hücre içi sindirim burada gerçekleşir."
+  },
+  {
+    "id": "fizyoloji_q7",
+    "exam": "Eylül 2006 TUS",
+    "subject": "Fizyoloji",
+    "topic": "Hücre Ölümü & Otoliz",
+    "question": "Hücrenin kendi yaşlanmış veya hasarlı organellerini lizozomları aracılığıyla sindirmesi ve geri dönüştürmesi olayına ne ad verilir?",
+    "options": {
+      "A": "Ekzositoz",
+      "B": "Heterofaji",
+      "C": "Otofaji",
+      "D": "Pinositoz",
+      "E": "Apoptoz"
+    },
+    "answer": "C",
+    "explanation": "Hücrenin kendi organellerini (örn. hasarlı mitokondriyi) çift zarlı otofagozom içine alarak lizozomla kaynaştırması ve sindirmesi olayına OTOFAJİ denir. Dışarıdan alınan yabancı partiküllerin sindirilmesi ise heterofajidir."
+  }
+]

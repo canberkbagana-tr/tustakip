@@ -4,6 +4,21 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## [v4.3.2] - 2026-09-16 (Canlıya Dağıtım - Zorunlu Giriş & Soru Motoru Entegrasyonu)
+### 🔐 Zorunlu Kimlik Doğrulama & Canlıya Güvenli Dağıtım
+- **🚪 Şifresiz Giriş Açığı Kapatıldı:**
+  - `index.html`'deki `loginOverlay`'den `style="display:none;"` kaldırıldı; overlay varsayılan olarak açık başlar. Sadece geçerli bir oturum doğrulandığında gizlenir.
+  - `auth.js` içindeki `getActiveStudent()` fonksiyonunda unauthenticated durumda 'ilay' fallback'i kaldırıldı; oturum yoksa `null` döner.
+  - Mobil ve tarayıcı önbelleklerini kırmak için script ve CSS referansları `?v=4.3.2` olarak güncellendi.
+- **🛡️ Firebase Senkronizasyon İzolasyonu (AUDIT 🟡-4):**
+  - `firebase-sync.js` içindeki `activeUser: 'ilay'` varsayılanı `null` yapıldı. Oturum açılmadan veya `setTargetUser()` çağrılmadan Firebase'e veri yazma ve okuma işlemleri tamamen bloke edildi.
+- **📚 Çoklu Branş Manifest Soru Yükleyici (AUDIT 🟡-2):**
+  - `quiz.js`'deki sabit tek dosya (`questions_fizyoloji.json`) yükleme mantığı kaldırıldı. `question_bank_manifest.json` üzerindeki tüm aktif branşların (`questionCount > 0`) JSON dosyalarını dinamik yükleyip tek havuzda birleştiren `loadQuestions()` motoru devreye alındı.
+- **🔬 Tesseract Türkçe OCR Desteği & Yerel Model Koruması:**
+  - `tur.traineddata` modeli yerel ortama eklendi, çift dilli (tur+eng) soru ayıklama hattı aktive edildi. Model dosyaları `.gitignore` ile korunarak reponun şişmesi engellendi.
+
+---
+
 ## [v4.3.1-security-cleanup] - 2026-09-16 (Güvenlik Temizliği)
 ### 🔒 Hassas Veri Koruması & Firebase Güvenlik Notu
 - **🗑️ Backup JSON'lar git'ten çıkarıldı:**

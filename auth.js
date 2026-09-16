@@ -155,6 +155,16 @@
       return this.currentUser;
     },
 
+    // ===== Get Active Target Student (for Multi-User) =====
+    getActiveStudent() {
+      if (!this.currentUser) return null;
+      if (this.isAdmin()) {
+        const target = localStorage.getItem('tus_active_target_student');
+        if (target) return target;
+      }
+      return this.currentUser.username;
+    },
+
     // ===== Check Admin =====
     isAdmin() {
       return this.currentUser && this.currentUser.role === 'admin';
