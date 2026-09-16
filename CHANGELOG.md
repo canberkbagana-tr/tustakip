@@ -16,12 +16,11 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
   - `quiz.js`'deki sabit tek dosya (`questions_fizyoloji.json`) yükleme mantığı kaldırıldı. `question_bank_manifest.json` üzerindeki tüm aktif branşların (`questionCount > 0`) JSON dosyalarını dinamik yükleyip tek havuzda birleştiren `loadQuestions()` motoru devreye alındı.
 - **🔬 Tesseract Türkçe OCR Desteği & Yerel Model Koruması:**
   - `tur.traineddata` modeli yerel ortama eklendi, çift dilli (tur+eng) soru ayıklama hattı aktive edildi. Model dosyaları `.gitignore` ile korunarak reponun şişmesi engellendi.
-- **📚 189 Gerçek Çıkmış TUS Sorusu Sanal DB'ye Eklendi (Sayfa 92 / 304):**
-  - `Fizyoloji.pdf` kitabından 2. parti (Sayfa 47-92) taranarak **106 yeni soru** daha eklendi ve havuz **189 soruya** ulaştı.
-  - Soru tabanı (`questions_fizyoloji.json`) 189 soru ile yalnızca **256 KB** boyuttadır.
-  - **📍 Checkpoint & Resume Altyapısı (`extraction_state.json`):** Kitabın son işlenen sayfa indeksi (`lastProcessedPage: 92`) kalıcı kaydedilir. Gelecek oturumda tekrar 1. sayfadan başlamaz, tam 92. sayfadan devam eder; aynı sorular asla mükerrer ayıklanmaz.
-  - **🏁 Kitap Tamamlanma & PDF Temizleme Planı:** Kitap 304. sayfaya ulaştığında `isCompleted: true` işaretlenecek ve 172 MB'lık PDF güvenle silinerek disk tasarrufu sağlanacak.
-  - `question_bank_manifest.json` otomatik güncellendi: **Toplam Soru: 189 | Aktif Branş: 1/13**.
+- **📚 319 Gerçek Çıkmış TUS Sorusu Sanal DB'ye Eklendi (Sayfa 137 / 304):**
+  - `Fizyoloji.pdf` kitabından 3. parti (Sayfa 93-137) taranarak **130 yeni soru** daha eklendi ve toplam havuz **319 soruya** ulaştı.
+  - 319 soruluk devasa çıkmış soru tabanı (`questions_fizyoloji.json`) yalnızca **415 KB** boyuttadır.
+  - **📍 Checkpoint & Resume Altyapısı (`extraction_state.json`):** Kaldığımız yer `lastProcessedPage: 137` olarak kaydedildi.
+  - `question_bank_manifest.json` otomatik güncellendi: **Toplam Soru: 319 | Aktif Branş: 1/13**.
 
 ---
 

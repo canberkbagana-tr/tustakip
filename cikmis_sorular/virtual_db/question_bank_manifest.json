@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "lastUpdated": "1789583707.0422332",
-  "totalQuestions": 189,
+  "totalQuestions": 319,
   "summary": {
     "totalSubjects": 13,
     "activeSubjects": 1
@@ -13,10 +13,10 @@
       "file": "cikmis_sorular/virtual_db/questions_fizyoloji.json",
       "color": "#ef4444",
       "icon": "🫀",
-      "questionCount": 189,
+      "questionCount": 319,
       "categories": {
         "Hücre & Temel Fizyoloji": 83,
-        "Temel & Klinik Fizyoloji": 106
+        "Temel & Klinik Fizyoloji": 236
       }
     },
     "patoloji": {

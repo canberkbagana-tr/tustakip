@@ -159,16 +159,16 @@ Kullanıcının uyarısı: *"testi yaparken izledim seni kullanıcı z aslında 
 
 - [x] Kullanıcı Z ve yeni kayıt olan öğrencilerin İlay'ın verilerini görme açığı giderildi ve katı izolasyon sağlandı.
 - [x] İlay'a özel yüzen partner notunun diğer kullanıcılarda gizlenmesi sağlandı.
-- [x] Fizyoloji çıkmış soru tabanı 189 soruya genişletildi (`cikmis_sorular/virtual_db/questions_fizyoloji.json`, 256 KB).
-- [x] 13 TUS dersi soru takip manifestosu (`question_bank_manifest.json`) 189 soru ile güncellendi.
-- [x] Soru çıkarma checkpoint sistemi (`extraction_state.json`) kuruldu; Sayfa 92 / 304 kaydedildi.
+- [x] Fizyoloji çıkmış soru tabanı 319 soruya genişletildi (`cikmis_sorular/virtual_db/questions_fizyoloji.json`, 415 KB).
+- [x] 13 TUS dersi soru takip manifestosu (`question_bank_manifest.json`) 319 soru ile güncellendi.
+- [x] Soru çıkarma checkpoint sistemi (`extraction_state.json`) kuruldu; Sayfa 137 / 304 kaydedildi.
 - [x] Dashboard'a ders bazlı soru dağılımını gösteren detaylı modal (`quizPoolModal`) entegre edildi.
 - [x] Günlük 5 soruluk Duolingo tarzı mini-quiz motoru (`quiz.js`, `style.css`) çalışır hale getirildi.
 - [x] Aralıklı Tekrar (Spaced Repetition) ve 5.000+ soru havuzu takip mekanizması kodlandı (`_isReview`, `_daysAgo`, `"1 Hafta Önce Yanlış Çözmüştün!"` rozeti).
 - [x] `extract_questions.py` aracına soru olmayan kısımları (telif, kapak, salt teori) atlama, Tesseract tur+eng desteği, kaldığı yerden devam etme ve manifestoyu otomatik senkronize etme yeteneği eklendi.
 - [x] Zorunlu login overlay ve Firebase izolasyonu canlıya dağıtıldı (`main` branch).
-- [ ] **Sıradaki Adım 1:** Fizyoloji kitabındaki kalan üniteleri (Sayfa 93-304) partisiyonlar halinde taratıp kitabı tamamlamak (`isCompleted: true`).
-- [ ] **Sıradaki Adım 2:** Fizyoloji bitince `Fizyoloji.pdf` dosyasını diskten temizlemek.
+- [ ] **Sıradaki Adım 1:** Fizyoloji kitabındaki kalan üniteleri (Sayfa 138-304) sonraki oturumlarda taratıp kitabı tamamlamak (`isCompleted: true`).
+- [ ] **Sıradaki Adım 2:** Fizyoloji bitince 172 MB'lık `Fizyoloji.pdf` dosyasını diskten temizlemek.
 - [ ] **Sıradaki Adım 3:** İkinci bir branşın kitabını (örn. Patoloji veya Dahiliye) ekleyip aynı hafif JSON pipeline'ını çalıştırmak.
 
 ---

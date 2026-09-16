@@ -3571,5 +3571,2459 @@
     },
     "answer": "A",
     "explanation": "Üç germ yaprağından gelişen yapılar iyi bilinmelidir. Tam bir soru deposudur. Ektodermden: Merkezi sinir sistemi, Periferik sinir sistemi, Duyu organlarının duyu epiteli, Epidermis ve deri ekleri (kıl, tırnak, bezler), Hipofiz, Diş minesi ve bazı organların epiteli (Parotis v. b. ) gelişir. Mezodermden: Bağ dokusu, kıkırdak ve kemikler, Çizgili ve düz kaslar, Kan hücreleri, damarlar ve kalp, Böbrekler, gonadlar ve boşaltma yolları, Böbrek üstü bezi korteksi ve Dalak gelişir. Endodermden: Solunum sistemi epitel örtüsü, Sindirim kanalı epitel örtüsü ve türevleri (karaciğer, pankreas v.b.), Tonsil, tiroid, paratiroid, timus parankiması, Mesane ve üretra epitelinin büyük bölümü, Östaki borusu ve orta kulak boşluğu epiteli gelişir. Eee germ tabakasından oluşan yapılar Santral ve periferik sinir sistemi + Adenohipofiz + Ameloblastlar * Göz, kulak ve burundaki duyu epitelleri * Epidermis, saç ve tırnaklar ipofiz bezi, meme bezi, yağ ve ter bezleri pupiller kası ve lens, korneanın anterior epiteli Parotis, meme Şu yapıların epitelleri: Anal kanalın alt parçası, erkek üretrasının distal kısmı, dış kulak yolu Utrikul, sakkulus, semisirküler kanallar, kohlear kanal, 8.sinirin vestibüler ve spinal gangliyonu Olfaktor plakfodlar, (I. kraniyal sinir)"
+  },
+  {
+    "id": "fizyoloji_q190",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Embriyonel dönemde endodermden gelişen yapı aşağıdakilerden hangisidir? (Eylül-87)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Böbrekler",
+      "B": "Tonsiller",
+      "C": "Gonadlar",
+      "D": "Kas dokusu",
+      "E": "Hipofiz"
+    },
+    "answer": "B",
+    "explanation": "Tonsilla ve Timus lenfoid doku olup endodermden geliştiği iyi bilinmelidir... Embriyonel dönemde endoderm'den gelişen yapı: Tonsilla Palatinadır. Böbrekler : Mezodermden gelişir. Gonadlar : Mezodermden gelişir. Kas dokusu : Mezodermden gelişir. Hip: ktodermden gelişir. Tonsilla gibi lenfoid doku olup endodermden gelişen Timus'ta unutulmamalıdır. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 89"
+  },
+  {
+    "id": "fizyoloji_q191",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "İntrauterin beşinci hafta sonunda 3. — 4. yutak keselerinin endodermal divertikül arkasında beliren ve retikulum hücrelerinin epitel karakter taşıdığı lenfoid doku aşağıdakilerden hangisidir? (Eylül 2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tonsil",
+      "C": "Timus",
+      "B": "Dalak",
+      "D": "Lenf nodu",
+      "E": "Mukozaların lenfoid dokusu"
+    },
+    "answer": "C",
+    "explanation": "Diğer lenfoid organların aksine timusun embriyolojik kökeni endodermal orjinlidir. Bu bilgi farklı şekilerde sorgulanabilir. Timus, 3. çift faringeal ceplerden gelişir. Endodermal kökenli olup içerisindeki yoğun lenfositler mezodermal kökenli olduğu için timus organ olarak çift germ kökenli kabul edilir. Dalak ve lenf nodları mezodermal kökenlidir. Parafolliküler C hücreleri 4.cepten gelişirken; tiroid direk olarak endodermden gelişir."
+  },
+  {
+    "id": "fizyoloji_q192",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Endodermal tabakadan iki ayrı tomurcuk hâlinde gelişen ve 6. haftadan sonra rotasyonla birleşerek oluşan organ aşağıdakilerden (hangisidir? (Eylül 2011)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mide",
+      "B": "Karaciğer",
+      "C": "Pankreas",
+      "D": "Uterus",
+      "E": "Duedonum"
+    },
+    "answer": "C",
+    "explanation": "Germ yapraklarından hangi yapıların geliştiği emriyoloji açısından mutlaka bilinmesi gerekli noktalardır. Pankreas, endodermal germ tabaksasının ileri farklılanması ( ön ve arka tomurcukların birleşmesi ) ile oluşan preenteron (foregut)'dan gelişir."
+  },
+  {
+    "id": "fizyoloji_q193",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki (o yapılardan (hangisi endoderm kökenli ilkel bağırsak kanalından gelişmez? (Eylül 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Hepatositler",
+      "B": "Safra kesesi",
+      "C": "Paratiroid bezi",
+      "D": "Dalak parankimi",
+      "E": "Hepatositler"
+    },
+    "answer": "D",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) hangisi mezoderm kökenlidir? Aşağıdaki / yapılardan (Eylül 2019 BENZERİ) = 5 Ğ"
+  },
+  {
+    "id": "fizyoloji_q194",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "İris kaslarının embriyolojik orijini aşağıdakilerden hangisidir? (Eylül 2012)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Nöroektoderm",
+      "B": "Splanknik mezoderm",
+      "C": "İntermediyer mezoderm",
+      "D": "Ektomezenkim",
+      "E": "Somatik mezoderm"
+    },
+    "answer": "A",
+    "explanation": "Kasların hepsi mezodermal kökenliyken iris kasları ektodermal kökenlidir. Erken göz gelişimi bir seri uyarılar sonucu gerçekleşir. Gözler dört kaynaktan gelişir. Ön beyin néroektodermi: Retina, iris'in arka tabakaları ve optik sinire farklılaşır. Başın yüzey ektodermi: Lens ve kornea epitelini oluşturur. Nöral krestten: Mezenşim içine göç eden nöral krest hücreleri koroid, sklera ve kornea endoteline farklılaşır."
+  },
+  {
+    "id": "fizyoloji_q195",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisinin gelişimine üç germ tabakası da katılır? (Eylül 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Karaciğer",
+      "B": "Retina",
+      "C": "Langerhans adacığı (o",
+      "D": "Hipofiz",
+      "E": "Timpanik membran"
+    },
+    "answer": "E",
+    "explanation": "Burada özellikle farklı bir ayırt edici bilgi bulunmaktadır. Her üç germ tabakasını da içine alan yapı oluşum itibari ile faringeal kompleks içinde olmalıdır. İşte sorudaki ipucu da bu olacaktır. Timpanik membran oluşumuna her üç germ tabakası da katılır. Karaciğer ve Langerhans adacığı endoderm iken retina ve hipofiz ektoderm kökenlidir. Organların embriyolojik gelişimini düşünürken organın damarları mezoderm, sinirleri ektoderm, yapısı endodermden gelişir gibi ayrı ayrı düşünmemeliyiz. Örneğin karaciğer gelişirken önce endodermden, hepatik divertikül gelişiyor. Sonra karaciğerdeki diğer yapılar (damar, sinir) gelişimi görülüyor. O yüzden karaciğer gibi iç organları gelişimi endoderm olarak kabul ediliyor. Embriyoloji ana kaynakları timpanik membran için özel bir şekilde üç germ yaprağından birden gelişir olarak bahsederler."
+  },
+  {
+    "id": "fizyoloji_q196",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki yapılardan hangisi ilkel ağız boşluğu tavanını döşeyen ektodermden gelişir? (Eylül 2001)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tiroid",
+      "B": "Paratiroid",
+      "C": "Adenohipofiz",
+      "D": "Epifiz",
+      "E": "Timus"
+    },
+    "answer": "C",
+    "explanation": "Soru direk rathke kesesini agiklar gibi kurgulanmis. Artigindan kraniyofarinjioma gelişebildiği unutulmamalıdır. Adenohipofiz, embriyoda primitif ağzın tavanından ektodermin yaptığı cep gibi bir çıkıntı olarak oluşan Rathke kesesinden gelişir. Posterior hipofiz (nörohipofiz), ise diensefalonun tabanından bir çıkıntı şeklinde oluşur ve beyinden ayrılmaksızın kaudal yönde bir sap şeklinde büyür. Diensefalonun (o tabanındaki o çıkıntı o nörohipofizi oluştururken tavanındaki çıkıntı epifizi oluşturur."
+  },
+  {
+    "id": "fizyoloji_q197",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden (hangisi diensefalondan 3. ventrikülün tavanında bir çıkıntı olarak gelişir? (Eylül 2002)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Adenohipofiz",
+      "C": "Infundibulum",
+      "B": "Epifiz",
+      "D": "Nérohipofiz",
+      "E": "Talamus"
+    },
+    "answer": "B",
+    "explanation": "Diensefalonun alt tarafından hipotalamus ve hipofiz gelişirken, üst bölümünden epitalamus ve epifiz gelişir. Anatomik olarak da isimlendirme akılda kalıcıdır. Diensefalon hemisferler arasında bulunur ve yalnız alt yüzü serbesttir. Diğer yüzleri hemisferlere yapışıktır. Diensefalon fonsiyonel 4 bölüme ayrılır;"
+  },
+  {
+    "id": "fizyoloji_q198",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi nöral krista'dan gelişmez? (Eylül-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Melanosit",
+      "B": "Schwann hücresi",
+      "C": "Duramater",
+      "D": "Odontoblast",
+      "E": "Medulla spinalisin bazı hücreleri"
+    },
+    "answer": "C",
+    "explanation": "Krista nöralis hücreleri ektodermden köken alıp mezodermin içine dağılmışlardır. Buradan gelişen yapılar çok iyi bilinmelidirler... Nöral cristadan köken alan yapılar; 1- Adrenal medullanin kromaffin hücreleri, 2- Deride ve derialtı dokularındaki melanositler, 3- Odontoblastlar, 4- Pia mater ve araknoid hücreler, 5- Kranial ve spinal duyu ganglionlarının duyu nöronları, 6- Sempatik ve parasempatik ganglionların postganglionik nöronları, 7- Periferik aksonların Schwann hücreleri, 8- Periferik ganglionlarin satellit hücreleridi, Duramaterin mezodermden köken aldığını iyi bilmek gerek. Diğer beyin zarları ektodermal kökenlidir."
+  },
+  {
+    "id": "fizyoloji_q199",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Embriyonik gelişim sırasında son bağırsak duvarına yetersiz göçü Hirschsprung hastalığına neden olan hücre aşağıdakilerden hangisidir? (Şubat 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Splanknik mezoderm hücresi",
+      "B": "Sölom epitel hücresi",
+      "C": "Yüzey ektoderm hücresi",
+      "D": "Paraksiyel mezoderm hücresi",
+      "E": "Nöral krista hücresi"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) mk ie Burada hastalığın diğer adı Agangliyonik megakolondur. Dolayısı ile ganglion gelişimini sağlayan germ yapısının nöral krest olması bizi şaşırtmamalıdır. ~ Hirschprung hastalığı gangliyon gelişme defekti olduğu için bu hastalığın kökeni nöral krest olmaktadır. Omfalosel ve Meckel divertikülü omfoloenterik kanal defekti sonucu oluşan yapılardandır. Kranyofaringiyoma oral ektoderm kökenli tümördür. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 91 Spina bifida okkulta gibi nöral tüp defekti posterior nöropor kapanma defekti sonucu oluşur."
+  },
+  {
+    "id": "fizyoloji_q200",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi nöral kristadan gelişmez? (Eylül 2011)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Baş bölgesinin bağ dokusu",
+      "B": "Melanositler",
+      "C": "Spinal ganglion hücreleri o",
+      "D": "Adrenal korteks",
+      "E": "Piamater"
+    },
+    "answer": "D",
+    "explanation": "Bu soruda dikkat edilmesi gereken bilgi; adrenal medullanın nöral krestten köken almasına karşılık, adrenal korteksin mezodermal germ tabakasının ileri farklılanması sonucu oluşmasıdır."
+  },
+  {
+    "id": "fizyoloji_q201",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Serebrum, primer beyin veziküllerinin hangisinden gelişir? (Nisan 2010)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Telensefalon",
+      "C": "Metensefalon",
+      "B": "Diensefalon",
+      "D": "Miyelensefalon",
+      "E": "Rombensefalon"
+    },
+    "answer": "A",
+    "explanation": "Primer ve sekonder beyin keselerini iyi bilmek gerekir. Özellikle beyin hemisferlerini oluşturan serebrumun kökeni önem arzetmektedir. 5 Sekonder beyin vezikülü 3 Primer beyin vezikülü Duyar Başk be Serebral oo irili Ön beyir İÇ Talarus enset m Mezonsetion Tneconeeteion mili Pons <a Serebellum AR Ç (fs bayensetelon: Ck spinal. Merkezi sinir sistemi"
+  },
+  {
+    "id": "fizyoloji_q202",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Pineal bez aşağıdakilerin hangisinden gelişir? (Şubat 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Diensefalon tavanı",
+      "B": "Miyelensefalonun kaudal kısmı",
+      "C": "Telensefalon",
+      "D": "Nöral krista",
+      "E": "Optik kupa"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:)"
+  },
+  {
+    "id": "fizyoloji_q203",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki embriyonik yapılardan hangisinin kalıntıları teratomlara yol açabilir? (Nisan 2013) G) Nöral krista",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Notokord",
+      "B": "Primitif çizgi",
+      "D": "Prekordal plak",
+      "E": "Kloakal zar"
+    },
+    "answer": "B",
+    "explanation": "GASTRULASYON + Üçüncü haftanın başlaması ile embriyonik döneme girilmiş olur. + Gastrulasyon primitif çizginin oluşması ile başlar (14-15.gün). Notokord (16-18.gün) ve üç germ tabakasının oluşması ile tamamlanır. + Üçüncü haftanın başında, embriyonik diskin dorsal yüzünde, orta çizginin kaudalinde kalın, şişkin çizgisel bir bant gözlenir. Başlangıçta kısa olan ve gittikçe uzayan bu çizgiye primitif çizgi adı verilir. * Bu çizgi epiblast hücrelerinin çoğalması ve embriyonik diskin orta bölgesine göçü ile oluşur. Oroforingeal membran 4 Amniyon zarının T kesik kenarı > Prenotokordal / hücreler Kloakal membran * Primitif çizgiden intraembriyonik mezoderm oluşması"
+  },
+  {
+    "id": "fizyoloji_q204",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Nucleus pulposuslar aşağıdakilerden hangisinden gelişir? (Eylül-90)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Notokord",
+      "C": "Vitellus kesesi",
+      "B": "Allantois",
+      "D": "Somitler",
+      "E": "Amnion"
+    },
+    "answer": "A",
+    "explanation": "Chorda Dorsalis (Notochord) primer iskelet olarak varlığını sürdürür. Daha sonra Chorda Dorsalis omur gövdelerinin oluştuğu yerde kaybolurken diskus intervertebralis bölgesinde kalarak nucleus pulposusu yapar. Notokord kaynaklı tümörlerin de kordomalar olduğunu unutmamak gerek."
+  },
+  {
+    "id": "fizyoloji_q205",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Embriyonel gelişimin hangi haftalarında nöral tüp defektleri gelişmektedir? (Nisan 2013)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "1-2.",
+      "B": "3-4.",
+      "C": "5-6.",
+      "D": "7-8.",
+      "E": "9-10."
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q206",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi nöral tüp defekti ile ilgili bir anomali değildir? (Şubat 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Meningomiyelosel",
+      "B": "Spina bifida okülta",
+      "C": "Kraniyosinostozis",
+      "D": "Meningomiyelosel",
+      "E": "Myelosizis"
+    },
+    "answer": "C",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) 30 günlük bir embriyoda nöroporların kapanmaması sonucu aşağıdakilerden hangisi olmaz? (Şubat 2019 BENZERİ) Sinir sistemi embriyolojisinde nöral tüp defektleri ağır toplumsal sağlık problemleri oluşturduğu için sıklıkla soru oluyor. Kraniyosinositozun bir kafatası sütürleri erken kapanması defekti olduğu hatırlanırsa kolaylıkla cevaplanabilir. Nörülasyon, 3 ve 4. haftayı kapsayan sinir sisteminin gelişim sürecidir. Gelişim 3. hafta başında notokordun ektodermi indüklemesiyle gelişen Nöral plak oluşumu ile başlar ve nöral tüp oluşumu ile biter. Nöral tüpün anterior bölgesi (rostral nöropor) 25. günde, posterior bölgesi (kaudal nöropor) 28. günde kapanır."
+  },
+  {
+    "id": "fizyoloji_q207",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki yapılardan hangisi epidermis kökenli değildir? (Nisan 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Vitellus kesesi",
+      "B": "Ektoderm",
+      "C": "Ara mezoderm",
+      "D": "Paraksiyal mezoderm",
+      "E": "3. farinks cebi"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdakilerden £ hangisi ektoderm kökenli değildir? (Nisan 2016 BENZERİ) Deri ekleri; kıl, tırnak ve bezlerden (ekrin ter bezleri, apokrin ter bezleri, yağ bezleri) oluşur. Tüm deri ekleri ektoderm kökenli epidermisten köken alır. Parotis bezi ektodermal kökenli iken sublingual ve submandibüler bezler endodermal tomurcuklardan gelişir. 4 . Barsaklar, embriyoda aşağıdakilerden hangisinden gelişir? (Nisan-90) Vitellus kesesi ilerde ilkel barsagi gelistirerek ortadan kaybolur..."
+  },
+  {
+    "id": "fizyoloji_q208",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Fetüste, major konjenital anomali oluşumunda teratojenlerin en etkili olduğu dönem gebeliğin kaçıncı haftalarıdır? (Eylül 2006)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "1.-2.",
+      "C": "12. - 14.",
+      "B": "4.-8.",
+      "D": "20. - 25.",
+      "E": "30. - 36."
+    },
+    "answer": "B",
+    "explanation": "Organogezin görüldüğü dönem teratojenlere en duyarlı dönemdir. Fetal hayattta 3. haftanın başından 8. haftanın sonuna kadar geçen döneme embriyonik dönem adı verilir. Embriyonik dönemde temel organ ve sistemlerin gelişmesi nedeniyle teratojenlere (ilaç, virus vs) karşı çok hassastır. Fetüs ne kadar erken dönemde teratojene maruz kalmışsa o kadar fazla etkilenecektir. Ancak gebeliğin ilk iki haftasındaki maruziyet çoğunlukla abortusla sonuçlanır. 2 $ = 5 & 2 5 &"
+  },
+  {
+    "id": "fizyoloji_q209",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plasentanın fetusa ait parçası aşağıdakilerden hangisidir? (Nisan-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Coryon frondosum",
+      "B": "Coryon leva",
+      "C": "Desidua paryetalis",
+      "D": "Corrioallantoic zar",
+      "E": "Corion plak"
+    },
+    "answer": "A",
+    "explanation": "Plasenta anne ile çocuğun ortaklaşa oluşturduğu bir organ olup histolojisi iyi bilinmelidir. Plasentanın temelini oluşturan ve amnion zarının dışında bulunan coryon, blastokistin dış tabakasını yapan trofoblast hücrelerinden oluşur ve bir süre sonra plasentanın yapısına iştirak eder. Plasentanın yapışmadığı yerden bir histolojik kesit alırsak; desidua paryetalis anneya ait kısmı, coryon leava da çocuğa ait kısmı oluşturur. Özet olarak; * Plasenta; coryon frondozum * desidua bazalisten oluşur. * Desidua bazalis, plasentanın anneye ait; * Coryon frondosum, fetusa ait parçasıdır. Coryon ve plasenta .Coryon « Plasentanın temelini oluşturur ve amnion zarının dışında bulunur. « Blastositin dış tabakasını yapan trofoblast hücrelerinden oluşur. + Coryon boşluğu, primitif yolk kesesi ve amnion boşluğunun germ diskinin trofoblasta bağlandığı bağlantı sapı dışında tümüyle sarar. * 6. haftadan itibaren embriyo coriondan ayrılır ve neticede göbek bağı damarları ve allantoisle bağlı olarak kalır. Plasenta « Uterus ile embriyo arasındaki metabolizma olaylarının gerçekleşmesi için gerekli bağlantıyı sağlar. « Plasenta gebelik hormonları yapıp salgılayan geçici bir organdır. * Bir patoloji olmaksızın plasentada anne ve çocuğa ait kanlar hiçbir şekilde birbirine karışmaz. * Olgun plasenta pars fötalis ve pars maternalis olmak üzere iki bölümden oluşur."
+  },
+  {
+    "id": "fizyoloji_q210",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plasentanın oluşumuna aşağıdakilerden hangisi katılmaz? (Nisan-93)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sitotrofoblast",
+      "B": "Sinsityotrofoblast",
+      "C": "Desidua basalis",
+      "D": "Internal embriyonel mezoderm",
+      "E": "Eksternal embriyonel mezoderm"
+    },
+    "answer": "D",
+    "explanation": "Plasentanın yapısı ile iligili öğretici bir soru... embriyoblasttan gelişen hiçbir yapı plasentanın yapısına katılmaz. PLASENTA YAPISINA KATILAN OLUŞUMLAR + Plasentada dıştan içe doğru şu tabakalar vardır. Y Sinsityotrofoblast hücreleri X Sitotrofoblast hücreleri X Koryon villusları içindeki bağ dokusu X Koryon villuslarındaki damar endoteli. v Eksternal embriyonel mezoderm X Desidua basalisde katılır."
+  },
+  {
+    "id": "fizyoloji_q211",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki (tabakalardan (hangisi plasenta membranında yer almaz? (Eylül 2007) G) Ektoderm",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sinsityotrofoblast",
+      "B": "Sitotrofoblast",
+      "D": "Villüslerin bağ dokusu",
+      "E": "Fetal kapiller endoteli"
+    },
+    "answer": "C",
+    "explanation": "Plasental bariyer ile ilgili öğretici bir soru... Cevap göz önünde olsa da diğer şıkları öğrenmek gerek. Plasenta: Koryon frondozum (fetal) ve desidua bazalisten (maternal) meydana gelmiştir. Gebeliğin ilerlemesiyle (5-6. ayda) desidua kapsülaris ve desidua pariyetalis giderek kaynaşır. Fetusun ve amniyon boşluğunun yukarıda değinildiği gibi giderek büyümesi sonucu amniyon zarı koryon leve ile kaynaşır ve amniyokoryonik zar adını alır. Doğumda plasenta ile birlikte dışarıya atılan amniyokoryonik zardır. Doğumdan hemen sonra tüm desidual tabakalar, plasenta, koryon leve ve amniyon uterustan atılır. İnsan plasentası hemokoriyaldir (*Nisan-1988). Sinsityotrofoblast gebeliğin sonuna kadar kalır, fakat sitotrofoblastlar gebeliğin ikinci yarısında giderek ortadan kaybolur (*Nisan-2000). Plasentayı oluşturan yapılar maternal taraftan fetal tarafa doğru, desidua-kotiledonlar, koryon Villusları, koryon ve amniyondur (*Nisan-1992; *Nisan-1993). Anne ve embriyo/fetus kanı arasında bulunan yapılar plasenta-bariyerini oluşturur. Erken dönemde bu bariyer villus duvarındaki sinsityotrofoblast, sitotrofoblast, embriyonik mezenşim, endotel bazal laminası ve villus kapiller endotel hücrelerinden oluşur. Plasentanın histolojik yapısında ektoderm yer almaz...!!! 5 a 5 E &"
+  },
+  {
+    "id": "fizyoloji_q212",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plasenta hücre katlarından hangisi gebeliğin ilerlemesiyle ortadan kalkar? (Nisan 2000)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sinsityotrofoblast",
+      "B": "Sitotrofoblast",
+      "C": "Hofbauer hücresi",
+      "D": "Fetal bağ dokusu mezenkim hücreleri",
+      "E": "Fetal kılcal damarların endotel hücresi"
+    },
+    "answer": "B",
+    "explanation": "Plasental bariyer ile ilgili öğretici bir soru... Sitotrofoblastlar ilerleyen haftalarda ortadan kalkar. Plasentanın fetal kısmı olan koryonda koryonik villüslerin çıktığı noktada bir koryon plağı bulunur. Koryonik villüsler ekstraembriyonik mezenkimden türemiş bağ dokusundan bir nüve etrafında yerleşmiş sinsityotrofoblasttan oluşur. Sinsityotrofoblast gebeliğin sonuna kadar kalır, fakat sitotrofoblastlar gebeliğin ikinci yarısı esnasında giderek ortadan kaybolur. Plasentasyonun erken döneminde sitotrofoblastta aşırı bir proliferasyon ile birlikte hücresel kaynaşma görülmesine karşın, gebelik ikinci yarısında proliferasyon yavaşlar ancak hücresel kaynaşma devam eder. Sonuçta sitotrofoblast hücrelerinin gelişmekte olan sinsityum yapısına katılarak ortadan kaybolduğu görülür. Hofbauer hücresi, plasentada bulunan makrofaj hücresidir (Eylül 2016 - TUS)."
+  },
+  {
+    "id": "fizyoloji_q213",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plasentada, kotiledonlar hangisinden oluşur? (Nisan 2005) aşağıdakilerden",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Koryon plağında",
+      "B": "Desidua bölmelerinin arasında",
+      "C": "Desidua tabanında",
+      "D": "Desidua kapsülariste",
+      "E": "Tutundurucu villüslerde"
+    },
+    "answer": "B",
+    "explanation": "Anne ile çocuk arasındaki alışverişlerin yapıldığı kotiledonların histolojisi sorgulanmış. Desidua (endometriyum): - Desidua bazalis (decidua basalis:koryon frondozuma komşu bölge) - Desidua kapsülaris (decidua capsularis:koryon leveyi çevreleyen bölge) - Desidua pariyetalis (decidua paryetalis: desidua'nın bunların dışında kalan bölümü)olmak üzere 3'e ayrılır. - Desiduada septumların gelişmesiyle kotiledonlar belirir. Doğumda atılan plasentanın bir yüzünde amniyon zarı (koryon plağı) ve göbek kordonu; diğer yüzünde desidua bölmeleri (septumları) ve kotiledonlar görülür. Soruda çeldiricilerde belirtilen terimlerden yapıların kotiledonlarla doğrudan bir ilişkisi yoktur."
+  },
+  {
+    "id": "fizyoloji_q214",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi plasental membranı geçemez? (Nisan 2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Retinoik asit",
+      "B": "igG",
+      "D": "Fenitoin",
+      "E": "Tetrasiklin"
+    },
+    "answer": "C",
+    "explanation": "Klinikle korele bir embriyoloji sorusu...Klinikte tekrar karşımıza çıkabilir... Netter'in İnsan Embriyoloji Atlası'nda sayfa 43'de maternal fetal kan bariyerini geçemeyen maddeler şöyle sıralanıyor. * Bakterilerin çoğu, + Proteinlerin çoğu (çok yavaş geçerler), protein hormonlar, insulin, * IgM, * Maternal trigliserit, kolesterol ve fosfolipidler, * Bazıilaçlar (heparin, kürar, metil dopa). Kadın doğumla ilgili kitaplara baktığımızda örneğin; Williams obstetrics 21. baskı, sayfa 138'de insulin, steroid hormonlar ve tiroid hormonlar plasentadan geçer ama çok yavaş bir hızda diye de belirtiliyor. Yani sonuç olarak sadece plazmada dağılım gösteren ve bir makromolekül olan heparin plasentadan geçmediği, protein tabiatta bir hormon olan ve ilaç olarak da kullanılan insülinin çok yavaş bir hızla da olsa plasentadan geçtiği kabul edilmelidir. M plasentayı + gecememektedir. Bu yüzdendir ki infantta tespit edilecek Ig M tipi konjenital (o enfeksiyonlar immünoglobülinler açısından hekimi uyarıcı olmalıdır!!!"
+  },
+  {
+    "id": "fizyoloji_q215",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plasenta ilkel olarak aşağıdaki yapılardan hangisinden gelişir? (Eylül-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Vitellus",
+      "B": "Trofoblast",
+      "D": "Blastokist",
+      "E": "Ekstraembriyonik mezoderm"
+    },
+    "answer": "B",
+    "explanation": "Plasentanın temelini oluşturan ve amnion zarının dışında bulunan koryon, blastosistin dış tabakasını yapan trofoblast hücrelerinden oluşur. Yani fetal zarlar ve plasenta trofoblasttan gelişir. Plasentanın oluştuğu erken dönemde sitotrofoblastlar aşırı proliferas-yon gösterir. Plasentanın oluşmasına katkıda bulunur. Gebeliğin sonunda giderek kaybolurlar. Sinsityotrofoblastlar ise gebeliğin sonuna kadar varlıklarını devam ettirirler. Igun plasentada sitotrofoblast bulunma;"
+  },
+  {
+    "id": "fizyoloji_q216",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisinde plasenta kesitinin içten dışa sıralaması doğru olarak verilmiştir? (Nisan-92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desidual tabaka, cotiledon, corion, villus",
+      "B": "Amniyon, corion, corionik villus, desidua",
+      "C": "Amniyon, corionik villus, corion, desidua",
+      "D": "Desidual tabaka, corion, cotiledon, villus",
+      "E": "Corion, corionik villus, amniyon, desidual tabaka"
+    },
+    "answer": "B",
+    "explanation": "Plasentanın histolojik kesiti ile ilgili klasik bir soru... Başka bir varyantında; kotiledonlar desiduadan hemen sonraya sıkıştırılabilir. Amnion: Fetal membranın en içteki tabakasıdır ve bu korion ile komşudur. Korion ve amniyon çok az miktardaki bağ dokusu ile birbirinden ayrılır. Koriondan sonra koryonik villus ve maternal tarafda desidua vera (Basalis) yer alır. Desidua bazalis Koryon villusu Vitellus kesesi Uterus boşluğu Amniyon Koryon kesesi (düz koryon) Desidua paryetalis Bozulan desidua Müköz tıkaç kapsülaris Plasenta ve fetal zarların gelişimi FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 97"
+  },
+  {
+    "id": "fizyoloji_q217",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi fetal membranlardan değildir? (Nisan-99)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Amnion",
+      "B": "Allantois",
+      "C": "Desidua kapsularis",
+      "D": "Vitellüs kesesi",
+      "E": "Koryon"
+    },
+    "answer": "C",
+    "explanation": "Fetusa ait zarsı yapıların başında keseler gelir. Amniyon kesesi koryon kesesi vitelliis kesesi derken; desiduanın anneye ait bir yapı olduğuna dikkat etmek gerek. Desidua kapsularis anneye aittir. Gebelik endometriu- mu da denir. Üç bölümde incelenir. 1- Desidua bazalis (embriyonun altında), 2- Desidua capsularis (embriyonun uterusa bakan kısmı), 3- Desidua paryetalis. Amnio ellus kesesi ve allantois"
+  },
+  {
+    "id": "fizyoloji_q218",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Göbek kordonu aşağıdaki yapılardan hangisiyle çevrilmiştir? (Eylül 2013 Orijinal),",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Koryon zarı",
+      "B": "Amniyon zarı.",
+      "C": "Ekstraembriyonik mezoderm.",
+      "D": "Koryon villusları",
+      "E": "Wharton jölesi"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) İlerlemiş bir gebelik materyalinde bağlantı sapını üst kısımdan çevreleyen, epiblast hücrelerinden köken alan yapı aşağıdakilerden hangisidir? (Eylül 2013 BENZERİ) Dikkat gerektiren embriyoloji bilgisi"
+  },
+  {
+    "id": "fizyoloji_q219",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "İmplantasyonun gerçekleştiği ve plasentanın maternal parçasının geliştiği bölge aşağıdakilerden hangisidir? (Eylül 2013 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desidua parietalis",
+      "B": "Desidua kapsilaris",
+      "C": "Desidua bazalis",
+      "D": "Koryon",
+      "E": "Korpus luteum"
+    },
+    "answer": "C",
+    "explanation": "Plasentanın anneye ait yapısını sorgulayan iyi kurgulanmış bir soru... Desidua basalis ile koryon frondosum komşu yapılardır ve birlikte plasentayı oluştururlar. PLASENTA VE FETAL ZARLAR Plasenta; maternal bileşen olarak desidua, fetal bileşen olarak koryondan oluşur. Koryon ve desidua yerleşimlerine göre bölümlere ayrılırlar. DESİDUA (ENDOMETRİYUM) * Desidua bazalis: Koryon frondozuma komşu bölgedir. * Desidua kapsülari: bölgedir. * Desidua pariyetalis: Desidua'nın bunların dışında kalan bölümüdür. Desiduada septumların gelişmesiyle kotiledonlar belirir. KORYON * Koryon frondozum: Desidua bazalise komşu koryon bölümüdür. Villusların varlığını koruması nedeniyle bu adla anılır ve plasentanın fetusa ait bileşenidir. * Koryon leave (düz koryon): Koryonun, koryon frondozum dışında kalan bölümünde villuslar ortadan kalkar ve bu nedenle düz koryon olarak adlandırılır. PLASENTA * Plasenta, koryon frondozum (fetal) ve desidua bazalisten (maternal) meydana gelmiştir. Koryon leveyi çevreleyen Allantois ve vitellüs kesesi fetusa ait yapılar olup endometrium ile ilişkileri yoktur. Korpus luteum ise menstrual siklusun ikinci yarısında görülen bir yapı olup şık doldurmak için kullanılmış. Plasentanın fetal kısmı villöz koryon tarafından oluşturulur. Ana villusların dalları, içleri anne kanıyla dolu villuslar arası boşluklara açılırlar. Plasentanın anneye ait (maternal) kısmı ise, plasentanın fetal kısmıyla ilişkili desidua bölümü, yani desidua bazalis tarafından oluşturulur."
+  },
+  {
+    "id": "fizyoloji_q220",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "İnhibin Ill. Östrojen Yukarıdaki hormonlardan hangileri plasentadan salgılanır? (Şubat 2018 Orijinali) G)i veli",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yalnız |",
+      "B": "Yalnız Ill",
+      "D": "Il ve lll",
+      "E": "I, il ve Ill"
+    },
+    "answer": "E",
+    "explanation": "Plasenta endokrin olarak birçok maddenin salgılandığı temel bir yerdir. Plasenta görevi ve salgıları çok iyi bilinmelidir."
+  },
+  {
+    "id": "fizyoloji_q221",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi polihidramniosun nedenlerinden biri değildir? (Mayıs 2011) G) Fetüste renal agenezi",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Fetüste spina bifida",
+      "B": "Fetüste özofagus atrezisi",
+      "D": "Fetüste anensefali",
+      "E": "Fetüste diyafragma hernisi"
+    },
+    "answer": "C",
+    "explanation": "Klinik önemi oldukça fazla olan amniyon sıvısı patolojileri bilinmelidir. Renal agenezi ise polihid- ramnios değil, oligohidramnios nedenidir. Termde amnion sıvısı yaklaşık 800 cc'dir. Bu miktarın 2000 cc ve üzerinde olması durumuna polihidramnios adı verilir. 1/3 olguda sebep bilinmez. 1/3 olguda ise konjenital anomaliler mevcuttur. Fetüste spina bifida, fetüste özofagus atrezisi, fetüste anensefali, fetüste diyafragma hernisi polihidroamniyoza neden olurken fetüste renal agenezi oligohidroamniyoza neden olmaktadır."
+  },
+  {
+    "id": "fizyoloji_q222",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden (hangisi korpus ( luteumun devamlılığını sağlar? (Eylül 2013 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Human koryonik gonadotropin",
+      "B": "Human koryonik somatomamotropin",
+      "C": "Human plasental laktojen",
+      "D": "Folliküler stimülan hormon",
+      "E": "Prolaktin"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Fertilizasyondan yaklaşık bir hafta sonra anne kanında görülmeye başlayan, hamileliğin 9. haftasında düzeyleri pik yapan, plasentada sinsityotrofoblastlarca sentezlenen ve korpus luteumun devamlılığını sağlayan hormon aşağıdakilerden hangisidir? (Eylül 2013 BENZERİ) Gebeliğin devamını progesteron sağlar. Progesteronu korpus luteum salgılar. Korpus luteumun devamlılığını beta-hCG sağlar. Onu da sinsityotrofoblastlar salgılar... Yani sonuç olarak gebeliği devam ettiren çocuğun ta kendisidir.! Luteinizan hormona benzeyen glikoprotein yapısındaki hCG, ilk kez sinsityotrofoblastlar tarafından ikinci hafta sırasında sentezlenir; hCG menstrüel siklusun başlamasını önleyen korpus luteumun idamesini sağlar. Relaksin; Overden ve plasentadan sentezlenir. Pelvik ligamentlerin relaksasyonunu sağlar ve doğum sırasında serviksin yumuşamasını sağlamaktadır. İnhibin; ön hipofiz bezinden salgılanır. FSH sentezini ve salınmasını önleyen bir peptiddir. İki formu vardır; inhibin-A ve inhibin-B. inhibin-A ; luteal fazda FSH inhibisyonu yapar. Prolaktin; Laktotrop hücrelerden salınır. Yapıca growth hormona benzer. En önemli etki yeri meme dokusudur. Human Koryonik Gonadotropin: İnsandaki en büyük aktif peptid yapılı hormondur. Yapısal olarak lüteinizan hormona benzer. Plasentadaki sinsityotrofoblastlar tarafından sentezlenirler. Fertilizasyon sonrasındaki ilk hafta içinde anne kanında görülmeye başlanır fakat pik düzeyine yaklaşık olarak hamileliğin 9-10.haftalarında ulaşır. En önemli işlevi korpus luteumun bozulmasını engellemektir. Human Plasental Laktojen: İnsan koryonik somatomamotropini de denir. Plasenta kitlesiyle en doğru orantılı olan hormondur. Gebelikte gelişen insülin rezistansından sorumludur. Büyüme hormonu ve prolaktin benzeri etkileri vardır."
+  },
+  {
+    "id": "fizyoloji_q223",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Embriyoda hematopoetik kök hücreleri ilk olarak aşağıdakilerden hangisinde görünür? (Nisan 2002) G) Kırmızı kemik iliği",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Karaciğer",
+      "B": "Dalak",
+      "D": "Timus",
+      "E": "Vitellus kesesi ve amnion duvarı"
+    },
+    "answer": "E",
+    "explanation": "Embriyoda ilk oluşumlar ve zamanları hep soru potansiyeli taşımaktadır. Vitellus kesesi, hematopoetik kök hücrelerin ilk görülmesi yanında bağırsakların gelişmesi özellikleriyle çok iyi bilinmelidir. Kan hücreleri (hematopoetik organlardaki kök hücrelerinden gelişirler. | Embriyogenezin erken dönemlerinde ilk kan hücreleri vitellüs kesesinin mezoderminden gelişir. Daha sonraki dönemde karaciğer ve dalak geçici hematopoetik organlar olarak görev yaparlar. = &"
+  },
+  {
+    "id": "fizyoloji_q224",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Oligohidramniyoz ile ilişkili olan hastalık... Renal agenezi FETAL DÖNEM, FARENGEAL ARKUSLAR, ÖZELLEŞMİŞ EMBRİYOLOJİ fetus şekline gelmesi aşağıda belirtilen zamanlardan hangisinde olur? (Eylül-88)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "3. haftanın sonundan itibaren",
+      "B": "2. ayın sonundan itibaren",
+      "C": "3. ayın sonundan itibaren",
+      "D": "4. ayın sonundan itibaren",
+      "E": "6. ayın sonundan itibaren"
+    },
+    "answer": "B",
+    "explanation": "Takvim isimlendirmesi adına bilinmesi gereken bir bilgi... İlk birkaç günlük gebelik materyali Zigottur."
+  },
+  {
+    "id": "fizyoloji_q225",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plica oumblicalis medianus aşağıdakilerden hangisinin artığıdır? (Eylül-92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Ductus arteriosus",
+      "B": "Sag vitellin veni",
+      "C": "Umblical ven",
+      "D": "Kardinal ven",
+      "E": "Umbilical arter"
+    },
+    "answer": "C",
+    "explanation": "Fetal yapıların erişkindeki artıkları tablosu iyi bilinmelidir. Allantoisten geriye kalan parçanın bir kısmı vesica urinarianın üst bölümü ile bağlantı halindeyken, geri kalan bir kısmı da fibröz kordon halinde urachusu yapar. Urachusda lig. umblicale medianumu oluşturur. Plica umblicalis medianus; allantoisin artığıdır. Embriyolojik yapılar ve erişkindeki karşılıkları: Plika umblicalis medianum — Urachus-allantois Plika umblicalis medialis — A. umblicalis Plika umblicalis lateralis — A.V. epigastirica inferior Ductus arteriozus — Lig. arteriozum Ductus venozus — Lig venosum Lig. teres hepatis— V umblicalis Lig. falciforme hepatis — A.V para umblicalis > Ligamentum teres hepatis hangi embriyonal yapının tıkanma artigidir? (Eylül-97) Fetal yapıların erişkindeki artıkları tablosu iyi bilinmelidir. Birçoğu bilinen yapılar olduğu için birkaç tekrar ile kolayca akılda kalabilir. Umblikal ven ve duktus venozus, doğumdan kısa bir süre sonra kapanır. Kapanan umblikal ven, lig. teres hepatise dönüşür. Karaciğer histolojisi ile ilgili önemli bir ligament olan lig. teres hepatis, erişkin karaciğer anatomisinde de makroskopik olarak görülebilir."
+  },
+  {
+    "id": "fizyoloji_q226",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Dört haftalık embriyoda aşağıdakilerden hangisi bulunmaz? (Eylül 99) G) El plakları",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "12-15 adet somit",
+      "B": "Nöropor",
+      "D": "Kalp",
+      "E": "Nöral krest"
+    },
+    "answer": "C",
+    "explanation": "El ve ayak taslakları 6. haftada ortaya çıkar. Somitler 3.haftanın ortalarında ortaya çıkar ve her gün 3 yeni somit belirir. Nöral tüpler 3. ve 4. haftalar arasında kapanır böylece"
+  },
+  {
+    "id": "fizyoloji_q227",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Fetüste dilin arkasında belirerek zamanla boyuna doğru ilerleyen bir borucuk oluşturan ve erişkinlerde kistler oluşmasına neden olabilen yapı aşağıdakilerden hangisidir? (Eylül 2008) G) Tiroid bezi",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Timus",
+      "B": "Tonsilla palatina",
+      "D": "Paratiroid bezi",
+      "E": "Glomus karotikum"
+    },
+    "answer": "C",
+    "explanation": "Dil ile ilişkisinden bahsedip erişkinlerde kist oluşturabilmesi söylenince soru kolaylaşmış. Klinik olarak tiroglossal kanal kistlerine tekabül eder. Fetüste dilin arkasında belirerek zamanla boyuna doğru ilerleyen bir borucuk oluşturan ve erişkinlerde kistler oluşmasına neden olabilen yapı tiroid bezidir. Embriyoloji sorusu olarak gelen bu soruda orta hatta görülen doğumsal boyun kitlelerinin önemli sebebi olan tiroglossal kist tarif edilmiş ve bunun etiyolojisinde FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 101 tiroid bezi olduğu bilinmektedir. Embriyonel dönemde tiroglossal kanaldan kök: tiroglossal kist: en sık infrahiyoid bölgede ve ağız açık iken dil hareketleri ile yer değiştirmesi önemli bir özelliğidir. Tedavide total eksizyon yapılır ancak öncesinde mutlaka bir tiroid sintigrafisi çekilmelidir.Çünkü hastadaki tek tiroid dokusu bu olabilir."
+  },
+  {
+    "id": "fizyoloji_q228",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerin ve yapısal (Nisan 2010) hangisinde gelişim | ilişkisi embriyonik (yapı bulunmaktadır?",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mezonefrik kanal — Prostat",
+      "B": "Ürogenital sinüs — Duktus deferens",
+      "C": "Paramezonefrik kanal — Uterus",
+      "D": "Phallus — Labia minor",
+      "E": "Ürogenital kabarıklıklar - Corpus cavernosum penis"
+    },
+    "answer": "C",
+    "explanation": "Klasik bir embriyoloji sorusu... Aynı zamanda paramezonefrik kanalın diğer ismi olan müller kanalıyla da Kadın-doğum branşını ilgilendiren bir soru. Gonadlar intrauterin 6. haftada bipotenttir. Eğer gonadal çıkıntıya spermatogonyum ulaşırsa, gonadın medullası gelişir ve testis oluşur. Eğer oogonyum ulaşırsa korteks gelişir ve over oluşur. Testis gelişimi için Y kromozomundaki Testis Determinate Factor (TDF) gereklidir."
+  },
+  {
+    "id": "fizyoloji_q229",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Kulak kepçesinde doğuştan şekil anomalisi görülen bir hastada, hangi faringeal kompleks bileşenleriyle | ilgili bir bozukluk o olabilir? (Ağustos 2017 Orjinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "1. faringeal arkus.",
+      "B": "1 ve 2. faringeal cep",
+      "C": "2 ve 3. faringeal yarık",
+      "D": "2 ve 3. faringeal cep",
+      "E": "1, faringeal yarık"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Kulak kepçesinin gelişmesinde önemli olan Meckel kıkırdağı; aşağıdaki farengeal komplekslerden hangisinden gelişir? (Ağustos 2017 BENZERİ) Faringeal arkuslar ile ilgili anomaliler iyi bilinmelidir. Özellikle bölgemizde sık görülen yarık damak yarık dudak hastalığı da 1.arkusun yapışma anomalisidir. Faringeal arkuslardan gelişen yapılar Stilohyoid ligament Hyoid kemiğin küçük boynuzu Hyoid kemiğin büyük boynuzu Hyoid kemiğin gövdesi Tiroid kıkırdağı: Krikoid kıkırdağı Trakeal halkalaı Baş-boyun gelişimi (faringeal arklar) Kulak kepçesi, 1. ve 2. Faringeal arkusların mezenşiminin ( proliferasyonu sonucu aurikuler tepecikler gelişir. Kulak kepçesi büyüdükçe birinci farengeal arkusun katkısı azalır. Kulak memesi; kulak kepçesinin en son gelişen bölümüdür. Faringeal arkuslardan (yay) köken alan yapılar (Temporal, masseter, + Medial ve lateral pterigoidler) Miyohiyoid ve digastrik kas (ant) + Tensor timpani + Digastrik kas (post) + Mimik Kasları (buksinatör, auriküler, frontal, platisma, orbikiilaris oris « Krikotiroid + Levator veli palatini, Farinksin konstriktérleri Larinksin intrensek kasları + Özofagusun çizgili kasları"
+  },
+  {
+    "id": "fizyoloji_q230",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden sırasında birinci (Şubat 2018 Orijinal) hangisi faringeal baş-boyun arktan gelişmez? + Maksilla Premaksilla Mandibula Meckel kıkırdağı + Temporal kemiğin savamöz parçası + Zigomatik kemik + Malleus + İnkus + Stapes + Stilohiyoid çıkıntı + Hiyoid kemik (küçük boynuz) + Hiyoid kemik gövdesi Hiyoid kemik (büyük Kornikulat k. Kuneiform k.",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Hiyoid kemik",
+      "C": "Mandibular çıkıntı",
+      "B": "Maksiller çıkıntı",
+      "D": "Tensor timpani",
+      "E": "Zigomatik kemik"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) yapılardan hangisi 1.farengeal arkustan gelişmez? Aşağıdaki (Şubat 2018 BENZERİ) Faringeal oluşumlar, soru sorması ve seçenek oluşturması kolay olduğu için hem organogenezde farklı organlarda hem de direk olarak soru gelebilmektedir."
+  },
+  {
+    "id": "fizyoloji_q231",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi insan embriyosunda birinci faringeal cep veya birinci faringeal yariktan gelişmez? (Eylül 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Timpanik kavite",
+      "B": "Dış kulak yolu",
+      "C": "Tonsilla palatina",
+      "D": "Östaki borusu",
+      "E": "Timpanik membran"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q232",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Dudak filtrumu embriyolojik olarak aşağıdaki yapıların hangisinden farklılaşır? (Şubat 2018 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yalnız |",
+      "B": "Yalnız 1",
+      "C": "Lateral nazal çıkıntı",
+      "D": "ive ii",
+      "E": "i, vet"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Primer damak Ml. Dudak filtrumu ll. Gingiva Yukardaki yapılardan hangisi / hangileri intermaksiller 'segmentten gelişir? (Şubat 2018 BENZERİ) Embriyolojinin zor ve karmaşık konularından biri sorgulanmış. Kafa karıştıran bir soru gibi görünse de aslında basit bir bilgi ile çözülebilir. Maksilla arası segment orta hattadır. Orta hatta olan birkaç yapıyı oluşturacaktır. Yüz taslakları prosensefalon ve rombensefalonun indüklemesiyle 4.hafta başında oluşmaya başlar. Yüzün ilk oluşan kısmı alt çene ve alt dudaklardır. Medial nazal kabartılar ve maksillar kabartıların kaynaşması üst çene ve üst dudağı oluşturur. Medial nazal kabartilarin kaynaşması ise intermaksiller segmenti oluşturur.. İntermaksiller segmentten aşağıdaki geli +  Üstdudak orta kısmı (filtrum) + Üst gene premaksillerbölümü + Üst gene premaksiller bölüme eşlik eden gingiva + Primer damak yapilar Medial ve lateral Nazal çukur o nazal kabartılar Kesitlerin seviyeleri 'Nazolakrimal oluk Ön beyin duvarı Nazal plak Medial nazal kabartı Mezenşim Lateral nazal Nazolakrimal oluk: kabartı Nazal çukur Frontonazal kabartı Oral kavite Maksillar kabartı c Medial nazal kabartilar birbirleriyle kaynaşıyor uy D Median palatal kabartı (Intermaksillar segment) Primer damak Gelişen maksilla Maksillanin premaksiller E parçasının taslağı Dudak filtrumu Yüz taslaklarının gelişimi"
+  },
+  {
+    "id": "fizyoloji_q233",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Prenatal yaşamda çekirdekli eritrosit ilk önce aşağıdakilerden hangisinde gelişir? (Nisan 2006)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "B": "Karaciğer",
+      "D": "Timus",
+      "A": "Vitellus kesesi",
+      "C": "Dalak",
+      "E": "Kemik İliği"
+    },
+    "answer": "A",
+    "explanation": "Sorunun dikkat çeken yönü ise ilk görülen eritrositlerin çekirdekli olmasıdır. KAN YAPIMI (HEMATOPOEZ) * Kanın şekilli elemanlarının hepsi mezenşimal kökenlidir. Kan yapımı 3 evrede gerçekleşir:"
+  },
+  {
+    "id": "fizyoloji_q234",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Kemik iliği yayma preparatlarında görülebilen en büyük hücreler hangileridir? (Eylül-87)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Plazma hücreleri",
+      "B": "Myeloblastlar",
+      "C": "Megakaryositler",
+      "D": "Makroblastlar",
+      "E": "Proeritroblastlar"
+    },
+    "answer": "C",
+    "explanation": "Mega ile başlayan trombosit kök hücreleri kemik iliğinin en büyük hücreleridir. Megakaryoblastlar 15-50 mm çaplı kemik iliğinin en büyük kök hücreleridir. Megakaryositler: Kemik iliğindeki megakaryoblastların farklılaşmasıyla gelişen hücreler olup, 35-150 mm civarında dev hücrelerdir. Kemik iliği yayma preperatlarında görülen en büyük hücreler megakaryositlerdir. Megakaryoblast— Megakaryosit— Platelet Trombositlerin esas yıkım yeri dalaktır."
+  },
+  {
+    "id": "fizyoloji_q235",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Kanda en yüksek oranda bulunup, gereğinde kapiller damarlardan çıkarak dokularda yabancı cisimleri ve mikropları fagosite edebilen şekilli eleman aşağıdakilerden hangisidir? (Nisan-88)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Eritrositler",
+      "B": "Trombositler",
+      "C": "Lenfositler",
+      "D": "Monositler",
+      "E": "Granülositler"
+    },
+    "answer": "E",
+    "explanation": "Granülositlerden erişkinde en çok bulunan tipi Nötrofillerdir. Eğer E şıkkı nötrofiller demiş olsaydı yine cevap değişmezdi. LÖKOSİTLER (AKYUVARLAR) * Granülositler (çok çekirdekli akyuvarlar; nötrofil, eozinofil, bazofil) *  Agranülositler (tek çekirdekli akyuvarlar; lenfosit ve monositler) Normal erişkinde lökosit formülü - Nötrofil : Ye 55-60 - Lenfosit :% 25-33 - Monosit : % 3-8 - Eozinofil :% 1-3 - Bazofil :%0.5"
+  },
+  {
+    "id": "fizyoloji_q236",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden değildir? (Eylül-95) hangisi hemoglobinin özelliği",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Oksijen taşıması",
+      "B": "Dört adet polipeptid zincir içermesi",
+      "C": "Allosterik özellik taşıyan bir protein olması",
+      "D": "Oksihemoglobin eğrisinin hiperbolik olması",
+      "E": "Miyoglobuline göre oksijene affinitesinin az olması"
+    },
+    "answer": "D",
+    "explanation": "Hemoglobin ile ilgili iyi kurgulanmış bir soru... Herbir şık soru olarak ayrıca gelebilir... Kanda O, Hb ile taşınır. Hb, hem ve globinden oluşur. Hem halkası dört adet pirol çekirdeği içerir. Miyoglobinden fazla olmasına rağmen (O,'ye) afinitesi azdır. Oksihemoglobin eğrisi sigmoidal bir eğriyken miyoglobin hiperbolik bir eğriye sahiptir."
+  },
+  {
+    "id": "fizyoloji_q237",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Hematokriti % 40, plazma hacmi 3500 ml olan bir insanın kan hacmi yaklaşık ne kadardır? (Eylül-96)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "5833",
+      "B": "4970",
+      "C": "6412",
+      "D": "6625",
+      "E": "7200"
+    },
+    "answer": "A",
+    "explanation": "Her hekimin bilmesi gereken hematokrit oranı ile ilgili iyi kurgulanmış bir soru... Kandaki hücrelerin % oranına hematokrit denir. Eğer hematokrit 40 ise kan hacminin % 40'ı hücre, geri kalanı plazma demektir. Hematokrit değeri normal erkeklerde ortalama 42, normal kadınlarda da yaklaşık 38 kadardır. Hematokrit % 40 ise plazma hacmi % 60'dır. % 60'ı 3500 ml ise kan hacminin tamamı (% 100) 5833 ml olur."
+  },
+  {
+    "id": "fizyoloji_q238",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi kemik iliğinde granülosit kök hücresidir? (Nisan 2000)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Myeloblast",
+      "B": "Promyelosit",
+      "C": "Metamyelosit",
+      "D": "Normoblast",
+      "E": "Megakaryoblast"
+    },
+    "answer": "A",
+    "explanation": "Myeloid seride ilk belirlenebilen olgunlaşmamış hücre myeloblasttır. Burdan türeyen neoplazilere de myeloblastik lösemi denir. Akut veya kronik olmasına göre AML, KML olarak adlandırılabilir Myeloblastlar çok düşük partiküller halinde kromatin içerip, (nükleolusları (o belirgindir. Myeloblastlar, promyelositlere farklılaşır. Bunların içinde çok sayıda granül vardır. Bu granüller türüne göre nötrofilik, bazofilik ve eozinofilik myelositler adını alırlar. Granülosit gelişim sırası myeloblast promyelosit, myelosit, metamyelosit, bant, nötrofil şeklindedir. Sadece ilk 3 aşamada mitoz vardır. 66-0-m— ©-6-0-©-@ ‘6.6-0-©-©-0-3- Myelost Promyelosit Myelosit Metamyelost =) Prooriroblast © Bazoflik PolkromaalilkOrtkromatk Retkuiost Kırmızı cntroblast © eniroblasi © Enroblst kan hücresi"
+  },
+  {
+    "id": "fizyoloji_q239",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki kan hücrelerinden hangisi hematopoez sırasında CFU-GEMM kök hücre gruplarından gelişmez? (Nisan 2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Eritrosit",
+      "B": "Trombosit",
+      "C": "Lenfosit",
+      "D": "Notrofil",
+      "E": "Bazofil"
+    },
+    "answer": "C",
+    "explanation": "Lenfositlerin kök hücresi ayrı diğer 7 hücrenin kök hücreleri ayrıdır. Kemik iliğinde lenfositler lenfoit kök hücreden gelişirken, lenfositler harici tüm klonlar myeloid (GEMM) kök hücreden gelişirler. Ayrıca nötrofil ve makrofajlar GM-CFU denen aynı klondan gelişirler. GEMM Granulosit ( Eritrosit | Monosit Megaloblast Granulosit- makrofaj > © Miyeloid kök hücre İ Eozinofil CFU -e-9 hey CFU [Ss Eritroid CFU Pluripotent Kök Hücre Kök hücreden kan hücrelerinin oluşumu gi 2 ö 8 a 2 Eğ 5 ="
+  },
+  {
+    "id": "fizyoloji_q240",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Sitoplazması metakromatik boyanan, granülleri heparin, histamin içeren lökosittipi aşağıdakilerden hangisidir? (Eylül 2005)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Bazofil",
+      "B": "Nötrofil",
+      "C": "Eozinofil",
+      "D": "Lenfosit",
+      "E": "Monosit"
+    },
+    "answer": "A",
+    "explanation": "Mast hücresi ve bazofiller için en önemli ipucu heparin ve histamin içermeleridir... Aynı zamanda Bazofil ve mast hücrelerinde IgE için spesifik reseptör bulunur... Bazofiller Bazofiller dolaşımdaki granülositlerin % 1’ inden daha azını oluştururlar. Metakromatik boyanan koyu lacivert - mor granüller içerirler ve çekirdekleri net seçilemez. Bazofiller ile mast hücreleri arasında benzerlik vardır. Mast hücreleri dokularda bulunur. Bazofillerin yarı ömürleri ve kinetikleri eozinofillerle paralellik gösterir. Bazofil ve mast hücrelerinin granüllerinde histamin ve inflamasyonda rol alan diğer mediyatörler bulunur. Bazofillerde bir miktar heparinde bulunur. Bronş astımı, ürtiker, allerjik rinit, anaflaksi gibi allerjik hastalıklarda hipersensitivite reaksiyonlarında ve lenfositlerin aracılık ettiği gecikmiş tip hipersensitivite reaksiyonlarında rol alırlar. Soruda çeldiricilerde belirtilen bazofil granülosit dışında kalan hi inin metakromatik boyanan, histamin heparin içeren granülü yoktur."
+  },
+  {
+    "id": "fizyoloji_q241",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi aplastik anemi gelişimine neden olmaz? (Nisan 2014 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Eritopoietin yokluğu",
+      "B": "Kemoterapi",
+      "C": "Yüksek doz radyoterapi",
+      "D": "İnsektisitler",
+      "E": "Lupus Eritematozus"
+    },
+    "answer": "A",
+    "explanation": "Klinik bilgilerle fizyoloji bilgilerinin entegre edilmesi durumunda kolaylıkla çözülebilecek bir sorudur. Aplastik Anemi (AA) Kemik iliğindeki ana hücrelerin (hemopoetik kök hücre) sayısal yetersizliği sonucu yeterli kan üretilememesi ile karekterize bir hastalıktır. Çeşitli nedenlere bağlı olarak kan yapan ana hücreler tahrip olur. Kemik iliğinin yerini yağ dokusu alır ve yeterli kan üretilemez. Yani sorun kan yapımını uyaran hormonda değildir, sorun kan üreten hücrelerdedir. Aplastik Anemi nedenleri: 1- Doğumsal nedenler (Fanconi anemisi ) 2- Edinsel nedenler: a) Nedeni bilinmeyenler b) Toksik maddeler (benzen) c) Viral nedenler ( bazı hepatit virusları) d) Radyasyon e) Bazı ilaçlar (kloramfenikol) f) Çeşitli nedenler (gebelik, bazı bağ doku hastalıkları) Aplastik aneminin bilinen sebeplerinden biri bir tür otoimmün bozukluktur. Bu bozuklukta lökositler (akyuvarlar) kemik iliğine saldırır. Eritropoetin (EPO) Alyuvar üretimini uyaran esas faktör bir glikoprotein olan eritropoietindir. EPO, hipokside ilk artan hormondur. Hipoksi, eritropoietin yapımında belirgin artışa neden olur. Hipoksi düzelinceye kadar da alyuvar yapımını arttırır. EPO, esas olarak hematopoetik kök hücreden proeritroblast üretimini uyarır. 9 EPO, JAK-STAT sinyal yolunu kullanır. Ancak yeni alyuvarlar yaklaşık 5 gün kadar sonra dolaşımda görülür. Epinefrin, norepinefrin ve bazı prostaglandinler eritropietin üretimini stimüle ederler,"
+  },
+  {
+    "id": "fizyoloji_q242",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Granülopoezde primer granüllerin sentezlenmeye başladığı hücre aşağıdakilerden hangisidir? (Ağustos 2017 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Miyeloblast",
+      "B": "Promiyelosit",
+      "C": "Miyelosit",
+      "D": "Metamiyelosit",
+      "E": "Retikülosit"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q243",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Granülopoez sırasında spesifik granüllerin ilk ortaya çıktığı aşama aşağıdakilerden hangisidir? (Eylül 2014 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Miyalosit.",
+      "C": "Promiyelosit",
+      "B": "Miyelobiast",
+      "D": "Metamiyelosit",
+      "E": "Band hücresi"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Granülopoez sırasında mitozla bölünebilen hücreler en son hangi aşamada görülür? (Eylül 2014 BENZERİ) Granülopoez sırasında spesifik granüllerin ilk ortaya çıktığı aşama miyelosit evresidir. Kan Dokusu Embriyoloji Ve Histolojisi ile İlgili Sorulabilecek Önemli Bilgiler"
+  },
+  {
+    "id": "fizyoloji_q244",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Kumadin türevleri antikoagülanlar etkilerini hangi yolla gösterir? (Eylül-2000)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kalsiyumu bağlayarak",
+      "B": "Trombosit agregasyonunu inhibe ederek",
+      "C": "Heparini inhibe ederek",
+      "D": "K vitamininin etkisini inhibe ederek",
+      "E": "Endotel'in salgıladığı PGI, ‘yi inhibe ederek"
+    },
+    "answer": "D",
+    "explanation": "Kumadin oral kullanılan antikoagülanların en önemlisi ve hala en çok kullanılanıdır. K Vitaminine bağlı pıhtılaşma faktörleri Protrombin (Il), Faktör Vil, Faktör IX ve Faktör X *  KvitaminiFli, FVII, FIX, FX ve Protein C gibi önemli pıhtılaşma faktörlerinin yapımı için gereklidir. * Vitamin K bu faktörler için gerekli olan karaciğer karboksilazı için esansiyeldir. *  K vitamini intestinal kanalda bakteriler tarafından sürekli olarak sentezlenir. + Vitamin K epoksid reduktaz kompleks 1 (VKOR cl) enzimi, vitamin K'yı aktif formuna döndürür. * Warfarin ve kumarin, vitamin K epoksid reduktaz kompleks 1 inhibisyonu ile vitamin K miktarını azaltır. Koagülasyon faktörleri karboksile edilemez ve biyolojik olarak inaktif kalırlar. * Dolayısıyla warfarin ve kumarin verildiğinde faktör Il, VII, IX ve X seviyeleri azalır (hepsi de karaciğerde üretilir)."
+  },
+  {
+    "id": "fizyoloji_q245",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Karaciğerde K vitamini etkisini engelleyerek bazı koagülasyon faktörlerinin yapımını azaltan dikumarol, aşağıdakilerden hangisinin plazma düzeyini önemli derecede değiştirmez? (Nisan-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Protrombin",
+      "B": "Fibrinojen",
+      "C": "Faktör Vil",
+      "D": "Faktör IX",
+      "E": "Faktör X"
+    },
+    "answer": "B",
+    "explanation": "Herkesin bildiği en klasik spotlardan... K vitamini ile ilişkili faktörler.. K vitaminine ihtiyaç gösteren pıhtılaşma faktörleri F2 (protrombin), F7, F9, F10 dur. Ayrıca protein C ve S'ninde sentezi için K vitamini gereklidir. Fibrinojen sentezinde K vitaminine ihtiyaç yoktur."
+  },
+  {
+    "id": "fizyoloji_q246",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Vitamin K aşağıdaki koagülasyon faktörlerinden hangisinin sentezini etkilemez? (Nisan 2005)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Protrombin",
+      "B": "Faktör VII",
+      "C": "Faktör VIII",
+      "D": "Faktör IX",
+      "E": "Faktör X"
+    },
+    "answer": "C",
+    "explanation": "K vitaminine bağlı pıhtılaşma faktörleri protrombin (Il), FVII, FIX, FX, protein C ve protein S’tir."
+  },
+  {
+    "id": "fizyoloji_q247",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plazminojeni aktif hale getirerek fibrinolitik etki gösteren aşağıdakilerden hangisidir? (Eylül-95)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "B": "Urokinaz",
+      "D": "Tirozin",
+      "A": "adı verilen güçlü",
+      "C": "Heparin",
+      "E": "Mevolonat"
+    },
+    "answer": "B",
+    "explanation": "Plazmin aktivatörlerinin sorgulandığı bir soru...Bir yerde pıhtı oluşunca plazminojen aktif hale geçerek plazmin oluşur ve pıhtı eritilir. Kan pıhtısının erimesi - plazmin + Plazmaproteinleri plazminojen (profibrinolizin) adı verilen bir öglobülin içerir. + Plazminojen aktive olduğunda plazmine (fibrinolizin) dönüşür. + Plazmin,fibrin iplikçiklerini ve çevre kanda bulunan fibrinojen, protrombin, FV, FVIII ve FXII gibi maddeleri sindirir (1,2,5,8,12). * Yaralanan dokular ve damar endoteli doku bir aktivatör salgılarlar. * t-PA, pıhtı kanamayı durdurduktan bir gün ya da daha sonra, plazminojeni plazmine çevirir ve pıhtıyı ortadan kaldırır. Plazminojen aktivatörleri, plazminojeni plazmine çevirirler. 1- Doku plazminojen aktivatörü (t-PA) 2- Ürokinaz plazminojen aktivatör faktörü (u-PA) 3- Streptokinaz"
+  },
+  {
+    "id": "fizyoloji_q248",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Heparin aşağıdakilerden hangi mekanizmayla pıhtılaşmayı önler? (Eylül-97) inaktive ederek ederek ederek",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Alfa-2 makroglobulinle birleşip fibrinojeni eriterek",
+      "B": "Alfa-2 makroglobulinle birleşip _ tromboplastini",
+      "C": "Alfa-1 antitripsin ile birleşip protrombini bloke",
+      "D": "Antitrombin III ile birleşip kalsiyumu bağlayarak",
+      "E": "Antitrombin III ile birleşip trombinin etkisini bloke"
+    },
+    "answer": "E",
+    "explanation": "Heparin * Normalde kandaki konsantrasyonu düşüktür. * o Tek başına antikoagülan etkinliği çok azdır ya da hiç yoktur. * Antitrombin III ile birleştiğinde, antitrombin Ill'ün trombini uzaklaştırma etkinli, bin kata kadar arttırarak antikoagülan etki gösterir. + Heparin-antitrombin Ill kompleksi, trombinin (Fil) yanı sıra aktif IX, X, XI ve XIl'yi de ortamdan uzaklaştırır (II, IX, X, XI, XI). + Heparin bağ dokusundaki mast hücreleri tarafından sürekli olarak salgılanarak dolaşıma geçer. * Ayrıca kandaki bazofiller de küçük miktarlarda heparini plazmaya serbestlerler. + oAkciğerdokusunda ve karaciğerdeki mast hücreleri düzenli heparin salgılayarak venöz kanda oluşan pek çok embolik pıhtının büyümesini önler."
+  },
+  {
+    "id": "fizyoloji_q249",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Trombositlerin aktive olmasıyla yüzeylerinde açığa çıkan Gplib-llla reseptör yapısı aşağıdakilerden hangisine bağlanır? (Eylül 2003)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tromboksan A,",
+      "C": "Trombin",
+      "B": "Fibrinojen",
+      "D": "Trombospondin",
+      "E": "Kollajen"
+    },
+    "answer": "B",
+    "explanation": "Adezyon ve agregasyon mekanizmaları ile ilgili öğretici bir soru... Trombosit Tıkaç Mekanizması * Trombositler hasara uğrayan damar yüzeyindeki kollajen liflere ve hasarlı endotel hücrelerine temas edince karakteristiklerini açık bir şekilde değiştirirler. *  Yaralanmayıizleyen birkaç saniye içinde; trombositler integrin ailesinden glikoprotein la/lla reseptörü ile subendoteldeki kollajen fibrillere yapışır. *  Builişki von Willebrand faktör tarafından stabilize edilir. von Willebrand faktör bu görevi trombosit reseptör bölgesi glikoprotein Ib/IX ile subendotelyal kollajen fıbriller arasında bir ilişki sağlayarak gerçekleştirir. * Salınan ADP pürinerjik reseptörlere bağlandığı zaman, glikoprotein Ilb/llla kompleksini fibrinojene ve yapışkan trombositleri hemostatik plağa bağlayacak şekilde şekil değişikliğine uğratır. Fibrinojen von Willebrand faktör ‘Subendotelyum Weibel-Palade cisimciği Trombositlerin adezyon ve agr"
+  },
+  {
+    "id": "fizyoloji_q250",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi trombosit tıkacı oluşumunu önleyici etki gösterir? (Eylül 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Serotonin",
+      "B": "Prostaglandin |,",
+      "C": "von Willebrand faktör",
+      "D": "Adenozin difosfat",
+      "E": "Tromboksan A,"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:)"
+  },
+  {
+    "id": "fizyoloji_q251",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "APP Il. Tromboksan AZ (TxA,) Ill, Prostaglandin |, (PGI, ) IV. von Willebrand faktör (VWF) V. Serotonin Yukarıdaki maddelerden hangisi/hangileri primer hemostatik tıkaç oluşumunu engeller? (Eylül 2019 BENZERİ)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Plazmin",
+      "B": "Alfa, -antiplazmin",
+      "C": "Streptokinaz",
+      "D": "Alfa, -makroglobulin",
+      "E": "Fletcher faktör"
+    },
+    "answer": "C",
+    "explanation": "Trombosit tıkaç mekanizması * Trombositler hasara uğrayan damar yüzeyindeki kollajen liflere ve hasarlı endotel hücrelerine temas edince karakteristiklerini açık bir şekilde değiştirirler. v Dokulardaki kollajene ve von Willebrand faktörü denen bir proteine tutunurlar. V ADP, tromboksan A2 ve serotonin salgılarlar. V Serotonin ve Oo tromboksan AZ, vazokonstriksiyon oluşturur. V ADP ve tromboksan A2, çevredeki trombositlere etkileyerek onları da aktive eder. Y Buyeni aktiflenmiş trombositler de yapışkanlıkları sayesinde başlangıçta aktiftenmiş trombositlere yapışırlar. Trombosit tıkacının oluşumu sağlanır. Yaralanmayı izleyen birkaç saniye içinde; trombositler integrin ailesinden glikoprotein la/lla reseptörü ile subendoteldeki kollajen fibrillere yapışır. Bu ilişki von Willebrand faktör tarafından stabilize edilir. Von Willebrand faktör bu görevi trombosit reseptör bölgesi glikoprotein Ib/IX ile subendotelyal kollajen fibriller arasında bir ilişki sağlayarak gerçekleştirir. ADP pürinerjik reseptörlere bağlandığı zaman, glikoprotein Ilb/lila kompleksini fibrinojene ve yapışkan trombositleri hemostatik plağa bağlayacak şekilde şekil değişikliğine uğratır. Trombosit (tıkacı önleyici etki gösterenler; oluşumunu Prostasiklin (PGI2), trombosit agregasyonunu inhibe eder. PGI2, vazodilatatér ve antiagregan özelliktedir. Trombosit tıkacı oluşumunu önleyici etki gösterir. Endotelden salgılanan Nitrik Oksit vazodilatasyon yaparak trombosit adezyonunu, agregasyonunu ve aktivasyonunu inhibe eder. . Aşağıdakilerden hangisi plazminojen aktivatörüdür? (Eylül 2006) ia 24 a o 3 8 23 5 Fr"
+  },
+  {
+    "id": "fizyoloji_q252",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Trombositlerde yapılarak agregasyona neden olan madde aşağıdakilerden hangisidir? (Eylül 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tromboksan A,",
+      "B": "Prostaglandin |,",
+      "C": "Von Willebrand faktörü",
+      "D": "Heparin",
+      "E": "Histamin"
+    },
+    "answer": "A",
+    "explanation": "Hasarlanmış endotel duvarına trombositin yapışmasına adezyon adı verilmektedir. Adezyon trombositin Von- Willebran antijeni ile karşılaşması sonucu olmaktadır. Von-Willebran antijeni endotelde Weibel-Palade cisimciğinde Faktör 8 ile beraber depo edilmektedir. İki trombositin birbiri ile yapışmasına agregasyon denmektedir. Trombositlerin birbirine yaklaşmaları bazı kemoaktrant moleküllerle meydana gelmektedir. (ADP. Tromboksan A2, seratonin, Platelet aktive edici Faktör, kalsiyum gibi) Aktive olan trombositler fibrinojen molekulü aracılığıyla birbirlerine yapışmaktadırlar (Agregasyon)."
+  },
+  {
+    "id": "fizyoloji_q253",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki pıhtılaşma faktörlerinden hangisinin eksikliğinde parsiyel tromboplastin zamanı (aPTT) normal sınırlarda kalır? (Nisan 2008)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Faktör X",
+      "B": "Faktör IX",
+      "C": "Faktör Vill",
+      "D": "Faktör Vil",
+      "E": "Faktör I"
+    },
+    "answer": "D",
+    "explanation": "Parsiyel tromboplastin zamanı (PTT), intrensek ve ortak yolun birlikte değerlendirildiği test olduğu için bu soruya “bu yollarda görev almayan faktör” olarak da yaklaşabiliriz. Faktör VII, ekstrensek yolakta görevlidir. PIHTILAŞMA FAKTÖRLERİ - PIHTILAŞMA TESTLERİ"
+  },
+  {
+    "id": "fizyoloji_q254",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Ekstrensek yolakta doku faktörü aracılığıyla pıhtılaşmayı başlatan faktör aşağıdakilerden hangisidir? (Eylül 2009)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Fibrinojen",
+      "B": "Faktör X",
+      "D": "Faktör Vil",
+      "E": "Faktör V"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q255",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki faktörlerden hangisi, kan pıhtılaşması sırasında ( protrombinden O trombin oluşan basamakta rol oynamaz? (Nisan 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kalsiyum iyonu",
+      "B": "Aktive faktör V",
+      "C": "Aktive faktör X",
+      "D": "Aktive faktör XII",
+      "E": "Trombosit fosfolipidleri"
+    },
+    "answer": "D",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Faktör 2'nin aktiflenmesi olayında aşağıdakilerden hangisinin direk rolü yoktur? (Nisan 2016 BENZERİ) Pıhtılaşma mekanizması * Damarın yırtılması ya da kanın hasarlanmasına cevap olarak kanda bir dizi kimyasal reaksiyonlar kompleksi meydana gelir. * Netsonuç, aktive olan tim maddelerin protrombin aktivatörü denen bir kompleks oluşturmasıdır. « Protrombin aktivatörü protrombinin trombine dönüşümünü katalizler. « Trombin bir enzim görevi yaparak fibrinojeni fibrin iplikçilerine çevirir. * Daha sonra fibrin iplikçikleri; trombositler, kan hücreleri ve plazmayı da içine alarak pıhtıyı oluşturur. Aktif faktör X, faktör V, kalsiyum ve fosfolipitlerle birleşerek (o protrombin aktivatörü (kompleksini oluşturur. Başlangıçta, protrombin aktivatörü kompleksi içindeki faktör V inaktiftir; pıhtılaşma işlemi ve trombin oluşumu başlandığında, trombinin proteolitik (etkisiyle faktör V aktive olur. Bu daha sonra protrombinin aktivasyonunu güçlü bir şekilde hızlandırır. Protrombin ( aktivatörü, protrombini (o trombine parçalar. Aktif faktör X protrombini trombine çeviren gerçek bir proteaz görevi yapar. Aktif faktör V bu proteaz aktivitesini büyük ölçüde güçlendirir ve fosfolipitler olayı daha da hızlandırırlar. başladıktan sonra, trombin, faktör pozitif feedback etki ile tüm olayı İşlem bir kez V üzerinden, hızlandırır. Protrombin —>| ca ‘Trombin Fibrinojen —————}> Fibrinojen monomeri Ca\" Fibrin iplikgikleri Trombin sj Akti fibrin, > stabilize edici faktör Çapraz bağlı fibrin iplikçikleri Protrombinin trombine dönüşümü"
+  },
+  {
+    "id": "fizyoloji_q256",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Heparinle etkisi güçlenen antikoagülan aşağıdakilerden hangisidir? (Nisan 2010)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Trombomodulin",
+      "B": "Plazminojen",
+      "C": "Protein C",
+      "D": "Antitrombin Ii!",
+      "E": "Doku plazminojen aktivatörü"
+    },
+    "answer": "D",
+    "explanation": "Heparin; Antitrombin Il'ü aktive ederek; Faktör IX, X, XI ve Xil'yi inhibe eder. Bu nedenle takibi aPTT ile yapılır. Protein C ise antikoagulan sistemin bir parçasıdır. Pıhtılaşma sırasında oluşan trombin, trombomodiline bağlanır. Bu kompleks inaktif durumda olan protein C'yi aktifler. Protein S, bu aktivasyon sırasında kofaktör görevi yapar. Aktif protein C, Faktör V ve Vil'i inaktif hale getirir. Böylece koagulasyon kaskadı sınırlandırılmış olur. Protein C, aynı zamanda t-PA inhibitör faktörün de yıkımını sağlar. Böylece t-PA (doku plazminojen aktivatörü) aktive olur. Aktive olan t-PA, plazminojeni plazmine dönüştürür. ‘Trombin, Faktör 10, Faktör 9'un inaktivasyonu. Faktör 5 ve in yıkımı Protein S Aktive protein C+ Protein C Aatitrombin 11 é Antikoagülan sistem"
+  },
+  {
+    "id": "fizyoloji_q257",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi, kanın damar sistemi içinde pıhtılaşmasını önleyen endotel yüzey faktörlerinden biridir? (Nisan 2012)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Trombin",
+      "B": "Antitrombin 111",
+      "C": "Protein C",
+      "D": "Trombomodulin",
+      "E": "Heparin"
+    },
+    "answer": "D",
+    "explanation": "Normal damar sisteminde pıhtılaşmanın önlenmesini bilmemizi isteyen bir soru Normal Damar Sisteminde Pıhtılaşmanın Önlenmesi, İntravasküler Antikoagülanlar Endotel Yüzeyi Faktörleri: Normal damar sisteminde pıhtılaşmayı önleyen en önemli faktörler 1) Endotelin düzgünlüğü: intrensek pıhtılaşma sisteminin aktivasyonunu önler; 2) Glikokaliks tabakası: Endotelin iç yüzüne adsorbe olan mukopolisakkarid pıhtılaşma faktörlerini ve trombositleri iterek pıhtılaşmanın aktivasyonunu engeller; 3) Endotel membranına bağlı bir protein olan trombomodulin: trombini bağlar. Trombomodulin ile trombinin bağlanması (trombomodulin-trombin kompleksi) pıhtılaşmayı yalnızca trombini ortamdan uzaklaştırmak suretiyle önlemez, bir plazma proteini olan protein C'yi de aktive eder protein C, faktör V ve VIII’ inaktive etmek yoluyla antikoagülan etkinlik gösterir. Trombomodulin Trombin Protein C —> Aktive Protein C + Protein S Villa —> İnaktif faktör VIII Va — inaktif faktör V Doku plazminojen aktivatör inhibitörünün inaktivasyonu (t-PA) Plazminojen ——> Plazmin Fibrinojen yıkımı Antikoagülan sistem Heparin Tek başına antikoa-gülan etkin! iği çok az ya da hiç yoktur, antitrombin III ile birleştiğinde antitrombin Ill'ün trombini uzaklaştırma etkinliğini yüz kattan bin kata kadar arttırmak suretiyle antikoagülan etki gösterir."
+  },
+  {
+    "id": "fizyoloji_q258",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi hemostazın ilk basamağıdır? (Nisan 2017 Orijinal) olması",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Trombosit adhezyonu ve agregasyonu",
+      "B": "Fibrin tıkacının faktör 13 ile stabilize edilmesi",
+      "C": "Faktör Xll'nin i",
+      "D": "İntrensek pıhtılaşma yolağının aktive olması",
+      "E": "Trombomodulin aktiflenmesi"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdakilerden hangisi hemostazın ilk evrelerinde lokalize damar spazmından sonra görülen basamaktır? (Nisan 2017 BENZERİ) O) Intrensek pıhtılaşma yolağının aktifenmesi aktive"
+  },
+  {
+    "id": "fizyoloji_q259",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi platelet aktive edici faktörün (PAF) fonksiyonu değildir? (Eyliil-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Damar geçirgenliğinin artırılması",
+      "B": "Membran geçirgenliğinin artırılması",
+      "C": "Damarda vazodilatasyon",
+      "D": "Prostoglandin (PG) inhibisyonu",
+      "E": "Trombosit agregasyonu"
+    },
+    "answer": "D",
+    "explanation": "TUS tarihinde fizyolojideki tek PAF sorusu... Otokoidler içinde genellikle kendine yer bulan PAF' ın istisnai özelliği hem vazodilatasyon hem vazokonstriksiyon yapabiliyor olmasıdır. PAF fosfolipitten çıkan bir mediyatördür. Trombosit agregasyonuna, vasküler (o geçirgenlikte (o artışa, damarlarda vazodilatasyona ve lökosit toplanmasına neden olur ve diğer hücreler tarafından PG'lerin sentezini uyarır."
+  },
+  {
+    "id": "fizyoloji_q260",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aktive faktör V ve faktör Vlli'in inaktifleşmesinde rol oynayan intravasküler antikoagülan aşağıdakilerden hangisidir? (Eylül 2015 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Protein C",
+      "B": "Doku faktör yolak inhibitörü (TFPI)",
+      "C": "Antitrombin III",
+      "D": "Plazmin",
+      "E": "Heparin"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:)"
+  },
+  {
+    "id": "fizyoloji_q261",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Faktör Xi WL Faktör Vill IV. Doku plazminojen aktivatörü mekanizmada önemli rol oynayan protein C'nin yukanda hangilerini inaktive eder? (Eylül 2015 BENZERİ) EYL lve V",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "adı verilen güçlü bir",
+      "B": "Ive Il",
+      "C": "illve lv",
+      "D": "I, Ive V"
+    },
+    "answer": "B",
+    "explanation": "Antikoagülan sistemini kilit ismi olan protein C ile ilgili güzel kurgulanmış bir soru... Dikkat edilmesi gereken nokta ise protein C'nin t-PA' yı inhibe değil aktive etiği bilgisidir. Koagülasyon sırasında trombin bir yandan pıhtılaşmayı desteklerken diğer yandan da trombomoduline bağlanarak antikoagülan sistemi devreye sokar. Bu kompleks protein C'yi aktifler. Protein C de faktör V ve faktör VIIl’i inaktiflestirerek antikoagülan etkinlik gösterir. Heparin; Antitrombin III ile birleşir. Bunun sonucunda antitrombin Ill'ün trombini uzaklaştırma etki, bin kata kadar arttırarak antikoagülan etki gösterir. Plazmin; fibrin iplikçiklerini ve çevre kanda bulunan fibrinojen, protrombin, FV, FVIII ve FXII gibi maddeleri sindirir (1, II, V, VII, Xil). Yaralanan dokular ve damar endoteli doku aktivatör salgılarlar. t-PA, pıhtı kanamayı durdurduktan bir gün ya da daha sonra, plazminojeni plazmine çevirir ve pıhtıyı ortadan kaldırır."
+  },
+  {
+    "id": "fizyoloji_q262",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Kallikreinin ( etkisi (hakkında hangisi doğrudur? (Nisan-92) oluşumu",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "FXIll inhibisyonu",
+      "B": "Bradikinojenden kallidin, metil kallidin ve bradikinin",
+      "C": "Renin substrattan Angiotensin I! oluşumu",
+      "D": "Faktör VII'nin aktivasyonu",
+      "E": "Angiotensin | ve Angiotensin Il oluşumu"
+    },
+    "answer": "B",
+    "explanation": "Kallikreinin hem bradikinin oluşumu üzerine etkisini ve hem de pıhtılaşma mekanizmasına etkisini bilip bilmediğimizi ölçen bir soru. aşağıdakilerden Plazma kallikreini bradikinin oluşumunu katalize eder. Plazma kallikreini Hageman faktör (faktör XII) veya plazmin tarafından aktive edilen bir reaksiyon ile prekallikreinden oluşur. Kallikrein pıhtılaşmanın intrensek mekanizmasında da görev yapmaktadır. Kallikrein, bradikininojenden bradikini oluşumunu sağlar. İntrensek yol, kan içindeki yapıların hasarlanmasıyla başlar. Bu durumda çıkan * Trombosit fosfolipidleri (PF3), * Yüksek molekül ağırlıklı kininojen (HMWK) ve * oPrekallikrein faktör XIl'yi aktifler."
+  },
+  {
+    "id": "fizyoloji_q263",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi 37*C'de 5-6 saat bekleyen kanda görülmez? (Eylul-92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "PCO, yükselmesi",
+      "B": "Laktat azalması",
+      "C": "Glikoz azalması",
+      "D": "Faktör V azalır",
+      "E": "pH düşmesi"
+    },
+    "answer": "B",
+    "explanation": "Nakil kanları genelde bekleyen kanlar olduğu için taze plazmadan nelerinin eksik olduğu iyi bilinmelidir"
+  },
+  {
+    "id": "fizyoloji_q264",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Herediter sferositoz Il. Hipofibrinojenemi lll. Beriberi hastalığı Yukarıdaki klinik durumlardan hangileri kan viskozitesini artırır? (Ağustos 2017 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yalnız |",
+      "B": "Yalnız Il",
+      "D": "| veli",
+      "E": "Ive lll"
+    },
+    "answer": "A",
+    "explanation": "Eritrosit membran bozuklugu ile giden herediter sferositozda eritrositlerin agregasyonu artacağı için kanın viskozitesi de artar. Viskozite ile ilgili bilinmesi gerekli en önemli bilgi hematokrit artışı ve fibrinojen düzeyi ile doğru orantılı olmasıdır. Bunlar artarsa viskozite artar, azalırsa azalır... Beriberide, hipofibrinojemide, hematokrit azalması durumunda vizkozite azalır. Viskoziteyi artıran durumlar: Hematokrit artışı Eritrosit agregasyonu artışı, Plazma fibrinojen düzeyi artışı ve Eritrosit deformabilitesi azalması viskoziteyi artırır. * Beriberide, hipofibrinojemide, hematokrit azalması durumunda viskozite azalır. Koagülasyon ve Hemostaz ile İlgili Sorulabilecek Önemli Bilgiler s+. 3-7 kompleksi Protrombini (2), trombine dönüştüren ne... F10 (Protrombin aktivatörü) Fibrinojeni (1), fibrine dönüştüren ne... Trombin Fibrini polimerize eden ne... 13 Ekstrensek yoldaki faktörler neler... 3-7 Intrensek yoldaki faktörler neler... 12-11, 9,8 PT uzamışsa sorun nerede... Ekstrensek yolda aPTT uzamışsa sorun nerede... İntrensek yolda PT-aPTT birlikte uzamışsa sorun nerede... Ortak yolda 1 2 3 4"
+  },
+  {
+    "id": "fizyoloji_q265",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki hücrelerden hangisi, kemik iliğinden köken almaz? (Nisan 2013)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Osteoklast",
+      "B": "Retina pigment hücresi",
+      "C": "Kupffer hücresi",
+      "D": "Mikroglia hücresi",
+      "E": "Ependim hücresi"
+    },
+    "answer": "E",
+    "explanation": "Ependim hücreleri glial hücrelerden olup BOS sentezinde görev alırlar. Sinir dokusu ile aynı kökten ektodermden gelişirler. Mononükleer fagositer sistem (MPS), monositten türeyen fagositlerin tamamıdır. * Histiosit (Bağ dokusu) + Kupffer hücresi (Karaciğer) * Alveoler makrofaj (Akciğer) +  Lenfoid organlardaki makrofajlar (Lenf düğümü ve dalağın sabit ve hareketli makrofajlar) * Kemik iligi makrofajı * Plevral ve peritoneal makrofaj * Osteoklast (Kemik) * TipAsinovisit * Mikroglia (Beyin) * Intraglomeriiler mezengial hücre (Böbrek) * Pigment hücresi (Retina)"
+  },
+  {
+    "id": "fizyoloji_q266",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki hicrelerden hangisi mononükleer fagositer sisteme aittir? (Nisan 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Keratinositler",
+      "B": "Tip A sinovisit",
+      "C": "Mast hücreleri",
+      "D": "Melanositler",
+      "E": "Müller hücresi"
+    },
+    "answer": "B",
+    "explanation": "Melanositler: | Melanin sorumlu hücrelerdir. yapımından Tip A sinovisit: Eklemin makrofajlarıdır. Mast hücreleri: Bağ dokuda bulunan bazofillerdir. Heparin histamin salgılarlar. Keratinositler: Keratinize edici epidermal hücrelerdir. Müller hücresi: Gözün retina tabakasında bulunan destek hücreleridir."
+  },
+  {
+    "id": "fizyoloji_q267",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi mononükleer fagositer sisteme ait hücrelerden değildir? (Eylül 2013 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Histiositler",
+      "B": "Kupffer hücresi",
+      "C": "Monosit",
+      "D": "Mast hücresi",
+      "E": "Mikroglia"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q268",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Plasentada bulunan makrofaj hücresi aşağıdakilerden hangisidir? (Eylül 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Karaciğer",
+      "B": "Deri merkel hücresi",
+      "C": "İnce bağırsak paneth hücresi",
+      "D": "Alveolar makrofaj",
+      "E": "Hofbauer hücresi"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdaki hücrelerden mononükleer fagositer etme dahil EY 2016 BENZERİ) ies, Hofbauer hücreleri plasentada bulunan fagositik hücrelerdir. Kupffer hücreleri karaciğerde, Alveolar makrofajlar akciğerde bulunan fagositoz fonksiyonuna sahip hücre yapılarıdır. Langerhans hücreleri 2010 yılına kadar makrofaj fonksiyonu olduğu kabul edilen, fakat daha sonra yapılan çalışmalarda antijen sunucu fonksiyona sahip olduğu temel kitaplara girmiş (Ross Histoloji hariç) bir hücre yapısıdır. Dendritik hücrede antijen sunucu fonksiyon gösteren hücre yapısıdır. Diğer şıklarda verilen hücreler monosit kökenli değildir. İto hücreleri A vitamini depolar. Merkel hücreleri kaba dokunma ile ilişkilidir. Paneth hücreleri lizozim ve defensin salgılar. Piramidal hücreler ise özelleşmiş nöronlardır. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ b 115"
+  },
+  {
+    "id": "fizyoloji_q269",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Bağ dokusunun immün yanıttan sorumlu primer hücresi aşağıdakilerden hangisidir? (Nisan-99)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kupffer hücresi",
+      "B": "Mast hücreleri",
+      "C": "Yağ hücresi",
+      "D": "Histiosit",
+      "E": "Fibroblast"
+    },
+    "answer": "D",
+    "explanation": "Histiositler *  Makrofajların bağ dokusunda yerleşip kalmasıyla oluşurlar. *  Histiositler gerektiğinde uzantılarını çekerek gezici makrofajlara dönüşebilir * Gezici makrofajlar zararlı etkenlerle savaşırken, görevlerinin gerektirdiği çeşitli hücre tiplerine dönüşebilirler (Epiteloid hücre, Yabancı cisim dev hücre). * Makrofajlar aynı zamanda, antijen sunan hücrelerdir. Gerektiği zaman T lenfositlere antijen sunabilirler"
+  },
+  {
+    "id": "fizyoloji_q270",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Makrofaja dönüşerek CD4* T lenfositine antijen sunan lökosit aşağıdakilerden hangisidir? (Nisan-1994, Nisan-2013)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Doğal öldürücü lenfosit",
+      "B": "Bazofil",
+      "C": "Nötrofil",
+      "D": "Eozinofil",
+      "E": "Monosit"
+    },
+    "answer": "E",
+    "explanation": "Monositler başlıca dalakta yapılırlar fakat miyeloid ve RES'in herhangi bir bölgesinde de oluşabilirler. Makrofajlara dönüşerek antijen sunucu vazife görebilirler. Monositlerin makrofaja (dönüşümleri (o sırasında sitoplazmalarındaki lizozom miktarı artar."
+  },
+  {
+    "id": "fizyoloji_q271",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Makrofajlardan salınarak akut enflamasyonda rol alan, endotel ve somatik hücreler üzerinde enflamatuar etkisi olan sitokin aşağıdakilerden hangisidir? (Nisan 2015 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "İntertökin-1",
+      "B": "Interiokin-12",
+      "C": "Tümör nekroz faktör-alfa",
+      "D": "İnterferon-gama",
+      "E": "Tümör nekroz faktör alfa"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Makrofajlardan ve yardımcı T lenfositlerden Salınan, alm ampere mini waasratod ilen (sitokin aşağıdakilerden (hangisidir? ekiz ie ou)"
+  },
+  {
+    "id": "fizyoloji_q272",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi makrofajlardan salgılanır? (Eylül-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Lökotrien",
+      "B": "İnterferon",
+      "C": "Kompleman faktörleri",
+      "D": "İnterlökin-1",
+      "E": "Histamin"
+    },
+    "answer": "D",
+    "explanation": "Makrofajlarin inflamasyona cevabinda 5 énemli faktör: 1) Tümör-nekroz faktörü (TNF) 2) İnterlökin-1 (IL-1) 3) Granülosit koloni-uyarıcı faktör (G-CSF) 4) Monosit koloni-uyarıcı faktör (M-CSF) ve 5) Granülosit-monosit koloni-uyarıcı faktör (GM- CSF)"
+  },
+  {
+    "id": "fizyoloji_q273",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Yardımcı T hücrelere antijen sunan hücre aşağıdakilerden hangisidir? (Eylül 2014 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Notrofiller",
+      "B": "Sitotoksik T hücreleri",
+      "C": "Plazma hücreleri",
+      "D": "Doğal öldürücü (NK) hücreler",
+      "E": "Makrofajlar"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Makrofajlar gibi yardımcı T hücrelere antijen sunabilen hücre aşağıdakilerden hangisidir? (Eylül 2014 BENZERİ) Antijen sunucu hücreler dokuların çoğunda bulunurlar. Kemik iliğinden köken alarak; - Dentritik hücreler - Makrofajlar - Derinin langerhans hücreleri - B Lenfositleri içeren bir hücre populasyonunu oluştururlar. Şıklarda bu antijen sunucu hücrelerden sadece makrofaj verilmiştir."
+  },
+  {
+    "id": "fizyoloji_q274",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi T lenfositlerin önemli fonksiyonlarından değildir? (Nisan-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "PPD pozitifliği",
+      "B": "Organ reddi",
+      "C": "Bağışıklık tanıma",
+      "D": "Direkt Ig salgılama",
+      "E": "Anaflaktik reaksiyon"
+    },
+    "answer": "D",
+    "explanation": "Bağışıklık sistemini yöneten T lenfositler; fagositoz yapmaz antikor salmazlar. Kavgaya direk girmezler. T lenfositler kemik iliğinde yapıldıktan sonra timusa giderek burada olgunlaşmalarını tamamlarlar. Direkt Ig salgılama fonksiyonu plazma hücrelerinin görevidir. T lenfositler 3 büyük gruba ayrılır. 1- Sitotoksik T-hücreleri; direkt olarak saldıran hücrelerdir, mikroorganizmaları, hatta aynı zamanda kendi vücut hücrelerinin bazılarını da öldürebilirler, ayrıca kanser hücrelerini öldürme, transplante edilmiş kalp hücreleri ya da şahsın vücuduna yabancı olan öteki tip hücreleri tahrip etmede önemli rol oynarlar. » Yardımcı T hücreleri; lenfositlerin en çok bulunanlarıdır. T hücrelerinin antijenlerle aktivasyonunu arttırılması, öteki T hücrelerinin aktivasyonunun stimulasyonu ve makrofaj sisteminin aktivasyonundan sorumludur. ig Supresör T hücreleri; gecikmiş tip hipersensitivite reaksiyonundan (PPD pozitifliği) da sorumludur."
+  },
+  {
+    "id": "fizyoloji_q275",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Akraba dışı bir vericiden böbrek nakli yapılan bir hastada organ reddinin önlenmesi için aşağıdaki hücrelerden hangisinin baskılanması öncelikle hedeflenir?",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Makrofajlar",
+      "B": "Eozinofiller",
+      "C": "T lenfositler",
+      "D": "B lenfositler",
+      "E": "Doğal öldürücü hücreler"
+    },
+    "answer": "C",
+    "explanation": "T lenfosit tiplerinden özellikle Sitotoksik T- hücreleri; direkt olarak saldıran hücrelerdir, mikroorganizmaları, hatta aynı zamanda kendi vücut hücrelerinin bazılarını da öldürebilirler. Ayrıca kanser hücrelerini öldürme, transplante edilmiş kalp hücreleri ya da şahsın vücuduna yabancı olan öteki tip hücreleri tahrip etmede önemli rol oynarlar. T lenfositlerin önemli fonksiyonları... + PPD pozitifliği * Organ reddi * Bağışıklık tanıma * Anafilaktik reaksiyon NK Hücresi (Doğal katil hücre, natural killer cell), daha önceden bir karşılaşma ve uyarılma olmadan virüs ile enfekte hücrelere ve kanser hücrelerine saldırdıkları için doğal öldü hücre adını almışlardır. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ p 117 B Lenfositler, antijenik uyarımla immünglobülin sekrete eden plazma hücrelerine dönüşür. Makrofajlar (özellikle doku makrofajları) inflamasyon sırasında ilk savunma hattını oluştururlar. Makrofajlar özgül lenfositlerin büyüme ve çoğalmasını kolaylaştıran özel bir aktivatör madde salgılar. Kanda eozinofillerin artması (eozinofili) allerjik reaksiyonlar ve parazitik enfeksiyonlar ile ilişkilidir."
+  },
+  {
+    "id": "fizyoloji_q276",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "T lenfositte MHC class Il antijenlerine bağlanmayı sağlayan yapı aşağıdakilerden hangisidir? (Eylül-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "CD1",
+      "B": "CD2",
+      "C": "CD3",
+      "D": "CD4",
+      "E": "CD8"
+    },
+    "answer": "D",
+    "explanation": "Klasik bir matematik sorusu... CD4-MHC2....CD8- MHC1 Class Il moleküller önce antijen sunan hücreler tarafından içeri alınan ve muamele edilen eksojen antijenleri prezente eder ve sonra class İl peptid kompleksi hücre yüzeyine taşınır. CD4*T hücreler yabancı antijenleri sadece Class II antijenlerin T yardımcı hücre gelişmesindeki rolü immün cevapların regülasyonunda önemli yere sahiptir. CD8 ise MHC class Ie bağlanır."
+  },
+  {
+    "id": "fizyoloji_q277",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Antijenler, antikorlara ait aşağıdaki yapılardan hangisine bağlanır? (Nisan-92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "VA,VL",
+      "B": "CH1 G) CH3",
+      "D": "CH2",
+      "E": "CL",
+      "C": "ve değişken (V)"
+    },
+    "answer": "A",
+    "explanation": "Antikorlar disülfit bağlarla bağlı polipeptit zincirlerinden oluşur. Her antikorda birbirinin aynı en az iki ağır (H) ve iki hafif (L) zincir bulunur. bölümleri bulunur. Sabit bölgeler biyolojik aktiviteden sorumludur. Antijenin bağlanmasında ise V bölgeleri sorumludur. Dolayısı ile antijen VH ve VL bölgelerine bağlanır. Değişken (Variable) Parçalar NH, COOH Disülfit Bağları Ağır zincir COOH COOH eter Antikor yapısı SE 22 BS @ Aİ zı zs 85 2 eI se Es şü te"
+  },
+  {
+    "id": "fizyoloji_q278",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Blenfositlerini, T lenfositlerinden kesin ayıran temel özellik aşağıdakilerden hangisidir? (Nisan-94)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Subkortikal yerleşimli olması",
+      "B": "Yüzeyel immünglobulin reseptörlerinin olması",
+      "C": "Dolaşımda daha az olması",
+      "D": "'yi içerirler. Ayrıca CD19 ve CD20 yüzey",
+      "E": "Peyer plağında bulunması"
+    },
+    "answer": "B",
+    "explanation": "B LENFOSİTLER * Dolaşanlenfositlerin % 10 - 20'sidir. + Lenf bezlerinde kortekste, dalakta beyaz pulpada, tonsil ve kemik iliğinde bulunurlar. * Antijenik uyarımla immünglobülin sekrete eden plazma hücrelerine dönüşür. + B lenfositler yüzeylerinde membranöz immünglobülin M (migM) ve immiinglobilin D markerleri bulunur. * Tlenfositlerde ise immünglobülin bulunmaz. CD3 yüzey markeri bulunur."
+  },
+  {
+    "id": "fizyoloji_q279",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Anaflaktik (etkiye yol açan aşağıdakilerden hangisidir? (Eylül-95) kompleman",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "CIS",
+      "B": "CR",
+      "C": "CSa",
+      "D": "C4",
+      "E": "C7"
+    },
+    "answer": "C",
+    "explanation": "Antikor Etkisi İçin Kompleman Sistemi: * o Çoğunluğu enzim prekürsörü olan toplam 20 kadar proteini kapsar. * Normalde bu proteinlerin tümü plazma proteinleridir ve kapillerden dokuya sızan plazmada da bulunurlar. “Kompleman aktivasyonu” başlıklı şekile bakınız. Üretilen proteinlerin işlevleri: * Opsonizasyon, kemotaksis ve sonuçta hücrenin lizisi ile istilacı organizmaların öldürülmesine yardım etmek. * Lizis, perforin denilen proteinlerin hücre zarı içine girmesiyle olur. Membranda delikler açılır ve böylece zar polaritesi bozulur."
+  },
+  {
+    "id": "fizyoloji_q280",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Sınıf Il majör histokompatibilite kompleksi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır? (Eylül 2016 Orijinal) proteinlerdir",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "DNA üzerinde yer alan özelleşmiş bir bölgedir.",
+      "B": "Humoral yanıtın özgüllüğünü belirlerler.",
+      "C": "MHG-liler yardımcı T lenfositiere antijen sunabilir.",
+      "D": "MHC-l'ler çekirdekli her hücrede bulunan yüzey proteinleridir.",
+      "E": "Doku uygunluk antijenleri olarak da isimlendirilirler."
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) hangisi yanlıştır? (Eylül 2016 BENZERİ) Bağışıklık sistemine ait tanıtıcı oyapıların özelliklerinin sorgulandığı güzel bir immünoloji sorusu... Mikrobiyoloji ve patoloji de daha detaylı analtılan doku uygunluk antijenleri hakkında bilinecek en temel bilgi; hücresel immünitenin özgüllüğü ile ilgili olmalarıdır."
+  },
+  {
+    "id": "fizyoloji_q281",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "NADPH oksidaz kompleksi mutasyonlarına ikincil olarak o nötrofillerin süperoksit dretememesi aşağıdaki nötrofil fonksiyonlarından hangisinin bozulmasına neden olur? (Nisan 2009) G) Migrasyon",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Adezyon",
+      "B": "Diapedez",
+      "D": "Degranülasyon",
+      "E": "Mikrobisidal aktivite"
+    },
+    "answer": "E",
+    "explanation": "Klinikte nötrofillerdeki NADPH oksidaz kompleksi mutasyonu kronik granülomatöz hastalık olarak bilinmektedir. Bu hastalıkta nötrofillerin fagositozla aldıkları mikroorganizmaları öldürme (mikrobisidal aktivite) yetenekleri bozulmuştur. Nötrofiller yara yerine ilk giden hücrelerdir. Yarı ömürleri 6 saat kadardır. Nötrofillerde bakteri ölümüne neden olan enzimlerden birisi NADPH oksidaz'dır. NADPH oksidaz, O,'den serbest radikal oluşturur (0). Enzimin eksikliğinde serbest oksijen radikali oluşamaz ve nötrofiller mikrobisidal aktivitelerini gösteremezler. Adezyon: Nötrofillerin damar duvarına yapışması Diapedez: Lökositin damar dışına çıkması Migrasyon: Nötrofillerin göç etmesi Degranülasyon: Granül içeren veziküllerin boşalması anlamlarına gelmektedir. Bağışıklık Sistemi ile İlgili Sorulabilecek Önemli Bilgiler Doğal bağışıklıkta görev Lökosit, makrofaj, mide asidi, aminler, kompleman sistemi, NK hücresi Edinsel bağışıklıkta görev yapanlar. .. B ve Tlenfosit, antikorlar T lenfositler nerede olgunlaşır... Timus Antikorla veya bağışıklık sistemi ile tepkime veren immünojenene denir... Antijen Antikor salgılayan hücre... Plazma hücresi Plazma hücresi neden farklılaşır... B lenfosit Plasenta engelini aşan immünglobülin... Ig 6 Gözyaşı, kolostrum, tükürük, prostat ve vajina salgılarında bulunan ana immünglobülin... IgA Allerjik © reaksiyonlarda mast ohücresi o ve bazofillerden heparin ve histamin salınımını uyaran immünglobülin... Ig E . Bir plazma protein grubu olan kompleman sistemini uyaranlar... Ig M ve Ig 6'ye bağlı antijenler . Yüzeylerinde © antijen © taşıyan (| partiküllerin kümeleşmesine ne denir... A glütinasyon . Antijenikajanın © hücreye kısımlarının antikorla örtülmesine ne denir... Nötralizasyon LENFATİK DOLAŞIM ve LENFOİD DOKU HİSTOLOJİSİ NOT: Lenfatik dolaşım ve ödem soruları, ortak bir konu olan kapiller sıvı hareketi - Starling kuvvetleri kısmında yer almaktadır. Kardiyovasküler sistem/ dolaşım sistemi kısmına bakınız."
+  },
+  {
+    "id": "fizyoloji_q282",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Agagidakilerden hangisi plazma proteinlerinin görevi değildir? (Eylül-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Onkotik basıncı sağlamak",
+      "B": "O, taşımak",
+      "C": "Koagülasyonda görev almak",
+      "D": "İg yapısında yer almak",
+      "E": "İlaç moleküllerinin taşınımında yer almak"
+    },
+    "answer": "B",
+    "explanation": "O, taşımak hemoglobinin görevidir. Majör plazma proteinleri * Albümin, a, B, y globilinler, fibrinojen, transferrin, fibronektin ve kompleman proteinleri. * Albümin en yaygın plazma proteinidir, karaciğerde üretilir. Kanın ozmotik basıncını sağlar. + Fibrinojen, en büyük plazma proteinidir. Koagülasyonda görev yapar. Karaciğerde üretilir, pıhtılaşma sırasında çözünemeyen, çapraz bağlı lifler şeklinde organize olup damarlardan kan kaybını engeller. *  Globülin,immüglobülin yapısına katılır ve enzimatik fonksiyonlarda görev yapar."
+  },
+  {
+    "id": "fizyoloji_q283",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Lenf düğümünde afferent lenf damarlarıyla gelen lenf ilk olarak aşağıdakilerden hangisine girer? (Nisan 2005)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Medüller sinüs",
+      "B": "Subkapsüler sinüs",
+      "C": "Subtrabeküler sinüs",
+      "D": "Hilus",
+      "E": "Yüksek endotelli venül"
+    },
+    "answer": "B",
+    "explanation": "Lenf Düğümündeki Lenfatik Sıvı Dolaşımı: * Lenf sıvısı ve antijenik elemanlar afferent damarlarla lenf düğümüne gelir. * Bu afferent damarlar subkapsüler sinüs adı verilen boşluklara açılırlar. * Lenf daha sonra kortikal sinüsler aracılığı ile medüller sinüslere açılır. *  Businüslerdeki makrofaj ve dendritik hücreler lenf sıvısındaki antijenleri yakalar. * Lenf sıvısı efferent (götürücü) lenf damarlarında toplanıp organı terk ederler. Lenf sıvısının lenf damarlarındaki drenajı: Afferent damarlar — Subkapsüller sinüsler — Kortikal sinüsler — Medüller sinüsler — Efferent damarlar"
+  },
+  {
+    "id": "fizyoloji_q284",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Lenf o düğümünde bulunmaz? (Nisan-94) aşağıdakilerden (o hangisi",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Medüller kordon",
+      "B": "Subkapsüler sinüsler",
+      "C": "Medüller sinüsler",
+      "D": "Yüksek endotelli venüller",
+      "E": "Venöz kan sinüsleri"
+    },
+    "answer": "E",
+    "explanation": "Birçok sinüsün görüldüğü lenf düğümlerinde venöz sinüs yoktur."
+  },
+  {
+    "id": "fizyoloji_q285",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Yüksek endotelli venüllerin görevi aşağıdakilerden hangisidir? (Nisan 2012)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Antikoagülan üretimi",
+      "B": "Isı kaybının önlenmesi",
+      "C": "Vasküler tonus düzenleyicilerin üretimi",
+      "D": "Damar duvarının drenajı",
+      "E": "Lenfositlerin lenfatik dokuya girişi"
+    },
+    "answer": "E",
+    "explanation": "Soruya ilk bakıldığında bu damar tipinin nerelerde bulunduğunu hatırlarsak kolaylıkla çözülebilecek bir soru tipi. Lenfositlerin Geri Dolaşımı (Resirkülasyon): Lenfositler postkapiller ya da yüksek endotelli venül adı verilen özel kan damarlarıyla kandan ayrılarak lenf düğümüne geri dönerler. Yüksek endotelli venüller ayrıca appendiks, tonsiller ve Peyer plakları gibi diğer lenfoid organlarda da bulunur ancak dalakta ve timusta bulunmaz. Resirkülasyon lenf düğümlerinde en belirgindir."
+  },
+  {
+    "id": "fizyoloji_q286",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Dalak sinüzoidleri arasına yayılan, başlıca plazma hücreleri, makrofajlar ve kan hücrelerinden oluşan yapı aşağıdakilerden hangisidir? (Nisan 2015 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kortikal sinüs",
+      "B": "Billroth kordonları",
+      "C": "Penisiler arterler",
+      "D": "Santral arterler",
+      "E": "Periarteriolar ek kılıf"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Kırmızı pulpadaki sinüzoidleri birbirinden ayıran ve değişik ölçüde kan hücrelerinden oluşan dalağa alt yapı aşağıdakilerden hangisidir? (Nisan 2015 BENZERİ) Remark kordonu karaciğerde, Billroth kordonu dalakta... DALAK * Dalak vücuttaki en büyük lenfoid dokudur. * Dolaşımdaki kanla yakın temasta bulunan çok sayıda fagositik hücre içerir. Dalak Pulpası * Taze dalağın kesit yüzeyinde parankim içinde beyaz noktalar gör a *  Bunlarlenfdüğümcükleridir ve beyaz pulpanın bir bölümünü oluştururlar. * Lenf düğümleri koyu kırmızı renkte, kanla dolu kırmızı pulpa ile çevrelenmiştir. * Kırmızı pulpa, sinüzoidler arasında uzanan dalak kordonlarından (Billroth kordonları) oluşur."
+  },
+  {
+    "id": "fizyoloji_q287",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Periarteriolar lenfatik kılıf (PALS) aşağıdaki yapılardan hangisinde gözlenir? (Eylül 2015 Orijinal) rmızı pulpa — İç korteks imi — Dış korteks",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Medulla",
+      "E": "Germinal merkez.",
+      "B": "Billroth kordonları",
+      "C": "Santral arter",
+      "D": "Periarteriolar lenfatik kılıf"
+    },
+    "answer": "D",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Dalağın beyaz pulpasında görülen ve T lenfositten zengin yapı aşağıdakilerden hangisidir? (Eylül 2015 BENZERİ) Beyaz Pulpa: * Beyaz pulpa, santral arterleri ve kiliflara ilişik lenf nodüllerini saran lenfoid dokudur. * Santral arterleri saran lenfoid hücreler T lenfositlerdir ve bunlar periarteriyel lenfatik kılıfları (PALS) oluştururlar. * Lenfnodülleri ise başlıca B lenfositleri içerir."
+  },
+  {
+    "id": "fizyoloji_q288",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Hassal korpusküllerini aşağıdaki hücrelerden hangisi oluşturur? (Eylül 2014 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Timus",
+      "B": "Tiroid",
+      "C": "Pankreas",
+      "D": "Sürrenal medulla",
+      "E": "Paratiroid bezi"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Timus epitel hücrelerinden oluşan Hassal korpuskülleri çoğunlukla = timusun (Oohangi (o alanında © bulunur? (Eylül 2014 BENZERİ) Lenfoid organların histolojik yapısı sınavlarda sıkça sorgulanmaktadır. Medullada bulunan Hassal korpüskülleri timusun epitelinden oluşur. Timus * Timus, gençlik çağlarında gelişimini tamamlayan, mediastinumda yerleşmiş lenfoepiteliyal bir organdır. * Timusharicindeki lenfoid organlar mezenkimden (mezoderm) köken alırlarken, timusun çift embriyonel kökeni vardır. * Timus 3. yutak cebinin endoderminden köken alır. * Timus lenfositleri mezenkimal (mezoderm) hücrelerden köken alır. Korteks: * Timus loblarinin dış koyu kısmıdır. * Kortekste yoğun bir T lenfosit popülasyonu, aralarında epiteliyal retiküler hücreler ve az sayıda makrofaj bulunur. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 121 Marjinal sinus Pensiller arter Dalakta beyaz pulpa ve PALS yapısı Korteks, küçük lenfositlerden zengin olduğu için medulladan daha koyu boyanır. Medulla, Hassal cisimciklerini (korpüskülleri) içerir. Bu yapıları; halkasal tarzda düzenlenmiş, yassılaşmış (skuamoz) epitel ve keratin filamanları ile dolu, dejenere ve bazen de kalsifiye retiküler hücrelerden oluşmuştur. Medulla: Korteksle aynı hücre popülasyonlarını barındırmakla birlikte daha fazla epiteliyal retiküler hücre içerir. Timus kapillerlerinin penceresiz bir endoteli ve çok kalın bir bazal laminası vardır. Medullada kan-timus engeli bulunmamaktadır. . Endodermal kökenli retiküler hücreler içeren organ aşağıdakilerden hangisidir? (Eylül-90) Timus ve tonsilla palatina endodermal kökenli lenfoid dokulardır. Bu istisnai bilgi her zaman soru olarak gelebilir. İnsanda timus endodermal kökenli olup, 3. ve 4. yutak ceplerinin ventralinden gelişir. 10. haftadan itibaren"
+  },
+  {
+    "id": "fizyoloji_q289",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdaki (lenfoid organlarin (hangisindeki retikulum hücreleri, mezenşimal kökenli değildir ve epitelyal yapı özellikleri gösterir? (Nisan 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Makrofajlar",
+      "B": "Germinal merkez",
+      "C": "T lenfositler",
+      "D": "Hassal cisimciği",
+      "E": "Epitelyal retiküler hücreler"
+    },
+    "answer": "B",
+    "explanation": "Timusun özellikleri ile ilgili öğretici bir soru... Timus kapsülü ile lobüllere ayrılan, korteks ve medullaya sahip lenfoid organdır. Korteksde küçük lenfositler bulunur ve kan timus bariyeri buradadır. Medullada ise Hassal cisimcikleri adı verilen epitelyal kökenli oluşumlar vardır. Epitelyal retiküler hücreler timus korteksinde yer alır. Dalakda ise beyaz pulpa,kırmızı pulpa ve marjinal zon bulunur. Beyaz pulpada bulunan periarteriyal lenfatik kılıf (PALS) T lenfositlerin yoğun bulunduğu bölgedir. Timusa özgü epitelyal retiküler hücreler, sorulması beklenen önemli özelliklerdendir. Timus endoderm kökenlidir. 1 . Aşağıdakilerden hangisi timus lenfoid foliküllerinde yer almaz? (Eylül 94) Timus ile ilgili güzel kurgulanmış bir soru... Germinal merkezler de B lenfositlere ait folliküller bulunur. B lenfositlerin vücutta giremeyeceği tek yer Timustur."
+  },
+  {
+    "id": "fizyoloji_q290",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "T hücresi aşağıdaki organlardan hangisinde olgunlaşır? (Eylül-87)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Dalak",
+      "B": "Barsaklar",
+      "C": "Timus",
+      "D": "Kemik İliği",
+      "E": "Böbrekler"
+    },
+    "answer": "C",
+    "explanation": "Timus, T hücrelerinin son farklanma ve seçilme yeridir. Bu işlem esnasında timus lenfositleri pek çok mitoz bölünme geçirirler. Buna karşın bu hücrelerin %95'ten fazlası apoptozis ile ortadan kaldırılırlar."
+  },
+  {
+    "id": "fizyoloji_q291",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisinin yapısında yüksek endotelli venül bulunmaz? (Eylül 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Lenf nodu",
+      "B": "Tonsilla",
+      "C": "Timus",
+      "D": "Apendiks",
+      "E": "Peyer plakları"
+    },
+    "answer": "C",
+    "explanation": "Dalak ve timus dışındaki lenfoid organların çok önemli bir özelliği olan resirkülasyon mekanizmasının dolaylı olarak sorgulandığı bir sorudur. Lenfositler, postkapiller ya da yüksek endotelli venül adı verilen özel kan damarlarıyla kandan ayrılarak lenf düğümüne geri dönerler. Yüksek endotelli venüller appendiks, tonsilla ve Peyer plakları gibi lenfoid organlarda bulunur, ancak dalak ve timusta bulunmaz. Resirkülasyon lenf düğümlerinde en belirgindir. düğümünde yüksek endotelli venül yapısı Lenfoid Doku Histolojisi ile İlgili Sorulabilecek Önemli Bilgiler Primer lenfoid organlar... Kemik iliği ve timüs 5 rat düğümündeki antijen sunucu hücre... Dendritik ücre . Lenfositlerin kandan lenf düğümüne geçtiği damar. Yüksek endotelli venül (postkapiller venül) Lenf düğümü, tonsilla, peyer plağı, appendikste bulunan venül tipi... Yüksek endotelli venül (HEV) Yüksek endotelli venül, hangi lenfoid organlarda bulunmaz... Dalak ve timüs Vücuttaki en büyük lenfoid doku... Dalak Billroth kordonları nerede bulunur... Dalak Santral arterin çevresindeki doku... Periarteriyel lenfatik kılıf (PALS)"
+  },
+  {
+    "id": "fizyoloji_q292",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Dişin görünen kısmını aşağıdakilerden hangisi örter? (Eylül-88) (Eylül-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Pulpa",
+      "B": "Sementum",
+      "C": "Dentin",
+      "D": "Enamelum",
+      "E": "Periodontium"
+    },
+    "answer": "D",
+    "explanation": "DİŞLER * Her bir dis özelleşmiş üç dokudan oluşur; > Mine > Sement > Dentin Mine (Enamelum) * Dişin en dista görünen, kuron (taç) olarak bilinen kısmını saran aselüler mineralize dokudur. * o Ektodermal epiteliyal kökenli dokudur. * Mine, insan vücudunun en sert dokusudur (596 mineral, 61 organik madde, %3 su). * Organik mine matriksi kolajen fibriller yerine amelogenin, ameloblastin, enamelin ve tuftelinler gibi proteinler içerir. Sement * Dişin kök kısmını saran mineralize dokudur. * Sementositler tarafından yapılır. * Sement yapısında dışarı doğu periodontal ligamente uzanan kolajen lifler (sharpey lifleri) dişi alveoler çene kemiğine bağlar. Dentin * Dişin en büyük kısmını oluşturan kalsifiye yapıdır. Dişte ilk mineralize olan yapıdır. * Organik matriksi odontoblastlar tarafından salgılanır. Pulpa * Dentin ile sınırlanmış gevşek bağ dokusudur. * Boldamarve sinirli dokudur."
+  },
+  {
+    "id": "fizyoloji_q293",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Diş minesinin matriksini oluşturan hücreler aşağıdakilerden hangisidir? (Eylül-97)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Osteoblastlar",
+      "B": "Kondroblastlar",
+      "C": "Odontoblastlar",
+      "D": "Sementoblastlar",
+      "E": "Ameloblastlar"
+    },
+    "answer": "E",
+    "explanation": "GASTROİNTESTİNAL SİSTEM HİSTOLOJİSİ ve FİZYOLOJİSİ >» 123 Diş histolojisi ile ilgili en çok sorulan kısım mine tabakasıdır. Her özelliği çok iyi bilinmelidir. Mine, dişin en dışta görünen, kuron (taç) olarak bilinen kısmını saran aselüler mineralize dokudur. Ektodermal epiteliyal kökenli dokudur."
+  },
+  {
+    "id": "fizyoloji_q294",
+    "book": "Fizyoloji",
+    "exam": "(Nisan-89)",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi lakteal'i tanımlar? (Nisan-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Liberkühn kriptalarının inflamasyonu",
+      "B": "Safra sıvısında kolesterol artışı",
+      "C": "İnce barsağın plazma hücreleriyle infiltrasyonu",
+      "D": "Bağırsakta emilen maddeyi taşıyan lenf damarı",
+      "E": "Gastrik stimulasyonun artması"
+    },
+    "answer": "D",
+    "explanation": "Lakteal kanalları ile ilgili detaylı bir soru. Jejenum mukozasından, lenfatik sisteme geçmesi gereken maddeler için ayrı bir emilim mekanizması geçerlidir. Bu kanalcıkların adıdır lakteal. Lakteal: Bağırsakta emilen maddeyi taşıyan lenf damarlarıdır. İnce bağırsakların küçük delikleri vardır. Bu bezlere intestinal bezler (kriptalar ya da Lieberkühn bezleri) denir. Villi Villus Lieberkühn. kriptasi Lakteal İnce bağırsak histolojik yapısı"
+  },
+  {
+    "id": "fizyoloji_q295",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Duodenum içeriğinde protein yıkım ürünlerinin ve H* iyonlarının bulunuşu ya da duodenumun distansiyonu mide hareketlerini azaltan bir reflekse neden olur. Bu refleks aşağıdakilerden hangisidir? (Eylül-87, Nisan-90)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Gastrokolik",
+      "C": "Enterogastrik",
+      "B": "Sefalogastrik",
+      "D": "Vago-Vagal",
+      "E": "Enteroenterik"
+    },
+    "answer": "C",
+    "explanation": "a] ce 2 3] = is Rİ 6"
+  },
+  {
+    "id": "fizyoloji_q296",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Auerbach  pleksusu tabakalardan hangisindedir? (Eylül-92) aşağıdaki",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "T. mukoza",
+      "C": "T. muskularis",
+      "B": "T. submukoza",
+      "D": "T. serosa",
+      "E": "T. adventisia"
+    },
+    "answer": "C",
+    "explanation": "Auerbach pleksusu (Miyenterik pleksus): + Longitudinal ve sirküler kas tabakaları arasında yer alan dış pleksustur. * oMiyenterik pleksus uyarıldığında; > Bağırsak duvarının tonusu artar. > Ritmik kasılmaların yoğunluğu artar o Kasılmanın ritim hızı hafifçe artar. > Peristaltik dalgalara neden olan uyarıcı dalgaların ileti hızı artar. i Mukoza Muskularis mukoza Submukoza Sirküler düz kas © | Muskularis (47 ~ Longitudinal düz kas | propria Gastrointestinal sistem katmanları"
+  },
+  {
+    "id": "fizyoloji_q297",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Meissner pleksusu histolojik olarak bağırsakların hangi tabakasında yer alır? (Eylül-88, Nisan-96)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mukosa",
+      "B": "Tunika submukosa",
+      "C": "2 kas tabakası arasında",
+      "D": "Tunika serosa",
+      "E": "Serosa ile kas tabakası arasında"
+    },
+    "answer": "B",
+    "explanation": "Meissner pleksusu (Submukozal pleksus) * o Submukozada bulunur. Auerbach pleksusu (Miyenterik pleksus): + Longitudinal ve sirküler kas tabakaları arasında yer alan dış pleksustur."
+  },
+  {
+    "id": "fizyoloji_q298",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Duodenumdaki Brunner bezlerinin salgısının artması ve submukozal kasın kasılmasında aşağıdakilerden hangisi rol oynar? (Eylül 2009)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Miyenterik pleksus",
+      "B": "Goblet hücreleri",
+      "C": "Meissner pleksusu",
+      "D": "Motilin",
+      "E": "Noradrenalin"
+    },
+    "answer": "C",
+    "explanation": "Meissner pleksus uyarıldığında; +  Lümenden osmotik, mekanik, kimyasal ve termal uyarı alır. + Gastrointestinal sekresyonlar artar. Asıl etkisi sekresyon üzerinedir. * Lokal kan akımını ve emilimi kontrol eder. * Muskularis mukozanın kasılması sağlanır."
+  },
+  {
+    "id": "fizyoloji_q299",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Tattomurcuklarında sinyal iletimi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır? (Nisan 2012) duyarlı Na* kanalıdır oynar aktivasyonu ile gerçekleşir reseptörlerin aktivasyonu gerekir aktivasyonu, Na* kanalının açılmasına neden olur reseptörünün",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tuzlu tat duyusundan sorumlu kanal, amılorid",
+      "B": "Ekşi tat duyusunda K' kanalının bloke edilmesi rol",
+      "C": "Umami tat duyusu, glutamat",
+      "D": "Bazı acı tat uyaranları için “gustducin” bağımlı",
+      "E": "Tatlı tat duyusundan sorumlu reseptörlerin"
+    },
+    "answer": "E",
+    "explanation": "Tatlar ve Reseptörleri + Tatlı tat: Şekerler ve ilişkili organik bileşiklerle oluşur. > G-proteini (Gustducin) ile ilişkili T1R2 ve T1R3 ile algılanır. > Ga bağlantılıdır ve İP3 yolağını kullanır. > Özellikle dilin ön kısmında bulunan fungiform papillalar aracılığıyla algılanır ve 7. kraniyal in korda timpani dalı ile iletilir. * Acı tat: Alkaloid, striknin ve bazı toksinlerle oluşur. > G-proteini (Gustducin) ile ilişkili T2R ile algılanır. > Çoğu Gg bağlantılıdır ve IP3 yolağını kullanır. > Bazı tastantlar K kanal blokajı ile algılama yapabilir. > Özellikle dilin posteriorunda bulunan sirkumvallat ve foliat papillalar aracılığıyla algılanır ve 9. kraniyal sinir ile iletilir. + Umumitat: L-glutamat, aspartat ve ilişkili bileşiklerle alınır. > Gproteini (Gustducin) ile ilişkili T1R1 ve T1R3 ile algılanır. + Ganong’a gére reseptörü mGluR4'dür. > Gq bağlantılıdır ve IP3 yolağını kullanır. > Özellikle dilin posteriorunda bulunan sirkumvallat ve foliat papillalar aracılığıyla algılanır ve IX. kraniyal sinir ile iletilir."
+  },
+  {
+    "id": "fizyoloji_q300",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisinde özofagustan kardiyaya geçişteki epitel değişimi doğru olarak verilmiştir? (Eylül 2015 Orijinal) prizmatik sekretuvar epitele dönüşür . katlı prizmatik sekretuvar epitele dönüşür. katlı sekretuvar epitele dönüşür. yassı epitele dönüşür. dönüşür.",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Çok katlı keratinize yassı epitel, tek katlı prizmatik epitel",
+      "B": "Çok katlı kerantinleşmemiş yassı epitel, tek katlı prizmatik",
+      "C": "Çok katlı kerantinleşmemiş yassı epitel çok",
+      "D": "Tek katlı kübik epitel çok katlı kerantinleşmiş",
+      "E": "Çok katlı değişici epitel tek katlı yassı epitele"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Özofagus ve midenin epitelleri aşağıdakilerden hangisinde sırasıyla doğru olarak verilmiştir? (Eylül 2015 BENZERİ) epitel ©) Si katlı kerantinleşmemiş yassı epitel, çok katlı değişici 0 Tek at kik op, ok kalı kerandnize yaza epitel e ee Vücuttaki temel epitel tipleri hakkındaki bilgilerimizin irdelendiği spot bilgi sorusudur. Özofagus; + Üst 1/3'ü çizgili kastan, orta 1/3'ü çizgili ve düz kastan (geçiş zonu), alt 1/3'ü ise düz kastan oluşur. * En üstte non-keratinize çok katlı yassı epitelle örtülüdür. * Mideye yakın bölümde lamina propriada bulunan özofageal kardiya bezleri mukus salgılar. + En dışta adventisya tabakası vardır, serozası yoktur. Sadece periton boşluğundaki kısmı seroza ile kaplıdır. Midenin kardiya bölgesi: + Özofagus ve mide arasında dar bir banttır. * Mukus salgılayan tek katlı prizmatik epitel içerir. Bu bilgiler nda özofagustan midenin kardiya bölgesine geçiş bölgesindeki epitel değişimi; çok katlı keratinleşmemiş yassı epitelden tek katlı prizmatik epitele olacak şekildedir."
+  },
+  {
+    "id": "fizyoloji_q301",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisinin eksikliğinde akalazya hastalığı ortaya çıkar? (Nisan 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kalsitonin gen ilişkili peptid",
+      "B": "P maddesi",
+      "C": "Vazoaktif intestinal peptid",
+      "D": "Glukagon benzeri peptid 1",
+      "E": "Asetikolin"
+    },
+    "answer": "C",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Mermi hangisi özefagusun kardiya green sorum? e208 BENLERİ 5) Guapo benzen pot Sorunun amacı; gastrointestinal (harekette gevşetici rolü olan VİP'in salınamaması durumunda oluşan akalazya hastalığının fizyolojik temellerini sorgulamaktir. Özefagusta normal olarak iki tip peristaltik hareket görülür. Primer peristaltizm: * Basitçe yutmanın farinks fazında başlayan ve özefagusa yayılan peristaltik dalganın devamıdır. Sekonder peristaltizm: + Primer peristaltik dalga özefagustaki besinin tümünü mideye gönderemezse, kalan besinin özefagus duvarını germesi sonucu sekonder peristaltik dalgalar gelişir ve bu dalgalar besinin hepsini mideye boşaltır. * Peristaltik yutma dalgası özefagusun alt kısmına geldiği zaman, “reseptif gevşeme” ile peristaltik dalgadan önce alt özofagial sfinkteri gevşetilir. * Primer/sekonder peristaltik dalgalarla VIP ve NO salınımı sonucu alt özefagus sfinkteri tamamen gevşer. + Akalazyada düz kasta gangliyon hücreleri dejenerasyonu vardır, bu dejenerasyona bağlı olarak VİP'in alınamaması durumunda alt özefagus sfinkleri açılamaz."
+  },
+  {
+    "id": "fizyoloji_q302",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "P maddesi Il. Asetilkolin lll. Vazoaktif intestinal peptid Gastrointestinal ( peristaltik (hareketin anal yönde düz kas gevşemesini sağlayan bileşeni yukarıdakilerden hangileri aracılığıyla oluşur? (Şubat 2018 Orijinal) G) Yalnız Ill",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yalnız |",
+      "B": "Yalnız Il",
+      "D": "I ve Ill",
+      "E": "I, lve tll"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q303",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Tükürüğün içeriğinde bulunan ve vazodilatör etkisiyle tükürük salgılanmasını artıran madde aşağıdakilerden hangisidir? (Nisan 2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Müsin",
+      "B": "Ürik asit",
+      "C": "Tiyosiyanat",
+      "D": "Kallikrein",
+      "E": "Lizozim"
+    },
+    "answer": "D",
+    "explanation": "* Kallikrein: Serin protezların alt grup enzimidir. Prolinden zengin proteinlerin hidrolizinde rol alır. İnvitro ortamda nötrofiller için kemotaktik faktör görevi de vardır. Kallikrein tükürük bezlerindeki çizgili kanal hücrelerinden sentezlenip kan dolaşımına girer ve kininojeni bradikinine çevirerek bölgeye giden kan damarlarını dilate ederek kan akımını arttırır. * Müköz hücrelerin ana ürünü müsin; kayganlaştırma, yüzey üzerinde engel oluşturmak ve mikroorganizmaları bağlayıp toplamaktır. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 127 * Lizozim bakterinin hücre duvarına etki ederek bakterisid etki gösterir. Bazı anyonlar bu müramidaz etkisini potansiyalize ederler. * Lizozimin bakteriler üzerinde agregan etkisi de vardır. Lizozim bakterilerin metabolizmalarını da bozar. + Vücuda giren siyanür sülfürlenerek tiyosiyanata (SCN”) çevrilir. Tükürük içine salgılanan tiyosiyanat iyonları, tükürük peroksidazları ve myeloperoksidazlar tarafından oksitlenerek antibakteriyel etkili hipotiyosiyanata (OSCN) çevrilirler. + Pirin metabolizmasının son ürünü olan ürik asit plazma ve tükürüğün önemli bir antioksidan maddesidir. Tükürüğün antioksidan kapasitesinin %70'ini oluşturur. Gastrointestinal Sisteme Giriş, Dil ve Diş Yapıları ile İlgili Sorulabilecek Önemli Bilgiler Çizgili ve düz kasları birlikte içeren organ... Özofagus Besin özofagustan mideye nasıl iner...Primer © ve sekonder peristaltik dalgalarla . Primer ve sekonder dalgalarda gevşetici olarak salınan transmitterler... VİP ve NO Düz kasta gangliyon hücre iŞ dejenerasyonu olan ve alt özofagus sfinkterinin açılamadığı hastalık... Akalazya Dilin tat duyusunu taşıyan sinirler (ön-arka-en © arka)... VII, IX, X MİDE HİSTOLOJİSİ ve FİZYOLOJİSİ"
+  },
+  {
+    "id": "fizyoloji_q304",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi mide asit salgısını arttırmaz? (Eylül-89)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Gastrin",
+      "B": "Histamin",
+      "C": "Vagal stimülasyon",
+      "D": "Asetilkolin",
+      "E": "Enterogastrik refleks"
+    },
+    "answer": "E",
+    "explanation": "Gastrointestinal sistemin en önemli hastalığı gastrit ve ülserlerdir. Bunların patogenezindeki asit salgısının artışı mekanizması ile iyice bilinmelidir. Midenin ( paryetal hicrelerinde ( kolesistokinin, histamin ve asetil kolin reseptörleri vardır. Bu reseptörler vasıtasıyla gastrin, histamin ve vagal stimülasyon artışına sebep olduğu asetil kolin, mideden asit sekresyonunu artırır. Sempatik sinirler ise mide asit sekresyonunu azalttiklarindan sempatolitiklerle etkileri kaldırıldığında mide asit salgısı yine artar. Enterogastrik refleks ise mide asit salgısını inhibe eder. Asetilkolin * o Midedeki salgı hücrelerinin tümünün salgısını artırır."
+  },
+  {
+    "id": "fizyoloji_q305",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi midenin asit salgısını",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kolesistokinin",
+      "B": "Gastrin",
+      "C": "Somatostatin",
+      "D": "VIP",
+      "E": "Urogastron"
+    },
+    "answer": "B",
+    "explanation": "Gastrin G hücrelerden salınan ve mideyi her yönüyle uyaran parakrin etkili bir mediyatördür. Midenin antrumundaki G hücrelerinden salgılanan gastrin midenin asit salgısını arttırır. Diğer şıklardaki- ler ise asit salgısını azaltırlar. Histamin ve parasempa- tomimetik etkide asit salınımını arttırır. Diğer şıklara bakacak olursak; Kolesistokinin mide boşalmasını yavaşlatır ve pankreatik lipazın güçlü stimülatörüdür. Somatostatin mide asidini azaltır ve mide boşalmasını yavaşlatır. Vazoaktif intestinal peptit; mide asidini azaltır ve mide boşalmasını yavaşlatır."
+  },
+  {
+    "id": "fizyoloji_q306",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Gastrointestinal sistemde gerçekleşen olaylar ve bu olayların gerçekleştiği hücrelerle ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır? (Ağustos 2018 Orijinal) bez hücreleri hücreleri hücreleri hücreler",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Gastrin sekresyonu — Gastrik antrum pilorik",
+      "B": "Demir absorpsiyonu —",
+      "C": "Safra tuzu reabsorpsiyonu — İleum epitel",
+      "D": "H* sekresyonu — Gastrik paryetal hücreler",
+      "E": "İntrinsik faktör sekresyonu — Gastrik paryetal"
+    },
+    "answer": "B",
+    "explanation": "İntestinal Cajal"
+  },
+  {
+    "id": "fizyoloji_q307",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi Gastrointestinal sistem ile ilgili aşağıdaki hangisi doğrudur? (Ağustos 2018 BENZERİ)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Temel elektriksel ritmim oluşumundan",
+      "B": "Cajalın interstisyel hücreleri tarafından",
+      "C": "Safra tuzu reabsorpsiyonu — Enterokromaffin hücreleri",
+      "D": "Norepinefrin, spike'lerin sayı ve gerimini",
+      "E": "Peristaltik hareketlerin ritmini belirler."
+    },
+    "answer": "D",
+    "explanation": "Eşleştirme soru tipi ilk bakışta bizleri korkutan bir soru yapısıdır. Ancak soru okunduğunda hiç de zor bir soru olmadığı, kolay bir bilginin ölçüldüğü anlaşılacaktır. İntestinal Cajal hücreleri sinir sisteminde aksiyon potansiyelinde ve GİS'te spontan pacemaker aktiviteli hücre olarak bahsedilir. Demir absorbsiyonu son derece basit bir eşleştirme olmuştur. Diğer seçenekler bilinmese dahi rahatlıkla yapılabilir... Cajal hücreleri * Gastrointestinal sistemdeki yavaş dalgalar, düz kas hücreleri ile düz kas hücreleri için elektriksel uyaran oluşturucu (pacemaker) Cajal'ın interstisyel hücreleri arasındaki etkileşim sonucu oluşurlar. * o Cajal'ıninterstisyel hücreleri, yavaş dalga aktivitesini oluşturacak şekilde aralıklı olarak açılıp kapanan ve içeri doğru akıma neden olan özgün iyon kanalları nedeniyle zar potansiyelinde döngüsel değişiklikler gösterirler. Bazal elektriksel ritmi (BER) oluştururlar. Demir emilimi * Demir emilimi büyük oranda duodenumda, bir miktar da proksimal jejunumda gerçekleşir. İntestinal lümenden enterositler tarafından emilir. Gastrin + Gastrin sekresyonu, G hücrelerinden (Gastrik antrum pilorik bez hücreleri) tarafından salgılanır. CCK, reseptörü üzerinden etkili olur. Paryetal (oksintik) hücreler + Pariyetal hücreler hidroklorik asit ve intrensek faktör (B12 emilimi için gerekli) salgılar. * Ayrıca Ghrelin de salgılar. Safra tuzu reabsorpsiyonu * Safra tuzlarının %90-95'i ince bağırsaklardan difüzyon ve çoğunlukla terminal ileumdan aktif transportla absorbe olur. gastrointestinal diiz kas hücrelerinde görülen yavaş dalgaların özelliklerinden biri değildir? sorumludur. ol ; G) Gerçek bir aksiyon potansiyeli değildir. artırır."
+  },
+  {
+    "id": "fizyoloji_q308",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Midede bazal asit sekresyonunu aşağıdakilerden hangisi arttırmaz? (Nisan-96)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kolinerjik ilaç kullanımı",
+      "B": "Enterokromaffin hücrelerinden histamin salınımı",
+      "C": "Zollinger-Ellison sendromu",
+      "D": "Atrofik gastrit",
+      "E": "Antral G hücre hiperplazisi"
+    },
+    "answer": "D",
+    "explanation": "Zollinger-Ellison sendromunda gastrin salgılayan tümör olduğundan asit salgısı artar. Antral G hücre hiperplazisinde de daha çok gastrin salgılanacağından asit salgısı artar. Kolinerjik ilaçlar; mide salgısını arttırarak vagal etkiyi taklit ederler. Histamin; paryetal hücrelerin en güçlü indüktörlerinden biridir. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 129 strik hücre tipleri ve fonksiyonları HCI, intrinsik faktör (yaşam için gerekli) Gastrin vagal stimülasyon(Ach) histamin Corpus (Fundus) Pepsinojen Vagal (düşük pH’da | stimülasyon pepsin olur.) (Ach) Corpus (Fundus) Vagal stimülasyon gal stimülasyon(Ach)"
+  },
+  {
+    "id": "fizyoloji_q309",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi mide paryetal hücre membranlarindan, HCI salgılanması sırasında gerçekleşen iyon taşıma mekanizmalarından biri değildir? (Eylül 2012) pasif geçişi iyonunun aktif geçişi difüzyonu bikarbonat iyonunun pasif geçişi iyonunun aktif geçişi",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Luminal membrandan lümene potasyum iyonunun",
+      "B": "Luminal membrandan hücre içine potasyum",
+      "C": "Bazal membrandan hücre içine klor iyonu",
+      "D": "Bazal membrandan o ekstraselüler (| aralığa",
+      "E": "Bazal membrandan ekstraselüler aralığa potasyum"
+    },
+    "answer": "E",
+    "explanation": "Klorür iyonları paryetal hücrenin sitoplazmasından kanaliküllerin lümenine, sodyum iyonları ise lümen dışına aktif transport ile taşınırlar. Hidrojen iyonları potasyum iyonları ile değişerek aktif olarak kanaliküllere sekrete edilir. Bu aktif değişim olayı H*-K*-ATPaz ile katalize edilir. Hücrede metabolizma sırasında oluşan veya kandan hücreye giren karbon dioksid karbonik anhidraz etkisi ile hidroksil iyonları ile bikarbonat iyonlarını oluşturmak üzere birleşir. Hücreden ekstrasellüler aralığa potasyum, sızma şeklinde çıkar. Potasyumun hücrenin içine girişi aktiftir. Hem Na- K ATPaz pompasının hem de H-K ATPaz pompasının yönü potasyumun hücre içine girmesidir."
+  },
+  {
+    "id": "fizyoloji_q310",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Gastrik asit sekresyonunu arttıran histamin, bu etkisini aşağıdakilerden hangi reseptörüne bağlanarak gösterir? (Eylül 2013 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "H2 o BJK O",
+      "B": "H3",
+      "C": "JM3 o DCCKB",
+      "D": "CCK-B",
+      "E": "MA"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Simetidin, ranitidin gibi asit azaltıcı maddeler midedeki bu etkisini hangi reseptöre bağlanarak gösterirler? (Eylül 2013 BENZERİ) Histaminin etkilerini ve gastrik asit sekresyonundaki rolünü bilmeyi ölçen bir soru... Çağımızın hastalıklarından olan gastirt, reflü, ülser gibi durumların patogenezini de aydınlatan asit fizyolojisi detaylıca bilinmeli. ASİT SALGILANMASI Karbondioksit ve su birleşerek karbonik asit oluşturur. Karbonik asit de hidrojen ve bikarbonata ayrışır. Hidrojen apikal membranda bulunan proton pompası ile mide lümenine atılırken, potasyum pariyetal hücreye girer (H*-K* ATPaz). Histamin * oHistidin amino asidinden oluşur. * Kapiller geçirgenliği artırarak ödeme neden olur. + H, reseptörleri aracılığıyla gastrik asit sekresyonunu artırır. + Bronkokonstriksiyona neden olur. |. Asetilkolin"
+  },
+  {
+    "id": "fizyoloji_q311",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Histamin Ili. Gastrin IV. Somatostatin Yukarıdakilerden hangileri hücre içi serbest kalsiyum konsantrasyonunu fosfolipaz C aracılı bir mekanizma ile değiştirerek paryetal hücrelerden asit sekresyonunu uyarır? (Eylül 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yalnız IV",
+      "B": "I ve Ill",
+      "C": "Ive Il",
+      "D": "Il ve IV",
+      "E": "I, live tll"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:)"
+  },
+  {
+    "id": "fizyoloji_q312",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Asetilkolin Ii. Histamin ill. Gastrin Yukarıda verilen gastrik asit salınımını arttıran faktörlerden hangisifhangileri Gq kenetli reseptörler üzerinden bu etkilerini gerçekleştirir? (Eylül 2016 BENZERİ).",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yainzil",
+      "B": "ivelii",
+      "C": "ilvelll Djiveli —",
+      "E": "i,iivelli"
+    },
+    "answer": "B",
+    "explanation": "Gastrointestinal sistem fizyolojisinin en temel konularından olan paryetal hücrelerdeki asit sekresyonunu ile ilgili bir soru... Asetilkolin muskarinik reseptörleri G proteinleri ile kenetlidir. Özellikle sindirim sistemi üzerinde etkili olan M3 reseptörleri Gq kenetli olup hücre için kalsiyum oranını arttırarak asit salınımını düzenler. Gastrin hormonu mide asidini arttıran en önemli hormonlardandır. Mide motilitesini ve pilor pompa aktivitesini de arttırır. Gastrin mide asidi üzerindeki etkisini (o kolesistokinin (o reseptörlerini (o uyararak gerçekleştirir. CCK reseptörleri Gq kenetli olup IP3 üzerinden hücre içi kalsiyum miktarını arttırır. Histamin de asit salgısını arttırır. Ancak bu etkisini Gs üzerinden cAMP'yi arttırarak gösterir. Somatostatin, Gi üzerinden cAMP'yi azaltarak asit salgısını azaltır. G hücre Enterokromaffin hücre Somatostatin Prostaglandin Simetidin | | astrik asit salınımını artıran ve azaltan faktörler"
+  },
+  {
+    "id": "fizyoloji_q313",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Midelümenine H' iyonu salgılanırken, hücreye geri alınan iyon aşağıdakilerden hangisidir? (Nisan-90)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sodyum",
+      "C": "Kalsiyum",
+      "B": "Potasyum",
+      "D": "Magnezyum",
+      "E": "Bikarbonat"
+    },
+    "answer": "B",
+    "explanation": "Paryetal hücrelerde bulunan asit pompasının fizyolojisi sorulmuş. H-K ATPaz pompası ya da nam-ı diğer proton pompası... Asit salgılanması * Pariyetal hücrelerde dinlenim halinde kanal yerine vezikül vardır. * Uyarı gelince veziküller apikal tarafa göç eder. * Karbondioksit ve su birleşerek karbonik asid oluşmaktadır. Daha sonra karbonik asid hidrojen ve bikarbonata ayrışmaktadır. * Hidrojen apikal membranda bulunan proton pompası ile mide lümenine atılırken potasyum pariyetal hücreye girer."
+  },
+  {
+    "id": "fizyoloji_q314",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Karın ağrısı ve midede yanma şikâyetleriyle başvuran 55 yaşındaki erkek hastanın üst gastrointestinal sistem endoskopik incelemesinde mide mukozasında keskin sınırlı, oval (zımba deliği gibi) mukozal kayıp ve hemoraji odakları görülüyor. Bu hastada midenin asit algılamasını baskılamak Için aşağıdakilerJen hangisi öncelikli olarak yapılmalıdır? (Eylül 2019 Orijinal) edilmesi",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Paryetal hücreler",
+      "B": "Müköz boyun hücreleri",
+      "C": "Esas hücreler",
+      "D": "Argentaffin hücreler",
+      "E": "Paneth hicreleri"
+    },
+    "answer": "C",
+    "explanation": "Aşağıdaki tabloda gastrik asid sekresyonunu artıran ve azaltan faktörler vardır. Dikkat edilirse seçeneklerimize giren Sekretin ve VİP normalde gastrik asid sekresyonunun inhibe eder. Onun dışında pariyetal hücrede asit salgısını etkileyen hormonlar ile ilgili şeklimize de dikkat edilirse histaminin H2 reseptörü üzerinden gastrik asit sekresyonunu artırdığı görülmekte ve asit salgısının temel olarak H*- K* pompası ile gerçekleştiği görülmektedir. Na*-K* pompasının aktive edilmesinin asit salgısı üzerine bir etkisi bulunmamaktadır. H+-K+ pompasının inhibe edilmesi ve histamin-H2 reseptörlerinin bloke edilmesi, Vazoaktif intestinal polipeptid (VİP) ve sekretin, mide asit salınımını azaltır. “Gastrik asit salınımını artıran ve azaltan faktörler” başlıklı şekile bakınız. 1 . Pepsinojen sentezleyen hücre aşağıdakilerden hangisidir? (Nisan-93) Hangi hücreden ne sentezlenir şeklindeki sorulara hazırlıklı olmak gerek. Gastrik Bezlerdeki; Esas Hücreler: (chief cells): Pepsinojen salgılar. Paryetal (oksintik) Hücreler: HCI asit sentezi ve int- rensek faktör sentezi yaparlar. Müköz boyun Hücreleri: Mukus üreterek epiteli asitten korurlar. Argentaffin (o hücreler: © Giimiig tuzları | ile boyanmasından dolayı bu adı alır. APUD sistemine dahildir. Gastrin yaparlar. e görevleri"
+  },
+  {
+    "id": "fizyoloji_q315",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Midede hidroklorik asidi sentezleyip salgılayan hücre aşağıdakilerden hangisidir? (Eylul-93)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Paryetal",
+      "B": "Zimojen",
+      "C": "Paneth",
+      "D": "Goblet",
+      "E": "G hücresi"
+    },
+    "answer": "A",
+    "explanation": "Hangi hücreden ne sentezlenir şeklindeki sorulara hazırlıklı olmak gerek. Midede asit salgılayan (HCI) hücre; Paryetal hücredir. Goblet hücreleri; ince bağırsakta bulunur. Sayıları duodenumdan ileuma doğru giderek artar. Bağırsak yüzeyini korumak ve kayganlaştırmak olan glikoprote- inleri salgılamaktır. İntestinal metaplazi durumlarında midede görülebilir. G hücreleri; gastrin sentezleyen hücrelerdir. Mide duodenum ve pankreasta dağınık halde bulunurlar Midenin zimojen hücreleri pepsinojeni salgılarken Paneth hücreleri de midede bulunmaz"
+  },
+  {
+    "id": "fizyoloji_q316",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Mideye ait aşağıdaki hücrelerin hangisinde intrasitoplazmik kanaliküller vardır? (Nisan-94)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Paryetal hücre",
+      "B": "Yüzeyel müküs hücreleri",
+      "C": "Boyun müküs hücreleri",
+      "D": "Esas hücreler",
+      "E": "Argentaffin hücreler"
+    },
+    "answer": "A",
+    "explanation": "Paryetal (oxyntik) Hücreler; elektron mikroskobu ile incelendiğinde en belirgin özellikleri apikal plazma membranlarında derin invaginasyonlar (intrasellüler kanalikilller) ve çok sayıda mitokondri içermesidir."
+  },
+  {
+    "id": "fizyoloji_q317",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi mideden salgılanan bir endopeptidazdir? (Eylül-95)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Pepsinojen",
+      "B": "Tripsinojen",
+      "C": "Karboksipeptidaz A",
+      "D": "Kimotripsinojen",
+      "E": "Aminopeptidaz"
+    },
+    "answer": "A",
+    "explanation": "Pepsinojen bir endopeptidazdır, bunu bilmekte fayda var ama şıklarda zaten “mideden salındığı” ifadesi olduğu için soru cepte... Karboksipeptidaz ekzopeptidazlardır. A, B ve Aminopeptidaz Kimotripsin ve tripsin ise pankreastan salınır. Pepsinojen; midenin esas hücrelerinden alınır. Protein sindiriminde görev alır. Aktif pepsine dönüşmesi için hidroklorik asit varlığı yeterlidir."
+  },
+  {
+    "id": "fizyoloji_q318",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Pepsinojen, aşağıdakilerden hangisinin etkisiyle aktif pepsin şekline dönüşür? (Mayıs 2011)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "HCl",
+      "B": "Gastrin",
+      "D": "Tripsin",
+      "E": "Amilaz"
+    },
+    "answer": "A",
+    "explanation": "Şef (Esas - zimojen) hücreler « o Tübüler bezlerin alt taban bölümündedir. » Pepsinojen ve gastrik lipaz üretir. «  Pepsinojen midenin asit ortamında HCI'nin etkisiyle aktif pepsine dönüşür. Mide Histolojisi ve Fizyolosiji ile İlgili Sorulabilecek Önemli Bilgiler Midenin bölümleri - Kardiya - fundus -korpus-pilor (makroskopik) - Gövde-atrum (anatomik) - Orad-kaudat (fizyolojik)"
+  },
+  {
+    "id": "fizyoloji_q319",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Temel & Klinik Fizyoloji",
+    "question": "Aşağıdakilerden hangisi, karbonhidrat içeriği salınır. yüksek bir öğün sonrasında pankreastan insülin +  Yiyecekalımının santral kontrolünde önemli rolü salgılanmasını artırır? (Nisan 2015 Orijinal) vardır, iştahı açar. Bi GEM inhibitör peptid 2. Sekretin salınımı için temel uyaran aşağıdakilerden",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sekretin",
+      "C": "Somatostatin",
+      "D": "Gastrin",
+      "B": "Peptit YY",
+      "E": "Kolesistokinin"
+    },
+    "answer": "D",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Sekretin salınımı için temel uyaran HCI dir. Aşağıdakilerden hangisi, glikoz alımından sonra pankreastan insülin salgılanmasını en fazla artırır? (Nisan 2015 BENZERİ) Sekretin Rupert lee ami ii *  Duodenumun “S” hücrelerinden salgılanır. *  Pankreastan bikarbonat salınımını uyarır. GİS hormonlarının hangi uyaranla salgılandığı ve «Gastrointestinal kanalın hemen tamamında etkilerinin bilinmesi sıkça sorulan sorulardandır. motilite üzerine hafif bir inhibitör etkisi vardır. « Asit kimus duodenuma geldiğinde sekretin GİP (Gastrik inhibitor peptid) salgılatır. * Yagasidi, amino asit ve az da karbonhidratlara cevap olarak salgılanır. 3. Ektopik salgılanması sonucunda aşırı diyare, gastrik asit sekresyonu ve peptik ülser gelişimine yol açan hormon aşağıdakilerden hangisidir? (Eylül 2014 Orijinal) * Ince bagirsagin üstkısımları gıda ile dolu olduğu zaman midenin motor aktivitesini inhibe ederek mide içeriğinin duodenuma geçişini yavaşlatır. olarak da bilinir. ci Dara Pe *  Sekretin ve glukagon ince bağırsak motilitesini ) Kolesistokinin Kolesistokinin (CCK) Ba alak fi öyle de m * Safra kesesinin kasılmasını artırarak safrayı ince bağırsağa bar A Ha a yi Zollinger-Elison sendromunda aşırı salgılanması sonucu sün midede ülser gelişen sistem hormonu + Yagi sindirmek igin pankreastan, pankreatiklipaz aşağıdakilerden hangisidir? (Eylül 2014 BENZERİ) * Pankreastan bikarbonat salınımını uyarır. Gastrin: * Midegerilmesivemideiçindeet sindirim ürünlerinin bonat salınımı bulunması gastrin salgılanmasına neden olur. + Asidik mide sıvısı salgılanmasına neden olur. Motilin * Midenin motor fonksiyonlarını da uyarır. * Mideveincebağırsak ve kolonda enterokromaffin * Pilor pompasının aktivitesini artırır. ve Mo hücrelerden salgılanır. * Peptid ve amino asit, distansiyon, vagal uyarı, + Mide ve bağırsak düz kaslarında kasılma"
   }
 ]
