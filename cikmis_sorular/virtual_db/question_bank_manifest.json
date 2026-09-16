@@ -1,10 +1,10 @@
 {
   "version": "1.0.0",
   "lastUpdated": "1789583707.0422332",
-  "totalQuestions": 729,
+  "totalQuestions": 5432,
   "summary": {
     "totalSubjects": 13,
-    "activeSubjects": 1
+    "activeSubjects": 6
   },
   "subjects": {
     "fizyoloji": {
@@ -13,7 +13,7 @@
       "file": "cikmis_sorular/virtual_db/questions_fizyoloji.json",
       "color": "#ef4444",
       "icon": "🫀",
-      "questionCount": 729,
+      "questionCount": 672,
       "categories": {
         "Hücre & Temel Fizyoloji": 83,
         "Temel & Klinik Fizyoloji": 646
@@ -25,8 +25,10 @@
       "file": "cikmis_sorular/virtual_db/questions_patoloji.json",
       "color": "#f472b6",
       "icon": "🔬",
-      "questionCount": 0,
-      "categories": {}
+      "questionCount": 1085,
+      "categories": {
+        "Temel & Klinik Fizyoloji": 1128
+      }
     },
     "dahiliye": {
       "name": "Dahiliye",
@@ -79,8 +81,10 @@
       "file": "cikmis_sorular/virtual_db/questions_biyokimya.json",
       "color": "#4ade80",
       "icon": "🧪",
-      "questionCount": 0,
-      "categories": {}
+      "questionCount": 778,
+      "categories": {
+        "Temel & Klinik Fizyoloji": 821
+      }
     },
     "mikrobiyoloji": {
       "name": "Mikrobiyoloji",
@@ -88,8 +92,10 @@
       "file": "cikmis_sorular/virtual_db/questions_mikrobiyoloji.json",
       "color": "#f97316",
       "icon": "🧫",
-      "questionCount": 0,
-      "categories": {}
+      "questionCount": 1317,
+      "categories": {
+        "Temel & Klinik Fizyoloji": 1377
+      }
     },
     "farmakoloji": {
       "name": "Farmakoloji",
@@ -97,8 +103,10 @@
       "file": "cikmis_sorular/virtual_db/questions_farmakoloji.json",
       "color": "#f87171",
       "icon": "💊",
-      "questionCount": 0,
-      "categories": {}
+      "questionCount": 1084,
+      "categories": {
+        "Temel & Klinik Fizyoloji": 1139
+      }
     },
     "anatomi": {
       "name": "Anatomi",
@@ -106,8 +114,10 @@
       "file": "cikmis_sorular/virtual_db/questions_anatomi.json",
       "color": "#d946ef",
       "icon": "🦴",
-      "questionCount": 0,
-      "categories": {}
+      "questionCount": 496,
+      "categories": {
+        "Temel & Klinik Fizyoloji": 524
+      }
     },
     "entegrehucre": {
       "name": "Entegre Hücre",

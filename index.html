@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TUS Sınav Çalışma Takip Uygulaması - Günlük ilerleme takibi, istatistikler ve hedef planlama">
   <title>TUS Takip 📚</title>
-  <link rel="stylesheet" href="style.css?v=4.4.0">
+  <link rel="stylesheet" href="style.css?v=4.5.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
@@ -840,48 +840,74 @@
 
   <!-- ==================== GAMIFIED QUIZ MODAL ==================== -->
   <div class="modal-backdrop quiz-modal-backdrop" id="quizModal" style="display:none;">
-    <div class="quiz-modal-card">
+    <div class="quiz-modal-card" id="quizModalCard">
       
       <!-- Question View -->
       <div id="quizQuestionView">
-        <div class="quiz-modal-top">
-          <div class="quiz-modal-meta">
-            <span class="quiz-meta-tag" id="quizSubjectTag">FİZYOLOJİ</span>
-            <span class="quiz-meta-exam" id="quizExamTag">Nisan 2001 TUS</span>
+        <div class="quiz-split-layout" id="quizSplitLayout">
+          
+          <!-- Main Left Column: Question, Options & Footer -->
+          <div class="quiz-main-column">
+            <div class="quiz-modal-top">
+              <div class="quiz-modal-meta">
+                <span class="quiz-meta-tag" id="quizSubjectTag">FİZYOLOJİ</span>
+                <span class="quiz-meta-exam" id="quizExamTag">Nisan 2001 TUS</span>
+              </div>
+              <button type="button" class="quiz-modal-close" id="quizModalClose" title="Kapat">✕</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="quiz-progress-wrap">
+              <div class="quiz-progress-info">
+                <span id="quizProgressText">Soru 1 / 5</span>
+                <span class="quiz-progress-reward">⚡ +20 XP</span>
+              </div>
+              <div class="quiz-progress-bar-bg">
+                <div class="quiz-progress-bar-fill" id="quizProgressBarFill" style="width: 20%;"></div>
+              </div>
+            </div>
+
+            <!-- Review Alert Badge (Spaced Repetition) -->
+            <div id="quizReviewAlertBadgeContainer"></div>
+
+            <!-- Question Stem -->
+            <div class="quiz-question-box">
+              <p class="quiz-question-text" id="quizQuestionContent">Soru yükleniyor...</p>
+            </div>
+
+            <!-- Options A - E -->
+            <div class="quiz-options-grid" id="quizOptionsContainer">
+              <!-- Dynamic option buttons inserted by quiz.js -->
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="quiz-modal-footer">
+              <button type="button" class="btn btn-primary btn-quiz-next" id="quizNextBtn" style="display:none;">
+                <span>Sonraki Soru</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
           </div>
-          <button type="button" class="quiz-modal-close" id="quizModalClose" title="Kapat">✕</button>
-        </div>
 
-        <!-- Progress Bar -->
-        <div class="quiz-progress-wrap">
-          <div class="quiz-progress-info">
-            <span id="quizProgressText">Soru 1 / 5</span>
-            <span class="quiz-progress-reward">⚡ +20 XP</span>
-          </div>
-          <div class="quiz-progress-bar-bg">
-            <div class="quiz-progress-bar-fill" id="quizProgressBarFill" style="width: 20%;"></div>
-          </div>
-        </div>
+          <!-- High-Yield Side Drawer (Right Column on Desktop, Slide-up on Mobile) -->
+          <aside class="quiz-side-drawer" id="quizSideDrawer" style="display:none;">
+            <div class="side-drawer-drag-handle"></div>
+            <div class="side-drawer-header">
+              <div class="side-drawer-title-wrap">
+                <span class="side-drawer-icon">💡</span>
+                <div>
+                  <h4 class="side-drawer-title">TUS Klinik Püf Noktası</h4>
+                  <p class="side-drawer-subtitle">Yüksek Verimli Hatırlatma Kartı</p>
+                </div>
+              </div>
+              <button type="button" class="side-drawer-close" id="quizSideDrawerClose" title="Açıklamayı Kapat">✕</button>
+            </div>
 
-        <!-- Question Stem -->
-        <div class="quiz-question-box">
-          <p class="quiz-question-text" id="quizQuestionContent">Soru yükleniyor...</p>
-        </div>
+            <div class="side-drawer-content" id="quizSideDrawerContent">
+              <!-- Dynamic rich flashcards, badges, and alternative questions inserted here -->
+            </div>
+          </aside>
 
-        <!-- Options A - E -->
-        <div class="quiz-options-grid" id="quizOptionsContainer">
-          <!-- Dynamic option buttons inserted by quiz.js -->
-        </div>
-
-        <!-- High-Yield Explanation Box -->
-        <div class="quiz-explanation-box" id="quizExplanationBox" style="display:none;"></div>
-
-        <!-- Footer Actions -->
-        <div class="quiz-modal-footer">
-          <button type="button" class="btn btn-primary btn-quiz-next" id="quizNextBtn" style="display:none;">
-            <span>Sonraki Soru</span>
-            <span class="btn-arrow">→</span>
-          </button>
         </div>
       </div>
 
@@ -975,9 +1001,9 @@
     </div>
   </div>
 
-  <script src="auth.js?v=4.4.0"></script>
-  <script src="firebase-sync.js?v=4.4.0"></script>
-  <script src="app.js?v=4.4.0"></script>
-  <script src="quiz.js?v=4.4.0"></script>
+  <script src="auth.js?v=4.5.0"></script>
+  <script src="firebase-sync.js?v=4.5.0"></script>
+  <script src="app.js?v=4.5.0"></script>
+  <script src="quiz.js?v=4.5.0"></script>
 </body>
 </html>

@@ -22,3 +22,11 @@ MULTI_USER_PLAN.md
 SORU_EKLEME_PLANI.md
 AUDIT_*.md
 TUS_AUDIT.md
+
+# Python cache & scratch audit scripts
+__pycache__/
+*.pyc
+audit_all_subjects.py
+check_anomalies.py
+clean_and_audit.py
+scratch_*.txt

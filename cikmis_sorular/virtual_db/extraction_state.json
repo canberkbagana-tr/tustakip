@@ -5,5 +5,35 @@
     "totalExtracted": 729,
     "isCompleted": true,
     "lastUpdated": "2026-09-16T20:40:00Z"
+  },
+  "anatomi": {
+    "lastProcessedPage": 263,
+    "totalPages": 263,
+    "totalExtracted": 524,
+    "isCompleted": true
+  },
+  "biyokimya": {
+    "lastProcessedPage": 414,
+    "totalPages": 414,
+    "totalExtracted": 821,
+    "isCompleted": true
+  },
+  "farmakoloji": {
+    "lastProcessedPage": 314,
+    "totalPages": 314,
+    "totalExtracted": 1139,
+    "isCompleted": true
+  },
+  "mikrobiyoloji": {
+    "lastProcessedPage": 472,
+    "totalPages": 472,
+    "totalExtracted": 1377,
+    "isCompleted": true
+  },
+  "patoloji": {
+    "lastProcessedPage": 410,
+    "totalPages": 410,
+    "totalExtracted": 1128,
+    "isCompleted": true
   }
 }

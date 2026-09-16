@@ -468,6 +468,12 @@
         reviewBadgeEl.style.display = 'none';
       }
 
+      // Reset High-Yield Side Drawer
+      const drawer = document.getElementById('quizSideDrawer');
+      const modalCard = document.getElementById('quizModalCard');
+      if (drawer) drawer.style.display = 'none';
+      if (modalCard) modalCard.classList.remove('has-drawer');
+
       if (explanationBox) {
         explanationBox.style.display = 'none';
         explanationBox.innerHTML = '';
@@ -554,17 +560,12 @@
         if (icon) icon.textContent = '✕';
       }
 
-      // Show High-Yield Explanation Box
-      if (explanationBox) {
-        explanationBox.innerHTML = `
-          <div class="explanation-header">
-            <span class="explanation-icon">💡</span>
-            <strong>TUS Püf Noktası & Açıklama (Doğru Cevap: ${q.answer})</strong>
-          </div>
-          <p class="explanation-text">${q.explanation}</p>
-        `;
-        explanationBox.style.display = 'block';
-      }
+      // Open High-Yield Side Drawer with Rich Cards
+      this.formatAndRenderPearlDrawer(q, selectedLetter, isCorrect);
+      const drawer = document.getElementById('quizSideDrawer');
+      const modalCard = document.getElementById('quizModalCard');
+      if (drawer) drawer.style.display = 'flex';
+      if (modalCard) modalCard.classList.add('has-drawer');
 
       // Show Next Button
       if (nextBtn) {
@@ -575,6 +576,97 @@
         }
         nextBtn.style.display = 'inline-flex';
       }
+    },
+
+    // ===== Format & Render High-Yield Pearl Drawer =====
+    formatAndRenderPearlDrawer(q, selectedLetter, isCorrect) {
+      const drawerContent = document.getElementById('quizSideDrawerContent');
+      if (!drawerContent) return;
+
+      const ansLetter = q.answer;
+      const ansText = q.options && q.options[ansLetter] ? q.options[ansLetter] : '';
+      let rawExpl = q.explanation || 'Bu soru için klinik açıklama hazırlanmaktadır.';
+
+      // 1. Extract "Başka bir hoca şöyle sorabilirdi" (Alternative Question Pattern)
+      let altQuestion = null;
+      const altRegex = /(?:Not:\s*)?(?:Bu\s*soru,?\s*)?(?:başka\s*bir\s*hoca\s*tarafından\s*)?şöyle\s*de?\s*sorulabilirdi[:\)]?\s*([^\?\n\r]+(?:\?|[^\.\n\r]+\.))/i;
+      const altMatch = rawExpl.match(altRegex);
+      if (altMatch) {
+        altQuestion = altMatch[1].trim();
+        rawExpl = rawExpl.replace(altMatch[0], '').trim();
+      }
+
+      // 2. Clean leading/trailing punctuation and dangling parens
+      rawExpl = rawExpl.replace(/^\s*[\)\:\-\*\+]\s*/, '').trim();
+
+      // 3. Break into distinct high-yield flashcard points
+      let points = [];
+      if (rawExpl.includes('*') || rawExpl.includes('+')) {
+        const parts = rawExpl.split(/[\*\+]/);
+        for (let p of parts) {
+          p = p.trim();
+          if (p.length > 5) points.push(p);
+        }
+      } else {
+        const sentences = rawExpl.split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ])/);
+        for (let s of sentences) {
+          s = s.trim();
+          if (s.length > 5) points.push(s);
+        }
+      }
+
+      if (points.length === 0) {
+        points = [rawExpl];
+      }
+
+      const icons = ['💡', '⚡', '🔬', '📌', '🧬', '🩺', '🎯', '🧪'];
+      let html = '';
+
+      // Section 1: Doğru Cevap Kartı
+      html += `
+        <div class="pearl-answer-card">
+          <div class="pearl-answer-badge">✓ Doğru Cevap: ${ansLetter}</div>
+          <div class="pearl-answer-text">${ansText}</div>
+        </div>
+      `;
+
+      // Section 2: "Başka Bir Hoca Şöyle Sorabilirdi" (Alternative Question Angle)
+      if (altQuestion) {
+        html += `
+          <div class="pearl-alt-card">
+            <div class="pearl-alt-header">
+              <div class="pearl-alt-label">
+                <span>🎯</span>
+                <span>Başka Bir Hoca Şöyle Sorabilirdi</span>
+              </div>
+              <span class="pearl-alt-tag">Hoca Notu</span>
+            </div>
+            <p class="pearl-alt-q">"${altQuestion}"</p>
+            <div class="pearl-alt-ai-footer">
+              <span>🤖</span>
+              <span>AI Destekli Soru Analizi & Varyasyon Kartı</span>
+            </div>
+          </div>
+        `;
+      }
+
+      // Section 3: High-Yield Flashcard Notları
+      html += `<div class="pearl-flashcards-wrap">`;
+      points.forEach((pt, idx) => {
+        const icon = icons[idx % icons.length];
+        let formatted = pt.replace(/^([A-ZÇĞİÖŞÜa-zçğıöşü\s\(\)\-]{3,35}\s*[:=])/g, '<strong>$1</strong>');
+        formatted = formatted.replace(/\(\s*o\s*/g, ' ').replace(/\s{2,}/g, ' ');
+
+        html += `
+          <div class="pearl-flashcard">
+            <span class="pearl-card-icon">${icon}</span>
+            <div class="pearl-card-body">${formatted}</div>
+          </div>
+        `;
+      });
+      html += `</div>`;
+
+      drawerContent.innerHTML = html;
     },
 
     // ===== Next Question or Finish =====
@@ -688,6 +780,10 @@
     // ===== Close Modal =====
     closeModal() {
       const modal = document.getElementById('quizModal');
+      const drawer = document.getElementById('quizSideDrawer');
+      const modalCard = document.getElementById('quizModalCard');
+      if (drawer) drawer.style.display = 'none';
+      if (modalCard) modalCard.classList.remove('has-drawer');
       if (modal) modal.style.display = 'none';
       this.renderDashboardCard();
     },
@@ -772,6 +868,16 @@
       const closeBtn = document.getElementById('quizModalClose');
       if (closeBtn) {
         closeBtn.addEventListener('click', () => this.closeModal());
+      }
+
+      const sideDrawerClose = document.getElementById('quizSideDrawerClose');
+      if (sideDrawerClose) {
+        sideDrawerClose.addEventListener('click', () => {
+          const drawer = document.getElementById('quizSideDrawer');
+          const modalCard = document.getElementById('quizModalCard');
+          if (drawer) drawer.style.display = 'none';
+          if (modalCard) modalCard.classList.remove('has-drawer');
+        });
       }
 
       const nextBtn = document.getElementById('quizNextBtn');

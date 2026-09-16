@@ -132,6 +132,88 @@ def update_manifest(book_code, book_title, question_count, categories_dict):
     except Exception as e:
         print(f"⚠️ Manifest güncellenirken hata: {e}")
 
+def audit_and_clean_questions(questions, book_name):
+    """
+    Otomatik Kalite Denetim ve Temizleme Boru Hattı (Pipeline QA).
+    PDF silinmeden önce tüm soruların şık uyumunu, OCR parantezlerini,
+    ters/swap olmuş soru kalıplarını ve şık tutarlılığını denetler.
+    Kusurlu/eksik soruları havuzdan eler, kurtarılabilir olanları temizler.
+    """
+    cleaned = []
+    fixed_count = 0
+    swap_count = 0
+    purged_count = 0
+
+    def clean_txt(t):
+        if not t:
+            return ""
+        t = re.sub(r'\(\s*o\s*', ' ', t)
+        t = re.sub(r'\(o\b', ' ', t)
+        t = re.sub(r'\s*©\s*', ' ', t)
+        t = re.sub(r'\(ee\b', ' ', t)
+        t = re.sub(r'\(\s+([a-zA-ZçğıöşüÇĞİÖŞÜ0-9])', r'\1', t)
+        t = re.sub(r'\(\s*([a-zA-ZçğıöşüÇĞİÖŞÜ0-9]+)\s*\(', r'\1 ', t)
+        t = re.sub(r'^[\s\)\:\-\*]+', '', t)
+        t = re.sub(r'\s{2,}', ' ', t).strip()
+        return t
+
+    for q in questions:
+        qtext = clean_txt(q.get("question", ""))
+        expl = clean_txt(q.get("explanation", ""))
+        options = {k: clean_txt(v) for k, v in q.get("options", {}).items()}
+        ans = q.get("answer", "")
+        ans_text = options.get(ans, "")
+
+        # 1. Kök uzunluğu kontrolü
+        if len(qtext.strip()) < 25:
+            purged_count += 1
+            continue
+
+        # 2. Şık sayısı ve geçerli cevap anahtarı
+        if len(options) < 4 or not ans or ans not in options:
+            purged_count += 1
+            continue
+
+        # 3. Çöp / Boş şık kontrolü (örn: A: ";")
+        has_junk_opt = False
+        for k, v in options.items():
+            if len(v.strip()) <= 1 or v.strip() in [";", ".", "-", ":", "_", "/", "\\"]:
+                has_junk_opt = True
+                break
+        if has_junk_opt:
+            purged_count += 1
+            continue
+
+        # 4. Romen rakamı öncül uyumu (Şıkta öncül varken kökte öncül yoksa hatalı extract)
+        opt_has_roman = any(v.lower().startswith("yalnız") or re.search(r"\b[iI|ıIİ]{1,3}\s*ve\b", v) for v in options.values())
+        stem_has_roman = bool(re.search(r"\b(I|II|III|IV|V)\.", qtext) or re.search(r"\b(1|2|3)\.\s", qtext))
+        if opt_has_roman and not stem_has_roman:
+            purged_count += 1
+            continue
+
+        # 5. Soru kökü - Alternatif Soru Swap kontrolü
+        m_alt = re.search(r'\(?Not:\s*Bu\s*soru[^\)]*şöyle\s*de?\s*sorulabilirdi[:\)]?\s*([^\?\n\r]+\?)', expl, re.IGNORECASE)
+        if m_alt:
+            alt_q = m_alt.group(1).strip()
+            if ans_text and len(ans_text) > 3 and re.search(r'\b' + re.escape(ans_text) + r'\b', qtext, re.IGNORECASE):
+                if not re.search(r'\b' + re.escape(ans_text) + r'\b', alt_q, re.IGNORECASE):
+                    clean_alt = re.sub(r'^[\s\)\:\-\*]+', '', alt_q).strip()
+                    new_alt = f"(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) {qtext}"
+                    expl = expl.replace(m_alt.group(0), new_alt)
+                    qtext = clean_alt
+                    swap_count += 1
+
+        if qtext != q.get("question") or expl != q.get("explanation"):
+            fixed_count += 1
+
+        q["question"] = qtext
+        q["explanation"] = expl
+        q["options"] = options
+        cleaned.append(q)
+
+    print(f"🔬 QA Audit Tamamlandı: {fixed_count} soru temizlendi, {swap_count} soru kalıbı düzeltildi, {purged_count} kusurlu soru elendi.")
+    return cleaned
+
 def parse_book_into_virtual_db(pdf_path, batch_pages=45):
     book_name = pdf_path.stem.lower().replace(" ", "_").replace("ç", "c").replace("ş", "s").replace("ı", "i").replace("ğ", "g").replace("ü", "u").replace("ö", "o")
     output_json_path = VIRTUAL_DB_DIR / f"questions_{book_name}.json"
@@ -265,7 +347,6 @@ def parse_book_into_virtual_db(pdf_path, batch_pages=45):
             if q_key not in seen_questions_text:
                 seen_questions_text.add(q_key)
                 extracted_new_questions.append(current_q)
-
     # Geçerli yeni soruları filtrele
     valid_new = []
     for q in extracted_new_questions:
@@ -276,6 +357,7 @@ def parse_book_into_virtual_db(pdf_path, batch_pages=45):
 
     # Mevcut havuzla birleştir ve ID'leri yeniden sırala
     all_combined = existing_questions + valid_new
+    all_combined = audit_and_clean_questions(all_combined, book_name)
     for idx, q in enumerate(all_combined, 1):
         q["id"] = f"{book_name}_q{idx}"
 

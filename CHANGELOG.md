@@ -4,18 +4,44 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
-## 📌 [16.09.2026 - Fizyoloji %100 Tamamlandı & Durum Özeti]
+---
+
+## 📌 [16.09.2026 - 5.432 Soru Kalite Filtresi & Yan Panel Açıklama Devrimi]
 ### 🏁 Neredeyiz, Ne Yaptık?
-- **📚 Fizyoloji Kitabı %100 Bitti (304 / 304 Sayfa):** `Fizyoloji.pdf` kitabındaki tüm sayfalar taranarak toplam **729 gerçek çıkmış TUS sorusu** Virtual DB'ye aktarıldı.
-- **⚡ 951 KB Ultra Hafif Veritabanı:** 172 MB'lık ham PDF verisi, şıkları, doğru cevapları ve detaylı klinik açıklamalarıyla yalnızca **951 KB** JSON olarak optimize edildi.
-- **🗑️ Disk Alanı Kurtarıldı:** İşi biten 172 MB'lık `Fizyoloji.pdf` diskten güvenle silindi.
-- **🔁 Otomatik Çıkarım Boru Hattı:** `extract_questions.py` kesintisiz döngü ve checkpoint mimarisine kavuşturuldu.
-- **📊 Canlı Manifest Senkronizasyonu:** `question_bank_manifest.json` otomatik güncellendi (Aktif Soru: 729 | Branş: 1/13).
+- **🎨 Yan Panel (Side Drawer / Split Layout):** Soru açıklamaları artık altta sıkışıp metni kesmiyor. Masaüstünde sağdan genişleyen 2 sütunlu split view, mobilde alttan açılan şık slide-up drawer yapısına kavuştu. "Sonraki Soru" butonu her zaman sol panelde sabit ve erişilebilir.
+- **🧠 Renkli & Emojili Hatırlatma Kartları (Flashcards):** Salt metin (duvar metin) tamamen kaldırıldı; açıklamalar `💡`, `⚡`, `🔬`, `📌` emojili high-yield spot kartlara ve vurgulu başlıklara bölündü.
+- **🎯 "Başka Bir Hoca Şöyle Sorabilirdi" Kartı:** Hoca varyasyonu soruları eflatun/mor neon kart haline getirildi ve `🤖 AI Destekli Soru Analizi & Varyasyon Kartı` damgası entegre edildi.
+- **🔬 5 Kurallı Pipeline Kalite Denetimi:** PDF silinmeden önce çalışacak kalite filtresi `extract_questions.py`'ye eklendi. Boş şıklar (A: ";"), öncülü eksik sorular ve swap hataları ayıklanarak 6 branşta toplam **5.432 tertemiz soru** sanal DB'ye mühürlendi.
 
 ### 🎯 Sıradaki Adımlar:
-1. İkinci branş PDF'i (Patoloji, Dahiliye veya Pediatri) `cikmis_sorular/` dizinine eklenecek.
-2. `extract_questions.py` çalıştırılarak yeni branş havuzuna dahil edilecek.
-3. Firebase Console üzerinden `tus_v4/auth` için read: false kuralı uygulanacak.
+1. İkinci parti klinik branşlar (Dahiliye, Pediatri, Genel Cerrahi, Kadın Doğum, Küçük Stajlar) PDF'leri temin edilince sisteme dahil edilecek.
+2. Firebase Console üzerinden `tus_v4/auth` için read: false kuralı uygulanacak.
+
+---
+
+## [v4.5.0] - 2026-09-16 (Yan Panel Açıklama Devrimi, Emojili Hatırlatma Kartları & Soru Kalite Filtreleme Pipeline'ı)
+### 🎨 Soru Açıklaması UI/UX Devrimi (Desktop Split View & Mobil Slide-Up Sheet)
+- **📐 İki Sütunlu Ergonomik Düzen (`quiz.js`, `style.css`, `index.html`):**
+  - Masaüstünde bir şık tıklandığında soru kartı akıcı bir animasyonla `1140px` genişliğe açılır. Sol sütunda soru, şıklar ve "Sonraki Soru" butonu net kalırken, sağ tarafta **TUS Klinik Püf Noktası Paneli** belirir.
+  - Mobilde ve küçük ekranlarda alttan yukarı yumuşakça kayan modern "Bottom Sheet" tasarımı uygulandı.
+- **🧠 Renkli & Emojili Flashcard Sistemi:**
+  - Açıklamalardaki uzun paragraflar, `*` ve `+` işaretleri otomatik ayrıştırılarak emojili (`💡`, `⚡`, `🔬`, `📌`, `🧬`) spot bilgi kartlarına dönüştürüldü.
+  - Doğru cevap kartı (`✓ Doğru Cevap: [Harf] - [Şık Metni]`) zümrüt yeşili neon efektle en üstte yer alır.
+- **🎯 "Başka Bir Hoca Şöyle Sorabilirdi" Bölümü:**
+  - Soru varyasyonları mor/eflatun gradient çerçeveli özel bir karta taşındı.
+  - İleride üretilecek AI soruları için `🤖 AI Destekli Soru Analizi & Varyasyon Kartı` etiketi entegre edildi.
+
+### 🔬 Soru Kalite Denetim ve Temizleme Boru Hattı (Pipeline QA)
+- **⚙️ 5 Aşamalı Kalite Kapısı (`extract_questions.py`):**
+  - Soru kökü uzunluğu kontrolü (< 25 karakter olanlar elenir).
+  - Şık sayısı (en az 4 şık) ve geçerli cevap anahtarı doğrulaması.
+  - Çöp/boş şık kontrolü (A: `";"` veya tek noktalama işareti içeren sorular temizlenir/elenir).
+  - Romen rakamı öncül uyumu (Şıkta `Yalnız I` varken kökte `I., II.` öncülleri eksik olan sorular ayıklanır).
+  - Soru kökü ve alternatif soru yer değiştirme (Swap) otomatik teşhis ve tamiri.
+- **📊 6 Temel Branşta 5.432 Doğrulanmış Kusursuz Soru:**
+  - Anatomi (496), Biyokimya (778), Farmakoloji (1.084), Fizyoloji (672), Mikrobiyoloji (1.317), Patoloji (1.085) olmak üzere toplam **5.432 soru** %100 temizlendi.
+- **🚀 Cache Buster v4.5.0:**
+  - Tüm CSS ve JS referansları `?v=4.5.0` yapılarak canlıya alındı.
 
 ---
 
