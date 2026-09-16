@@ -1340,6 +1340,18 @@
       };
     });
 
+    // Pre-fill last logged in user if available, but require password
+    const lastUser = localStorage.getItem('tus_last_username');
+    if (lastUser && !uInput.value) {
+      uInput.value = lastUser;
+      pInput.value = '';
+      setTimeout(() => pInput.focus(), 150);
+      if (hintEl) {
+        hintEl.textContent = `🔒 En son "${lastUser}" hesabıyla girildi. Devam etmek için şifrenizi girin:`;
+        hintEl.style.display = 'block';
+      }
+    }
+
     if (form) {
       form.onsubmit = async (e) => {
         e.preventDefault();
@@ -1349,6 +1361,7 @@
 
         const res = await window.AuthService.login(uInput.value, pInput.value);
         if (res.success) {
+          localStorage.setItem('tus_last_username', res.user.username);
           if (overlay) overlay.style.display = 'none';
           await onUserLoggedIn(res.user);
           startPeriodicSync();

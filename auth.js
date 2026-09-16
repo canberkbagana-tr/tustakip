@@ -30,21 +30,17 @@
     currentUser: null,
     usersCache: {},
 
-    // ===== Initialize & Check Session =====
+    // ===== Initialize & Check Session (Strict Security: Password on Every Visit) =====
     async init() {
+      // 🔒 Katı Güvenlik Protokolü: Sayfa her açıldığında şifre zorunludur.
+      this.currentUser = null;
       try {
-        const stored = localStorage.getItem(SESSION_KEY);
-        if (stored) {
-          this.currentUser = JSON.parse(stored);
-        }
-      } catch (e) {
-        console.error('Session load error:', e);
-        this.currentUser = null;
-      }
+        localStorage.removeItem(SESSION_KEY);
+      } catch (e) {}
 
       // Check if users exist in Firebase, seed default accounts if empty
       await this.ensureInitialSeed();
-      return this.currentUser;
+      return null;
     },
 
     // ===== Seed initial accounts if not created yet =====

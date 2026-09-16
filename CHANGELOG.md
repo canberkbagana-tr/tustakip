@@ -19,6 +19,17 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## [v4.3.8] - 2026-09-16 (Her Girişte Katı Şifre Zorunluluğu - Zero Auto-Login)
+### 🔒 Katı Güvenlik Protokolü & Her Girişte Şifre Sorma
+- **🛡️ Kalıcı Auto-Login Devre Dışı Bırakıldı:**
+  - `auth.js` içindeki `init()` fonksiyonunda `localStorage` üzerinden otomatik giriş yapma mantığı tamamen kaldırıldı (`this.currentUser = null`).
+  - Sayfa her açıldığında, tarayıcı veya sekme her yenilendiğinde **kesinlikle şifre sorulur**. Kimse şifresiz hesaba erişemez.
+- **⚡ Akıllı UX (Kullanıcı Adı Hatırlama & Şifreye Odaklanma):**
+  - Son giriş yapılan kullanıcı adı (`tus_last_username`) hatırlanarak kutuya otomatik yazılır ve imleç doğrudan şifre kutusuna odaklanır. Kullanıcı adı yazmakla vakit kaybetmeden sadece şifresini yazıp tek tıkla girebilir.
+- **🚀 Cache Buster v4.3.8:** Tüm script ve stil referansları `?v=4.3.8` yapılarak güncellemenin tüm cihazlarda anında devreye girmesi sağlandı.
+
+---
+
 ## [v4.3.6] - 2026-09-16 (Giriş Butonları & Hızlı Hesap Düzeltmesi)
 ### 🐛 Giriş Ekranı ve Hızlı Hesap Seçimi Düzeltildi
 - **🔧 initAuthAndSession ReferenceError Giderildi:**
