@@ -316,9 +316,16 @@ def main():
         print("📁 cikmis_sorular/ klasöründe taranacak PDF bulunamadı.")
         return
 
-    # Fizyoloji PDF'inden 45 sayfalık yeni dilim işle
+    # Tüm PDF'leri batch'ler halinde %100 bitene kadar işle
     for pdf in pdf_files:
-        parse_book_into_virtual_db(pdf, batch_pages=45)
+        book_name = pdf.stem.lower().replace(" ", "_").replace("ç", "c").replace("ş", "s").replace("ı", "i").replace("ğ", "g").replace("ü", "u").replace("ö", "o")
+        while True:
+            state = load_state()
+            if state.get(book_name, {}).get("isCompleted"):
+                print(f"✨ {pdf.name} tamamen tamamlandı!")
+                break
+            parse_book_into_virtual_db(pdf, batch_pages=45)
 
 if __name__ == "__main__":
     main()
+

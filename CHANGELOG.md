@@ -4,18 +4,32 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
-## 📌 [16.09.2026 - Kütüphane Seansı Kapanış & Durum Özeti]
+## 📌 [16.09.2026 - Fizyoloji %100 Tamamlandı & Durum Özeti]
 ### 🏁 Neredeyiz, Ne Yaptık?
-- **🔐 Kimlik Doğrulama & İzolasyon Canlıda:** Şifresiz giriş açığı kapatıldı, `loginOverlay` varsayılan açık hale getirildi, `ReferenceError` düzeltildi, `activeUser` fallback'leri `null` yapıldı. Canberk (`canberk123`) ve İlay (`ilay123`) hesapları test edildi.
-- **📚 319 Gerçek Çıkmış Soru Yayında:** `Fizyoloji.pdf`'den **319 soru** Virtual DB'ye aktarıldı. 319 soru yalnızca **415 KB** yer tutuyor.
-- **📍 Checkpoint & Kaldığı Yer:** `extraction_state.json` içinde **Sayfa 137 / 304** kaydedildi.
-- **🛡️ Git Temizliği:** `MULTI_USER_PLAN.md`, `SORU_EKLEME_PLANI.md`, `AUDIT_*.md` Git takibinden çıkarıldı, `.gitignore`'a eklendi ve yerel diskte korundu.
+- **📚 Fizyoloji Kitabı %100 Bitti (304 / 304 Sayfa):** `Fizyoloji.pdf` kitabındaki tüm sayfalar taranarak toplam **729 gerçek çıkmış TUS sorusu** Virtual DB'ye aktarıldı.
+- **⚡ 951 KB Ultra Hafif Veritabanı:** 172 MB'lık ham PDF verisi, şıkları, doğru cevapları ve detaylı klinik açıklamalarıyla yalnızca **951 KB** JSON olarak optimize edildi.
+- **🗑️ Disk Alanı Kurtarıldı:** İşi biten 172 MB'lık `Fizyoloji.pdf` diskten güvenle silindi.
+- **🔁 Otomatik Çıkarım Boru Hattı:** `extract_questions.py` kesintisiz döngü ve checkpoint mimarisine kavuşturuldu.
+- **📊 Canlı Manifest Senkronizasyonu:** `question_bank_manifest.json` otomatik güncellendi (Aktif Soru: 729 | Branş: 1/13).
 
-### 🎯 1 Saat Sonra (Eve Geçince) İlk Yapılacaklar:
-1. `extract_questions.py` çalıştırılarak **Sayfa 138'den** itibaren taramaya devam edilecek.
-2. Sayfa 304 tamamlandığında Fizyoloji `%100` bitecek.
-3. 172 MB'lık `Fizyoloji.pdf` diskten silinecek.
-4. İkinci branş (Patoloji veya Dahiliye) havuzuna geçilecek.
+### 🎯 Sıradaki Adımlar:
+1. İkinci branş PDF'i (Patoloji, Dahiliye veya Pediatri) `cikmis_sorular/` dizinine eklenecek.
+2. `extract_questions.py` çalıştırılarak yeni branş havuzuna dahil edilecek.
+3. Firebase Console üzerinden `tus_v4/auth` için read: false kuralı uygulanacak.
+
+---
+
+## [v4.4.0] - 2026-09-16 (Fizyoloji Soru Bankası %100 Tamamlandı - 729 Soru Virtual DB'de)
+### 📚 729 Çıkmış Soru & Tamamlanan Fizyoloji Havuzu
+- **🎉 304/304 Sayfa %100 Tarandı:**
+  - Sayfa 138-304 arasındaki kalan bölümler (batch 182, 227, 272, 304) otomatik döngü ile tarandı.
+  - Toplam havuz 319'dan **729 soruya** ulaştı. Tüm sorular şıkları (A-E), doğru cevabı ve detaylı soru açıklamalarıyla Virtual DB'ye işlendi.
+- **⚡ Boyut & Performans Zaferi:**
+  - 172 MB'lık devasa PDF, yalnızca **951 KB**'lık ultra optimize `questions_fizyoloji.json` dosyasına dönüştürüldü.
+- **🧹 Disk & Depolama Temizliği:**
+  - İşi biten `Fizyoloji.pdf` dosyası diskten silinerek 172 MB yer açıldı.
+- **🚀 Cache Buster v4.4.0:**
+  - Tüm script ve stil referansları `?v=4.4.0` yapılarak tarayıcı önbellekleri yenilendi.
 
 ---
 
