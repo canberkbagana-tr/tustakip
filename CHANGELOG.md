@@ -6,6 +6,31 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## 📌 [16.09.2026 - Mimari Derleme, Arşivleme & Birleşik Master Pipeline]
+### 🏁 Neredeyiz, Ne Yaptık?
+- **🧹 Ana Dizin Tertemiz:** Ana dizinde dağınık duran tüm `.py` scriptleri, güvenlik yedekleri ve scratch loglar toplandı. Ana dizin salt web uygulama dosyalarına (`index.html`, `style.css`, `app.js`, `quiz.js`, `auth.js`, `firebase-sync.js`) bırakıldı.
+- **🛠️ Birleşik Master Pipeline (`scripts/extract_questions.py`):** Branş kitapları ve Mart 2023 gibi çoklu sınav kitapları için ayrı scriptler açılması yerine tek bir merkezi pipeline çatısı kuruldu.
+- **📁 `archive/` ve `scripts/` Modüler Yapısı:**
+  - `scripts/`: Master extractor, arındırıcı (purifier) ve denetçi (auditor) araçları.
+  - `archive/`: `backups/`, `docs/`, `logs/` alt klasörlerine tasnif edilen geçmiş kayıtlar.
+
+---
+
+## [v4.6.1] - 2026-09-16 (Mimari Derleme & Arşivleme Reformu)
+### 🧹 Ana Dizin Temizliği ve Arşivleme
+- **📂 `archive/` Yapısı Kuruldu:**
+  - `archive/backups/`: Yerel güvenlik kopyaları (`backup_ilay_data_*.json`, `current_firebase_data*.json`).
+  - `archive/logs/`: Ham denetim logları (`scratch_quality_purge_log.txt`).
+  - `archive/docs/`: Eski denetim ve planlama raporları (`AUDIT_*.md`, `MULTI_USER_PLAN.md`, `SORU_EKLEME_PLANI.md`).
+- **🛠️ `scripts/` Dizininde Birleşik Pipeline Ekosistemi:**
+  - `scripts/extract_questions.py`: Hem branş kitaplarını (`cikmis_sorular/*.pdf`) hem de genel sınav kitaplarını (`ss/*.pdf`) ayrıştırıp 5 aşamalı QA filtresinden geçiren tek ve birleşik master extractor.
+  - `scripts/filter_and_purify_database.py`: 5.519 soruyu baştan uca tarayan kalite kontrol ve DB temizleme motoru.
+  - `scripts/audit_all_subjects.py`: Tüm branşların güncel temizlik metriklerini saniyeler içinde raporlayan analiz aracı.
+- **🔒 `.gitignore` Entegrasyonu:**
+  - `archive/backups/`, `archive/logs/` ve `archive/docs/` kuralları eklenerek Git repo sınırları korundu.
+
+---
+
 ## 📌 [16.09.2026 - Güncel Mart 2023 Gerçek TUS Entegrasyonu & 10 Soruluk Hibrit Quiz Motoru]
 ### 🏁 Neredeyiz, Ne Yaptık?
 - **🔥 Güncel Mart 2023 Gerçek TUS Sınavı Virtual DB'de:** `ss/2023 Mart.pdf` dosyasından 87 adet 5 şıklı, cevap anahtarlı ve açıklamalı orijinal sınav sorusu titizlikle ayıklandı (`questions_mart2023.json`). Toplam soru bankası **5.519 soruya**, aktif kategori sayısı **7'ye** ulaştı.

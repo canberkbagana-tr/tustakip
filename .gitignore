@@ -9,24 +9,18 @@ test_page*.png
 
 # Sensitive data — local backups only, must NOT go to GitHub
 # Ilay's real data lives in Firebase. These are local safety copies.
+archive/backups/
+archive/logs/
+archive/docs/
 backup_*.json
-current_firebase_data.json
+current_firebase_data*.json
 *_SAFE_COPY_*.json
 
 # Tesseract local models
 cikmis_sorular/tessdata/
 *.traineddata
 
-# Internal planning & audit documents (local development only)
-MULTI_USER_PLAN.md
-SORU_EKLEME_PLANI.md
-AUDIT_*.md
-TUS_AUDIT.md
-
-# Python cache & scratch audit scripts
+# Python cache & temporary files
 __pycache__/
 *.pyc
-audit_all_subjects.py
-check_anomalies.py
-clean_and_audit.py
 scratch_*.txt

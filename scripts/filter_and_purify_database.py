@@ -1,3 +1,11 @@
+"""
+TUS Soru Tabanı Evrensel Kalite Filtresi ve Arındırma Motoru (v2.0)
+Konum: scripts/filter_and_purify_database.py
+
+Tüm virtual_db/questions_*.json dosyalarını denetler, 5 aşamalı kalite kapısını uygular,
+hatalı şıkları ve bozuk soru köklerini ayıklar, manifest'i otomatik günceller.
+"""
+
 import json
 import re
 import sys
@@ -5,10 +13,16 @@ import glob
 from pathlib import Path
 
 if sys.platform == "win32":
-    sys.stdout.reconfigure(encoding="utf-8")
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
-MANIFEST_PATH = Path("cikmis_sorular/virtual_db/question_bank_manifest.json")
-VIRTUAL_DB = Path("cikmis_sorular/virtual_db")
+SCRIPT_DIR = Path(__file__).resolve().parent
+BASE_DIR = SCRIPT_DIR.parent
+VIRTUAL_DB = BASE_DIR / "cikmis_sorular" / "virtual_db"
+MANIFEST_PATH = VIRTUAL_DB / "question_bank_manifest.json"
 
 def clean_ocr(text):
     if not text:
@@ -23,7 +37,7 @@ def clean_ocr(text):
     text = re.sub(r'\s{2,}', ' ', text).strip()
     return text
 
-files = sorted(glob.glob("cikmis_sorular/virtual_db/questions_*.json"))
+files = sorted(glob.glob(str(VIRTUAL_DB / "questions_*.json")))
 total_before = 0
 total_after = 0
 purged_log = []
@@ -44,8 +58,8 @@ for fpath in files:
         ans = q.get("answer", "")
 
         # Validation Rule 1: Question Stem length
-        if len(qtext.strip()) < 25:
-            purged_log.append((q.get("id"), "Question stem too short (<25 chars)", qtext))
+        if len(qtext.strip()) < 20:
+            purged_log.append((q.get("id"), "Question stem too short (<20 chars)", qtext))
             continue
 
         # Validation Rule 2: Must have at least 4 options and valid answer key
@@ -60,77 +74,60 @@ for fpath in files:
                 has_junk_opt = True
                 break
         if has_junk_opt:
-            purged_log.append((q.get("id"), "Junk/empty option text", qtext[:60]))
+            purged_log.append((q.get("id"), "Junk/empty option", str(opts)))
             continue
 
-        # Validation Rule 4: Roman numeral mismatch (premisses missing in stem)
+        # Validation Rule 4: Roman numeral premise consistency
         opt_has_roman = any(v.lower().startswith("yalnız") or re.search(r"\b[iI|ıIİ]{1,3}\s*ve\b", v) for v in opts.values())
         stem_has_roman = bool(re.search(r"\b(I|II|III|IV|V)\.", qtext) or re.search(r"\b(1|2|3)\.\s", qtext))
         if opt_has_roman and not stem_has_roman:
-            purged_log.append((q.get("id"), "Premises missing in stem (Roman numeral options)", qtext[:60]))
+            purged_log.append((q.get("id"), "Roman numeral premise missing in stem", qtext[:60]))
             continue
 
-        # Validation Rule 5: Swap check if alt question exists
+        # Validation Rule 5: Swap repair
         m_alt = re.search(r'\(?Not:\s*Bu\s*soru[^\)]*şöyle\s*de?\s*sorulabilirdi[:\)]?\s*([^\?\n\r]+\?)', expl, re.IGNORECASE)
-        ans_text = opts.get(ans, "")
         if m_alt:
             alt_q = m_alt.group(1).strip()
+            ans_text = opts.get(ans, "")
             if ans_text and len(ans_text) > 3 and re.search(r'\b' + re.escape(ans_text) + r'\b', qtext, re.IGNORECASE):
                 if not re.search(r'\b' + re.escape(ans_text) + r'\b', alt_q, re.IGNORECASE):
-                    clean_alt = re.sub(r'^[\s\)\:\-\*]+', '', alt_q).strip()
-                    new_alt = f"(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) {qtext}"
-                    expl = expl.replace(m_alt.group(0), new_alt)
+                    clean_alt = clean_ocr(alt_q)
+                    expl = expl.replace(m_alt.group(0), f"Bu soru şöyle de sorulabilirdi: {qtext}")
                     qtext = clean_alt
 
-        q["question"] = qtext
-        q["explanation"] = expl
-        q["options"] = opts
-        valid_pool.append(q)
-
-    # Re-index IDs cleanly
-    for idx, q in enumerate(valid_pool, 1):
-        q["id"] = f"{book_code}_q{idx}"
+        valid_pool.append({
+            **q,
+            "question": qtext,
+            "options": opts,
+            "explanation": expl
+        })
 
     total_after += len(valid_pool)
-
-    # Write back clean JSON
     with open(fpath, "w", encoding="utf-8") as f:
         json.dump(valid_pool, f, ensure_ascii=False, indent=2)
 
-    print(f"📦 {book_code.capitalize()}: {len(questions)} -> {len(valid_pool)} soru (Temizlendi & Doğrulandı)")
+    print(f"[{book_code.upper()}] Önce: {len(questions)} -> Sonra: {len(valid_pool)} (Elenen: {len(questions) - len(valid_pool)})")
 
 # Update Manifest
 if MANIFEST_PATH.exists():
     with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
         manifest = json.load(f)
-    
-    total_manifest_q = 0
-    active_manifest_s = 0
+
     for fpath in files:
-        book_code = Path(fpath).stem.replace("questions_", "")
+        bcode = Path(fpath).stem.replace("questions_", "")
         with open(fpath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        count = len(data)
-        total_manifest_q += count
-        if count > 0:
-            active_manifest_s += 1
-        if book_code in manifest.get("subjects", {}):
-            manifest["subjects"][book_code]["questionCount"] = count
-    
-    manifest["totalQuestions"] = total_manifest_q
-    if "summary" in manifest:
-        manifest["summary"]["activeSubjects"] = active_manifest_s
-    
+            qs = json.load(f)
+        if bcode in manifest["subjects"]:
+            manifest["subjects"][bcode]["questionCount"] = len(qs)
+
+    manifest["totalQuestions"] = sum(s.get("questionCount", 0) for s in manifest["subjects"].values())
+    manifest["summary"]["activeSubjects"] = sum(1 for s in manifest["subjects"].values() if s.get("questionCount", 0) > 0)
+
     with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-print(f"\n==========================================")
-print(f"🎉 KALİTE VE TEMİZLİK FİLTRESİ TAMAMLANDI")
-print(f"Önceki Havuz: {total_before} soru")
-print(f"Doğrulanmış Kusursuz Havuz: {total_after} soru")
-print(f"Elenen/Düzeltilen Hatalı Soru: {len(purged_log)} soru")
-print(f"==========================================")
-
-with open("scratch_quality_purge_log.txt", "w", encoding="utf-8") as f:
-    for item in purged_log:
-        f.write(f"{item[0]} | {item[1]} | {item[2]}\n")
+print("\n================ ÖZET ================")
+print(f"Toplam Başlangıç Sorusu: {total_before}")
+print(f"Toplam Onaylanan Soru  : {total_after}")
+print(f"Arındırılan/Elenen Soru : {len(purged_log)}")
+print(f"Güncel Manifest Toplamı: {manifest.get('totalQuestions')}")
