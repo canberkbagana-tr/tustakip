@@ -6,6 +6,38 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## 📌 [17.09.2026 - Firebase Senkronizasyon & Çoklu Kullanıcı Quiz İstatistik Doğrulaması]
+### 🏁 Neredeyiz, Ne Yaptık?
+- **☁️ Firebase Bulut Senkronizasyonu Doğrulandı:** Kız arkadaşın İlay'ın çözdüğü 5 soru yerel tarayıcıda değil, doğrudan Firebase Realtime Database bulutunda (`/tus_v4/users/ilay/quiz`) kayıtlıdır (`solvedCount: 5, totalXp: 150, streak: 1`).
+- **🔄 Login & Switch Senkronizasyon Kesintisi Çözüldü:**
+  - Sayfa açıldığında güvenlik sebebiyle oturum kapalı başladığından `QuizModule` istatistikleri varsayılan olarak misafir (guest) olarak başlatılıyordu.
+  - `app.js` içerisindeki `onUserLoggedIn` fonksiyonu kullanıcı giriş yaptığında `QuizModule`'e haber vermiyordu. Artık giriş anında ve öğrenci değiştirildiğinde `tus-user-changed` tetiklenerek hedef öğrencinin bulut istatistikleri anında yükleniyor.
+- **🎯 Dashboard Kartında "Çözülen Soru" Göstergesi Eklendi:**
+  - Önceden kart üzerinde sadece Seri, XP, Rütbe ve Soru Havuzu vardı; toplam çözülen soru sayısı gösterilmiyordu. Artık `🎯 Çözülen: 5 Soru` hapı kartta belirgin olarak yer alıyor.
+- **🕒 Yerel Zaman Dilimi Entegrasyonu (YYYY-MM-DD):**
+  - UTC tabanlı tarih ayrıştırması nedeniyle Türkiye saatiyle (UTC+3) gece yarısı çözülen soruların bir önceki güne yazılması ve günlük seri kontrolünde yaşanan saat uyuşmazlığı, `getLocalDateString()` fonksiyonu ile cihazın yerel saatine bağlandı.
+- **🏷️ "5 Soru" Metin Belirsizliği Giderildi:**
+  - Kart başlığı ve açıklaması doğrudan "Günün 10 Soruluk TUS Hibrit Quizi" olarak netleştirildi.
+
+---
+
+## [v4.6.2] - 2026-09-17 (Firebase Senkronizasyon & Çoklu Kullanıcı Doğrulama)
+### ☁️ Firebase ve Oturum Entegrasyonu
+- **`app.js`:**
+  - `onUserLoggedIn(user)` fonksiyonuna `window.dispatchEvent(new CustomEvent('tus-user-changed', ...))` ve `QuizModule.loadUserStats(activeStudent)` entegre edildi.
+  - `switchActiveStudent(newStudent)` çağrıldığında hem etkinlik fırlatılıyor hem de doğrudan QuizModule güncelleniyor.
+- **`quiz.js`:**
+  - `loadUserStats(overrideUsername)` parametre alabilir hale getirildi; Firebase REST isteğine `?t=${Date.now()}` önbellek kırıcı parametre eklendi.
+  - `getActiveUsername()` fonksiyonu admin durumunda `tus_active_target_student` anahtarını öncelikli kontrol edecek şekilde güçlendirildi.
+  - `getLocalDateString()` eklenerek Duolingo serisi ve günlük görev kontrolü yerel Türkiye saatine uyarlandı.
+  - `renderDashboardCard()` içerisine `quizCardSolvedCount` elementi bağlandı.
+- **`index.html`:**
+  - Quiz kartı istatistik satırına `🎯 Çözülen: 0 Soru` (`#quizCardSolvedCount`) rozeti eklendi.
+  - Kart başlığı `Günün 10 Soruluk TUS Hibrit Quizi`, açıklaması ise `Bugünkü 10 soruluk özel seans: İlk 5 soru genel ders havuzundan, son 5 soru ise güncel Mart 2023 gerçek sınavından gelir` şeklinde güncellendi.
+  - Script sürümleri `v=4.6.2` olarak güncellendi.
+
+---
+
 ## 📌 [16.09.2026 - Mimari Derleme, Arşivleme & Birleşik Master Pipeline]
 ### 🏁 Neredeyiz, Ne Yaptık?
 - **🧹 Ana Dizin Tertemiz:** Ana dizinde dağınık duran tüm `.py` scriptleri, güvenlik yedekleri ve scratch loglar toplandı. Ana dizin salt web uygulama dosyalarına (`index.html`, `style.css`, `app.js`, `quiz.js`, `auth.js`, `firebase-sync.js`) bırakıldı.

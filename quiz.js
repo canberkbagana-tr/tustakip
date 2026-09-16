@@ -147,7 +147,20 @@
         const u = window.AuthService.getCurrentUser();
         if (u && u.username) return u.username;
       }
+      try {
+        const savedTarget = localStorage.getItem('tus_active_target_student');
+        if (savedTarget) return savedTarget;
+      } catch (e) {}
       return 'guest';
+    },
+
+    // ===== Helper: Local YYYY-MM-DD Date (Prevents UTC timezone midnight discrepancies) =====
+    getLocalDateString() {
+      const d = new Date();
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
     },
 
     // ===== Load Question Bank (Dynamically from Manifest & Mart 2023) =====
@@ -228,8 +241,8 @@
     },
 
     // ===== Load User Quiz Stats (Firebase + LocalStorage fallback) =====
-    async loadUserStats() {
-      const username = this.getActiveUsername();
+    async loadUserStats(overrideUsername) {
+      const username = overrideUsername || this.getActiveUsername();
       const localKey = `tus_quiz_stats_${username}`;
       
       // Default initial stats
@@ -249,13 +262,16 @@
         }
       } catch (e) {}
 
-      // 2. Try Firebase (Lightweight: ~100 bytes)
+      // 2. Try Firebase (Lightweight: ~100 bytes) with cache-busting timestamp
       try {
-        const res = await fetch(`${DB_URL}/tus_v4/users/${username}/quiz.json`);
+        const res = await fetch(`${DB_URL}/tus_v4/users/${username}/quiz.json?t=${Date.now()}`);
         if (res.ok) {
           const cloudData = await res.json();
           if (cloudData && typeof cloudData === 'object') {
             this.userStats = Object.assign(this.userStats, cloudData);
+            if (!this.userStats.questionHistory) {
+              this.userStats.questionHistory = {};
+            }
             localStorage.setItem(localKey, JSON.stringify(this.userStats));
           }
         }
@@ -270,7 +286,7 @@
     updateStreakValidation() {
       if (!this.userStats.lastPlayedDate) return;
 
-      const today = new Date().toISOString().split('T')[0];
+      const today = this.getLocalDateString();
       const last = new Date(this.userStats.lastPlayedDate);
       const now = new Date(today);
       const diffTime = now - last;
@@ -292,10 +308,17 @@
       } catch (e) {}
 
       try {
+        // Lightweight cloud sync (keeps Firebase footprint under 100 bytes)
+        const cloudPayload = {
+          streak: this.userStats.streak || 0,
+          totalXp: this.userStats.totalXp || 0,
+          solvedCount: this.userStats.solvedCount || 0,
+          lastPlayedDate: this.userStats.lastPlayedDate || null
+        };
         await fetch(`${DB_URL}/tus_v4/users/${username}/quiz.json`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(this.userStats)
+          body: JSON.stringify(cloudPayload)
         });
       } catch (err) {
         console.warn('[Quiz] Firebase istatistik kaydetme hatası:', err);
@@ -318,20 +341,22 @@
       const card = document.getElementById('quizDashboardCard');
       if (!card) return;
 
-      const today = new Date().toISOString().split('T')[0];
+      const today = this.getLocalDateString();
       const isCompletedToday = this.userStats.lastPlayedDate === today;
       const rank = this.getRankInfo(this.userStats.totalXp);
 
       const streakEl = document.getElementById('quizCardStreak');
       const xpEl = document.getElementById('quizCardXp');
       const rankEl = document.getElementById('quizCardRank');
+      const solvedEl = document.getElementById('quizCardSolvedCount');
       const poolEl = document.getElementById('quizCardPoolCount');
       const statusBadge = document.getElementById('quizCardStatusBadge');
       const startBtn = document.getElementById('quizCardStartBtn');
 
-      if (streakEl) streakEl.textContent = `${this.userStats.streak} Gün`;
-      if (xpEl) xpEl.textContent = `${this.userStats.totalXp} XP`;
+      if (streakEl) streakEl.textContent = `${this.userStats.streak || 0} Gün`;
+      if (xpEl) xpEl.textContent = `${this.userStats.totalXp || 0} XP`;
       if (rankEl) rankEl.innerHTML = `${rank.icon} ${rank.title}`;
+      if (solvedEl) solvedEl.textContent = `${this.userStats.solvedCount || 0} Soru`;
       if (poolEl && this.manifest && typeof this.manifest.totalQuestions === 'number') {
         poolEl.textContent = `${this.manifest.totalQuestions} Soru`;
       }
@@ -341,7 +366,7 @@
           statusBadge.innerHTML = '✅ Bugünkü TUS Dozu Alındı! (10/10 Soru Çözüldü 🔥)';
           statusBadge.className = 'quiz-status-badge completed';
         } else {
-          statusBadge.innerHTML = '🔥 Günün 10 Sorusu Bekliyor! (5 Genel + 5 Güncel Mart 2023)';
+          statusBadge.innerHTML = '🔥 Günün 10 Sorusu Bekliyor! (5 Genel + 5 Mart 2023)';
           statusBadge.className = 'quiz-status-badge pending';
         }
       }
@@ -361,7 +386,7 @@
         this.userStats.questionHistory = {};
       }
 
-      const today = new Date().toISOString().split('T')[0];
+      const today = this.getLocalDateString();
       const todayDate = new Date(today);
 
       // Helper to select 5 questions from a pool using Spaced Repetition (SRS)
@@ -742,7 +767,7 @@
 
     // ===== Finish Quiz & Celebrate =====
     async finishQuiz() {
-      const today = new Date().toISOString().split('T')[0];
+      const today = this.getLocalDateString();
       const isFirstToday = this.userStats.lastPlayedDate !== today;
 
       // Update Streak
@@ -969,9 +994,10 @@
         poolModalDone.addEventListener('click', () => this.closePoolModal());
       }
 
-      // Re-load stats when user changes
-      window.addEventListener('tus-user-changed', async () => {
-        await this.loadUserStats();
+      // Re-load stats when user changes or logs in
+      window.addEventListener('tus-user-changed', async (e) => {
+        const student = (e && e.detail && e.detail.student) || this.getActiveUsername();
+        await this.loadUserStats(student);
         this.renderDashboardCard();
       });
     }

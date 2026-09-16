@@ -1429,6 +1429,17 @@
 
     // Sync from Firebase
     await syncFromFirebase();
+
+    // 🔔 Notify modules (QuizModule, etc.) that user has logged in and activeStudent is set
+    window.dispatchEvent(new CustomEvent('tus-user-changed', { detail: { student: activeStudent, user: currentUser } }));
+    if (window.QuizModule && typeof window.QuizModule.loadUserStats === 'function') {
+      try {
+        await window.QuizModule.loadUserStats(activeStudent);
+        window.QuizModule.renderDashboardCard();
+      } catch (err) {
+        console.warn('QuizModule login refresh error:', err);
+      }
+    }
   }
 
   async function populateAdminStudentSelector() {
@@ -1457,7 +1468,15 @@
     loadData();
     refreshAllUI();
     await syncFromFirebase();
-    window.dispatchEvent(new CustomEvent('tus-user-changed', { detail: { student: activeStudent } }));
+    window.dispatchEvent(new CustomEvent('tus-user-changed', { detail: { student: activeStudent, user: currentUser } }));
+    if (window.QuizModule && typeof window.QuizModule.loadUserStats === 'function') {
+      try {
+        await window.QuizModule.loadUserStats(activeStudent);
+        window.QuizModule.renderDashboardCard();
+      } catch (err) {
+        console.warn('QuizModule switch student error:', err);
+      }
+    }
   }
 
   async function renderAdminUsersList() {
