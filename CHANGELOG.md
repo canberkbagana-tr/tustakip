@@ -4,6 +4,15 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## [v4.3.6] - 2026-09-16 (Giriş Butonları & Hızlı Hesap Düzeltmesi)
+### 🐛 Giriş Ekranı ve Hızlı Hesap Seçimi Düzeltildi
+- **🔧 initAuthAndSession ReferenceError Giderildi:**
+  - `app.js` içerisindeki `initAuthAndSession()` fonksiyonunda `const user = await window.AuthService.init();` satırı eksik kaldığı için oluşan `ReferenceError: user is not defined` hatası giderildi.
+  - Bu hata sebebiyle `setupLoginOverlay()` çalışmıyor, form submit listener'ı ve "Hızlı Hesap Seç" butonlarının `onclick` fonksiyonları bağlanamıyordu; hata düzeltilerek butonlar ve form tam çalışır hale getirildi.
+- **🚀 Cache Buster v4.3.6:** Tüm asset ve script referansları `?v=4.3.6` yapılarak tarayıcıların anında güncel kodu çekmesi sağlandı.
+
+---
+
 ## [v4.3.2] - 2026-09-16 (Canlıya Dağıtım - Zorunlu Giriş & Soru Motoru Entegrasyonu)
 ### 🔐 Zorunlu Kimlik Doğrulama & Canlıya Güvenli Dağıtım
 - **🚪 Şifresiz Giriş Açığı Kapatıldı:**

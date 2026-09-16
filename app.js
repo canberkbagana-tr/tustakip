@@ -1291,6 +1291,7 @@
   // ===== Multi-User & Admin Management Functions =====
   async function initAuthAndSession() {
     if (!window.AuthService) return false;
+    const user = await window.AuthService.init();
     const overlay = document.getElementById('loginOverlay');
     if (!user) {
       // Show login overlay
