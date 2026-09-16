@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-09-15T23:50:00.000Z",
-  "totalQuestions": 7,
+  "lastUpdated": "1789583707.0422332",
+  "totalQuestions": 83,
   "summary": {
     "totalSubjects": 13,
     "activeSubjects": 1
@@ -13,15 +13,9 @@
       "file": "cikmis_sorular/virtual_db/questions_fizyoloji.json",
       "color": "#ef4444",
       "icon": "🫀",
-      "questionCount": 7,
+      "questionCount": 83,
       "categories": {
-        "Hücre Bölünmesi (Mitoz)": 1,
-        "Hücre Zarı & Membran Proteinleri": 1,
-        "Organeller & Genetik Materyal": 1,
-        "Hücre İçi İyon Dengesi": 1,
-        "Sitoskeleton & Hücre Mimarisi": 1,
-        "Hücre İçi Sindirim & Organeller": 1,
-        "Hücre Ölümü & Otoliz": 1
+        "Hücre & Temel Fizyoloji": 83
       }
     },
     "patoloji": {

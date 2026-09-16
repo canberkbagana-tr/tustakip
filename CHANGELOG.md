@@ -16,6 +16,11 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
   - `quiz.js`'deki sabit tek dosya (`questions_fizyoloji.json`) yükleme mantığı kaldırıldı. `question_bank_manifest.json` üzerindeki tüm aktif branşların (`questionCount > 0`) JSON dosyalarını dinamik yükleyip tek havuzda birleştiren `loadQuestions()` motoru devreye alındı.
 - **🔬 Tesseract Türkçe OCR Desteği & Yerel Model Koruması:**
   - `tur.traineddata` modeli yerel ortama eklendi, çift dilli (tur+eng) soru ayıklama hattı aktive edildi. Model dosyaları `.gitignore` ile korunarak reponun şişmesi engellendi.
+- **📚 83 Gerçek Çıkmış TUS Sorusu Sanal DB'ye Eklendi:**
+  - `Fizyoloji.pdf` (Hücre & Temel Fizyoloji Ünitesi) taranarak **83 soru**, tüm A-E şıkları, doğru cevapları ve detaylı klinik açıklamalarıyla `cikmis_sorular/virtual_db/questions_fizyoloji.json` dosyasına yazıldı.
+  - "Şöyle de sorulabilirdi / BENZERİ" şeklindeki türetilmiş sorular elenerek duplicate soru üretimi tamamen engellendi.
+  - `question_bank_manifest.json` otomatik güncellendi (Toplam Soru: 83, Aktif Branş: 1/13).
+  - 83 soruluk ultra hafif JSON yalnızca **119 KB** yer tutarak disk ve kota verimliliği sağlandı.
 
 ---
 

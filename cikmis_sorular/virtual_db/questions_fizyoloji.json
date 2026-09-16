@@ -1,151 +1,1571 @@
-{
-  "subject": "Fizyoloji",
-  "code": "fizyoloji",
-  "book": "TÜM TUS SORULARI - Fizyoloji Histoloji ve Embriyoloji",
-  "totalQuestions": 7,
-  "lastUpdated": "2026-09-15T23:50:00.000Z",
-  "categories": {
-    "Hücre Bölünmesi (Mitoz)": 1,
-    "Hücre Zarı & Membran Proteinleri": 1,
-    "Organeller & Genetik Materyal": 1,
-    "Hücre İçi İyon Dengesi": 1,
-    "Sitoskeleton & Hücre Mimarisi": 1,
-    "Hücre İçi Sindirim & Organeller": 1,
-    "Hücre Ölümü & Otoliz": 1
+[
+  {
+    "id": "fizyoloji_q1",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre içerisinde, zarı bulunmayan organel aşağıdakilerden hangisidir? (Nisan- 90) NORMAL HÜCRELER",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Zarla çevrili ya da zar yapısındaki",
+      "B": "Zarla çevrili olmayan organeller:",
+      "C": "Mitokondri",
+      "D": "Ribozom",
+      "E": "Endoplazmik retikulum"
+    },
+    "answer": "D",
+    "explanation": "Organellerin çoğu zarla çevrilidir. o Zarla çevrili olmayanları bilmek soruların yapılmasını sağlayacaktır. ey S 2 2 2 2 — = 5 5 = organeller: + Hücrezarı (plazma membranı) Mitokondri * o Granüllü endoplazmik retikulum (GER) * Düz (agranüler-kaba) endoplazmik retikulum (DER-AGER) Golgi bileşiği * Lizozom + Kaplı kesecikler Salgı granülleri *  Peroksizom (mikrocisimler) * Ribezom KÖK / KANSER HÜCRELERİ *  Mikrotübül * Sentriol * o Mikrofilaman Çekirdekçik"
   },
-  "questions": [
-    {
-      "id": "fizyoloji_q1",
-      "book": "Fizyoloji",
-      "exam": "Nisan 2001 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Hücre Bölünmesi (Mitoz)",
-      "question": "Kromozomlar hücre bölünmesinde hangi evrede ekvatoryal düzeyde dizilim gösterirler?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "İnterfaz",
-        "B": "Profaz",
-        "C": "Metafaz",
-        "D": "Anafaz",
-        "E": "Telofaz"
-      },
-      "answer": "C",
-      "explanation": "Ekvatoryal dizilim = Metafazın en önemli özelliğidir. Mitoz bölünmede kromozomların mikrotübüllere tutunarak hücrenin ekvatoral düzleminde (metafaz plağı) tek sıra halinde dizildiği evre metafazdır. Karyotip analizi de en belirgin bu evrede yapılır."
+  {
+    "id": "fizyoloji_q2",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre siklusunun düzenlenmesinde rol oynayan ve es p53’e bağlanan “nikleostemin” proteini aşağıdakilerin © hangisinde bulunur? (Şubat 2018 Orijinal) o",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Çekirdek membranı",
+      "B": "Ribozom",
+      "C": "Mitokondri",
+      "D": "Çekirdekçik",
+      "E": "Sitoplazma"
     },
-    {
-      "id": "fizyoloji_q2",
-      "book": "Fizyoloji",
-      "exam": "Eylül 1999 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Hücre Zarı & Membran Proteinleri",
-      "question": "Aşağıdakilerden hangisi hücre membranının özelliği değildir?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "Yapısında temel olarak proteinler ve fosfolipidler bulunur.",
-        "B": "Periferal proteinler iyon kanalı görevi görür.",
-        "C": "Hücre membranı asimetrik yapıdadır.",
-        "D": "Protein yapılı hormonlar için yüzeyde özelleşmiş reseptörler bulunur.",
-        "E": "Kolesterol oranı artan bölümlerinde akışkanlık azalır."
-      },
-      "answer": "B",
-      "explanation": "Periferal proteinler membran boyunca uzanmazlar (transmembran değillerdir), lipid çift katmanının sadece bir yüzüne gevşek bağlıdırlar. Bu nedenle iyon kanalı veya taşıyıcı protein görevi İNTEGRAL (transmembran) proteinlere aittir. Kolesterol ise membran akışkanlığını düzenler, yüksek konsantrasyonda akışkanlığı azaltır."
+    "answer": "D",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) p53 bağlayıcı protein olarak da bilinen nükleostemin proteini aşağıdaki hücre bölümlerinden hangisinde bulunur? (Şubat 2018 BENZERİ) Aktif hücre bölünmesi © Sitoplazma NS GENİ BASKILANMIŞ / FARKLILAŞMIŞ HÜCRELER c Apoptozis ve bununlu ilişkili tüm bileşenler, güncel proteinler ve mekanizmaları her zaman sorulma potansiyeli bulunmaktadır. Nükleostemin: Çekirdekçik içerisinde bulunan, son zamanlarda tanımlanmış bir proteindir. Hücre siklusunu düzenleyen ve hücre farklılaşmasını etkileyen p53 bağlayıcı bir proteindir. Hücresel farklılaşmalar ilerledikçe bu proteinin miktarı azalmaktadır. Malign hücrelerde bol bulunması; bu hücrelerin kontrolsüz ( proliferasyonunda rolü ( olabileceğini düşündürmektedir. Hücre döngüsünde G1 kontrol noktasındaki durdurma, p53 denilen protein aracılığı ile gerçekleşir. p53 protei kodlayan gen; insan kanserlerinde Nükleostemin ve p53 mutasyona uğramıştır. © İnaktifp53 o Aktif p53 mi Nükleostemin"
+  },
+  {
+    "id": "fizyoloji_q3",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Nükleus DNA'sına gereksinim olmadan bölünebilen organel aşağıdakilerden hangisidir? (Nisan- 97)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mitokondri",
+      "B": "Sentriyol",
+      "C": "Golgi cisimciği",
+      "D": "Granüllü endoplazmik retikulum",
+      "E": "Ribozom"
     },
-    {
-      "id": "fizyoloji_q3",
-      "book": "Fizyoloji",
-      "exam": "Nisan 1997 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Organeller & Genetik Materyal",
-      "question": "Nükleus DNA'sına gereksinim olmadan kendi kendine bölünebilen / çoğalabilen organel aşağıdakilerden hangisidir?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "Mitokondri",
-        "B": "Lizozom",
-        "C": "Peroksizom",
-        "D": "Golgi cisimciği",
-        "E": "Granüllü endoplazmik retikulum"
-      },
-      "answer": "A",
-      "explanation": "Mitokondri kendi dairesel çift sarmallı DNA'sına (mtDNA), kendi ribozomlarına ve tRNA'larına sahiptir. Nükleer DNA'dan bağımsız olarak replike olabilir ve ikiye bölünerek çoğalabilir. Anneden aktarılır (maternal kalıtım)."
+    "answer": "A",
+    "explanation": "Mitokondri * Hücre için gerekli enerjinin (ATP) elde edildiği organeldir. * Yüksek enerji metabolizmasına sahip hücreler (kalp kası hücreleri, böbrek tübül hücreleri) çok sayıda mitokondriye sahiptir. Mitokondriler hücrelerde enerji tüketiminin fazla olduğu yerlerde (titrek tüylü hücrelerin üst bölgelerinde, spermlerin orta kısmında ve iyon transportu yapan hücrelerin bazal kısmında) fazla bulunur. + Kendisi bölünerek yenilenebilen bir organeldir. + Kendine ait DNA, RNA, ribozom ve proteinleri vardır. Dış mitokondri membranı İç mitokondri membranı j ? Matriks 1 iLL JJ Yoğun matriks granülleri (Ca) «5 Enzimler - iç zar tanecikleri Mitokondrinin şematik görünümü Diğer şıkları inceleyecek olursak * Sentriyol en çeldirici şık görünümünde... Çünkü hücre bölünmesi ile olan ilişkisi bilinen klasik bir bilgidir... Ancak zarı bile olmayan sentriyolün kendi DNA sı yoktur. + Ribozomlar, hücrenin en ilkel organelleridir. Hücre içinde kullanılacak olan proteinlerin sentezinden sorumludur. + Golgi ve GER birbirinin devamı niteliğinde organeller olup tek başlarına bölünemezler. GER’ den kopan veziküller hücrenin tamamen başka bir yerinde Golgi'yi oluşturur."
+  },
+  {
+    "id": "fizyoloji_q4",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre içinde en fazla kalsiyum içeren organeller aşağıdaki (o şıkların (o hangisinde © verilmiştir? (Nisan- 94)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Ribozom ve proteozom",
+      "B": "Çekirdek ve sitoplazma",
+      "C": "Peroksizom ve golgi aparatı",
+      "D": "Sentriyol ve mikrotübüllerde",
+      "E": "Mitokondri ve endoplazmik retikulum"
     },
-    {
-      "id": "fizyoloji_q4",
-      "book": "Fizyoloji",
-      "exam": "Nisan 1994 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Hücre İçi İyon Dengesi",
-      "question": "Hücre içinde en fazla kalsiyum (Ca²⁺) içeren / depolayan organeller aşağıdaki seçeneklerin hangisinde birlikte verilmiştir?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "Çekirdek ve Golgi cisimciği",
-        "B": "Lizozom ve Peroksizom",
-        "C": "Ribozom ve Çekirdekçik",
-        "D": "Plazma zarı ve Sentrozom",
-        "E": "Mitokondri ve Endoplazmik retikulum"
-      },
-      "answer": "E",
-      "explanation": "Hücrede serbest sitozolik kalsiyum çok düşüktür. Kalsiyumun başlıca depolandığı yer Agranüler / Düz Endoplazmik Retikulumdur (özellikle kas hücrelerinde Sarkoplazmik Retikulum). İkinci önemli kalsiyum deposu ve tamponlayıcısı ise Mitokondridir."
+    "answer": "E",
+    "explanation": "Kalsiyumun Fizyoloji'de birçok başlıkta yeri vardır. Gerek pıhtılaşma kaskadında gerek kas kasılmasında gerekse ekzositozdaki rolleri ile en fonksiyonel iyonlardan birisidir. Kalsiyum iyonları normalde intrasellüler sıvıda çok düşük konsantrasyondadır. Hücrede kalsiyum agranüler (düz) endoplazmik retikulumda ve mitokondri matriksinde depolanır. Kas hücrelerinde özellikle sarkoplazmik retikulum başlıca kalsiyum kaynağıdır. Hücre içinde kalsiyumun serbest formu çok az bulunur. Bunun sebebi kalsiyumun fazlalığının apoptozu tetiklemesidir."
+  },
+  {
+    "id": "fizyoloji_q5",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre dışına salgılanacak proteinlerin yapımı aşağıdaki hangi organelde gerçekleşir? (Eylül - 97. Eylül - 2004) G) Golgi cisimciği",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Granülsüz endoplazmik retikulum",
+      "B": "Granüllü endoplazmik retikulum",
+      "D": "Lizozomlar",
+      "E": "Ribozomlar"
     },
-    {
-      "id": "fizyoloji_q5",
-      "book": "Fizyoloji",
-      "exam": "Eylül 2003 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Sitoskeleton & Hücre Mimarisi",
-      "question": "Hücre iskeleti elemanlarından hangisi mikrovillüslerin yapısında demetler halinde bulunur ve fırçamsı kenarı oluşturur?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "Mikrotübüller",
-        "B": "Ara filamanlar",
-        "C": "Aktin filamanları (Mikrofilamanlar)",
-        "D": "Nörofilamanlar",
-        "E": "Laminler"
-      },
-      "answer": "C",
-      "explanation": "Mikrovillüslerin merkezinde paralel demetler halinde organize olmuş AKTİN filamanları yer alır (fimbrin ve villin ile bir arada tutulur). Mikrotübüller ise silya (titrek tüy) ve flagella yapısında 9+2 mikrotübül çifti düzeninde bulunur."
+    "answer": "B",
+    "explanation": "Granüllü Endoplazmik Retikulum (GER) * Çekirdek zarının dış yaprağı ile devamlılık gösterir. * Dış yüzüne ribozomların bağlandığı, ünit zarlarla çevrili, tübül ve sisternalardan oluşan organeldir. *  Hücredışına salgı olarak verilecek proteinlerin ve lizozomal enzimlerin sentezinden sorumludur. + Kollajen, pıhtılaşma proteinleri, serum albümini ve immünglobülin gibi proteinler sentezlenir. * Pankreas asinus hücreleri (sindirim enzimleri), fibroblastlar (kollajen) ve plazma hücreleri (immünglobülinler) gibi protein salgılamak için özelleşmiş hücrelerde fazla miktarda GER bulunur. GER’in diğer görevleri * Glikoproteinlerin merkezi glukozlanması + Fosfolipitlerin sentezi * Cok zincirli proteinlerin birleştirilmesi ile trasnlasyonun uzayıp durdurulabilmesi Hücre içinde kalacak proteinlerin sentezi (LDH gibi hücre içi enzimleri ve hemoglobin gibi hücre içi proteinlerin sentezi) serbest o ribozomlarca gerçekleşir."
+  },
+  {
+    "id": "fizyoloji_q6",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki proteinlerden hangisi sitoplazmada bulunan serbest ribozomlar tarafından sentezlenmez?",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Nükleer protein",
+      "B": "Salgı protein",
+      "C": "Sitoplazmik protein",
+      "D": "Peroksizomal protein",
+      "E": "Mitokondriyal protein"
     },
-    {
-      "id": "fizyoloji_q6",
-      "book": "Fizyoloji",
-      "exam": "Nisan 2005 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Hücre İçi Sindirim & Organeller",
-      "question": "Hücre içi aktif sindirimin gerçekleştiği, primer lizozomun sindirilecek materyali içeren vezikülle birleşmesiyle oluşan yapı aşağıdakilerden hangisidir?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "Mitokondri",
-        "B": "Primer lizozom",
-        "C": "Peroksizom",
-        "D": "Sekonder lizozom (Fagolizozom)",
-        "E": "Proteazom"
-      },
-      "answer": "D",
-      "explanation": "Golgi'den yeni tomurcuklanan inaktif hidrolitik enzim içeren organele primer lizozom denir. Primer lizozom fagositer veya pinositer bir vakuolle kaynaştığında sekonder lizozom (fagolizozom) oluşur ve aktif hücre içi sindirim burada gerçekleşir."
+    "answer": "B",
+    "explanation": "Soruda temelde hangisinin hücre dışına gönderildiği, hangisinin yapısal protein olduğu sorulmaktadır. “Salgı protein” seçeneğindeki “salgı” kelimesinin diğer seçeneklerden farklı olarak dışarı gönderildiğini ifade eden ve bu proteinlerin de granüllü endoplazmik retikulumda sentezlendiğini bilen bir kişi için soru son derece basittir... Serbest ribozomlar, hücre içinde kullanılacak yapısal proteinlerin sentezinden sorumludurlar. Hücre dışına verilecek proteinler ve lizozomal enzimlerin sentezi granüllü endoplazmik retikulumda gerçekleşir. Nükleer, sitoplazmik, mitokondriyal (o proteinlerin ribozomlar tarafından yapılır. peroksizomal ve sentezi (o serbest"
+  },
+  {
+    "id": "fizyoloji_q7",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Protein yapılı hormonlar Golgi aparatında paketlenmeden hemen önce hangi hücre organelinde işlem görür? (Nisan - 95)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sentriyol",
+      "B": "Ribozom",
+      "C": "Proteozom",
+      "D": "Mitokondri",
+      "E": "Granüler endoplazmik retikulum"
     },
-    {
-      "id": "fizyoloji_q7",
-      "book": "Fizyoloji",
-      "exam": "Eylül 2006 TUS",
-      "subject": "Fizyoloji",
-      "topic": "Hücre Ölümü & Otoliz",
-      "question": "Hücrenin kendi yaşlanmış veya hasarlı organellerini lizozomları aracılığıyla sindirmesi ve geri dönüştürmesi olayına ne ad verilir?",
-      "hasImage": false,
-      "image": null,
-      "options": {
-        "A": "Ekzositoz",
-        "B": "Heterofaji",
-        "C": "Otofaji",
-        "D": "Pinositoz",
-        "E": "Apoptoz"
-      },
-      "answer": "C",
-      "explanation": "Hücrenin kendi organellerini (örn. hasarlı mitokondriyi) çift zarlı otofagozom içine alarak lizozomla kaynaştırması ve sindirmesi olayına OTOFAJİ denir. Dışarıdan alınan yabancı partiküllerin sindirilmesi ise heterofajidir."
-    }
-  ]
-}
+    "answer": "E",
+    "explanation": "Granüler Endoplazmik Retikulum membranı ribozom yapısındadır. Ön protein molekülü burada üretilir ve glikoprotein şekline geçmesi için Golgi cisimciğine gönderilir. Örneğin İnsülin preprohormon olarak üretilir. Granüllü endoplazmik retikulumda prohormon halini alır ve son olarak Golgi'den hormon olarak salınır. Sentriyol, mikrotübül yapıdadır ve hücrede sentez olaylarında rolü yoktur. Mitokondri enerji santralidir ve ATP üretimi için ETZ enzimlerini bulundurur. Ribozom hücre içinde kalacak olan proteinlerin sentezinden sorumlu organel olup tüm canlı hücrelerde bulunur. Proteozom denatüre peptidlerin yıkıldığı organeldir. Aktif bir hormonun hücrede uğrayacağı son organel proteozomdur diyebiliriz."
+  },
+  {
+    "id": "fizyoloji_q8",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Protein sentezinin translasyon evresinde, sinyal dizisinin uzamasını durduran yapı aşağıdakilerden hangisidir? (Eylül 2011)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "mRNA molekülü",
+      "B": "tRNA molekülü",
+      "D": "Karnitin",
+      "E": "Sinyal tanıma partikülü"
+    },
+    "answer": "E",
+    "explanation": "Zor sayılabilecek, biraz ayrıntı olmakla birlikte önemli bir konuyu işaret eden bir sorudur. Protein sentezinin translasyon evresinde sinyal dizisinin uzamasını durduran SRP yapısının, SRP reseptörünün GER üzerinde bulunduğu bilgisinin hatırlanması gereken bir soru... SRP (Signal Recognition Peptid = Sinyal Tanıma Partikülü), granüllü endoplazmik retikulum membranında bulunur. Bu reseptör ile ribozomlar, granüllü endoplazmik retikuluma bağlanır ve protein sentezi devam eder. Sinyal dizisinin uzamasını kontrol eden temel yapı membranda bulunan SRP molekülüdür."
+  },
+  {
+    "id": "fizyoloji_q9",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki (o proteinlerden (hangisi (o Granüllü Endoplazmik Retikulum üzerindeki ribozomlarda sentezlenmez? (Eylül 2001)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kollajen",
+      "B": "Pıhtılaşma proteinleri",
+      "C": "Laktat dehidrogenaz",
+      "D": "Serum albumini",
+      "E": "immunglobulinier"
+    },
+    "answer": "C",
+    "explanation": "Granüllü endoplazmik retikulum (üzerindeki ribozomlar hücre dışına gönderilecek proteinlerin sentezini yapar. Aslında soru “hangisi hücre dışına gönderilen proteinlerden değildir” şeklinde de düşünülebilir... Granüllü endoplazmik retikulum © üzerindeki ribozomlar hücre dışına gönderilecek maddelerin sentezini yapar. Kollajen, pıhtılaşma proteinleri, serum albumini ve immünglobulinler burada sentezlendikten sonra hücre dışına salgılanırlar. Serbest ribozomlar ise hücre maddelerin sentezinden sorumludur. Laktat dehidrogenaz sitozolde bulunan ve buradaki birçok tepkimede görev alan enzim olduğundan serbest ribozomlarda sentezlenir. içinde kalacak"
+  },
+  {
+    "id": "fizyoloji_q10",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Nöronların sitoplazmasında düzeyinde Nissl tanecikleri olarak adlandırılan yapı aşağıdakilerden hangisidir? (Eylül 2008, Eylül 1999) ışık mikroskobu",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Granüllü endoplazmik retikulum",
+      "B": "Mitokondri",
+      "C": "Primer lizozom",
+      "D": "Düz endoplazmik retikulum",
+      "E": "Golgi cisimciği"
+    },
+    "answer": "A",
+    "explanation": "Nissl Cisimciği * Nöron sitoplazmasında granüllü ER ve serbest ribozomlar ışık mikroskobu altında “Nissl cisimcikleri” denen bazofilik granüler alanlar şeklinde görülür. * Nissli cisimcikleri, motor nöron gibi büyük sinir hücrelerinde çok sayıda bulunur. Nöronun hücre gövdesinde (soma) bulunur, aksonda ve dendritlerin uç kısımlarında bulunmaz. + Bu bilgiden başka mutlaka bilinmesi gereken ve olası yeni sınavlarda yine soru olarak karşımıza gelecek olan bilgi ise sinir hasarında hücre gövdesinde meydana gelen ilk değişiklik: Kromatolizis'dir (Nissl cisimciklerinin bozulması)."
+  },
+  {
+    "id": "fizyoloji_q11",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre organel - görev eşleşmelerinden yanlış olan aşağıdakilerden hangisidir? (Nisan - 99)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Nukleus - RNA Sentezi",
+      "B": "Mitokondri - Oksidatif fosforilasyon",
+      "C": "Golgi - Yağ asiti sentezi",
+      "D": "GER - Protein sentezi",
+      "E": "Lizozom - Yıkım reaksiyonları"
+    },
+    "answer": "C",
+    "explanation": "Golgi, posttranslasyonel değişimleri tamamlar, hücre tarafından sentez edilmiş olan ürünleri paketler, glikozilasyon, fosforilasyon ve sülfatasyon yapar. Proinsülinin insüline dönüşümü Golgi cisimı de meydana gelen protein değişikliğinin iyi bir örneğidir. Yağ asitlerinin sentezi endoplazmik retikulumda gerçekleşir. Geri kalan şıklar doğru olup öğretici tarzda çalışılmalı."
+  },
+  {
+    "id": "fizyoloji_q12",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Steroid hormon sentezleyen hücrelerde hangi organel iyi gelişmiştir? (Eylül - 2002)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Granülsüz endoplazmik retikulum",
+      "B": "Granüllü endoplazmik retikulum",
+      "C": "Ribozom",
+      "D": "Peroksizom",
+      "E": "Lizozom"
+    },
+    "answer": "A",
+    "explanation": "Granülsüz (Düz) Endoplazmik Retikulum (DER) * Dış yüzlerinde ribozom yoktur. Birbirleriyle ağızlaşan ünit zarla çevrili tübüllerden oluşur. * DER'inanagörevi bütün hücresel membranların yapısını oluşturan çeşitli fosfolipitlerin sentezidir. + Başlıca;steroid sentezi, ilaç detoksifikasyonu, glikojen ve lipit metabolizmasında görev yaparlar (karaciğerde glukoz 6 fosfataz enzimini içerir, glikojen yıkımı ve glikolizde etkili.) * Kas hicrelerinde triad ve diad yapısına katılarak kalsiyumun depolanması ve sitoplazmaya salınması olaylarında da rol oynar. + Steroid sentezleyen adrenal korteks hücreleri ile karaciğer hücrelerinde iyi gelişmiş düz endoplazmik retikulum vardır."
+  },
+  {
+    "id": "fizyoloji_q13",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Karaciğerde toksik maddelerin temizlenmesini sağlayan, ilaç detoksifikasyonundan sorumlu karaciğer (hücre (organeli (aşağıdakilerden hangisidir? (Nisan - 95, Nisan 2014 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Karaciğer",
+      "B": "Pankreas",
+      "C": "Beyin",
+      "D": "Safra kesesi",
+      "E": "Kalp"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Hangi organda Granülsüz Endoplazmik Retikulum çok gelişmiştir? (Nisan 2014 BENZERİ) Karaciğerde ( toksik (omaddelerin (temizlenmesini sağlayan, ilaç detoksifikasyonundan sorumlu karaciğer hücre organeli granülsüz endoplazmik retikulumdur. Başlıca; steroid sentezi, ilaç detoksifikasyonu, glikojen ve lipit metabolizmasında görev yaparlar (karaciğerde glukoz 6 fosfataz enzimini içerir, glikojen yıkımı ve glikolizde etkili. )"
+  },
+  {
+    "id": "fizyoloji_q14",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücrede (proteine ( karbonhidrat aşağıdakilerden hangisi ile (Eylül- 94, Nisan- 96) bağlantısı gerçekleşir?",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Çekirdekçik",
+      "B": "Primer lizozom",
+      "C": "Golgi cisimciği",
+      "D": "Sentriyol",
+      "E": "Granülsüz endoplazmik retikulum"
+    },
+    "answer": "C",
+    "explanation": "Golgi Cismi * Endoplazmik retikulum gibi zarla çevrili, tübül ve keseciklerden oluşmuş bir organeldir. * o Tipik olarak çekirdek ile üst plazma membranı arasında yerleşmiştir. + GER'de sentezlenen proteinler, transfer vezikiilleri ile Golgi kompleksine aktarılır * Burada karbonhidrat (glukozilasyon), sülfat, fosfat gibi gruplar eklenir. + Özellikle oligosakkaritleri, proteinlerin, serin ve treonin amino asitlerinin olduğu bölgelere ekler. Bu olaya proteinlerin posttranslasyonel modifikasyonu denir. * Golgi kompleksi ayrıca, proteinlerin sınırlı proteolizinden de sorumludur. Mukus salgılayan Goblet hücreleri gibi hücrelerde Golgi kompleksi bol bulunur."
+  },
+  {
+    "id": "fizyoloji_q15",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Proteinlerdeki glikozilasyon aşağıdaki organellerin hangisinde gerçekleşir? (Nisan 2009) G) Endoplazmik retikulum",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mitokondri",
+      "E": "Çekirdek",
+      "B": "Peroksizom",
+      "D": "Lizozom"
+    },
+    "answer": "C",
+    "explanation": "Glikozilasyon işlemi sorularda sıkça karşımıza çıkmaktadır.  Golgi'nin şıklarda olmayışı soruyu biraz sıradışı yapmış. Golgiden önce proteinlerin Endoplazmik o retikulumda o işlem (gördüğünün ve glikolizasyonun başladığının çok iyi bilinmesi gerekmektedir."
+  },
+  {
+    "id": "fizyoloji_q16",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi Golgi cisimciğinden endoplazmik retikuluma vezikül transportunda görev alır? (Ağustos 2018 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Lamin-A © Epitel hücrelerini bazal laminaya bağlama",
+      "B": "Troponin! Kasta kalsiyum bağlama",
+      "C": "Glikokaliks o Kemik apozisyon hızını ölçme",
+      "D": "Ubikuitin Hücre içi sindirimi sağlama",
+      "E": "Coatomer!  Golgi'den endoplazmik retikuluma vezikül"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdaki “molekül ve ilişkili görev” eşleşmelerinden hangisi doğrudur? (Ağustos 2018 BENZERİ) i ‘ transportu Yeni bulunan ve hücrede önemli görevleri olan proteinler her zaman sorulagelmiştir. Burada sorulan coatomer (in COP-1 olarak da bilindiği hatırlanırsa doğru cevabı bulmak kolaylaşacaktır. Lamin-A çekirdek membranında bulunan moleküldür. Lamin-A proteini hücrenin çekirdeğe sahip olduğunu gösterir. Troponin-C ve Troponin-l ise kasta bulunan proteinlerdir. Troponin-| en fazla doku miyokardinda bulunur. Miyokard infarktüsünde en spesifik markerdir. Troponin-C ise kasta kalsiyum bağlar. Glikokaliks ise hücre zarının yapısında bulunur ve negatif yüke neden olur."
+  },
+  {
+    "id": "fizyoloji_q17",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre içi sindirim aşağıdaki organellerden hangisinde meydana gelir? (Nisan - 98)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mitokondri",
+      "B": "Primer lizozom",
+      "C": "Peroksizom",
+      "D": "Sekonder lizozom",
+      "E": "Ribozom"
+    },
+    "answer": "D",
+    "explanation": "Hücre organellerinden lizozom ve lizozomun enzi- matik aktivite gösterdiği sindirim işleminin bilin- mesini gerektiren bir soru... Lizozom * Golgi cisimciğinden bogumlanarak oluşurlar. * 0.2-04 pm çapında, ünit zarla çevrili, hidrolitik enzimler içeren (başlıca asit hidrolazlar) organeldir. * Asit hidrolazlar, asit pH'da çalışan sindirici enzimlerdir ve lizozom membranında H-ATPaz pompası bulunur. + Lizozom, fagositozla hücreye alınan yabancı maddelerle, hücre içinde oluşan artık maddelerin parçalanmasından sorumludur. + Bu nedenle makrofajlarda (fagositoz yapan hücrelerde) bol lizozom bulunur. *  Olgunlaşmasını tamamlamış lizozom primer lizozom olarak adlandırılır. * Hücre dışından alınmış yabancı maddeyi içeren vezikülle birleşmiş lizozom ise sekonder lizozom olarak isimlendirilir. Sekonder Reziduel Bakteri — lizozom cisim © gg Fagositoz —+' 0 Endositoz Fagozom—/ ) Primer lizozom © Pe J+ — Erken endozom) Otofagozom yi | z +-— Geç endozom | 1 Otofaji — Mitokondri~ / \\ /Gagicemi \\ {  Nukleus | Endoplazmik J / retikulum. \\ 4 e m Lizozom ve fagositoz Mitokondri hücrenin enerji santralidir. Peroksizom safra tuzlarının sentezi, çok uzun zincirli yağ asitlerinin hidroksilasyonu ile ilgilenirken; Ribozomlar hücre içi yapısal proteinleri üretir."
+  },
+  {
+    "id": "fizyoloji_q18",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücredeki hidrolitik enzimler aşağıdaki organellerden hangisinde bulunur? (Nisan 2000)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Lizozom",
+      "C": "Mitokondri",
+      "B": "Plazma membranı",
+      "D": "Ribozom",
+      "E": "Hücre çekirdeği"
+    },
+    "answer": "A",
+    "explanation": "Hücre içi sindirimde önemli olan hidrolitik enzimlerin lizozomların başlıca yapısal proteinleri olduğunu unutmamak gerekir... Lizozomlar, lipoprotein yapısında bir membranla çevrilidir. 'ozomlar; fosfat esterlerini parçalayan esteraz, sülfat gruplarını parçalayan sülfataz, proteinleri parçalayan katepsin, mukopolisakkarid moleküllerinden glukoronik asidini ayıran beta glukuronidaz gibi hidrolitik enzimleri içerir. Diğer şıklardaki organellerin yapısında yıkıcı hidrolitik enzimleri bulunmaz."
+  },
+  {
+    "id": "fizyoloji_q19",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi lizozomların özelliklerinden biri değildir? (Eylül - 2000)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Zarla çevrili olmaları",
+      "B": "Ubigutin ile işaretli proteinleri sindirmeleri",
+      "C": "Golgi cisimciğinden bogumlanarak ayrılmaları",
+      "D": "Hidrolitik enzimler içermeleri",
+      "E": "Hücre içi sindirimde görev almaları"
+    },
+    "answer": "B",
+    "explanation": "Ubigutin ile işaretli proteinlerin sindirilmesi proteozom organel ile ilişkilidir. Golgi cisimciğinden boğumlanarak ayrılmaları, içerdiği hidrolitik enzimler ile hücre içi sindirimde görev almaları ve zarla çevrili organellerden olmaları lizozomların en belirgin özelliklerindendir."
+  },
+  {
+    "id": "fizyoloji_q20",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücrenin kendi kendisini sindirmesi olayına ne ad verilir? (Eylül - 87)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Karyoliz",
+      "B": "Otoliz",
+      "C": "Karyoreksis",
+      "D": "Fagositoz",
+      "E": "Hidropik şişme"
+    },
+    "answer": "B",
+    "explanation": "Hücre histolojisi ile ilgili bir tanımlama sorusu... Hücrenin kendi kendini sindirmesi olarak tanım- lanan Otoliz kavramı ile hücrenin kendini sindir- mesindeki ilk değişiklik hidropik şişme kavramları hem patolojide hem de Fizyoloji'de çıkabilecek önemli tanımlamalardır... Hücrenin kendi kendisini sindirmesine Otoliz denir. Hipokside en erken değişiklik hidropik şişmedir. Çekirdekte izlenen değişimlerin başlıcaları piknoz, karyoreksiz ve karyolizdir. Piknoz nükleus'un küçülmesi, karyotekanın düzensiz girintili çıkıntılı bir görünüm kazanması ve kromatinin yoğunlaşması halidir."
+  },
+  {
+    "id": "fizyoloji_q21",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre organellerinin kendi lizozomu tarafından parçalanması olayına ne ad verilir? (Nisan 2015 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mitokondri içerisindeki sitoktomların sitoplazmaya çıkması",
+      "C": "Lizozomların parçalanması ile litik enzimlerin sitoplazmaya",
+      "B": "İntrinsik yolaklar ile aktiflenen programlanmış hücre ölümü",
+      "D": "Fagositoz olayı ile gerçekleşen hücre yıkımı",
+      "E": "Proteozomlar ile gerçekleşen hücre içi peptid yıkımı"
+    },
+    "answer": "C",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Hücrede otoliz olayı aşağıdakilerden hangisi ile açıklanabilir? (Nisan 2015 BENZERİ) çıkması Otoliz, otofaji, apoptozis gibi tanımlamalar çok iyi bilinmelidir... Fagositoz * Bakteri ya da doku yıkımı sonucu oluşan parçalar gibi büyük partiküllerin hücre içine alınmasıdır. Otofaji * Biriken proteinler makrofajlar tarafından fagosite edilerek elimine edilir. * Mitokondri içerisindeki sitokrom C'lerin sitoplazmaya çıkması ile apopitoz tetiklenir. * Hücre organellerinin kendi lizozomu tarafından parçalanması otofajidir. Pinositoz * Pinositoz, çok büyük moleküllerin hücre içine girebilmesini sağlar. * Proteinlerin çoğu bu yolla hücre içine alınır. + LDL, B12 vitamini ve transferin klatrin kaplı veziküller aracılığıyla hücreye alınır. Ekzositoz * Ekzositozda bir sitoplazmik vezikül plazma membranıyla birleşir ve içerik dışarı boşaltılır. * Ekzositoz hücrede sitozolik kalsiyumun geçici artışı ile tetiklenir."
+  },
+  {
+    "id": "fizyoloji_q22",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Kaspaz-1 enzimi (o aracılığıyla (o gerçekleşen hücre ölümü şekli aşağıdakilerden hangisidir? (Ağustos 2018 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kaspaz-1",
+      "B": "Kaspaz-2",
+      "C": "Kaspaz-3",
+      "D": "Kaspaz-6",
+      "E": "Kaspaz-7"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdaki kaspaz türlerinden hangisi primer olarak piropitozis ile ilişkilidir? (Ağustos 2018 BENZERİ) Özellikle kaspaz ailesinden belli başlı özellikleri olanları bilmeliyiz. Piropitozis ile ilişkili tek bir kaspaz türü olduğu için işimiz kolaylaşıyor. Burada soruyu terminolojiden bularak da yapabiliriz. Piro kelimesi “ateş” demektir ve kaspaz-1 ile ilişkilidir. Çünkü bu kaspaz türünde IL-1 görev almaktadır. Burada kafamızı karıştıracak yegâne bilgi ise apopitoz ile ilişkili olan kaspaz-3'tür. Entozis: Kısaca hücrenin matriks yapısından ayrılmasıdır. Bu olay non apopitotik bir süreci ifade etmektedir. Epitel hücrelerinde sık meydana gelir. Apopitoz: Programlı hücre ölümüdür. Kaspaz-3 ile ilişkilidir. Mikrootofaji: Hücrenin kendini sindirmesi olarak adlandırılır. Fizyolojik otofaji strese adaptif yanıtı ifade ederken patolojik otofajide kaspazdan bağımsız hücre ölümü gerçekleşir. Piropitozis: Kaspaz-1 aracılı gerçekleşen hücre ölümüdür. Parapitozis: Nörodejeneretif hastalıklarda görülen ve sitoplazmada aşırı vokualizasyon gözlenen non apopitotik değişikliklerdir."
+  },
+  {
+    "id": "fizyoloji_q23",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki hücrelerden hangisi çok sayıda lizozom içerir? (Nisan 2003)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Fibroblast",
+      "C": "Makrofaj",
+      "B": "Plazmosit",
+      "D": "B lenfosit",
+      "E": "Mastosit"
+    },
+    "answer": "C",
+    "explanation": "Hangi doku tipinde hangi organel fazla bulunur tarzında sorulara hazırlıklı olmak gerekir. Salgı epitelinde golgilerin fazla olması, kas hücrelerinde mitokondrilerin fazla olması gibi... Lizozomlar hemen hemen tüm hücrelerde mevcuttur, ancak özellikle fagositik aktivite gösteren hücrelerde bol miktardadır (Makrofajlarda çok sayıdadır). Fibroblast hücreleri özellikle dokuya kollajen gönderdikleri için yoğun miktarda granüllü endoplazmik retikulum içerir. B lenfosit ve plazma hücreleri antikor sentezi yaptıkları için granüllü endoplazmik retikülumun yoğun olduğu hücre tipleridir."
+  },
+  {
+    "id": "fizyoloji_q24",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Metakromatik lökodistrofide temel moleküler defekt aşağıdaki hücre bölgelerinin hangisindedir? (Aralık 2010)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mitokondri",
+      "C": "Mikrofilaman",
+      "B": "Mikrotübül",
+      "D": "Lizozom",
+      "E": "Golgi cisimciği"
+    },
+    "answer": "D",
+    "explanation": "Hücre Histoloji:"
+  },
+  {
+    "id": "fizyoloji_q25",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Yanlış (katlanmış denatüre veya anormal polipeptidlerin hücre (o içerisinde (yıkıldığı hücre içi organel aşağıdakilerden hangisidir? (Eylül 2014 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kalsiyum depolamak",
+      "B": "Proteinlere sentez sonrası sülfat eklenmesi",
+      "C": "Proteinlere sentez sonrası glukoz eklenmesi",
+      "D": "Yanlış katlanmış denatüre veya anormal polipeptidlerin hücre",
+      "E": "Oksijen kullanarak proteinlerin sindirilmesi"
+    },
+    "answer": "D",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Proteozomun temel görevi aşağıdakilerden hangisidir? (Eylül 2014 BENZERİ) içerisinde yıkılması Proteozom nadir sorulan organellerden olduğu için görevi tam olarak hatırlanamayabilir. Bu yüzden dikkatli çalışmak gerekir ve peroksizomla karıştırmamak gerekir... Proteozom * Merkezi bölümlerinde ATPaz ve ubikuitin denilen, protein tanıyan bir parça bulunur. * o Ubikuitinmolekülü, hatalı kıvrılmış ya da virüs tarafından kodlanmış proteinlerin, yıkım için proteozomlara aktarılmasını sağlar. + Proteozom veya hücrenin protein kontrolünü yapan mekanizmalarda bozulma o hücrede aşırı protein birikimine neden olur. * Beyinde bu olay direkt beyin fonksiyonlarını etkiler ve nörodejenerasyon yapar. + Alzheimer hastaligi ve Huntington hastalığı bu şekildeki protein aggregatlarla oluşan nörolojik hastalıklardır. Peroksizomlar, oksijen kullanarak sindirim yapan organellerdir. Lizozom: Hücrelerde bakterilerin ve büyük molekülerin sindiriminde görevli olan organeldir. Ribozom: Hücre içinde kullanılacak olan yapısal proteinlerin sentezlendiği organeldir. Peroksizom: Hücrede süperoksit radikallerinin üretimini sağlayan ve çok uzun zincirli yağ asitlerinin beta oksidasyonunu oluşturan organeldir."
+  },
+  {
+    "id": "fizyoloji_q26",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Peroksizomlarla ilgi olarak hangisi doğrudur? (Nisan- 2001) aşağıdakilerden",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Protein sentezinde görev alırlar.",
+      "B": "Yağ asitlerinin oksidasyonunda rol oynar.",
+      "C": "Hücre içi sindirimde rol oynar.",
+      "D": "Hücre hareketlerinden sorumludur.",
+      "E": "Ca* hücre içi depolanma yeridir."
+    },
+    "answer": "B",
+    "explanation": "PEROKSİZOM * Böbrek ve karaciğer hücrelerinde bol bulunurlar. + Peroksizomlar, mitokondri gibi oksijen kullanırlar, ancak ATP sentezi yapmazlar. * Peroksizomun esas görevi, spesifik organik substratları okside etmektir (2H,O, > 2H,O #0). * Biyokimyasal markeri katalazdır. * Peroksizom ayrıca, ilaçların ve bazı toksik maddelerin, karaciğer ve böbrekte yıkımından da sorumludur. +  Etilalkol kullanan kişilerde alınan alkolün yarısı asetaldehite peroksizomlarda çevrilir. * Safra asitlerinin safra tuzlarına dönüştüğü yerdir. * Peroksizomlar, 18 karbondan uzun zincirli yağ asitlerini okside edip daha küçük parçalara ayırır. Hücre içi Ca** depolama düz endoplazmik retikulum görevidir."
+  },
+  {
+    "id": "fizyoloji_q27",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücrenin apikal yüzeyinde bulunabilen; hareketsiz ve yana uzantı veren oluşuma ne ad verilir? (Nisan- 91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desmozom",
+      "C": "Flagella",
+      "B": "Stereosilya",
+      "D": "Silya",
+      "E": "Perisit"
+    },
+    "answer": "B",
+    "explanation": "Stereosilyalar, hareketsiz mikrovillus olmaları ile gerçek silyalardan ayrılırlar. Silya, stereosilya farkı iyi bilinmelidir... Stereosilya + Epididimis, duktus deferens hücrelerinin uzun ve yana çıkıntı veren hareketsiz uzantılarıdır. * Esasen uzun ve dallanmış mikrovilluslardır. Bunlar gerçek silya ile karıştırılmamalıdır. * Görevi, mikrovillus gibi emilim yüzeyini artırmaktır. * İç kulaktaki tüy hücrelerinin uzantılarından sayıca çok olanlarına da stereosilya adı verilirken, başta tek olarak bulunana kinosilyum denir. Desmozon, hücreler arası bağlantı tiplerinden biridir. Perisit, özellikle kapiller çevresinde bulunabilen bir hücre tipidir. Flagella, sperm hücresinde bulunan ve hareket yeteneği kazandıran yapılardır."
+  },
+  {
+    "id": "fizyoloji_q28",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücre membranlarının apikal yüzey farklılaşmalarından hangisi absorbsiyon yüzeyini arttıran silindirik uzantılar içerir? (Eylül- 94)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Flagella",
+      "B": "Mikroflaman",
+      "C": "Mikrovillus",
+      "D": "Mikrotübül",
+      "E": "Sentriyol"
+    },
+    "answer": "C",
+    "explanation": "Plazma membranı absorbsiyon yüzeyini arttıran uzantılara mikrovillus — denir. _ Mikrovilluslar içerisinde mikroflamanları içerir. Mikrotübüller ise hücre içerisinde bulunan daha kompleks yapılardır. Bu üçü arasındaki farklar vurgulanarak çalışılmalıdır. Mikrovillus + Hücrenin sitoplazma uzantıları olup, plazma membranıyla örtülüdürler. Hücrenin apikal yüzey alanını artırırlar, böylece emilim yüzey alanı genişler. *  Mikrovilluslariç kısımlarında 20-30 kadar aktin içeren mikrofilament grubuna sahiptir. * Mikrovilluslar içerisindeki villin ve fimbrin molekülleri aktinleri çapraz bağlayarak mikrofilaman stabilitesini sağlarlar. + İnce bağırsağı döşeyen epitel ve böbrek proksimal tübül hücreleri gibi emilim yapan hücrelerde, düzgün olarak sıralanmış yüzlerce mikrovillus bulunur. * Mikrovilluslar ve glikokaliks kompleksi ışık mikroskobunda kolayca görülür ve fırçamsı kenar (çizgili kenar) olarak isimlendirilirler. ran ald (a) Mikrofilaman (aktin) Ara (İntermediate)| filamanlar (b) Ara (İntermediate) filaman Mikrotübüller| Sentrozom (c) Mikrotübül Hücre iskeleti"
+  },
+  {
+    "id": "fizyoloji_q29",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Mikrovillusun yapısındaki aktin filamanlarını birbirine protein (aşağıdakilerden hangisidir? (Eylül 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Fimbrin",
+      "B": "Spektrin",
+      "C": "CapZ",
+      "D": "Mein!",
+      "E": "Gelsotin"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Villin ile birlikte mikrofilamanları çapraz bağlayan protein spağıdakierden hangisidir? (Eyl 2016 BENZERİ) Aktin iskeletlerini bir arada tutan villin ve fimbrin ilişkisi de sorulabilecek sorulardandır. Formin ve Gelsolin fonksiyonuyla beraber sorulabilecek molekiillerdendir...."
+  },
+  {
+    "id": "fizyoloji_q30",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi mikrovillus yapısında yer almaz?",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Vimentin",
+      "B": "Desmin",
+      "C": "Aktin",
+      "D": "Glial filament",
+      "E": "Nörofilament"
+    },
+    "answer": "B",
+    "explanation": "Mikrovillus * Hücrenin sitoplazma uzantıları olup, plazma membranıyla örtülüdürler. Hücrenin apikal yüzey alanını artırırlar, böylece emilim yüzey alanı genişler + İnce bağırsağı döşeyen epitel ve böbrek proksimal tübül hücreleri gibi emilim yapan hücrelerde, düzgün olarak sıralanmış yüzlerce mikrovillus bulunur. + Mikrovilluslar ve glikokaliks kompleksi ışık mikroskobunda PAS pozitif olarak kolayca görülür ve fırçamsı kenar (çizgili kenar) olarak isimlendirilirler. * Mikrovilluslar iç kısımlarında 20-30 kadar aktin içeren mikrofilament grubuna sahiptir. *  Aktinler, - o Apikalde villin proteini ile apikal membrana, - Lateralde membrana miyozin 1 proteiniyle, - Fimbrin, espin, fascin ile birbirlerine çapraz bağlanır. . Kalp kası ve iskelet kası hücrelerinde, Z diskinin içinde yer alan ara filament aşağıdakilerden hangisidir? (Nisan 2009) Ara filamanlar özellikle patoloji de ilgili doku malignitesinin boyası olarak kullanılabildiği için ciddi önemi olan bir konudur. İskelet kası ile ilgili proteinler Alfa - aktinin: Fibriler aktini Z çizgisine bağlar. Nebulin: Globuler aktin monomerlerini birbirine bağlayan proteindir. Desmin: Z çizgisini, iskelet kası hücre membranına bağlar. Distrofin: Aktini kas membranına bağlar ve hücre içi stabiliteyi oluşturur. İnsanda bulunan özellikli ara filamanlar ve ilişkili olduğu patolojiler Asidik sitokeratin Epitel doku Bazik sitokeratin Epitel doku Mezenkimal bağ dokusu Fibroblast, kondroblast, Vinentin Makrofaj, endotel, damar düz kas hücresi Kas hücreleri (damar düz kası Desmin Tari) Sinemin Kas doku Temel olarak astrositler; GFAP daha az olarak ependimal (Glial fibriler asidik hücre, Schwann hücresi, protein) enterik glial hücreler, satellit hücreler ve pitüisit Periferin Nöronlar Nöroflamenler (NEL, NEM, NF-H) Nöron gövdesi (Soma) Alfa interneksin Embriyonik sinir doku Lamin A-B-C Çekirdek ara filamanı Nestin Nöral kök hücreler Fakinin Göz lens fiber hücreleri Filesin Göz lens fiber hücreleri v 2 KE 2 aj = | ‘4 5 = es"
+  },
+  {
+    "id": "fizyoloji_q31",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki hücre ara filamanlarından hangisi epitelyum hücrelerinin hücre iskeletine özgüdür? (Mayıs 2011)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Vimentin",
+      "C": "Keratin",
+      "B": "Desmin",
+      "D": "Miyozin",
+      "E": "Glial fibriller asidik protein"
+    },
+    "answer": "C",
+    "explanation": "Keratin; ışığı iki kez kıran filamentéz bir skleroproteindir. Deride stratum korneum tabakasında bulunur. Epitel hücreleri için spesifik ara filamandır. Vimentin; mezenşimal kökenli hücreler için sipesifik ara filamandır. Desmin; kas hücreleri için spesifik ara filamandır. Miy kasta bulunan kalin filamandir. Glial Fibriler Asidik Protein (GFAP); Glia kökenli hücreler için özgül ara filamandır."
+  },
+  {
+    "id": "fizyoloji_q32",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Lamin-A proteini aşağıdakilerden hangisinin yapısında bulunur? (Eylül 2016 Orijinal) Çekirdek yapısında bulunan ara filaman aşağıdakilerden hangisidir? (Eylül 2016 BENZERİ)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Aktin",
+      "B": "Lamin",
+      "C": "Çekirdek zarının iç yaprağında",
+      "D": "Desmin",
+      "E": "Keratin"
+    },
+    "answer": "B",
+    "explanation": "Ara filamanlardan Lamin A-B-C proteinleri farklılaşmamış tüm hücrelerin çekirdeklerinde bulunur... Çekirdek zarının elektron mikroskobunda paralel iki ünit membrandan oluştuğu görülür. Bu membran çifti ve aradaki boşluk, birlikte nükleer zarfı meydana getirirler. Nükleer zarfı stabilize etmeye yardım eden nükleer lamina, nükleer membranın iç kısmıyla yakından ilişkili bir protein fibril ağıdır. Bu laminanın ana bileşenleri lamin A, B, C olarak adlandırılan üç temel intermediate filament proteinleridir. tüm hücrelerde bulunur. Nükleer zarfta yapısal bir çerçeve oluştururlar."
+  },
+  {
+    "id": "fizyoloji_q33",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Farklılaşmış hücrelerin tümünün çekirdeğinde bulunan intermediyer filaman aşağıdakilerden hangisidir? (Nisan 2016 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kas hücresi",
+      "B": "Mezenkimal hücreler",
+      "C": "ara filamanları çekirdek zarının iç",
+      "D": "Glial hücreler",
+      "E": "Enterositler"
+    },
+    "answer": "C",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Lamin ara filamanı aşağıdaki hücre tiplerinin hangisinde görülmez? (Nisan 2016 BENZERİ) Farklılaşmamış tüm hücrelerin çekirdeklerinde bulunan lamin ara filamanı “olgun hali çekirdek içermeyen hücrelerde bulunmaz” olarak da sorulabilir. yaprağında tüm hücrelerde bulunur. Nükleer zarfta yapısal bir çerçeve oluştururlar."
+  },
+  {
+    "id": "fizyoloji_q34",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki organellerden hangisi immün sistem hücrelerinin kemotaksis yapmasında görevlidir? (Eyliil- 95)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mikrotübül",
+      "B": "Peroksizom",
+      "C": "Primer lizozom",
+      "D": "Ribozom",
+      "E": "Endoplazmik retikulum"
+    },
+    "answer": "A",
+    "explanation": "Nötrofillerin kemotaksisi psödopotlar aracılığıyla gerçekleşir. Bu hareket olaylarında mikrotübüllerin önemli rolü vardır. Mikrotübül ve kemotaksis ilişkisini sorgulayan bir soru... Mikrotübüller * 25 nm çapında, tübülin adı verilen proteinden oluşmuş, boru şeklinde bir organeldir. * oTübülin düzenlenmesi, Ca” ve mikrotübüle bağlı proteinlerin (MAP) kontrolü altındadır. * Hücreşeklinin oluşması ve devamında rol alan katı yapılardır. *  Mikrotübüllerin görevleri -  Hücreiskeletinin oluşumu ile hücre bütünlüğünün korunması, - Hücre hareketi (kemotaksis), - Fagositoz > Mitoz bölünme - Lizozom gibi organellerin intrasitoplazmik hareketi - Salgı granüllerinin transport - Nöronda aksoplazmik taşıma -  Melanositlerde melanin taşınması - Mitoz mekiği ile kromozom taşınması - Hücre kompartmanları arasında vezikül hareketi."
+  },
+  {
+    "id": "fizyoloji_q35",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi mikrotübül stabilizasyonunu sağlar? (Nisan 2010)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Taksol",
+      "B": "Kolşisin",
+      "C": "Vinblastin",
+      "D": "Kolsemid",
+      "E": "Vinkristin"
+    },
+    "answer": "A",
+    "explanation": "Mikrotübül yapısı ve özelliklerinin yanında fonksiyonu ve bu fonksiyonunu bozan farmakolojik ajanların da bilinmesini gerektiren bir soru... Taksol; omikrotübül yapısında bulunan tübülin proteinlerine bağlanarak tübülin proteininin polimerizasyonunu (uyarır. (Sonuçta (mikrotübül oluşumunu arttırarak fonksiyonel olmayan (stabil) mikrotübül sentezletirler. Vinka alkaloidleri ise tübülin polimerizasyonunu inhibe ederler. Vinkristin Mikrotübül oluşumunu bloke eder ve mitozu metafazda durdurur M-< Vinblastin Mikrotübül oluşumunu aşırı Paklitaksel muuup> derecede stimüle eder ve mitozu metafazda durdurur DNAgiraz (topoizomeraz IT) 6, id. mp {Etopexia enzimini inhibe eder Bitkisel kaynaklı antineoplastiklerin etki mekanizmaları Kolşisin; doğal bir alkaloiddir. Ürik asit oluşumunu etkilemez ve ürikozürik etkisi yoktur. Lökositlerde intrasellüler (protein (tübüllere (| bağlanarak migrasyon ve fagositozu önler. Okolşisin, tubulin dimerlerine bağlanarak | a tübül onların mikrotübül yapısına katılmasını engeller. & Anlitümör. tedavide kullanılan, vinblastin ve p-tübülin Vineristin'de tübül polmerizasyonunu inhibe eder EEE Pakitaksel (Taxol), mikrotübül stabilazasyonunu sağlar Mikrotübüler fonksiyonu engelleyen ajanlar FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ p 21"
+  },
+  {
+    "id": "fizyoloji_q36",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aksonda anterograd taşınmada etkili, ATPaz aktivitesi gösteren motor protein aşağıdakilerden hangisidir? (Nisan - 2009)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Aktin",
+      "B": "Dinein",
+      "C": "Kinezin",
+      "D": "İntegrin",
+      "E": "Katenin"
+    },
+    "answer": "C",
+    "explanation": "Çeldiricisi çok kuvvetli ve ayrıntı bilgi gerektiren bir histoloji sorusu. Hem dynein hem de kinezin'in ATPaz aktivitesi vardır ama soruda “aksonda” ve “anterograd taşınmada” detayları çok önemli... Silya hareketlerindeki Dinein ATP-az aktivitesine sahip ve hareketi sağlayan koldur. Ancak aksonda anterograd taşımada etkili olan motor protein ATP- az aktivitesine sahip olan Kinezin proteinidir. Bu iki durum birbirleriyle karıştırılmamalıdır. Kinezinlerin ve sitoplazmik dynein moleküllerinin her ikisinin de iki ATP bağlayıcı başı ve iki kuyruğu vardır. Enerji, başta bulunan ATPaz'ın ATP'yi sürekli hidrolize etmesiyle karşılanır. Kinezin, nöron gövdesindeki vezikülleri akson ucuna doğru hareket (anterograd taşınım) ettirmek için ATP hidrolizinden elde ettiği enerjiyi kullanır. Karşı yöndeki vezikül hareketi (retrograd taşınım) için ise sitoplazmik dynein ATP'yi enerji kaynağı olarak kullanır. Diğer şıklara bakacak olursak; -  Hücreyi ekstrasellüler bağ dokusuna bağlayan protein integrin'dir. -  Kadherin proteini hücre içi iskeletinde aktin ve katenin'e bağlıdır. Katenin, kadherin proteininde herhangi bir defekt meydana geldiğinde bunu DNA'ya bildirir. ‘Sekretuar vezikül Kinezin proteini Mikrotübül Mikrotübül Dinein proteini Membran vezikülü Aksonem yapısı ve motor proteinler"
+  },
+  {
+    "id": "fizyoloji_q37",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Periferik nöronlarda nérotransmitterlerin akson terminaline taşınması Il. Akson ( terminalinden taşınması Ili. Nöron hücre iskeletinin yapısı retrograd o vezikül Bir fare deney modelinde, aksonal dineine karşı oluşturulan (o antikorlar (farelere (o verildiğinde yukarıdakilerden hangilerinin bozulması beklenir? (Ağustos 2018 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Nörotransmitterin egzositoz İçin akson terminaline taşınması",
+      "B": "Yalnız Il",
+      "D": "Ive ll",
+      "E": "|, il ve Ill"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdakilerden £ hangisi, dinein proteininin o aksonal görevlerindendir? (Ağustos 2018 BENZERİ) Anterograd (ileri) ve retrograd (geri) kavramlarını bilen bir kişi I ve Il önermelerinin ikisinin birden doğru olamayacağını tahmin edecektir... Mikrotübüle-dayalı moleküler motor proteinler * Mitoz -mayoz bölünme ve aksonal iletide rol alırlar. * Kinezinler: İleriye yönelik (anterograd) taşımada görevlidi + Dineinler: Geriye yönelik (retrograd) taşımada görevlidir. Aksonal Taşınma (Dinein ve Kinezin) Oksitosin hormonu, hipotalamusun paraventriküler nükleusunda, ADH hormonu da hipotalamusun supraoptik nükleusunda sentezlendikten sonra aksonal taşınmayla (anterograd taşınma, kinezin aracılığıyla) arka hipofize gelir Daha sonra boş vezikülün tekrar retrograde taşınmasında ise dinein protein görev alır. Böylece kinezin anterograd taşınmada, dinein ise retrograde taşınmada görev almış olur. Bu proteinlerin nöron hücre iskeletinin yapısına katkısı bulunmamaktadır. Periferik © nöronlarda — nörotransmitterlerin © akson terminaline taşınmasında görevli olan kinezin proteinidir."
+  },
+  {
+    "id": "fizyoloji_q38",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Silyanın yapısında bulunan, periferdeki mikrotübül çiftlerini birbirine bağlayan protein köprüsüne ne ad verilir? (Eylül 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Neksin",
+      "C": "Konnekson",
+      "B": "Konneksin",
+      "D": "Işınsal dalga",
+      "E": "Merkezi kılıf"
+    },
+    "answer": "A",
+    "explanation": "Silya yapısı, sentriyoller, mikrotübüller, mikrovillüsler sıkça sorulduğu için yapısı iyi bilinmelidir. Silyalar * Gövde ve bazal cisimcikten meydana gelen hareketli hücre uzantılarıdır. *  Uzantıların içindeki mikrotübül çatısı aksonem olarak adlandırılır. * o Aksonem, merkezde iki tek, periferde 9 çift (9*2) mikrotübülden oluşur. * 942 mikrotübül çatısına aksonem denmesinin sebebi, sinir aksonu içinde de aynı yapının bulunmasıdır. * Ortadaki ikili yapı merkezi kılıfla kaplıdır. * Periferdeki çiftler, birbirine neksin protein köprüleriyle bağlanırken, ortadaki kılıfa da ışınsal uzantılarla bağlanırlar. Paylaşılmış ri heterodimerler mikrotübül çifti Mikrotübül Dinein Plazmalemma ra Neksin Işınsal uzantılar Merkezi kılıf - Aksonem (9+2 düzeninde) Silya (aksonem) Konneksin: Gap junction (neksus) tipi dediğimiz, hücreden hücreye elektriksel iletimi sağlayan, iyon ve hormon alışverişini sağlayan bağlantılardaki transmembran zar proteinine verilen addır. Konnekson: Gap junctionlardaki konneksin proteinleri, hücrelerin yan yüzündeki bağlantı bölgelerinde altıgen boşluk yapıları oluşturur."
+  },
+  {
+    "id": "fizyoloji_q39",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi epitel dokusunun apikal yüzeyinde bulunmaz? (Nisan-2006)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sterosilya",
+      "B": "Fırçamsı kenar",
+      "C": "Mikrovillus",
+      "D": "Kinosilya",
+      "E": "Desmozom"
+    },
+    "answer": "E",
+    "explanation": "Epitel hücreleri; bazalinde lamina bulunması ile komşu kenarlarında bağlantı tipleri bulunması ile daha önce sorgulanmıştır. Epitelin apikal yüzey özelleşmeleri de bilinmesi gereken konulardandır."
+  },
+  {
+    "id": "fizyoloji_q40",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Mikrotübüllere bağlanarak hareket edemeyecek şekilde kararlı hale getiren (stabilize eden), mitotik iğcikler oluşmasını önleyerek hücrelerin ölümüne yol açan... Taksol (Paklitaksel) |. Kromatidlerin mitoz mekiğinin mikrotübüllerine tutunmasını sağlayan protein uç bölüm... Kinetokor . İçi dolu vezikülü somadan akson ucuna getiren ne (Anterograd)... Kinezin . İçi boş vezikülü aksondan somaya geri götüren ne (Retrograd)... Dinein HÜCREDE MADDE TAŞINMASI Na‘, Clr ve suya geçirgen olan ancak protein moleküllerinin geçişine izin vermeyen, yarı geçirgen bir zarla ayrılmış, eşit hacimli K ve L sulu çözeltilerindeki sodyum ve klor iyon konsantrasyonları ile -1 toplam yüklü proteinin (P*) konsantrasyonu, t=0 anında aşağıdaki gibi ölçülüyor. K ve L çözeltileriyle ilgili aşağıdaki ifadelerden hangisi doğrudur? (Ağustos 2017 Orijinal) daha yüksektir. hacimleri değişse de belli bir süre sonra tekrar eşitlenir. klor geçişi, K'dan L'ye ise net sodyum geçişi gerçekleşir. bulunan ozmotik olarak aktif tanecik sayısı, Udekine göre daha fazla olur. doğrudur.",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "t=0 anında, K çözeltisinin ozmotik basıncı",
+      "B": "t=0 anından başlayarak çözeltilerdeki sıvı",
+      "C": "t=0 anından başlayarak L çözeltisinden K'ya",
+      "D": "t=0 anından belli bir süre sonra, K çözeltisinde",
+      "E": "t=0 anında; elektriksel gradiyent, L'den K'ya"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q41",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi aktif taşınım ile gerçekleşmez? (Nisan- 88, Nisan- 89, Nisan-97)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Eritrosit içine klor alınımı",
+      "B": "Proksimal tübülde sodyumun geri emilimi",
+      "C": "Glukozun bağırsaklardan emilimi",
+      "D": "Distal tübülde sodyumun geri emilimi",
+      "E": "Kas sarkoplazmasında kalsiyumun geri emilimi"
+    },
+    "answer": "A",
+    "explanation": "CI hücre dışı sıvılarda, hücre içine göre daha fazla bulunan element olduğu için aktif taşınıma gerek olmadan basit difüzyon ile hücreye girer. Glikoz ve aminoasitlerin böbrekte filtrattan ve ince barsaktan geri emilimi sodyum ile beraber olmaktadır. Bu tip taşınıma sodyum bağımlı kotransport denmektedir. Burada hücre içine giren sodyumun tekrar dışarı atılması için Na'- K* ATPaz pompasına ihtiyaç vardır. Burada ATP harcandığı için bu taşınımın diğer adı sekonder aktif taşınımdır. Böbrekte sodyumun geri emilmesi yine Na* - K*ATPaz pompası ile gerçekleşmektedir. İskelet kasında kalsiyumun sarkoplazmik retikuluma taşınması yine aktif taşınımla (ATP gerektirir) gerçekleşir. Midede hidrojen iyonunun mide lümenine salgılan- masında görev yapan H* - K* ATPaz pompasida primer aktif taşınıma örnektir. Primer aktif taşınıma örnekler + Hücre membranindaki Na* - K* - ATPaz pompası + Sarkoplazmik Retikulumdaki Ca’? - ATPaz pompası * Mide paryetal hücresindeki H* - K* - ATPaz pompası * Lizozomlardaki H* - ATPaz pompası Sekonder Aktif transport * Enterositlerden glukoz'un Na bağımlı taşınımı + Enterositlerden aminoasitlerin Na bağımlı taşınımı Kolaylaştırılmış diffüzyona örnekler * Galaktoz ve amino asitlerin ince bağırsak ve böbrek proksimal tübül epitel hücresinden kana veya ekstrasellüler sıvıya geçişleri * Fruktozun lümenden enterosite ve enterositten de kana geçişi * Plasental glukozun emilimi * GLUT ilişkili tüm glikoz taşınımları İnce bağırsak / Böbrek tübül lümeni Simport Sekonder aktif transport"
+  },
+  {
+    "id": "fizyoloji_q42",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki taşınma örneklerinden hangisinde, doğrudan veya dolaylı olarak enerji kullanılmaz? (Nisan 2013) girmesi sekresyonu geçmesi",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Paryetal hücreden lümene HCI salınımı",
+      "B": "Fruktozun bağırsak lümeninden intestinal hücreye",
+      "C": "Kalsiyumun sarkoplazmik retikuluma taşınması",
+      "D": "Distal tübül hücresinden lümene hidrojen",
+      "E": "Sinir hücresinde sodyumun ekstraselüler ortama"
+    },
+    "answer": "B",
+    "explanation": "Temel taşınım mekanizmaları, fizyolojide olmazsa olmazlar arasındadır. Basit difüzyon, kolaylastiril- mış transport ve aktif transport sistemleri örnekle- riyle bilinmelidir... Fruktozun bağırsak lümeninden intestinal hücreye girişinde GLUT-5 adını verdiğimiz özel taşıyıcı prote- inler görev alır. Bu taşınım kolaylaştırılmış taşınıma bir örnektir ve enerji kullanılmaz. GLUTS... Jejunum ve spermde kolaylaştırılmış difuzyonla Fruktoz taşınması Glikoz, galaktoz ve aminoasitler sekonde aktif bir şekilde enerji harcanarak barsaktan emilirken; fruktozun enerji harcanmadan emildiğinde dikkat ediniz."
+  },
+  {
+    "id": "fizyoloji_q43",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi hücrede reseptör aracılı endositozda rol almaz? (Nisan 2003)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kargo reseptör",
+      "B": "Örtülü çukurcuklar",
+      "C": "Klatrin",
+      "D": "Adaptin",
+      "E": "Veziküle özgü membran proteini"
+    },
+    "answer": "E",
+    "explanation": "Kargo reseptörleri kargo proteini olarak adlandırılan ve endositoz yöntemiyle taşınacak proteinlerin (öm. LDL) reseptörüdür. Adaptin ise klatrin ile reseptör arasındaki aracı proteindir. Veziküle özgü membran proteini, ekzositozda görev alan ve sintaksin, sinaptobrevin ve SNAP-25 proteinlerine verilen genel isimdir. Pinositoz * Pinositoz, çok büyük moleküllerin hücre içine girebilmesini sağlar. * Proteinlerin çoğu bu yolla hücre içine alınır. * Bu tür moleküllerin hücre zarıyla temaslarının artması pinositik vezikül oluşumunu artırır. +  Moleküllerreseptöre bağlanır. + Reseptörler hücre membranının dış yüzeyinde kaplı (örtülü) çöküntü (ceplerde) yoğunlaşmış olarak bulunurlar. +  Buceplerin hücre içine bakan bölümünde klatrin adı verilen bir fibriler protein aktin ve miyozin gibi kontraktil bir ağ oluşturur. + Klatrin pinositotik vezikül oluşumunu sağlayan kasılabilir proteindir. + Vezikiil boynunda GTP bağlayıcı dynamin proteini vardir. * LDL, B12 vitamini ve transferin klatrin kaplı veziküller aracılığıyla hücreye alınır. Bu olaya reseptör aracılı endositoz denir. — — Klatrin kapsül A ŞİM Kargo Adaptin reseptörü Kargo molekülü WED Kaplı vezikül ‘Adaptin Transport vezik' SITOPLAZMA Reseptör aracılı endositoz"
+  },
+  {
+    "id": "fizyoloji_q44",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "G proteinleri aşağıdaki hücre yapılarından hangisinde bulunur? (Eylül 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sitoplazma",
+      "B": "Çekirdek membranı",
+      "C": "Mitokondri membranı (o",
+      "D": "Hücre membranı",
+      "E": "Çekirdek matriksi."
+    },
+    "answer": "D",
+    "explanation": "G proteini kenetli reseptörün membranda olduğunu Sitoplazmada herkes bilebilir ancak G proteinini sitoplazma da Ge eği sanmamak gerek. Kenetli reseptörünün aksine hücre membranına içerden gömülüdür. G proteinleri, reseptörlerden hücre içi hedef enzimlere bilginin iletiminden sorumlu moleküllerdir ve hücre zarının iç yaprağında bulunurlar. Hormonlar,"
+  },
+  {
+    "id": "fizyoloji_q45",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki hormonlardan hangisi, G protein aracılı olmayan hücre içi sinyal iletimi mekanizmalarıyla hedef hücreye etki etmektedir? (Nisan 2013)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Vazopressin",
+      "B": "Anjiyotensin I!",
+      "C": "aktive",
+      "D": "Glukagon",
+      "E": "Leptin"
+    },
+    "answer": "E",
+    "explanation": "İkincil haberciler ve etki mekanizmaları sınavlarda sıkça sorgulanan bilgilerdendir. Son yılların gözde konularından birisi olan leptin'in bu seferde ikincil habercisi sorulmuş. Tiroid stimüle edici hormon (TSH) ve glukagon ikincil haberci olarak cAMP sistemini kullanırlar. Vazopressin ve anjiyotensin Il ise hem cAMP hem de inozitol trifosfat ikincil haberci sistemini kullanarak etkilerini ortaya çıkartırlar. Buna karşılık büyüme hormonu, eritropoietin, pro- lal leptin, interlökin-6 ve interferon-gama ise ikincil haberci olarak JAK-STAT sistemini kullanırlar. Plazma membranı JAK STAT Fosforile (aktive) STAT Nükleus JAK-Fosforillenmiş STAT dimer yolu JAK-STAT YOLU İLE SİNYAL İLETİMİ * Tirozin kinaz süper ailesinin alt grubudur. * JAK (Just another kinase): Janus kinases; STAT (Signal transducers and activators of transciprition). + INF-gama, IL-6, growth hormon, prolaktin, eritropoietin, leptin, CSF (koloni stimulan faktérler), inflamatuar sitokinler JAK-STAT sinyal sistemini kullanırlar. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ > 27 + Reseptöre substrat bağlanması, tirozin kinaza bağlı reseptörlerde olduğu gibi, reseptörün ayrık parçalarını bir araya getirir. Bu olaya dimerizasyon denir. * Membranin dış kısmında bulunan reseptör alt birimine ligand bağlandığında, sitoplazmadaki JAK aktive olur. » JAK, tirozin kinaz aktivitesine sahiptir. * Buözelliğinedeniile STAT proteini üzerindeki tirozini fosforilleyip STAT’! aktive eder. * STAT ise DNA'ya bağlanarak transkripsiyonu sağlar. Hormon ve transmitterlerin hücrede etki mekanizmaları SELE cAMP’yi artıranlar SİTOP roe +1H Seateal + ADH (V1) + TSH* + Oksitosin + CRH + GnRH + HCG » GHRH + Katekolamin (8) + TRH + Kalsitonin + TSH* + FSH JAK-STAT + Anjiyotensin 2** + ACTH Pinan <itokini (Kasıcı etki) + ADH (V2) (ME gama) “| Katekolamin (at) Del ee + Lenfokinler | * Glukagon** + Anjiyotensin 2** (IL-6) (Karacigerde- (Epitelyal miGronth Glikojenoliz) hücreler) RarTOn + Prolaktin « Eritropoietin cAMP’yi * Leptin baie TREONIN azaltanlar KİNAZ + Somatostatin + TGF-Beta + inhibin * Aktivin + Alfa reseptörler RESEPTÖRÜ ÇEKİRDEKTE (| | TIROZİN KİNAZ cGMP * Androjen + İnsülin + NO + D-vitamini + IGF -4 = ANP + Östrojen (Somatomedin C) + BNP + Retinoik asit | + Büyüme « Tiroid faktörleri hormonu (T3) * TSH reseptörü, tipik olarak G-protein kenetli, Gs aracılığıyla adenil siklazı aktive eden transmembran eder. * Anjiyotensin 2, kasıcı etkisini IP, mekanizması ile gerceklestirirken, epitelyal hücrelerde (böbrekte su tutucu) Gs aracılığıyla adenil siklazı aktive ederek etki gösterir. ** Glukagon, karaciğerde Gs üzerinden adenil siklazı etkinleştirerek ve hücre içi CAMP'yi artırarak etkili olur. Bununla birlikte, glukagon fosfolipaz C'yi etkinleştirmek için aynı karaciğer hücresi üzerine yerleşmiş farklı glukagon reseptörlerini etkiler ve sonuçta sitoplazmik Ca” artışı glikojenolizi uyarır. v 2 z 2 2 2 a 12 5 S ="
+  },
+  {
+    "id": "fizyoloji_q46",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi ikinci taşıyıcı olarak cAMP kullanmaz? (Eylül-89, Nisan 2003, Eylül-95)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tiroid hormonu (T3)",
+      "B": "TSH",
+      "D": "Epinefrin",
+      "E": "FSH"
+    },
+    "answer": "A",
+    "explanation": "Reseptörü çekirdekte olan hormonların ikincil habercileri yoktur Bu durumda reseptörü çekirdekte olan Tiroid hormonu (T3) cAMP yolağını kullanmaz... Tiroksin, iyot ihtiva eden bir tiroid hormonudur. Tiroid hormonlarının reseptörleri hücre içinde olduğundan bunlar hücre içine girerek etki eder. Diğer şıklardaki protein yapıdaki hormonlar ise hücre membranındaki reseptörlerine bağlanarak II. habercileri olan cAMP üzerinden etki ederler. ADENILAT SİKLAZ SİNYAL YOLU (cAMP YOLU) + Gproteini eğer Gs tipinde ise, adenilaz siklazı aktive edip, hücre içi CAMP miktarını artırır. * G proteinine bağlı reseptöre bir hormon tutunduğunda, G proteininin alfa alt bi ine GTP bağlanır. + Böylece alfa alt birimi, diğer beta ve gama alt birimlerinden koparak, bir membran proteini olan adenilat siklazı aktive eder. * Adenilat siklaz aktive olunca, ATP'yi CAMP’a çevirir. Oluşan cAMP protein kinazı A'yı aktive eder. * Protein kinaz A da, hücre içi bazı proteinleri (enzimleri) fosforilleyerek, aktive (glikojen fosforilaz gibi) ya da inaktive (glikojen sentetaz gibi) eder. gösteren hormonlar Glukagon Kalsitonin Katekolaminler (8 reseptörler) ADH (V2 reseptörleri ile su emilimi) Anjiyotensin Il (epitel hücreleri) + Somatostatin ve alfa-2 reseptörler CAMP miktarını azaltırlar (Gi proteini ile etkileşerek)."
+  },
+  {
+    "id": "fizyoloji_q47",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden (o hangisi cAMP’yi (azaltır? (Eylül 2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kortizol",
+      "B": "Glukagon",
+      "C": "İnsülin",
+      "D": "Epinefrin",
+      "E": "Somatomedin"
+    },
+    "answer": "A",
+    "explanation": "Bu soru aslında şu şekilde de sorulabilir. Aşağıdakilerden hangisi Gi reseptörü üzerinden etki eder? Somatostatin; Safra kasılmasından tutun da insülin sentezini, büyüme hormonuna kadar geniş yelpazede inhibisyon yapar. Mide asidini inhibe ettiği gibi pankreas üzerindeki birçok salgıyı da inhibe eder. Bu inhibitör etkiyi Gi üzerinden cAMP'yi azaltarak gerçekleştirir. “ Aşağıdakilerden hangisi bağlanarak etkir? (Eylül-88) hücre igi reseptére İkincil haberci kullanan ve gerek duymayan hormonlar her zaman soru olarak karşımıza gelebilir. Kortizol, steroid yapıda olup hücre membranını geçerek sitoplamadaki reseptörüne bağlanır... STEROİD VE TİROİD HORMONLARIN ETKİ MEKANİZMASI * Steroid hormonlar (aldosteron, östrojen, progesteron, testosteron gibi) hücre sitoplazmasına diffüze olur ve buradaki spesifik reseptörüne bağlanırlar. + Hormon-reseptér kompleksi çekirdeğe girer ve çekirdekte spesifik DNA'daki regülatör bölgesi ile etkileşir. Transkripsiyon olur ve MRNA sentezlenir. * Bu mRNA, sitoplazmada fizyolojik etkiyi yapacak proteine translasyone olur. * Kortizol, aldosteron ve progesteron reseptörleri sitoplazmada bulunurken, östrojen, androjen, tiroid hormonu (T,), retinoik asit ve D vitamini reseptörleri çekirdektedir. Plazma membranı Steroid hormon G Hicrof0bik steroid hormon plazma membranindan geçer, Sieroid hormon sitozol reseptörüne bağlanır. Sisrositozo reseptör kompleksi nükleusu geçer, DNAya bağlanır ve gen ekspresyonu aktivasyonu ya da represyonunu sağlar Steroid hormon aktivitesi mekanizması"
+  },
+  {
+    "id": "fizyoloji_q48",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Noradrenalin reseptörü ll. Glisin reseptörü Il. Östrojen reseptörü MW. Retinoik asit reseptörü Yukarıdakilerden hangileri hücre içinde bulunur? (Şubat 2018 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Yalnız |",
+      "B": "Yalnız lll",
+      "C": "iveli",
+      "D": "Il ve lV",
+      "E": "ili ve IV"
+    },
+    "answer": "E",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Aşağıdakilerden hangisinin reseptörü hücre içinde bulunur? (Şubat 2018 BENZERİ) Vücutta hormon ve transmitterlerin ikincil haberci etkileri, reseptörlerinin bulunduğu yerler ve etki mekanizmaları sıkça soru olarak karşımıza çıkabilmektedir. Detaylıca bilinmelidir. Steroid yapıdaki hormonlar hücre içi reseptöre bağlanarak etki ederken glikoprotein yapıdaki hormonlar ise hücre membranindaki reseptörlere bağlanarak etki eder. Steroid (kortizol, aldosteron, östrojen, progesteron, testosterone, D vitamini ve A vitamin gibi...) ve tiroid hormonlar, reseptörleri hücre içinde olan transmitterlerdir. Bu reseptörlerle bağlanma bazı hormonlarda sitoplazmada (kortizol, aldosteron ve progesteron gibi) ancak bazılarında ise direk DNA üzerinde spesifik bağlanma bölgeleri (östrojen, androjen, D vitamini (kalsitriol) ve A vitamini (retinoik asit) gibi ) ile olmaktadır. Noradrenalin gibi katekolaminler ise amin yapıda hormonlardır ve hücre membranlarındaki lipid bariyeri geçemezler. Bu nedenle mecburen reseptörleri hücre membranında olmak zorundadır. Hücrede yapacakları işleri ise yine bu nedenle kendileri yapamadığından sinyal yollarını kullanmak zorundadır. Glisin yine hücre membranında reseptörü bulunan bir nörotransmitterdir. Diğer seçenekte bulunanlardan farklı olarak hücre içerisinde ikincil haberci kullanmadan doğrudan iyon kanalını açarak etki gösterir. Bu konudaki özel örnek ise tiroid hormonlarıdır. Tiroid hormonları iyot içerdikleri için amin yapıda olmalarına rağmen lipofiliktir ve reseptörü çekirdek üzerindedir. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ b 29 Hücrede Sinyal İletimi ve İkincil Haberciler ile İlgili Sorulabilecek Önemli Bilgiler . cGMP yolundaki sitoplazmik enzim... Protein kinaz 6 . DAG yolundaki sitoplazmik enzim... Protein kinaz C . Siklik AMP (cAMP) yolaginda hücre içindeki etkilere aracılık eden en önemli enzim... Protein kinaz A . IP3 sitoplazmaya hangi iyonun girişine neden . İkincil Ca haberci hangisi... Ca olur olarak görev yapan iyon . NO-ANP-BNP hangi enzimi aktifler... Guanilat NO hangi guanilat siklazı siklazı — aktifler... Sitoplazmada çözünebilir guanilat siklazı . Kan damarlarının çapının düzenlenmesinde önemli bir rol oynayan ve argininden oluşan, beyinde kavşak iletimi ve penis ereksiyonu dahil, diğer birçok işleve katılan... NO . ANP-BNP hangi guanilat siklazı aktifler... Zarsal guanilat siklazı . NO-ANP-BNP hangi 2. mesajcıyı kullanır..."
+  },
+  {
+    "id": "fizyoloji_q49",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Prusya mavisi aşağıdakilerden (hangisinin B) Ozmiyum tetroksit tesbitinde kullanılır? (Nisan-91) G) Sudan siyahı",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "D": "Feulgen",
+      "A": "Verhoeff",
+      "B": "Mallory trichrom",
+      "C": "Eozin",
+      "E": "Asit fosfataz"
+    },
+    "answer": "D",
+    "explanation": "boyama aşağıdakilerden hangisidir? (Eylül 2015 BENZERİ) Prusya mavisi ve (Kemik iliği depo demiri AH eğen Prusya mavisi, depo demiri göstermek için uygulanır. Si Pili fiksasyonunda etkilidir. Snir Ee: DOKU ÇALIŞMALARINDA TEMEL BOYANMA KURALLARI Masson-Trichrom: Kas, bağ ve sinir dokusunu ayrı * Hematoksilen-Eozin: Rutin preparatlarda renklerde boyar ve ayrımlarında önemlidir. kullanılır. * Bütün boyalar iginde en sık hematoksilen ve eozin 3. Aşağıdaki boyalardan hangisi DNA'yı işaretler? örnekleridir, mitokondri, salgı granülleri ve kollajen n yaparlar. Bu bir hoca tarafından. de sorulabilirdi: * Prusya mavisi: Depo demirini göstermek için Poem Lied uygulanır. DNA fiksasyonu için kullanılan feulgen yöntemi; aşağıdaki boyama türelerinden hangisinin bir varyantıdır? + Toloudin mavisi: Mast hücrenin metakromatik boyanmasında önemlidir. Kongo-Red boyası: Amiloidi gösterir (K+ permanganat primer/ sekonder amiloid ayrımında kullanılır). Masson-Trichrom: Kas, bağ ve sinir dokusunu ayrı renklerde boyar ve ayrımlarında önemlidir. Sudan Ill: Yağ boyasıdır. Gümüş boyası: Dokudaki retiküler lifleri boyar. PAS: Glikojeni boyamak için kullanılır. Orsein ve rodamin: Bakır boyamak için kullanılır. Fulgein: DNA boyama yöntemidir. Verhoeff boyası: Elastik blokunun ortaya konulmasında kullanılan histopatolojik boyadır. En fazla kullanılan boyalardan biri de kan ve kemik iliğini boyamak için kullanılan Romanowsky boyaları (Giemsa, Wright)'dir."
+  },
+  {
+    "id": "fizyoloji_q50",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "(Nisan 2017 BENZERİ)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Protein",
+      "B": "Safra asidi",
+      "C": "Kromatin",
+      "D": "Yağ birikimi",
+      "E": "Glikojen"
+    },
+    "answer": "E",
+    "explanation": "Verhoeff boyası: elastik dokunun ortaya konulmasında kullanılan histopatolojik boyadır. DNA boyama yöntemi Fuelgeindir. Karaciğer hücresinde periyodik asit Schiff boyasıyla aşağıdakilerden hangisi gösterilir? (Şubat 2019 Orijinal)"
+  },
+  {
+    "id": "fizyoloji_q51",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Dokulara madde geçişini engelleyen, kan- doku bariyerlerinde sıklıkla bulunan iki hücre arasında sıkı bağlantıyı sağlayan yapı aşağıdakilerden",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desmozom",
+      "C": "Gap Junction",
+      "B": "Zonula Ocludens",
+      "D": "Zonula Adherens",
+      "E": "Zonula Fibrilaris"
+    },
+    "answer": "B",
+    "explanation": "Zonula okludensi, sıkı bağlantı ismiyle de bilmek gerekir. Her iki isimle de sorulabilmektedir... HUCRE-HUCRE BAGLANTILARI"
+  },
+  {
+    "id": "fizyoloji_q52",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Kalbin uyarı oluşturan ve ileten hücreleriyle, kalp kası hücrelerinin zarları arasında en çok bulunan bağlantı tipi aşağıdakilerden hangisidir? (Nisan - 97)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desmozom",
+      "B": "Neksus",
+      "C": "Zonula adherenes",
+      "D": "Zonula ocludens",
+      "E": "Macula adherens"
+    },
+    "answer": "B",
+    "explanation": "Kalpte uyarıların çıktığı sinoatriyal düğümden başlayıp ventrikül içlerine yayılan purkinje liflerine kadar olan iletim yollarında tartışmasız en önemli bağlantı tipi neksuslardır. Gap Junction (Neksus) Karaciğer, lens ve kalp oOkasından izole edilebilmektedirler. Elektriksel sinapslar bir hücreden diğerine direkt olarak elektriği aktarırlar. Buna tipik bir örnek: kalp kası hücreleridir. Buradaki gap junction'lar kalbin düzenli atışından sorumludur. * Hücreden hücreye elektriksel iletimi sağlayan bağlantılardır. * Epitel hücrelerinin çoğunda yan yüzey zarları boyunca hemen her yerde bulunabilir. * İskelet kasında bulunmaz. * Birhücrede6adetkonneksin bir araya gelerek bir yarı kanal (konnekson) oluşturur. *  İkihücredeki konneksonlar yan yana gelince tam bir kanal oluşur (Neksus). * Böyleceikihücre arasında iyon, su, hormon ve ikincil habercilerin geçişini sağlayan bir kanal oluşur. * Gapjunctionların esas görevi hücrelerarasında bilgi iletimidir."
+  },
+  {
+    "id": "fizyoloji_q53",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisinde hücreler (arası bağlantı bölgesinde konneksonlar yer alır? (Eylül-95, Nisan 2008)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Neksus",
+      "C": "Sıkı bağlantı",
+      "B": "Ara bağlantı",
+      "D": "Desmozom",
+      "E": "Yan yüz"
+    },
+    "answer": "A",
+    "explanation": "Hücreler arası bağlantı tipleri ve özelleşmiş proteinleri iyi bilinmelidir. Neksuslar veya Gap juncitonlar hücrelerarasında iyon geçişine izin veren bağlantı tipleridir. 6 adet konneksinin bir araya gelmesi ile 1 adet konnekson meydana gelir. Karşılıklı 2 konneksonun bir araya gelmiş özel haline de neksus adı verilir. Epitel hücrelerinin bağlantı birimlerinde bulunan zar proteinleri + İntegrinler + Desmoglein * Kadherin * Konneksin - * Okludinler, Zo proteinleri > Hemidesmozom -> Desmozom “> Zonula adherens -> Neksus Zonula okludens"
+  },
+  {
+    "id": "fizyoloji_q54",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki hücrelerarası bağlantıların hangisinde integrin proteinleri rol alır? (Aralık 2010, Eylül 2015 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desmozom",
+      "B": "Hemidesmozom",
+      "C": "Zonula adherens",
+      "D": "Neksus",
+      "E": "Zonula occludens"
+    },
+    "answer": "B",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Yapısında integrin proteinlerinin bol miktarda bulunduğu hücre-yüzey bağlantı tipi aşağıdakilerden hangisidir? (Aralık 2010, Eylül 2015 BENZERİ) Hücrelerarası bağlantı molekülleri hakkındaki bilgilerimizin irdelendiği temel bilgi sorusudur. Ara filaman Plektin kollajen Laminin 5 kollajen Tip 7 kollajen Hemidesmozomda bulunan adezyon molekülüdür. Epitel hücrelerini, altlarındaki bazal membrana bağlarlar. Bazal membrandaki laminine ve matrikste bulunan kollajen ve fibronektine tutunurlar. İntegrinler ayrıca lökosit, makrofaj, trombosit üstünde bulunurlar. Transmigrasyonda görev alan moleküldür."
+  },
+  {
+    "id": "fizyoloji_q55",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hücrenin hücrelerarası matriks ile etkileşimini sağlayan transmembran yapıdaki adezyon reseptörleri aşağıdakilerden hangisidir? (Nisan - 2007)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "B": "Selektinler",
+      "D": "İntegrinler",
+      "A": "Kateninler",
+      "C": "Kadherinler",
+      "E": "Vinkülinler"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q56",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Cilt dokusunda hücreyi mekanik strese karşı koruyan, hücre-hücre bağlantısı sağlayan ve intermediyer filamanları stoplazmik plağa tutunan bağlantı kompleksi aşağıdakilerden hangisidir? (Nisan 2017 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Desmozom",
+      "B": "Hemidesmozom",
+      "D": "Zonula occludens",
+      "E": "Bazal membran,"
+    },
+    "answer": "A",
+    "explanation": "(Not: Bu soru, başka bir hoca tarafından şöyle de sorulabilirdi:) Stratum spinosum tabakasında bulunan tonofilamanları ile deriye sağlamlık kazandıran hücre - hücre bağlantı tipi aşağıdakilerden hangisidir? (Nisan 2017 BENZERİ) Epitel dokusunun en belli başlı konularından olan hücreler arası bağlantı birimleri her sınavda beklenilen sorulardandır. o Özellikle (pemfigus (hastalığına patogenez oluşturan desmozom antikorlarını da bu soru vasıtasıyla hatırlamak gerekmektedir. Desmozomların yoğun olarak stratum spinozumda bulunur. Yoğun desmozom içeriği sebebiyle spinöz (dikensi) uzantılar görülür. Işık mikroskobunda hücreler arası köprüler stratum spinosum için tipiktir. Desmozom (Makula Adherens) Hücre yüzeyinde disk şeklinde bir yapıdır. İki komşu hücrede özdeş yapılarla bağlantı kurulur. Ara filamanları çok güçlüdür, desmozomlar hücreler arasında en güçlü bağlantı ünitesidir. Epitelin bazal yüzünde görülen desmozomlara ise hemidesmozom denir. Hücreden hücreye elektriksel | iletimi bağlantılar Gap junctionlardir. sağlayan Zonula okludens geçirgen olmayan bağlantıdır. Bazal membran epitel dokusunun tabanında bulunur ve bir bağlantı birimi değildir."
+  },
+  {
+    "id": "fizyoloji_q57",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki hücreler arası bağlantı birimlerinden hangisi diskus interkalaris'in yapısında bulunur? (Eylül 2012)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Zonula occludens",
+      "B": "Zonula adherens",
+      "C": "Fascia adherens",
+      "D": "Hemidesmozom",
+      "E": "Interdigitasyon"
+    },
+    "answer": "C",
+    "explanation": "Ezber bozan bir soru... Diskus interkalaris adi verilen hücre-hücre boşlukları genelde Gap Junction (neksus) ile özdeşleştirilmiş olsa da, bu yapının içinde diğer 2 farklı bağlantı birimi daha olduğu bilinmelidir. * İnterkalar diskler, kardiyak kas hücrelerine özgü hücrelerarası boşluklardır. İnterkalar diskin longitudinal komponentini Gap junction, transvers komponentini ise Fasia adherens ve Desmosomlar oluşturmaktadır. * İnterdijitasyon: Barsaklarda ve böbreklerde, iki hücre arasındaki sıkı bağlantı dışındaki parmaksı çıkıntılardır. * Zonula Okludens (Sıkı Bağlantı, Tight junction): Okludin ve claudin proteinlerinden oluşan ve geçirgen olmayan bağlantıdır. * Zonula Adherens: Kadherin molekülü ile ilişkide olan bağlantıdır. Fascia adherens alfa-aktinin ve vinculin aracılığıyla bağlantı sağlayan özel bir zonula adherens tipidir. * Desmozom (Makula Adherens): Kadherin ailesinden desmoglein vedesmokollin proteininden oluşmuş yapılardır. * Hemidesmozom: Epitelin bazal yüzünde görülen desmozomlardır. Epitel hücrelerinin hemen alttaki bazal laminaya tutunmasını sağlarlar. Yoğun miktarda integrin protein bulundurur. * Gap Junction (Neksus): Konneksin proteinlerinden oluşan ve hücreden hücreye elektriksel iletimi sağlayan bağlantılardır. Kardiyosit 7 Bağlantı yüzeyi | Transvers. | komponent | pl Longitudinal komponent B Adrenerjik reseptör Fosfolambran Sarkaplazmik retikulum Kalp Kası Hücrelerinde Discus İnterkalaris Yapısı 5 2 2 2 = 3 2 o 6"
+  },
+  {
+    "id": "fizyoloji_q58",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki organlardan hangisinin iç yüzü tek katlı silyalı epitelle kaplıdır? (Nisan-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "B": "Üreter",
+      "D": "Mesane",
+      "A": "Özefagus",
+      "C": "Konjuktiva",
+      "E": "Uterus"
+    },
+    "answer": "E",
+    "explanation": "Tek katlı prizmatik epitel: Sindirim kanalını döşeyen epitel, tuba uterina'lar, uterusta bulunur. Sekresyon özelliği vardır. Tubalarda ve endometriyumda silyalı özellik kazanır. Silyalı epitelin önemli özelliği spermlerin kapasitasyon yeteneği için gerekli olmalarıdır. Özefagus: Çok katlı yassı epitel Duodenum: Tek katlı prizmatik epitel Konjuktiva: Çok katlı prizmatik epitel Üreter ve Mesane: Çok katlı değişici epitel (çok katlı transisyonel epitel) Uterus: Tek katlı prizmatik silialı epitel ile kaplıdır. Epitel doku tipleri ve özellikle Epitel türü Bulunduğu yerler Endotel: Damarlar ve kalbin iç yüzü Mezotel: Seröz boşlukların iç yüzü (perikard, plevra, periton), Alveol (tip-I hücre) Bowman kapsülü pariyetal yaprağı, ince Henle kulpu Tek katlı yassı Tükürük bezi kanalları, böbrek tübülleri, ovaryumda germinal (doğurucu) epitel, tiroid folikülleri Tek katlı kübik Sindirim kanalı (mide ve distali), safra kesesi Silli: Tuba uterina, uterus, bronşiyol, paranazal sinüsler Tek katlı prizmatik Silli: Solunum epiteli (burun, Yalancı çok katlı | nazofarinks, östaki borusu, trakea, (psödostrafiye) | bronşlar) Stereosilyalı: Epididimis Keratinize: Epidermis, dil, dişeti Non-keratinize: Özofagus, vajina, gerçek ses telleri (vokal katlantılar), epiglottis'in dile bakan yüzü, ağız tabanı, damak, kornea Çok katlı yassı Bazı tükürük bezi kanalları, ter bezi kanalları, anorektal bileşke, ovaryumun gelişen folikülleri Çok katlı kübik Çok katlı prizmatik Bazı tükürük bezi kanalları, konjunktiva, erkek üretrasının membranöz kısmı Renal pelvis, üreter, mesane, üretranın proksimal (Uroepitel)"
+  },
+  {
+    "id": "fizyoloji_q59",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki anatomik yapılardan iç yüzünü mikrovilluslu örtü epiteli (Eylül - 92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mide",
+      "C": "Özefagus",
+      "B": "Burun mukozası",
+      "D": "İnce barsak",
+      "E": "Trakea"
+    },
+    "answer": "D",
+    "explanation": "Villuslar hücrenin apikal yüzeyinde emilim yüzeyini arttırmak için farklılaşmışlardır. Vücutta iki önemli örneği vardır. İnce barsak lümeni ve proksimal tübül epiteli... İnce barsağı döşeyen epitel veya proksimal renal tübül hücreleri gibi emilim yapılan hücrelerde mikrovillus örtü epiteli bulunur. Mide duvarında mukus salgılayan bir epitel vardır. Özefagus lümeni hava ile temasından dolayı çok katlı epitel ile döşelidir. Trakea gibi büyük hava yollarından yalancı çok katlı silyalı epitel bulunur."
+  },
+  {
+    "id": "fizyoloji_q60",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "İdraryolu içyüzünü döşeyen epitel aşağıdakilerden hangisidir? (Eylül-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tek katlı prizmatik",
+      "B": "Tek katlı kübik",
+      "C": "Değişici epitel",
+      "D": "Çok katlı kübik",
+      "E": "Çok katlı nonkornifiye yassı epitel"
+    },
+    "answer": "C",
+    "explanation": "İdrar yolu iç yüzünü döşeyen epitel: Değişici (tran- sitional) epiteldir. Çok katlı değişici epitel: + Epitelin en yüzeyel katının organın dolu veya boş olmasına göre yassıdan şişkin şekle değişim göstermesi nedeni ile bu şekilde isimlendirilir. + Renal kaliks, renal pelvis, üreter, mesane ve üretranın üst kısmını döşer. * Yüzeyinde kubbe gibi şişkin hücrelerin varlığı ile özellik kazanır."
+  },
+  {
+    "id": "fizyoloji_q61",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Gözde, kornea epitelinin histolojik yapısı aşağıdakilerden hangisidir? (Eylül 2008)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Çok katlı değişici epitel",
+      "B": "Çok katlı yassı keratinleşme göstermeyen epitel",
+      "C": "Çok katlı prizmatik epitel",
+      "D": "Tek katlı yassı epitel",
+      "E": "Tek katlı prizmatik epitel"
+    },
+    "answer": "B",
+    "explanation": "Burada karıştırmamamız gereken kornea epitelinin çok katlı yassı keratinleşme göstermeyen epitel, kornea endotelinin ise tek katlı yassı epitelden oluştuğu bilgisidir... Kornea tabakalarını ve özelliklerini tablo halinde toparlayacak olursak: Özellik Korneanın ön yüzü (havayla temas eden) nonkeratinize çok katlı yassı epitel. Birçok serbest sinir sonlanması, yüksek regenerasyon kapasitesi bulunur. Bazal hücreler; bölünme yeteneği fazladır. Korneoskleral limbustaki kök hücrelerden oluşurlar, Kornea yüzeyinin yenilenmesi ve tamirini sağlarlar. Kornea epiteli Epitelin bazal membranıdır. (Anterior sınırlayıcı zar) Bowman membranı Korneanın kalın tabakası ( %90) , kollajen tip I ve tip V içerir, parelel kollajen tabakalarından oluşur. Kollajen liflerin organizasyonu ve aralıklarının korunmasında; Stroma Endotelin bazal membranıdır. (Posterior sınırlayıcı zar) Descement membran Korneanın arka yüzünü döşeyen tek katlı yassı epiteldir. Kornea ve aköz humör arasındaki metabolik alışverişten sorumludur. Kornea endoteli bezlerinden hangisi yaptığı salgının salgılanma niteliği bakımından apokrin salgı bezine örnektir? (Nisan-91)"
+  },
+  {
+    "id": "fizyoloji_q62",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki salgı",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Koltuk altı koku bezi",
+      "C": "Parotis bezi",
+      "B": "Yağ bezi",
+      "D": "Gözyaşı bezi",
+      "E": "Submandibular bez"
+    },
+    "answer": "A",
+    "explanation": "Bezler salgılarını veriş şekillerine göre üç tipe ayrılırlar. Her tipe ait örnekler soru olarak karşımıza gelebilir... Igıların verilme biçimine göre bezlerin gruplandırılması ve özellikleri Ter bezi, pankreas Koltuk altı koku bezleri, meme bezleri, dış kulak yolu (serumen) bezleri Feromon oluşumu Sitoplazmanın bir kısmı salgı ürünü ile birlikte atılır Tüm hücredejenere Bhd Yağ bezleri, gonadlar 2 £ 2 =, 5 2 5 a"
+  },
+  {
+    "id": "fizyoloji_q63",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki bez tiplerinden hangisinde; salgılanma işlemi hücrenin tamamı dejenere olarak gerçekleşir? (Eylül-92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Apokrin",
+      "B": "Merokrin",
+      "C": "Ekrin",
+      "D": "Endokrin",
+      "E": "Holokrin"
+    },
+    "answer": "E",
+    "explanation": "Holokrin bezler: * Tüm hücre dejenere olarak salgıyı boşaltır. Yağ bezleri, gonadlar buna örnektir."
+  },
+  {
+    "id": "fizyoloji_q64",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Yağ bezlerinin “salgı verme şekline göre” tipi aşağıdakilerden hangisidir? (Eylül-93, Eylül-2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Apokrin",
+      "B": "Merokrin",
+      "D": "Seröz",
+      "E": "Müköz"
+    },
+    "answer": "C",
+    "explanation": "Holokrin salgıda, tüm hücre dejenere olarak salgıyı boşaltır. Yağ bezleri, gonadlar buna örnektir."
+  },
+  {
+    "id": "fizyoloji_q65",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki hücrelerden hangisi salgı bezlerinin etrafında bulunur ve içerdiği mikrofilaman yapıları ile kasılması sağlanır? (Eylül - 92)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Myoepitelyal hücre",
+      "B": "Endotel",
+      "C": "Tek katlı yassı epitel",
+      "D": "Salgı kanalları",
+      "E": "Bazal membran"
+    },
+    "answer": "A",
+    "explanation": "Myoepitelyal (o hücreler olduk¢a (özelleşmiş yapılardır. Başındaki myo- eki sizi yanıltabilir, ancak bu hücreler epitelyal hücrelerdir ve ektoderm kökenlidir ve kasılabilme özelliğine sahiptir... Miyoepitelyal hücreler * Bunlara basket hücreleri de denir. * Çek sayıda aktin filamentine sahip dallanmış hücrelerdir. + İçlerinde kasılabilen mikrofilamanlar (aktin, miyozin) vardır. + Epitelyum kökenli olup, keratin ailesinden ara filamanlara sahiptir. * oEkzokrin salgı bezlerinin kanallarını döşerler. + Başlıca meme, ter ve tükürük bezlerinin asinuslarında bulunur. * Imminohistokimyasal olarak aktin ile pozitif boyanır. *  Salgının boşalmasına yardımcı olurlar."
+  },
+  {
+    "id": "fizyoloji_q66",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Kromaffin hücreler böbrek üstü bezinin neresinde yerleşim gösterir? (Eylül-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Fasikülata tabakası",
+      "B": "Retikularis tabakası",
+      "C": "Granülosa tabakası",
+      "D": "Medulla",
+      "E": "Korteksin tümü"
+    },
+    "answer": "D",
+    "explanation": "Nöroendokrin hücre (DNES-APUD- Argentaffin hücre-Kromaffin Hücre) * Kromlama ve gümüşleme teknikleri ile boyandıklarından bu adlar verilmiştir. + Adrenal medulla hücreleri de aynı boyanma özelliğinden dolayı aynı adla anılırlar. * Salgilari parakrin etki oluşturur. + Solunum ve sindirim sistemi, tiroid, hipofiz, prostat ve adrenal medullada yer alırlar. * GlS'teki APUD hücreleri serotonin salgılar ve karsinoid tümör oluşumunda rol oynarlar. + Kromaffin hücreler böbrek üstü bezinin medullasında bulunurlar."
+  },
+  {
+    "id": "fizyoloji_q67",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden o hangisinde APUD hücreleri",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Sindirim kanalının bütün bölümlerinde bulunması",
+      "B": "Glikoprotein türde salgı yapması",
+      "C": "Sindirim enzimlerini salgılayan bez hücreleri",
+      "D": "Argentaffin hücre olarak da adlandırılması",
+      "E": "Doku içinde hücre grupları şeklinde yerleşik"
+    },
+    "answer": "B",
+    "explanation": "Nöroendokrin hücreler (DNES-APUD-Argentaffin hücre-Kromaffin Hücre) adrenal medullada yer alırken adrenal kortekste yer almazlar... Solunum ve sindirim sistemi, tiroid, hipofiz, prostat ve adrenal medullada yer alırlar. GİS'teki APUD hücreleri serotonin salgılar ve karsinoid tümör oluşumunda rol oynarlar. Kromaffin hücreler böbrek üstü bezinin medullasında bulunurlar. 1 . Aşağıdakilerden hangisi kalsiform hücrelerinin özelliklerinden birisidir? (Nisan 2004) olması olması Zor bir soru gibi görünse de Goblet hücresinin diğer adlarını bilmek soruyu kolaylaştırır. Goblet hücresi solunum yollarında ve gastrointestinal sistemde (özefagus hariç) bulunur. Glikoprotein (mukus) sekresyonu yapar. Bu nedenle PAS boyası ile turkuaz rengi boyanır. Sekresyonlarının hücrenin üst kısmında biriktirip, çekirdeği tabana ittiği için kadeh gibi gözükür. Bu nedenle diğer adı kalisiform (kadehe benzer) adını alır. Kalsiform hücreler tek başına bulunurlar, grup halinde görülmezler. Argentaffin veya kromaffin hücreler olarak adlandırılan nöroendokrin hücrelerin Goblet ile bir ilişkisi yoktur."
+  },
+  {
+    "id": "fizyoloji_q68",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Birleşik asiner yapıda seröz bir bez ile ili aşağıdaki ifadelerden hangisi (o yanlıştır? (Eylül 2007) boyanırlar. bazaldedir.",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Çok hücrelidir.",
+      "B": "Ekzokrin salgılama yapar.",
+      "C": "Salgısı protein yapılıdır.",
+      "D": "Salgı hücreleri, hematoksilen-eosin ile yoğun",
+      "E": "Salgı hücrelerinin çekirdekleri yassılaşmış ve"
+    },
+    "answer": "E",
+    "explanation": "Salgı hücrelerinin çekirdeklerinin yassılaşmış ve bazalde olması seröz bezlerin değil muköz bezlerin bir özelliğidir. Dış salgı bezleri, salgılarının kimyasal yapısına göre de üçe ayrılır:"
+  },
+  {
+    "id": "fizyoloji_q69",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Glikoprotein Gobletin — diğer isimleri... Kadeh, Kalisiform hücre BAĞ DOKUSU _ 1: Kollagen liflerin paralel sıralandığı düzenli sıkı bağ dokusu aşağıdakilerin hangisinde bulunur? (Eylül-91)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Albumin",
+      "B": "Elastin",
+      "C": "Fibronektin",
+      "D": "Kondronektin",
+      "E": "Laminin"
+    },
+    "answer": "A",
+    "explanation": "Bağ doku tiplendirmesi ile ilgili öğretici bir soru. Genel hatları ile bilinmeli... Gevşek ve sıkı bağ dokusu karıştırılmamalıdır... BAĞ VE DESTEK DOKULAR * Gevşek bağ dokusu: Areolar bağ dokusu adı da verilir. > Epitel dokunun altında bulunur. Bez epitelleri ile ilişkilidir > Kapillerden zengin bir bölgedir. Bu sebeple immun reaksiyonların gerçekleştiği bölgedir > Sindirim sisteminin lamina propriyası tipik örnektir. *  Sıkıbağdokusu: Kollajenlerin dizilişine bağlı olarak düzenli sıkı bağ doku ve düzensiz sıkı bağ doku olarak iki kısımda incelenir > Düzensiz sıkı bağ doku: Çoğunlukla kollajen içermektedir. Sindirim sisteminin submukoza tabakası ve derinin retiküler dermis tabakası tipik birer örnektir > Düzenlisıkıbağ doku: Tendon ve ligamentlerde görülen güçlü bir bağ dokudur. Kollajen lifler: Tendon'da paralel olarak sıralanmıştır. Yani düzenli sıkı bağ dokusudur. C şıkkı tendonu tariflemektedir. Aşağıdaki proteinlerden hangisi bağ dokusunun yapıtaşlarından birisi değildir? (Nisan-95) Yapısal olarak bağ dokusu üç alt bileşene ayrılır; hücreler, lifler ve temel madde... Albumin karaciğer tarafından sentezlenen, plazmanın en önemli proteinidir. Plazmanın kolloid basıncından sorumludur. Aynı zamanda kan içeri: önemli maddenin taşıyıcılığı rolü olarak bağ dokuda bulunmaz. Çoklu yapışkan glikoproteinler * Hücrelerin alt tabakalara yapışmasında da önemli görevler alırlar. I- Fibronektin * Fibroblastlar ve bazı epitel hücreleri tarafından sentezlenen bir glikoproteindir. Hücreler için kollajen ve glukozaminoglikanlara bağlanma bölgelerini oluşturur. Hücreler bu glikoproteinlere integrin molekülü ile tutunurlar. Bu ilişkiler normal hücre birleşmesi ve göçüne yardımcı olur. Ii- Laminin * Büyükbir glikoproteindir. * Bazal laminada tespit edilmiştir ve epitel hücrelerinin bazal membrana tutunmasindan sorumludur. Lamininin yapısında, bazal membrana yapışmada görevli entaktin, proteoglikan, integrin ve proteoglikan bağlanma bölgeleri bulunur. * Kanser hücreleri fibronektin ve laminini parçalayarak diğer dokulara nüfuz ederler. * Kondronektin ise kıkırdakta bulunur. Kondrositlerin tip-2 kollajene bağlanmasını Sağlar. Ill- Tenasin * Embriyonik dönemde görülür ancak matür dokularda sentezi durmuştur. * Yara iyileşmesi sırasında ortaya çıkar ve kas tendon kavşağında görülebilir. Kollajen bağlayıcı ——>| }] E bölge (entaktin) İntegrinler için hücre bağlayıcı Kollajen bölge (RGD) Heparin/ heparan sülfat ve a distroglikan bağlanma bölgesi Laminin"
+  },
+  {
+    "id": "fizyoloji_q70",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Plazma hücrelerinde immunglobulin sentezi sonucu sitoplazmada görülen, büyük homojen eozinofilik inklüzyon cisimciği aşağıdakilerden hangisidir? (Eylül-95)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Russel cisimciği",
+      "B": "Amiloid",
+      "C": "Mallory cisimciği",
+      "D": "Asteroid cisimciği",
+      "E": "Guarnieri cisimciği"
+    },
+    "answer": "A",
+    "explanation": "Russel cisimciklerinin (body) plazma hiicrelerinin sitoplazmasında görülen inklüzyon cisimcikleri olduğu bilgisinin sorgulanmak istediği bir soru... Plazma hücresi * o İmmünglobülin (antikor) salgılar ve hümoral immüniteyi oluşturur. Granüllü endoplazma retikulumu bakımından zengin oluşu nedeniyle bazofilik sitoplazmaya sahiptir. *  B lenfositlerin immunoglobulin salgılamak için özelleşmiş halleridir. * Bakteri ve yabancı proteinlerin çok girebildiği yerlerde (bağırsak mukozası, kronik iltihap bölgesi) bol bulunurlar. + Sitoplazmalarında Russel cisimcikleri (Ig artıkları) denen asidofilik inklüzyonlara rastlanabilir. + Plazma hücresi çekirdeği genelde saat kadranına benzer görünümüyle tanınır. © Araba tekerleği görünümlü çekirdek ibroblast nukleusu Plazma hiicresi (periferal araba tekerliği görünümlü çekirdek ve bazofilik sitoplazma) + Mallory cismi: Alkolik karaciğer hastalığında görülür. + Asteroid body: Sarkoidozda görülür. + Guarnieri cismi: Pox virüs enfeksiyonlarında görülür. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ p 39"
+  },
+  {
+    "id": "fizyoloji_q71",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi bağ dokusu matriksinde yer almaz? (Nisan-98)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kollajen fibril",
+      "C": "Hyalüronik asit",
+      "B": "Laminin",
+      "D": "Fibronektin",
+      "E": "L-selektin"
+    },
+    "answer": "E",
+    "explanation": "L- Selektin ekstrasellüler matriksde bulunmaz. Hücre adezyon moleküllerinden biridir. Amorf madde: * Glukozaminler: Glukozamin, galaktozamin, glukuronik asit, iduronik asit, hyalüronik asit * Proteoglikanlar: Glukozaminlerin hyaluronik asit dışında birleşmesiyle oluşurlar. (Dermatan sülfat, kondroitin sülfat, keratan sülfat ve heparan sülfat) * Yapısal glikoproteinler: Fibronektin, laminin ve tenasindir. Fibriller: * Kollagen fibriller * Elastik Fibriller"
+  },
+  {
+    "id": "fizyoloji_q72",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisi tüm bağ dokusu türlerinde bulunan ara maddenin sentezinde rol alır? (Eylül - 2002)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Makrofaj",
+      "B": "Fibroblast",
+      "C": "Mast hücresi",
+      "D": "Histiosit",
+      "E": "Monosit"
+    },
+    "answer": "B",
+    "explanation": "Bağ dokusunda kök hücresi olması, onarım özelliği ve matriksi sentezlemesi özellikleri ile fibroblastlar her zaman soru olarak karşımıza çıkabilir. Bağ dokusunda bulunan hücreler + Fibrosit (sabit) * Yağ hücresi (Sabit) + o Mezenşim hücresi (hareketli) *  Histiosit (hareketli) + Retikulum hücresi (hareketli) * Mast hücreleri (hareketli) + Pigment hiicresi (hareketli) Fibroblastlar * Bağ dokusunun sabit hücreleridir. Bag dokularında en fazla bulunan hücredir. * Bağ dokusu lif proteinlerini ve amorf temel maddenin büyük kısmını sentezlerler. + Hücreleri bölünmeyen bir doku (kalp kası gibi) zedelenmesinin ardından ortaya çıkan boşlukları (yara iyileşme dokusu) doldurur. Onarımda esas olarak fibroblastlar rol üstlenir * Yeni bağ dokusu yapımı, rejenerasyonu ve tamir olayları fibroblastlar tarafından sağlanır. * Bağ dokusunun kök hücresidir. *  Dokuhasarındansonrayarakontraksiyonundan bu hücreler sorumludur. 3 2 2 = z 8"
+  },
+  {
+    "id": "fizyoloji_q73",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Sitoplazmalarında bazofilik ve metakromatik granüller içeren, heparin ve histaminden zengin bağ dokusu hücresi aşağıdakilerden hangisidir? (Nisan-2001, Nisan 2004)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Makrofaj",
+      "C": "Fibroblast",
+      "B": "Lenfosit",
+      "D": "Mast hücresi",
+      "E": "Retinakulum hücresi"
+    },
+    "answer": "D",
+    "explanation": "Metakromatik (granülleri Otoloudin mavisinin oluşturduğu unutulmamalıdır. Heparin ve histamin ilişkisi de en önemli ipucu olmaktadır... Mast hücre degranülasyonunun ürtiker, allerji ile ilişkisi iyi bilinmelidir. Mast hücreleri (Mastosit) * Sitoplazmalarinda bazofil boyanan granüller vardır. * Sitoplazma asit metakromatiktir. + Metakromatik moleküller içeren bir yapı uygulanan boyanın renginden (mavi) farklı bir renk (mor-kırmızı) alır. * Metakromazi, bazik anilin boyaların (toluidin mavisi gibi) rengini değiştirme özelliğidir. * oGranüller, Giemsa, Toluidin mavisi ve PAS ile (+) reaksiyon verir. + Mast hücrelerinde spesifik IgE reseptörleri bulunur. * Belirgin mast hücre degranülasyonu, anafilaksi de dahil olmak üzere, alerjinin klinik tablolarını oluşturur. kökleri (o nedeniyle Fibroblast: Bağ dokunun temel hücresi olup granüler yapısı yoktur, kollajen sentezler. Lenfositler; bağ doku da bulunmazken retinakulum hücreleri de şık doldurmak için kullanılmış. Mast hücre granül içeriği * Heparin * Histamin * ECF (Eozinofil kemotaktik faktör anaflaksi) * SRS-A(Anafilaksinin yavaş etkili maddesi) * (LTC4-D4-E4) * Granül boşalımı sitokalazin ile durdurulabilir. * Sitokalazin mikrofilamentin aktifitesini baskılar. + Mast hiicre granülleri suda erir. Antijen Degranülasyon \\ Histamin Mast hiicresi"
+  },
+  {
+    "id": "fizyoloji_q74",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Agagidakilerden (o hangisi bag dokusunun ekstra ler elemanı değildir? (Nisan 2000)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kollagen fibril",
+      "B": "Elastik fibril",
+      "C": "Retiküler fibril",
+      "D": "Glikozaminoglikanlar",
+      "E": "Tonofilamentler"
+    },
+    "answer": "E",
+    "explanation": "Bağ dokunun ekstrasellüler elemanlarından en önemlisi kollajen lifleridir. Proteoglikanlar glikozaminglikanlar ve çoklu yapışkan glikoproteinler ile amorf madde sağlanır. Amorf hücreler arası temel madde, hücreleri bağ dokusunun liflerine bağlamada rol alan glikoprotein ve proteoglikanların kompleks bir karışımı olup renksiz, saydam ve homojendir. Üç ana tip bağ dokusu lifi vardır. Bunlar; kollagen lifler, retiküler lifler ve elastik liflerdir. Retiküler lifler yara iyileşmesinde görülen özelleşmiş kollajen lifleridir. Tonofilamentler ise deri epidermis tabakasında görülebilen demetlerdir. Hücre içi iskeletin önemli bir parçasıdır ve genellikle desmozomlar ile ilişkilidir."
+  },
+  {
+    "id": "fizyoloji_q75",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Bağ dokusunda en fazla miktarda bulunan fibriller aşağıdakilerden hangisidir? (Eylül 2003)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kollajen fibriller",
+      "B": "Elastik fibriller",
+      "C": "Retiküler fibriller",
+      "D": "Nörofibriller",
+      "E": "Miyofibriller"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "id": "fizyoloji_q76",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisinde tip Il kollajen bulunur? (Eylül 2011)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Dermis",
+      "C": "Kemik",
+      "B": "Tendon",
+      "D": "Bazal lamina",
+      "E": "Hiyalin kıkırdak"
+    },
+    "answer": "E",
+    "explanation": "Vücutta en bol bulunan kollajen tipleri: * Tip 1 kollajen: Deri, kemik, kornea ve tendonda (paralel dizilimli) + Tip 2 kollajen: Kıkırdak, vitröz cisim ve embriyonik dokularda * Tip3 kollajen: Düz kas ve damar duvarında * Tip4 kollajen: Bazal membranda"
+  },
+  {
+    "id": "fizyoloji_q77",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Kollajen lif sentezi için gerekli olan prolin ve lizin aminoasitlerinin hidroksilasyonunda (kofaktör olarak rol oynayan vitamin aşağıdakilerden hangisidir? (Eylül 2012)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Avitamini",
+      "C": "C vitamini",
+      "B": "B vitamini",
+      "D": "D vitamini",
+      "E": "E vitamini"
+    },
+    "answer": "C",
+    "explanation": "Temel histolojiden bağ dokusu lif yapısını bilmemizi ölçen bir sorudur. Vitaminler genel olarak histolojide vurgulanmasa bile C vitamini eksikliğinin kollajen frajilitesini arttırdığı bilgisi histologlar için önemlidir. Kollajen lifleri bağ dokusunda en çok bulunan liflerdir. Hidroksilasyonu yapan enzimlerin kofaktörü O,, Fe* ve C vitaminidir. Skorbüt hastalığında hidroksilasyon bozuk olduğu için kollajen immatürdür. Bu nedenle damar duvarı frajilitesi artar ve kanamaya meyil oluşur. FİZYOLOJİ - HİSTOLOJİ ve EMBRİYOLOJİ p 41"
+  },
+  {
+    "id": "fizyoloji_q78",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Epitel dokusunun altında yer alan gevşek bağ dokusundan oluşmuş tabakaya ne ad verilir? (Eylül 2005)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Mukoza",
+      "C": "Lamina propria",
+      "B": "Tunika adventisya",
+      "D": "Tunika muskularis",
+      "E": "Tunika seroza"
+    },
+    "answer": "C",
+    "explanation": "Gevşek bag dokusunun vücuttaki en önemli örneği sorulmuş. Tersi de “Lamina propria tabakasındaki bağ doku tipi hangisidir?” olarakta sorulabilir. Gevşek bağ dokusu: Areolar bağ dokusu adı da verilir. Epitel dokunun altında bulunur. Bez epitelleri ile ilişkilidir. Kapillerden zengin bir bölgedir. Bu sebeple immun reaksiyonların gerçekleştiği bölgedir Sindirim sisteminin lamina propriyası tipik örnektir. Bağ Dokusu ile İlgili Sorulabilecek Önemli Bilgiler Bağ dokudaki ara maddeyi sentezleyen hücre... Fibroblast . Yeni bağ doku yapımı ve tamir işinde görevli hücre... Fibroblast Bağ dokusu lif proteinlerini sentezleyen hücre... Fibroblast Hemidesmozomun yapısında bulunan integrinin hücre (o adezyonunda (görevli (matriks) bağlandığı, ekstrasellüler (| glikoprotein (o hangisidir?... Fibronektin . Bir dokudaki kollajen aminoasitlerden hangisinin ölçümü kullanılır?. . Hidroksiprolin Deri ve kemikte en fazla bulunan kollajen tipi... Tip I miktarının tayininde, Kahverengi yağ dokusunda bulunan ve vücut ısısının korunmasında görevli olan bir proteindir... Termogenin KIKIRDAK ve KEMİK DOKUSU"
+  },
+  {
+    "id": "fizyoloji_q79",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdaki yapıların hangisinde fibröz kıkırdak bulunur? (Nisan-91, Nisan 2013) G) Kosta",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Tiroid kıkırdağı",
+      "B": "Kulak kepçesi",
+      "D": "Sternum",
+      "E": "İntervertebral disk"
+    },
+    "answer": "E",
+    "explanation": "Vücutta üç tip kıkırdak bulunmakta olup farklı organlara özgü değişiklik göstermektedir. Hepsinin bulundukları organlar çok iyi bilinmelidir..."
+  },
+  {
+    "id": "fizyoloji_q80",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerden hangisinde hyalin kıkırdak bulunur? (Nisan 2002)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kulak kepçesi",
+      "B": "Trakea",
+      "C": "Omurga arası diskler",
+      "D": "Symphisis pubis",
+      "E": "Epiglottis"
+    },
+    "answer": "B",
+    "explanation": "Büyük solunum yolu duvarlarında hiyalin kıkırdak bulunur (trakea, bronş, larinks). Simpisiz pubis ve intervertebral disklerdeki kıkırdak ise fibröz yapıdadır. Epiglottis ve kulak kepçesi kıkırdağı elastik özelliktedir."
+  },
+  {
+    "id": "fizyoloji_q81",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Aşağıdakilerin hangisinde elastik liften zengin kıkırdak yapısı bulunur?",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kostalarin 6n ucu",
+      "B": "Burun",
+      "C": "Trakea",
+      "D": "İntervertebral disk",
+      "E": "Eklem yüzleri"
+    },
+    "answer": "D",
+    "explanation": "Elastik kikirdak, diger kikirdak tiplerine gére daha esnek ve bükülgendir. Yapısında tip Il kollajene ek olarak bol miktarda elastik lif vardır. Elastik kıkırdak, kulak kepçesi, dış kulak kanalı duvarı, epiglottis, östaki borusu, plika vokalis ve kuneiform kıkırdakların yapısında bulunur. İnervertebral disk ve simfizis pubiste fibröz kıkırdak bulunur. Sinovyal eklemlerin eklem yüzeyinde, solunum yollarında (larinks, trakea, bronkus) hyalin kıkırdak bulunur. . Aşağıdakilerin © hangisinde O hyalin (kıkırdak bulunmaz? (Nisan 2005) Erişkinde hyalin kıkırdağın bulunduğu bölgeler: Uzun kemiklerin eklem yüzeyi, kostal kemiklerin ventral ucu, burun, larinks, trakea, bronşlarda bulunur. İntervertebral diskte fibröz kıkırdak bulunur."
+  },
+  {
+    "id": "fizyoloji_q82",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Hematoksilen-eozin ile boyanmış bir doku kesitinin mikroskobik görüntüsü verilmiştir. Bu görüntüye ait doku aşağıdakilerden hangisidir? (Şubat 2019 Orijinal)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Kompakt kemik",
+      "B": "Çok katlı yassı epitel",
+      "C": "Spongioz kemik",
+      "D": "Hiyalin kikirdak",
+      "E": "Gevşek bag doku"
+    },
+    "answer": "D",
+    "explanation": "Artık dokular için görüntüler karşımıza çıkmaktadır. Bu da demek oluyor ki görüntüleri iyi hatırlamamız gerekiyor. Özellikle de kıkırdak, kemik ve yağ dokusunun görüntüleri iyi bilinmelidir."
+  },
+  {
+    "id": "fizyoloji_q83",
+    "book": "Fizyoloji",
+    "exam": "Fizyoloji Çıkmış Soru",
+    "subject": "Fizyoloji",
+    "topic": "Hücre & Temel Fizyoloji",
+    "question": "Kemiklerin enine gelişmesine en çok katkısı olan yapı aşağıdakilerden hangisidir? (Eylül-87)",
+    "hasImage": false,
+    "image": null,
+    "options": {
+      "A": "Perikondrium",
+      "B": "Periosteum",
+      "C": "Perimetrium",
+      "D": "Periodontium",
+      "E": "Perikardiyum"
+    },
+    "answer": "B",
+    "explanation": "Enine gelişmede periostun önemini, boyuna büyümede epifiz plağının çok iyi bilinmesi Kıkırdak tipleri gerekmektedir... Uzun kemikler: Epifizyal plaklardaki faaliyet sonucu uzarlar ve periosteum apozisyonuyla da genişlerler. Epifizlerin kapanmaları yaklaşık 20 yaş civarında sona erer. Bundan sonra artık kemik boyuna uzayamaz ama enine olarak büyüyebilir. Bunu da sağlayan periosteum'dur. Diğer şıklara bakacak olursak: Perikondrium kıkırdak dokunun bir komponenti olup kemiklerde enine büyüme ile ilgili bir görevi yoktur. Perimetrium uterusa ait bir yapı olup sadece şık doldurmak için verilmiştir."
+  }
+]

@@ -159,15 +159,15 @@ Kullanıcının uyarısı: *"testi yaparken izledim seni kullanıcı z aslında 
 
 - [x] Kullanıcı Z ve yeni kayıt olan öğrencilerin İlay'ın verilerini görme açığı giderildi ve katı izolasyon sağlandı.
 - [x] İlay'a özel yüzen partner notunun diğer kullanıcılarda gizlenmesi sağlandı.
-- [x] İlk 7 soruluk doğrulanmış Fizyoloji çıkmış soru tabanı `cikmis_sorular/virtual_db/questions_fizyoloji.json` olarak kuruldu.
-- [x] 13 TUS dersi soru takip manifestosu (`question_bank_manifest.json`) oluşturuldu.
+- [x] Fizyoloji çıkmış soru tabanı 83 soruya genişletildi (`cikmis_sorular/virtual_db/questions_fizyoloji.json`, 119 KB).
+- [x] 13 TUS dersi soru takip manifestosu (`question_bank_manifest.json`) 83 soru ile güncellendi.
 - [x] Dashboard'a ders bazlı soru dağılımını gösteren detaylı modal (`quizPoolModal`) entegre edildi.
 - [x] Günlük 5 soruluk Duolingo tarzı mini-quiz motoru (`quiz.js`, `style.css`) çalışır hale getirildi.
 - [x] Aralıklı Tekrar (Spaced Repetition) ve 5.000+ soru havuzu takip mekanizması kodlandı (`_isReview`, `_daysAgo`, `"1 Hafta Önce Yanlış Çözmüştün!"` rozeti).
-- [x] `extract_questions.py` aracına soru olmayan kısımları (telif, kapak, salt teori) atlama ve manifestoyu otomatik senkronize etme yeteneği eklendi.
+- [x] `extract_questions.py` aracına soru olmayan kısımları (telif, kapak, salt teori) atlama, Tesseract tur+eng desteği ve manifestoyu otomatik senkronize etme yeteneği eklendi.
+- [x] Zorunlu login overlay ve Firebase izolasyonu canlıya dağıtıldı (`main` branch).
 - [ ] **Sıradaki Adım 1:** Fizyoloji kitabındaki diğer üniteleri (Dolaşım, Solunum, Boşaltım vb.) toplu taratıp manifestoya eklemek.
 - [ ] **Sıradaki Adım 2:** İkinci bir branşın kitabını (örn. Patoloji veya Dahiliye) ekleyip aynı hafif JSON pipeline'ını çalıştırmak.
-- [ ] **Sıradaki Adım 3 (Katı Kural):** ASLA canlıya çıkılmayacak. En az 2 farklı kitaptan (Fizyoloji + 1 diğer ders) soru tabanı oluşturulup yerel ortamda (`http://localhost:8080`) kusursuz çalıştığı doğrulanmadan canlıya (GitHub Pages) dağıtım yapılmayacak.
 
 ---
 
