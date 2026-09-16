@@ -6,6 +6,48 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## 📌 [16.09.2026 - Güncel Mart 2023 Gerçek TUS Entegrasyonu & 10 Soruluk Hibrit Quiz Motoru]
+### 🏁 Neredeyiz, Ne Yaptık?
+- **🔥 Güncel Mart 2023 Gerçek TUS Sınavı Virtual DB'de:** `ss/2023 Mart.pdf` dosyasından 87 adet 5 şıklı, cevap anahtarlı ve açıklamalı orijinal sınav sorusu titizlikle ayıklandı (`questions_mart2023.json`). Toplam soru bankası **5.519 soruya**, aktif kategori sayısı **7'ye** ulaştı.
+- **🎯 10 Soruluk Hibrit Günlük Quiz:** Günlük doz 5 sorudan **10 soruya** çıkarıldı:
+  - **1-5. Sorular:** Temel bilimler genel soru havuzundan (SRS aralıklı tekrar öncelikli).
+  - **6-10. Sorular:** Sadece **Mart 2023 Gerçek TUS Sınavı** kitabından.
+- **🏷️ Dinamik Sınav Rozeti (Section Badge):** Sorunun kaynağı netleştirildi: `📚 Genel Soru Havuzu` vs altın/alev efektli `🔥 Güncel TUS • Mart 2023 Gerçek Sınavı`.
+- **📁 Kalıcı PDF Politikası:** PDF dosyaları yerel diskte (`ss/2023 Mart.pdf` vb.) kalıcı olarak muhafaza ediliyor; Git ignore ile repo sınırları korunuyor.
+
+---
+
+## [v4.6.0] - 2026-09-16 (Mart 2023 Gerçek TUS Entegrasyonu & 10 Soruluk Hibrit Quiz Motoru)
+### 🔥 Mart 2023 Gerçek Sınav Havuzu (`questions_mart2023.json`)
+- **📜 87 Doğrulanmış Gerçek Sınav Sorusu:**
+  - `ss/2023 Mart.pdf` (173 sayfa) CamScanner OCR katmanı ayrıştırıldı; soru kökü, 5 şık (A-E), doğru cevap ve detaylı açıklamalar yapılandırıldı.
+  - ÖSYM soru numarasına göre tüm branşlar otomatik sınıflandırıldı (Anatomi, Histoloji, Fizyoloji, Biyokimya, Mikrobiyoloji, Patoloji, Farmakoloji, Dahiliye, Pediatri, Cerrahi, Kadın Doğum, Küçük Stajlar).
+  - OCR kaynaklı şık karışıklıkları (8→B, O/0→D, Ç→C) ve sayfa numarası çakışmaları sıfırlandı.
+  - Soru açıklamalarındaki telif uyarıları ve taranma gürültüleri ayıklandı.
+- **📊 Manifest Güncellemesi:**
+  - `question_bank_manifest.json` içine `mart2023` eklendi (`icon: 🔥, color: #f59e0b, questionCount: 87`). Toplam soru **5.519** oldu.
+  - PDF yerel diskte kalıcı bırakıldı, silinmedi.
+
+### 🎮 10 Soruluk Hibrit Günlük Quiz Motoru (`quiz.js`, `index.html`, `style.css`)
+- **⚖️ 5 Genel + 5 Mart 2023 Ayrımı:**
+  - `startQuiz()` fonksiyonu iki ayrı havuzdan Spaced Repetition (SRS) algoritmasıyla soru çeker:
+    - 5 soru: Genel havuzdan (yanlış yapılanlar öncelikli).
+    - 5 soru: Mart 2023 havuzundan (yanlış yapılanlar öncelikli).
+  - Toplam 10 soru sırayla çözülür (1-5 genel, 6-10 Mart 2023).
+- **🏷️ Görsel Rozet (Section Badge):**
+  - Soru üst başlığında `📚 Genel Soru Havuzu & Tekrar` veya parlayan `🔥 Güncel TUS • Mart 2023 Gerçek Sınavı` rozeti görüntülenir.
+- **📊 10 Soruluk İlerleme ve Sonuç Yönetimi:**
+  - İlerleme çubuğu `%10` adımlarla ilerler; metin `Soru X / 10` olarak güncellenir.
+  - 10. soruda buton `Sonuçları Gör 🏆` haline gelir.
+  - Sonuç ekranında doğruluk `${score} / 10` olarak listelenir, çözülen soru istatistiğine 10 eklenir.
+  - Sonuç tebrik mesajları 10 soru performansına göre uyarlandı (10/10 Efsanevi Başarı, vb.).
+- **🏠 Dashboard Kartı:**
+  - `🔥 Günün 10 Sorusu Bekliyor! (5 Genel + 5 Mart 2023)` rozeti ve `Quize Başla (10 Soru)` butonu eklendi.
+- **🚀 Cache Buster v4.6.0:**
+  - Tüm stiller ve scriptler `?v=4.6.0` ile güncellendi.
+
+---
+
 ## 📌 [16.09.2026 - 5.432 Soru Kalite Filtresi & Yan Panel Açıklama Devrimi]
 ### 🏁 Neredeyiz, Ne Yaptık?
 - **🎨 Yan Panel (Side Drawer / Split Layout):** Soru açıklamaları artık altta sıkışıp metni kesmiyor. Masaüstünde sağdan genişleyen 2 sütunlu split view, mobilde alttan açılan şık slide-up drawer yapısına kavuştu. "Sonraki Soru" butonu her zaman sol panelde sabit ve erişilebilir.

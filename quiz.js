@@ -98,6 +98,7 @@
 
   const QuizModule = {
     allQuestions: [],
+    mart2023Questions: [],
     manifest: null,
     currentQuizQuestions: [],
     currentIndex: 0,
@@ -149,9 +150,10 @@
       return 'guest';
     },
 
-    // ===== Load Question Bank (Dynamically from Manifest) =====
+    // ===== Load Question Bank (Dynamically from Manifest & Mart 2023) =====
     async loadQuestions() {
       let combined = [];
+      let martQuestions = [];
 
       // 1. If manifest is available, fetch all active subjects with questions
       if (this.manifest && this.manifest.subjects) {
@@ -163,8 +165,13 @@
               if (res.ok) {
                 const data = await res.json();
                 if (Array.isArray(data) && data.length > 0) {
-                  combined = combined.concat(data);
-                  console.log(`[Quiz] ${sub.name}: ${data.length} soru yüklendi.`);
+                  if (sub.code === 'mart2023' || sub.isExamEdition) {
+                    martQuestions = data;
+                    console.log(`[Quiz] ${sub.name}: ${data.length} soru (Mart 2023 Özel Havuzu) yüklendi.`);
+                  } else {
+                    combined = combined.concat(data);
+                    console.log(`[Quiz] ${sub.name}: ${data.length} soru yüklendi.`);
+                  }
                 }
               }
             } catch (err) {
@@ -174,13 +181,31 @@
         }
       }
 
+      // Ensure mart2023 questions are loaded even if manifest was cached/omitted
+      if (martQuestions.length === 0) {
+        try {
+          const resMart = await fetch('cikmis_sorular/virtual_db/questions_mart2023.json');
+          if (resMart.ok) {
+            const dataMart = await resMart.json();
+            if (Array.isArray(dataMart) && dataMart.length > 0) {
+              martQuestions = dataMart;
+              console.log(`[Quiz] Mart 2023: ${martQuestions.length} soru doğrudan yüklendi.`);
+            }
+          }
+        } catch (e) {
+          console.warn('[Quiz] Mart 2023 soruları doğrudan yüklenirken hata:', e);
+        }
+      }
+
+      this.mart2023Questions = martQuestions;
+
       if (combined.length > 0) {
         this.allQuestions = combined;
-        console.log(`[Quiz] Toplam ${this.allQuestions.length} soru Virtual DB'den başarıyla yüklendi.`);
+        console.log(`[Quiz] Toplam ${this.allQuestions.length} soru Genel Havuzdan + ${this.mart2023Questions.length} soru Mart 2023'ten yüklendi.`);
         return;
       }
 
-      // 2. Fallback candidates
+      // 2. Fallback candidates for general pool
       const fallbackUrls = [
         'cikmis_sorular/virtual_db/questions_fizyoloji.json',
         'cikmis_sorular/fizyoloji_sorular.json'
@@ -313,24 +338,24 @@
 
       if (statusBadge) {
         if (isCompletedToday) {
-          statusBadge.innerHTML = '✅ Bugünkü TUS Dozu Alındı! (Seri Korundu 🔥)';
+          statusBadge.innerHTML = '✅ Bugünkü TUS Dozu Alındı! (10/10 Soru Çözüldü 🔥)';
           statusBadge.className = 'quiz-status-badge completed';
         } else {
-          statusBadge.innerHTML = '🔥 Günün 5 Sorusu Bekliyor! (Serini Koru)';
+          statusBadge.innerHTML = '🔥 Günün 10 Sorusu Bekliyor! (5 Genel + 5 Güncel Mart 2023)';
           statusBadge.className = 'quiz-status-badge pending';
         }
       }
 
       if (startBtn) {
         if (isCompletedToday) {
-          startBtn.innerHTML = '<span>Tekrar Pratik Yap</span><span class="btn-arrow">🔄</span>';
+          startBtn.innerHTML = '<span>Tekrar Pratik Yap (10 Soru)</span><span class="btn-arrow">🔄</span>';
         } else {
-          startBtn.innerHTML = '<span>Quize Başla (5 Soru)</span><span class="btn-arrow">🚀</span>';
+          startBtn.innerHTML = '<span>Quize Başla (10 Soru)</span><span class="btn-arrow">🚀</span>';
         }
       }
     },
 
-    // ===== Start a 5-Question Quiz (with Spaced Repetition) =====
+    // ===== Start a 10-Question Hybrid Quiz (5 General + 5 Mart 2023) =====
     startQuiz() {
       if (!this.userStats.questionHistory) {
         this.userStats.questionHistory = {};
@@ -339,68 +364,96 @@
       const today = new Date().toISOString().split('T')[0];
       const todayDate = new Date(today);
 
-      // 1. Identify review candidates: questions marked 'wrong'
-      const reviewCandidates = [];
-      const freshCandidates = [];
-      const correctCandidates = [];
+      // Helper to select 5 questions from a pool using Spaced Repetition (SRS)
+      const selectFiveWithSRS = (pool, sectionType, sectionBadge) => {
+        const reviewCandidates = [];
+        const freshCandidates = [];
+        const correctCandidates = [];
 
-      this.allQuestions.forEach(q => {
-        const hist = this.userStats.questionHistory[q.id];
-        if (!hist) {
-          freshCandidates.push({ ...q });
-        } else if (hist.status === 'wrong') {
-          const lastDate = hist.lastDate ? new Date(hist.lastDate) : new Date('2020-01-01');
-          const daysAgo = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
-          reviewCandidates.push({
-            ...q,
-            _isReview: true,
-            _daysAgo: daysAgo >= 1 ? daysAgo : 1
-          });
-        } else {
-          correctCandidates.push({ ...q });
+        pool.forEach(q => {
+          const hist = this.userStats.questionHistory[q.id];
+          if (!hist) {
+            freshCandidates.push({ ...q });
+          } else if (hist.status === 'wrong') {
+            const lastDate = hist.lastDate ? new Date(hist.lastDate) : new Date('2020-01-01');
+            const daysAgo = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+            reviewCandidates.push({
+              ...q,
+              _isReview: true,
+              _daysAgo: daysAgo >= 1 ? daysAgo : 1
+            });
+          } else {
+            correctCandidates.push({ ...q });
+          }
+        });
+
+        // Shuffle candidate sub-pools
+        reviewCandidates.sort(() => 0.5 - Math.random());
+        freshCandidates.sort(() => 0.5 - Math.random());
+        correctCandidates.sort(() => 0.5 - Math.random());
+
+        const picked = [];
+        // Priority 1: Pick up to 2 review (wrong) questions
+        const reviewPickCount = Math.min(2, reviewCandidates.length);
+        for (let i = 0; i < reviewPickCount; i++) {
+          picked.push(reviewCandidates[i]);
         }
-      });
 
-      // Shuffle pools
-      reviewCandidates.sort(() => 0.5 - Math.random());
-      freshCandidates.sort(() => 0.5 - Math.random());
-      correctCandidates.sort(() => 0.5 - Math.random());
-
-      // Pick up to 2 review questions (Spaced Repetition priority)
-      const selected = [];
-      const reviewPickCount = Math.min(2, reviewCandidates.length);
-      for (let i = 0; i < reviewPickCount; i++) {
-        selected.push(reviewCandidates[i]);
-      }
-
-      // Fill remaining from fresh (unseen) questions
-      while (selected.length < 5 && freshCandidates.length > 0) {
-        selected.push(freshCandidates.shift());
-      }
-
-      // If still need more, fill from correct pool or review pool
-      while (selected.length < 5 && correctCandidates.length > 0) {
-        selected.push(correctCandidates.shift());
-      }
-      while (selected.length < 5 && reviewCandidates.length > 0) {
-        const nextRev = reviewCandidates.shift();
-        if (!selected.find(s => s.id === nextRev.id)) {
-          selected.push(nextRev);
+        // Priority 2: Fill remaining from fresh (unseen) questions
+        while (picked.length < 5 && freshCandidates.length > 0) {
+          picked.push(freshCandidates.shift());
         }
-      }
 
-      // Fallback if pool is small
-      if (selected.length < 5) {
-        const fallbackPool = [...this.allQuestions].sort(() => 0.5 - Math.random());
-        while (selected.length < 5 && fallbackPool.length > 0) {
-          selected.push(fallbackPool.shift());
+        // Priority 3: Fill from correct pool or review pool
+        while (picked.length < 5 && correctCandidates.length > 0) {
+          picked.push(correctCandidates.shift());
         }
-      }
+        while (picked.length < 5 && reviewCandidates.length > 0) {
+          const nextRev = reviewCandidates.shift();
+          if (!picked.find(s => s.id === nextRev.id)) {
+            picked.push(nextRev);
+          }
+        }
 
-      // Shuffle final 5
-      selected.sort(() => 0.5 - Math.random());
+        // Fallback if pool is small
+        if (picked.length < 5 && pool.length > 0) {
+          const fallbackPool = [...pool].sort(() => 0.5 - Math.random());
+          while (picked.length < 5 && fallbackPool.length > 0) {
+            const cand = fallbackPool.shift();
+            if (!picked.find(s => s.id === cand.id)) {
+              picked.push({ ...cand });
+            }
+          }
+        }
 
-      this.currentQuizQuestions = selected.slice(0, 5);
+        // Tag each question with its section identifier
+        return picked.slice(0, 5).map(q => ({
+          ...q,
+          _quizSection: sectionType,
+          _sectionBadge: sectionBadge
+        }));
+      };
+
+      // Pool 1: General question pool (all non-Mart 2023 questions)
+      const generalPool = this.allQuestions.filter(q => q.exam !== 'Mart 2023 TUS' && (!q.id || !q.id.startsWith('mart2023')));
+      const part1 = selectFiveWithSRS(
+        generalPool.length > 0 ? generalPool : this.allQuestions,
+        'general',
+        '📚 Genel Soru Havuzu & Tekrar'
+      );
+
+      // Pool 2: Mart 2023 Gerçek TUS Sınavı pool
+      const martPool = this.mart2023Questions && this.mart2023Questions.length > 0
+        ? this.mart2023Questions
+        : this.allQuestions.filter(q => q.exam === 'Mart 2023 TUS' || (q.id && q.id.startsWith('mart2023')));
+      const part2 = selectFiveWithSRS(
+        martPool.length > 0 ? martPool : this.allQuestions,
+        'mart2023',
+        '🔥 Güncel TUS • Mart 2023 Gerçek Sınavı'
+      );
+
+      // Combine into the 10-question hybrid set (1-5 General, 6-10 Mart 2023)
+      this.currentQuizQuestions = [...part1, ...part2];
       this.currentIndex = 0;
       this.currentScore = 0;
       this.earnedXp = 0;
@@ -435,13 +488,21 @@
       const explanationBox = document.getElementById('quizExplanationBox');
       const nextBtn = document.getElementById('quizNextBtn');
 
-      const pct = ((this.currentIndex + 1) / 5) * 100;
-      if (progressText) progressText.textContent = `Soru ${this.currentIndex + 1} / 5`;
+      const pct = ((this.currentIndex + 1) / 10) * 100;
+      if (progressText) progressText.textContent = `Soru ${this.currentIndex + 1} / 10`;
       if (progressBar) progressBar.style.width = `${pct}%`;
 
       if (subjectTag) subjectTag.textContent = `${q.subject} • ${q.topic || 'Genel'}`;
       if (examTag) examTag.textContent = q.exam || 'Çıkmış TUS';
       if (questionText) questionText.textContent = q.question;
+
+      // Section Badge (General Pool vs Mart 2023 Real Exam)
+      const sectionBadgeEl = document.getElementById('quizSectionBadge');
+      if (sectionBadgeEl) {
+        const isMart = q._quizSection === 'mart2023' || q.exam === 'Mart 2023 TUS' || (q.id && q.id.startsWith('mart2023'));
+        sectionBadgeEl.className = `quiz-section-badge ${isMart ? 'mart2023' : 'general'}`;
+        sectionBadgeEl.textContent = q._sectionBadge || (isMart ? '🔥 Güncel TUS • Mart 2023 Gerçek Sınavı' : '📚 Genel Soru Havuzu & Tekrar');
+      }
 
       // Spaced Repetition Review Badge
       let reviewBadgeEl = document.getElementById('quizReviewAlertBadge');
@@ -569,7 +630,7 @@
 
       // Show Next Button
       if (nextBtn) {
-        if (this.currentIndex >= 4) {
+        if (this.currentIndex >= 9) {
           nextBtn.innerHTML = '<span>Sonuçları Gör 🏆</span><span class="btn-arrow">→</span>';
         } else {
           nextBtn.innerHTML = '<span>Sonraki Soru</span><span class="btn-arrow">→</span>';
@@ -671,7 +732,7 @@
 
     // ===== Next Question or Finish =====
     nextQuestion() {
-      if (this.currentIndex < 4) {
+      if (this.currentIndex < 9) {
         this.currentIndex++;
         this.renderCurrentQuestion();
       } else {
@@ -702,7 +763,7 @@
       }
 
       this.userStats.totalXp += this.earnedXp;
-      this.userStats.solvedCount += 5;
+      this.userStats.solvedCount += 10;
 
       // Save to Firebase and Local
       await this.saveUserStats();
@@ -721,7 +782,7 @@
       const rankEl = document.getElementById('quizResultRank');
       const messageEl = document.getElementById('quizResultMessage');
 
-      if (scoreEl) scoreEl.textContent = `${this.currentScore} / 5`;
+      if (scoreEl) scoreEl.textContent = `${this.currentScore} / 10`;
       if (xpEl) xpEl.textContent = `+${this.earnedXp} XP`;
       if (streakEl) streakEl.textContent = `${this.userStats.streak} Gün 🔥`;
 
@@ -729,12 +790,14 @@
       if (rankEl) rankEl.innerHTML = `${rank.icon} ${rank.title}`;
 
       if (messageEl) {
-        if (this.currentScore === 5) {
-          messageEl.textContent = '🌟 Mükemmel! 5\'te 5 Tam İsabet! Fizyolojiyi fethediyorsun!';
-        } else if (this.currentScore >= 3) {
-          messageEl.textContent = '👏 Harika performans! TUS soru kalıplarını çok iyi yakalıyorsun.';
+        if (this.currentScore === 10) {
+          messageEl.textContent = '🌟 Efsanevi Başarı! 10\'da 10 Tam İsabet! Hem Genel Havuzu hem Güncel Mart 2023 TUS\'u fethettin!';
+        } else if (this.currentScore >= 8) {
+          messageEl.textContent = '🔥 Harika performans! Hem genel temelde hem Mart 2023 sınavında çok güçlüsün.';
+        } else if (this.currentScore >= 5) {
+          messageEl.textContent = '👏 Tebrikler! 10 soruluk maratonu başarıyla tamamladın. TUS soru kalıpları oturuyor.';
         } else {
-          messageEl.textContent = '💪 Güzel deneme! Açıklamaları iyi oku, her soru sınavda +1 net demek!';
+          messageEl.textContent = '💪 Güzel mücadele! Yan paneldeki yüksek verimli kartları iyi oku, her soru sınavda +1 net!';
         }
       }
 

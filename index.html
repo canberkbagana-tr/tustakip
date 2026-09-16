@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TUS Sınav Çalışma Takip Uygulaması - Günlük ilerleme takibi, istatistikler ve hedef planlama">
   <title>TUS Takip 📚</title>
-  <link rel="stylesheet" href="style.css?v=4.5.0">
+  <link rel="stylesheet" href="style.css?v=4.6.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
@@ -173,10 +173,10 @@
         <div class="quiz-card-left">
           <div class="quiz-card-header">
             <span class="quiz-card-badge">🎯 GÜNÜN TUS DOZU</span>
-            <span class="quiz-status-badge pending" id="quizCardStatusBadge">🔥 Günün 5 Sorusu Bekliyor!</span>
+            <span class="quiz-status-badge pending" id="quizCardStatusBadge">🔥 Günün 10 Sorusu Bekliyor! (5 Genel + 5 Mart 2023)</span>
           </div>
-          <h3 class="quiz-card-title">Fizyoloji & Temel Bilimler Çıkmış Soru Quizi</h3>
-          <p class="quiz-card-desc">Her gün 5 çıkmış soru çöz, serini koru, Dr. rütbeni yükselt!</p>
+          <h3 class="quiz-card-title">Günün TUS Hibrit Quizi (5 Genel + 5 Güncel Mart 2023)</h3>
+          <p class="quiz-card-desc">5 Soru Genel Soru Havuzundan + 5 Soru Güncel Mart 2023 Gerçek Sınavından! Serini koru, Dr. rütbeni yükselt!</p>
           <div class="quiz-card-stats-row">
             <div class="quiz-stat-pill">
               <span class="pill-icon">🔥</span>
@@ -196,14 +196,14 @@
             <div class="quiz-stat-pill clickable" id="quizCardPoolPill" title="Ders bazlı soru dağılımını incele">
               <span class="pill-icon">📚</span>
               <span class="pill-label">Havuz:</span>
-              <strong id="quizCardPoolCount">7 Soru</strong>
+              <strong id="quizCardPoolCount">5.519 Soru</strong>
               <span class="pill-badge-info">🔍 Detay</span>
             </div>
           </div>
         </div>
         <div class="quiz-card-right">
           <button type="button" class="btn btn-quiz-launch" id="quizCardStartBtn">
-            <span>Quize Başla (5 Soru)</span>
+            <span>Quize Başla (10 Soru)</span>
             <span class="btn-arrow">🚀</span>
           </button>
         </div>
@@ -850,6 +850,7 @@
           <div class="quiz-main-column">
             <div class="quiz-modal-top">
               <div class="quiz-modal-meta">
+                <span class="quiz-section-badge general" id="quizSectionBadge">📚 Genel Soru Havuzu</span>
                 <span class="quiz-meta-tag" id="quizSubjectTag">FİZYOLOJİ</span>
                 <span class="quiz-meta-exam" id="quizExamTag">Nisan 2001 TUS</span>
               </div>
@@ -859,11 +860,11 @@
             <!-- Progress Bar -->
             <div class="quiz-progress-wrap">
               <div class="quiz-progress-info">
-                <span id="quizProgressText">Soru 1 / 5</span>
+                <span id="quizProgressText">Soru 1 / 10</span>
                 <span class="quiz-progress-reward">⚡ +20 XP</span>
               </div>
               <div class="quiz-progress-bar-bg">
-                <div class="quiz-progress-bar-fill" id="quizProgressBarFill" style="width: 20%;"></div>
+                <div class="quiz-progress-bar-fill" id="quizProgressBarFill" style="width: 10%;"></div>
               </div>
             </div>
 
@@ -921,7 +922,7 @@
           <div class="quiz-results-grid">
             <div class="result-stat-box">
               <span class="result-stat-icon">🎯</span>
-              <div class="result-stat-val" id="quizResultScore">5 / 5</div>
+              <div class="result-stat-val" id="quizResultScore">10 / 10</div>
               <div class="result-stat-lbl">Doğruluk</div>
             </div>
             <div class="result-stat-box">
@@ -1001,9 +1002,9 @@
     </div>
   </div>
 
-  <script src="auth.js?v=4.5.0"></script>
-  <script src="firebase-sync.js?v=4.5.0"></script>
-  <script src="app.js?v=4.5.0"></script>
-  <script src="quiz.js?v=4.5.0"></script>
+  <script src="auth.js?v=4.6.0"></script>
+  <script src="firebase-sync.js?v=4.6.0"></script>
+  <script src="app.js?v=4.6.0"></script>
+  <script src="quiz.js?v=4.6.0"></script>
 </body>
 </html>

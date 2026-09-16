@@ -2648,6 +2648,44 @@ body::before {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quiz-section-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.quiz-section-badge.general {
+  background: rgba(99, 102, 241, 0.18);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 92, 252, 0.45);
+}
+
+.quiz-section-badge.mart2023 {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(239, 68, 68, 0.22) 100%);
+  color: #fde047;
+  border: 1px solid rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+  animation: pulseMartBadge 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseMartBadge {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.45);
+    border-color: rgba(245, 158, 11, 0.8);
+  }
 }
 
 .quiz-meta-tag {
