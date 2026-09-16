@@ -16,3 +16,9 @@ current_firebase_data.json
 # Tesseract local models
 cikmis_sorular/tessdata/
 *.traineddata
+
+# Internal planning & audit documents (local development only)
+MULTI_USER_PLAN.md
+SORU_EKLEME_PLANI.md
+AUDIT_*.md
+TUS_AUDIT.md
