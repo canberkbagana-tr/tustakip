@@ -1,12 +1,14 @@
 """
-TUS Akıllı Soru Ayıklama ve Virtual Soru Tabanı Motoru (v2.1)
+TUS Akıllı Soru Ayıklama ve Virtual Soru Tabanı Motoru (v2.2 - Checkpoint & Resume)
 
 Temel İlkeler:
 1. Soru olmayan alanları (kapaklar, telif sayfaları, salt konu anlatımı/özet tabloları) KESİNLİKLE soru olarak kesmez.
 2. Soruların konu anlatımlarının arasına serpiştirildiği kitaplarda regex ve şık analizi ile yalnızca izole soru bloklarını yakalar.
 3. Soruları kitap bazlı hafif ve optimize JSON olarak (cikmis_sorular/virtual_db/questions_<kitap>.json) depolar.
 4. "Benzer soru / şöyle de sorulabilirdi" şeklindeki türetilmiş soruları duplicate olarak almaz, tekilleştirir.
-5. question_bank_manifest.json dosyasını otomatik olarak güncelleyerek sistemle %100 senkronize tutar.
+5. CHECKPOINT & RESUME: extraction_state.json üzerinden kalınan sayfayı hatırlar, her çalıştırmada kaldığı yerden devam eder.
+6. Mevcut soruları silmez; yeni soruları mevcut listeye ekler (append & dedup).
+7. Kitap tamamen bittiğinde (304/304 sayfa) isCompleted: true işaretler ve PDF'in güvenle silinebileceğini bildirir.
 """
 
 import os
@@ -28,6 +30,7 @@ PDF_DIR = BASE_DIR / "cikmis_sorular"
 VIRTUAL_DB_DIR = PDF_DIR / "virtual_db"
 LOCAL_TESSDATA = PDF_DIR / "tessdata"
 MANIFEST_PATH = VIRTUAL_DB_DIR / "question_bank_manifest.json"
+STATE_PATH = VIRTUAL_DB_DIR / "extraction_state.json"
 
 if LOCAL_TESSDATA.exists():
     os.environ["TESSDATA_PREFIX"] = str(LOCAL_TESSDATA)
@@ -65,10 +68,6 @@ def is_blacklisted_text(text):
     return any(k in text_lower for k in BLACKLIST_KEYWORDS)
 
 def parse_options_from_line(line):
-    """
-    Satırda yan yana veya tek başına bulunan A), B), C), D), E) şıklarını ayrıştırır.
-    Örn: 'A) Lizozom B) Golgi aparatı' -> {'A': 'Lizozom', 'B': 'Golgi aparatı'}
-    """
     opts = {}
     parts = re.split(r'([A-E]\))', line)
     if len(parts) > 1:
@@ -79,10 +78,23 @@ def parse_options_from_line(line):
                 opts[letter] = val
     return opts
 
+def load_state():
+    if STATE_PATH.exists():
+        try:
+            with open(STATE_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+def save_state(state):
+    try:
+        with open(STATE_PATH, "w", encoding="utf-8") as f:
+            json.dump(state, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"⚠️ State kaydedilemedi: {e}")
+
 def update_manifest(book_code, book_title, question_count, categories_dict):
-    """
-    question_bank_manifest.json dosyasını günceller.
-    """
     if not MANIFEST_PATH.exists():
         return
 
@@ -107,13 +119,11 @@ def update_manifest(book_code, book_title, question_count, categories_dict):
                 "categories": categories_dict
             }
 
-        # Toplam soru ve aktif ders hesapla
         total_q = sum(sub.get("questionCount", 0) for sub in manifest["subjects"].values())
         active_s = sum(1 for sub in manifest["subjects"].values() if sub.get("questionCount", 0) > 0)
 
         manifest["totalQuestions"] = total_q
         manifest["summary"]["activeSubjects"] = active_s
-        manifest["lastUpdated"] = f"{Path(__file__).stat().st_mtime}"
 
         with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
             json.dump(manifest, f, ensure_ascii=False, indent=2)
@@ -122,25 +132,56 @@ def update_manifest(book_code, book_title, question_count, categories_dict):
     except Exception as e:
         print(f"⚠️ Manifest güncellenirken hata: {e}")
 
-def parse_book_into_virtual_db(pdf_path, max_pages=None, start_page=12):
+def parse_book_into_virtual_db(pdf_path, batch_pages=45):
     book_name = pdf_path.stem.lower().replace(" ", "_").replace("ç", "c").replace("ş", "s").replace("ı", "i").replace("ğ", "g").replace("ü", "u").replace("ö", "o")
-    print(f"\n=======================================================")
-    print(f"📖 Kitap İşleniyor: {pdf_path.name}")
-    print(f"Hedef Sanal DB: questions_{book_name}.json")
-    print(f"=======================================================")
+    output_json_path = VIRTUAL_DB_DIR / f"questions_{book_name}.json"
+
+    # 1. Mevcut soruları oku (ezmemek ve dedup için)
+    existing_questions = []
+    seen_questions_text = set()
+    if output_json_path.exists():
+        try:
+            with open(output_json_path, "r", encoding="utf-8") as f:
+                existing_questions = json.load(f)
+                for q in existing_questions:
+                    q_key = q.get("question", "")[:40].lower().strip()
+                    if q_key:
+                        seen_questions_text.add(q_key)
+        except Exception:
+            existing_questions = []
+
+    # 2. State dosyasından kalınan sayfayı belirle
+    state = load_state()
+    book_state = state.get(book_name, {
+        "lastProcessedPage": 12,
+        "totalPages": 0,
+        "totalExtracted": len(existing_questions),
+        "isCompleted": False
+    })
+
+    if book_state.get("isCompleted"):
+        print(f"✅ {pdf_path.name} zaten %100 tamamlanmış durumda! ({book_state.get('totalExtracted')} soru)")
+        return existing_questions
 
     doc = fitz.open(pdf_path)
     total_pages = len(doc)
-    end_page = min(total_pages, start_page + max_pages) if max_pages else total_pages
+    book_state["totalPages"] = total_pages
 
-    extracted_questions = []
-    seen_questions_text = set()
+    start_page = book_state.get("lastProcessedPage", 12)
+    end_page = min(total_pages, start_page + batch_pages)
+
+    print(f"\n=======================================================")
+    print(f"📖 Kitap: {pdf_path.name} (Toplam {total_pages} sayfa)")
+    print(f"📍 Kaldığı Sayfa: {start_page} ➔ Taranacak Aralık: Sayfa {start_page + 1} - {end_page}")
+    print(f"📦 Mevcut Havuz: {len(existing_questions)} soru")
+    print(f"=======================================================")
+
+    extracted_new_questions = []
 
     for page_idx in range(start_page, end_page):
         page = doc[page_idx]
         text = page.get_text()
 
-        # Sayfa bitmap taramaysa OCR ile tara
         if len(text.strip()) < 50:
             try:
                 pix = page.get_pixmap(dpi=150)
@@ -152,7 +193,6 @@ def parse_book_into_virtual_db(pdf_path, max_pages=None, start_page=12):
         if not text or len(text.strip()) < 40:
             continue
 
-        # Telif / Kapak sayfası kontrolü
         if is_blacklisted_text(text) and not ANSWER_REGEX.search(text):
             continue
 
@@ -164,37 +204,32 @@ def parse_book_into_virtual_db(pdf_path, max_pages=None, start_page=12):
             if not trimmed:
                 continue
 
-            # "Bu soru şöyle de sorulabilirdi / BENZERİ" filtrele (duplicate engelle)
             if "şöyle de sorulabilirdi" in trimmed.lower() or "benzeri)" in trimmed.lower():
                 if current_q and current_q.get("answer"):
-                    # Ana sorunun çözümüne ek bilgi olarak ekle, yeni soru yapma
                     current_q["explanation"] += " (Not: " + trimmed + ")"
                 continue
 
-            # Soru başlangıcı tespiti: (Örn: 3. Hücre içerisinde...)
             m_start = Q_START_REGEX.match(trimmed)
             if m_start:
                 q_num = int(m_start.group(1))
                 q_rest = m_start.group(2).strip()
 
-                # Soru numarası makul aralıkta mı? (1 - 300)
                 if 1 <= q_num <= 300:
-                    # Önceki tamamlanmış soruyu kaydet
                     if current_q and len(current_q.get("options", {})) >= 3 and current_q.get("answer"):
-                        q_key = current_q["question"][:40].lower()
+                        q_key = current_q["question"][:40].lower().strip()
                         if q_key not in seen_questions_text:
                             seen_questions_text.add(q_key)
-                            extracted_questions.append(current_q)
+                            extracted_new_questions.append(current_q)
 
                     exam_match = EXAM_PERIOD_REGEX.search(trimmed)
                     exam_label = exam_match.group(0) if exam_match else f"{pdf_path.stem} Çıkmış Soru"
 
                     current_q = {
-                        "id": f"{book_name}_q{len(extracted_questions) + 1}",
+                        "id": f"{book_name}_q{len(existing_questions) + len(extracted_new_questions) + 1}",
                         "book": pdf_path.stem,
                         "exam": exam_label,
                         "subject": pdf_path.stem,
-                        "topic": "Hücre & Temel Fizyoloji",
+                        "topic": "Temel & Klinik Fizyoloji",
                         "question": q_rest,
                         "hasImage": False,
                         "image": None,
@@ -207,20 +242,17 @@ def parse_book_into_virtual_db(pdf_path, max_pages=None, start_page=12):
             if not current_q:
                 continue
 
-            # Şık tespiti (A, B, C, D, E)
             line_opts = parse_options_from_line(trimmed)
             if line_opts:
                 for letter, opt_text in line_opts.items():
                     current_q["options"][letter] = opt_text
                 continue
 
-            # Doğru cevap tespiti
             ans_match = ANSWER_REGEX.search(trimmed)
             if ans_match:
                 current_q["answer"] = ans_match.group(1).upper()
                 continue
 
-            # Açıklama veya Soru Kökü devamı
             if current_q.get("answer"):
                 if not is_blacklisted_text(trimmed):
                     current_q["explanation"] += " " + trimmed
@@ -228,39 +260,53 @@ def parse_book_into_virtual_db(pdf_path, max_pages=None, start_page=12):
                 if not line_opts:
                     current_q["question"] += " " + trimmed
 
-        # Sayfa sonundaki soruyu kaydet
         if current_q and len(current_q.get("options", {})) >= 3 and current_q.get("answer"):
-            q_key = current_q["question"][:40].lower()
+            q_key = current_q["question"][:40].lower().strip()
             if q_key not in seen_questions_text:
                 seen_questions_text.add(q_key)
-                extracted_questions.append(current_q)
+                extracted_new_questions.append(current_q)
 
-    # Temizleme ve kalite kontrolü
-    valid_questions = []
-    categories_dict = {}
-
-    for idx, q in enumerate(extracted_questions, 1):
-        q["id"] = f"{book_name}_q{idx}"
+    # Geçerli yeni soruları filtrele
+    valid_new = []
+    for q in extracted_new_questions:
         q["question"] = q["question"].strip()
         q["explanation"] = q["explanation"].strip()
-
-        # En az 4 şık ve bir cevap olmalı
         if len(q["options"]) >= 4 and q["answer"]:
-            valid_questions.append(q)
-            cat = q.get("topic", "Genel Fizyoloji")
-            categories_dict[cat] = categories_dict.get(cat, 0) + 1
+            valid_new.append(q)
 
-    # Sanal Soru Tabanı JSON Çıktısı
-    output_json_path = VIRTUAL_DB_DIR / f"questions_{book_name}.json"
+    # Mevcut havuzla birleştir ve ID'leri yeniden sırala
+    all_combined = existing_questions + valid_new
+    for idx, q in enumerate(all_combined, 1):
+        q["id"] = f"{book_name}_q{idx}"
+
+    # Kategorileri hesapla
+    categories_dict = {}
+    for q in all_combined:
+        cat = q.get("topic", "Genel Fizyoloji")
+        categories_dict[cat] = categories_dict.get(cat, 0) + 1
+
+    # JSON'a kaydet
     with open(output_json_path, "w", encoding="utf-8") as f:
-        json.dump(valid_questions, f, ensure_ascii=False, indent=2)
+        json.dump(all_combined, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ {pdf_path.name} içerisinden {len(valid_questions)} geçerli çıkmış soru ayıklandı.")
-    print(f"💾 Kayıt Yeri: {output_json_path}")
+    # State'i güncelle
+    book_state["lastProcessedPage"] = end_page
+    book_state["totalExtracted"] = len(all_combined)
+    book_state["isCompleted"] = (end_page >= total_pages)
+    state[book_name] = book_state
+    save_state(state)
+
+    print(f"\n✅ Bu turda {len(valid_new)} yeni soru eklendi!")
+    print(f"📈 Toplam Havuz: {len(all_combined)} soruya ulaştı.")
+    print(f"📍 Kaldığımız Sayfa: {end_page} / {total_pages}")
+
+    if book_state["isCompleted"]:
+        print(f"🎉 TEBRİKLER! {pdf_path.name} %100 tarandı ve tamamlandı!")
+        print(f"🗑️ PDF dosyası ({pdf_path.name}) artık yer kaplamaması için güvenle silinebilir.")
 
     # Manifest'i güncelle
-    update_manifest(book_name, pdf_path.stem, len(valid_questions), categories_dict)
-    return valid_questions
+    update_manifest(book_name, pdf_path.stem, len(all_combined), categories_dict)
+    return all_combined
 
 def main():
     ensure_directories()
@@ -270,13 +316,9 @@ def main():
         print("📁 cikmis_sorular/ klasöründe taranacak PDF bulunamadı.")
         return
 
-    # İlk etapta Fizyoloji kitabından ilk üniteyi (Sayfa 12-45) tarıyoruz
-    total_extracted = 0
+    # Fizyoloji PDF'inden 45 sayfalık yeni dilim işle
     for pdf in pdf_files:
-        qs = parse_book_into_virtual_db(pdf, max_pages=35, start_page=12)
-        total_extracted += len(qs)
-
-    print(f"\n🎉 Tarama Tamamlandı! Virtual Soru Tabanı Havuzu: {total_extracted} soru.")
+        parse_book_into_virtual_db(pdf, batch_pages=45)
 
 if __name__ == "__main__":
     main()
