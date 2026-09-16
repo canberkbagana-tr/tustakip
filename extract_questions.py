@@ -8,7 +8,7 @@ Temel İlkeler:
 4. "Benzer soru / şöyle de sorulabilirdi" şeklindeki türetilmiş soruları duplicate olarak almaz, tekilleştirir.
 5. CHECKPOINT & RESUME: extraction_state.json üzerinden kalınan sayfayı hatırlar, her çalıştırmada kaldığı yerden devam eder.
 6. Mevcut soruları silmez; yeni soruları mevcut listeye ekler (append & dedup).
-7. Kitap tamamen bittiğinde (304/304 sayfa) isCompleted: true işaretler ve PDF'in güvenle silinebileceğini bildirir.
+7. Kitap tamamen bittiğinde isCompleted: true işaretlenir; PDF dosyaları kontrol, doğrulama ve görsel referans amacıyla yerel diskte kalıcı saklanır (silinmez).
 """
 
 import os
@@ -384,7 +384,7 @@ def parse_book_into_virtual_db(pdf_path, batch_pages=45):
 
     if book_state["isCompleted"]:
         print(f"🎉 TEBRİKLER! {pdf_path.name} %100 tarandı ve tamamlandı!")
-        print(f"🗑️ PDF dosyası ({pdf_path.name}) artık yer kaplamaması için güvenle silinebilir.")
+        print(f"🔒 PDF dosyası ({pdf_path.name}) kontrol ve doğrulama amacıyla diskte kalıcı olarak saklanıyor (silinmez).")
 
     # Manifest'i güncelle
     update_manifest(book_name, pdf_path.stem, len(all_combined), categories_dict)
