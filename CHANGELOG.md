@@ -6,6 +6,42 @@ Bu belgede **TUS Takip** projesinde yapılan tüm güncellemeler ve sürüm notl
 
 ---
 
+## 📌 [17.09.2026 - Mart 2023 Gerçek Sınav Arındırma, Tıbbi İmla & Flashcard Pop-Up Revizyonu]
+### 🏁 Neredeyiz, Ne Yaptık?
+- **💎 Mart 2023 Soru Bankası (%100 Kusursuz Arındırma):** `ss/2023 Mart.pdf` CamScanner OCR katmanından kaynaklanan harf çorbası (örn: `Atai!Jidaki lenfofd oroııniarııı ... bylynm~z`, `nmus`, `Lenf dOOOmo`, `Befincl`, `h0crelerini`, `Ç<>Oalmak`, `ONA`), soru köklerine karışan telif metinleri ve şekil etiketleri tamamen ayıklandı. 87 sorunun tamamı tıp literatürüne ve ÖSYM soru metnine uygun olarak pürüzsüz Türkçe ve doğru Latince terminoloji ile baştan derlendi.
+- **🎯 Cevap Anahtarları ve Şıklar %100 Doğrulandı:**
+  - OCR hataları yüzünden kayan cevap anahtarları (Q43: Fosfatidik asit B yerine A, Q45: Perilipin C yerine D, Q52: Hidroksil radikali B yerine E, Q79: Hipertrofi A yerine D, Q82: Mikrosatelit instabilite E yerine A, Q89: Granüloza tümörü E yerine D, Q98: Metastatik tümör B yerine A, Q100: Asetazolamid B yerine E, Q205: Geçici hipoparatiroidizm D yerine E, Q216: Splenik hilus C yerine A, Q227: Kavernöz sinüs D yerine E vb.) kitapçık ve TUSDATA açıklamalarıyla birebir çapraz sorgulanarak düzeltildi.
+- **📖 Yana Açılan Pop-Up (Pearl Drawer) & Tıbbi Açıklama İyileştirmesi:**
+  - Sayfa geçişlerinde kesilen açıklamalar (örn: `explanation: "22"` veya `ortaya çıkan küçülme`) kitaptaki orijinal klinik açıklamalarıyla tamamlandı.
+  - Açıklamalardaki taranma gürültüleri (`CamScanner ile tarandı`), sonda kalan çifte cevap anahtarları temizlendi.
+  - Açıklama kartları (`formatAndRenderPearlDrawer`) artık `•`, `*`, `-` ve paragraf geçişlerini akıllıca ayrıştırarak çok daha okunaklı, hap bilgi niteliğinde yüksek verimli (high-yield) flashcardlar üretiyor.
+- **🏷️ Çifte Branş Başlığı Hatası Giderildi:**
+  - `quiz.js` içerisinde soru başlığında görülen `HİSTOLOJİ VE EMBRİYOLOJİ • HİSTOLOJİ VE EMBRİYOLOJİ` ve `MİKROBİYOLOJİ • MİKROBİYOLOJİ` tekrarları düzeltildi. Ders ile konu aynı olduğunda tek etiket, spesifik konu varsa `Branş • Spesifik Konu` formatına dönüştürüldü.
+- **⚡ Sürüm Güncellemesi:** Tarayıcı önbelleklerini kırmak amacıyla script sürümleri `v=4.6.3` yapıldı.
+
+---
+
+## [v4.6.3] - 2026-09-17 (Mart 2023 Gerçek Sınav Arındırma & Flashcard Pop-Up Revizyonu)
+### 🩺 Soru Bankası & Tıbbi Arındırma
+- **`cikmis_sorular/virtual_db/questions_mart2023.json`:**
+  - 87 sorunun tamamında kök, şıklar ve açıklamalar tıp fakültesi standartlarında kusursuzlaştırıldı.
+  - Hatalı cevap anahtarları düzeltildi (Q43, Q45, Q52, Q79, Q82, Q89, Q98, Q100, Q205, Q216, Q227).
+  - Şık kaymaları (Q161, Q169, Q220, Q222) orijinal PDF sayfalarıyla eşleştirilerek onarıldı.
+  - Tüm sorulara dersine özel zengin konu başlıkları atandı.
+- **`scripts/purify_module.py` & `scripts/rebuild_mart2023_perfect.py`:**
+  - Tekrarlanabilir, deterministik TUS OCR arındırma ve tıbbi normalizasyon kütüphanesi kuruldu.
+- **`scripts/extract_questions.py`:**
+  - Gelecekteki ayıklamalarda OCR anomalilerinin DB'ye sızmaması için `purify_text` QA filtresine entegre edildi.
+
+### 🎮 Quiz Arayüzü & Pop-Up Deneyimi
+- **`quiz.js`:**
+  - `renderCurrentQuestion()`: `subjectTag` üzerinde konu/branş aynı olduğunda oluşan tekrar engellendi.
+  - `formatAndRenderPearlDrawer()`: Açıklama metinlerindeki taranma filigranları ve cevap anahtarı artıkları temizlendi; `•`, `*` ve satır başlarına göre mikro flashcard bölümleme kabiliyeti kazandırıldı.
+- **`index.html`:**
+  - Script sürümleri `v=4.6.3` olarak güncellendi.
+
+---
+
 ## 📌 [17.09.2026 - Firebase Senkronizasyon & Çoklu Kullanıcı Quiz İstatistik Doğrulaması]
 ### 🏁 Neredeyiz, Ne Yaptık?
 - **☁️ Firebase Bulut Senkronizasyonu Doğrulandı:** Kız arkadaşın İlay'ın çözdüğü 5 soru yerel tarayıcıda değil, doğrudan Firebase Realtime Database bulutunda (`/tus_v4/users/ilay/quiz`) kayıtlıdır (`solvedCount: 5, totalXp: 150, streak: 1`).

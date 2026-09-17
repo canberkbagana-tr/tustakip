@@ -1,4 +1,4 @@
-// ===== TUS Takip - Gamified Daily Quiz Module (v4.1.0) =====
+// ===== TUS Takip - Gamified Daily Quiz Module (v4.6.3) =====
 (function() {
   'use strict';
 
@@ -517,7 +517,15 @@
       if (progressText) progressText.textContent = `Soru ${this.currentIndex + 1} / 10`;
       if (progressBar) progressBar.style.width = `${pct}%`;
 
-      if (subjectTag) subjectTag.textContent = `${q.subject} • ${q.topic || 'Genel'}`;
+      if (subjectTag) {
+        const sub = q.subject || 'Genel TUS';
+        const top = q.topic || '';
+        const hasSpecificTopic = top && 
+          top.trim().toLowerCase() !== sub.trim().toLowerCase() && 
+          top.trim().toLowerCase() !== 'genel' &&
+          top.trim().toLowerCase() !== `${sub.trim().toLowerCase()} genel`;
+        subjectTag.textContent = hasSpecificTopic ? `${sub} • ${top}` : sub;
+      }
       if (examTag) examTag.textContent = q.exam || 'Çıkmış TUS';
       if (questionText) questionText.textContent = q.question;
 
@@ -682,27 +690,35 @@
         rawExpl = rawExpl.replace(altMatch[0], '').trim();
       }
 
-      // 2. Clean leading/trailing punctuation and dangling parens
-      rawExpl = rawExpl.replace(/^\s*[\)\:\-\*\+]\s*/, '').trim();
+      // 2. Strip trailing answer keys, OCR artifacts and leading/trailing noise
+      rawExpl = rawExpl.replace(/(?:Doğru\s*cevap|Dogru\s*cevap|Doğnı\s*cevap|Doğrv\s*cevap|Cevap)\s*[:=]?\s*[A-Ea-e]/gi, '');
+      rawExpl = rawExpl.replace(/CamScanner[^\n]*/gi, '');
+      rawExpl = rawExpl.replace(/^\s*[\)\:\-\*\+•]\s*/, '').trim();
 
       // 3. Break into distinct high-yield flashcard points
       let points = [];
-      if (rawExpl.includes('*') || rawExpl.includes('+')) {
-        const parts = rawExpl.split(/[\*\+]/);
+      if (rawExpl.includes('•') || rawExpl.includes('*') || rawExpl.includes('\n')) {
+        const parts = rawExpl.split(/(?:[•\*]|\n+)/);
         for (let p of parts) {
-          p = p.trim();
-          if (p.length > 5) points.push(p);
+          p = p.trim().replace(/^[\-\:\*•\.\s]+/, '');
+          if (p.length > 8 && !/^(?:Doğru cevap|Doğru|Cevap)\s*[:=]?/i.test(p)) {
+            points.push(p);
+          }
         }
       } else {
         const sentences = rawExpl.split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ])/);
         for (let s of sentences) {
-          s = s.trim();
-          if (s.length > 5) points.push(s);
+          s = s.trim().replace(/^[\-\:\*•\.\s]+/, '');
+          if (s.length > 8 && !/^(?:Doğru cevap|Doğru|Cevap)\s*[:=]?/i.test(s)) {
+            points.push(s);
+          }
         }
       }
 
       if (points.length === 0) {
-        points = [rawExpl];
+        const cleanSingle = rawExpl.trim().replace(/^[\-\:\*•\.\s]+/, '');
+        if (cleanSingle.length > 0) points = [cleanSingle];
+        else points = ['Bu soru için klinik açıklama hazırlanmaktadır.'];
       }
 
       const icons = ['💡', '⚡', '🔬', '📌', '🧬', '🩺', '🎯', '🧪'];

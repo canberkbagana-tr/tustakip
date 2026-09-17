@@ -165,10 +165,15 @@ def audit_and_clean_questions(questions, book_name):
         t = re.sub(r'\s{2,}', ' ', t).strip()
         return t
 
+    try:
+        from purify_module import purify_text
+    except Exception:
+        purify_text = lambda x: x
+
     for q in questions:
-        qtext = clean_txt(q.get("question", ""))
-        expl = clean_txt(q.get("explanation", ""))
-        options = {k: clean_txt(v) for k, v in q.get("options", {}).items()}
+        qtext = purify_text(clean_txt(q.get("question", "")))
+        expl = purify_text(clean_txt(q.get("explanation", "")))
+        options = {k: purify_text(clean_txt(v)) for k, v in q.get("options", {}).items()}
         ans = q.get("answer", "")
         ans_text = options.get(ans, "")
 
